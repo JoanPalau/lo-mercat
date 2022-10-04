@@ -21,6 +21,9 @@ assignees: ''
 * Dep 2
 
 **Task Completion Checklist**
-- [X] Mercury
-- [ ] Venus
-- [ ] Earth (Orbit/Moon)
+- [ ] Completed flow on Mobile
+- [ ] Test flow on Mobile
+- [ ] Screenshot on Mobile
+- [ ] Completed flow on Web
+- [ ] Test flow on Web
+- [ ] Screenshot on Web
