@@ -2,10 +2,18 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-
 import Button from 'react-bootstrap/Button';
 
-const Home: NextPage = () => {
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch('http://localhost:3000/api/hello')
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
+const Home: NextPage = ({ data } : any) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -16,7 +24,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Next.js! {data["name"]}</a>
         </h1>
 
         <p className={styles.description}>
