@@ -85,6 +85,13 @@ model Purchase {
   customerId String
 }
 
+// enum Gender {
+//   Male
+//   Female
+//   Other
+//   NoStatement
+// }
+
 model Customer {
   id       String     @id @unique @default(cuid())
   email    String     @unique
@@ -92,4 +99,5 @@ model Customer {
   name     String
   birthday DateTime
   Purchase Purchase[]
+  gender   String
 }
