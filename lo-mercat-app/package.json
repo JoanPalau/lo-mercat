@@ -2,11 +2,15 @@
   "name": "lo-mercat-app",
   "version": "0.1.0",
   "private": true,
+  "prisma": {
+    "seed": "node prisma/seed.ts"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "updatedb": "npx prisma migrate dev --name init"
   },
   "dependencies": {
     "@prisma/client": "4.4.0",
