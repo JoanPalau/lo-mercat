@@ -41,11 +41,40 @@ const start = async () => {
   // so it isn't included in PrismaClient type
   const dmmf = ((prisma)._baseDmmf)
   const adminOptions = {
-    // We pass Publisher to `resources`
-    resources: [{
+    resources: [
+    {
       resource: { model: dmmf.modelMap.Market, client: prisma },
       options: {},
-    }],
+    },
+    {
+      resource: { model: dmmf.modelMap.Farmer, client: prisma },
+      options: {},
+    },
+    {
+      resource: { model: dmmf.modelMap.Stand, client: prisma },
+      options: {},
+    },
+    {
+      resource: { model: dmmf.modelMap.Stock, client: prisma },
+      options: {},
+    },
+    {
+      resource: { model: dmmf.modelMap.Product, client: prisma },
+      options: {},
+    },
+    {
+      resource: { model: dmmf.modelMap.OrderLine, client: prisma },
+      options: {},
+    },
+    {
+      resource: { model: dmmf.modelMap.Purchase, client: prisma },
+      options: {},
+    },
+    {
+      resource: { model: dmmf.modelMap.Customer, client: prisma },
+      options: {},
+    }
+  ],
   }
   // Please note that some plugins don't need you to create AdminJS instance manually,
   // instead you would just pass `adminOptions` into the plugin directly,

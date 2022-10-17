@@ -17,7 +17,7 @@ model Farmer {
   name              String
   registration_time DateTime  @default(now())
   birthday          DateTime
-  market            Market    @relation(fields: [marketId], references: [id])
+  market            Market    @relation(fields: [marketId], references: [name])
   marketId          String
   Stand             Stand[]
   Stock             Stock[]
@@ -25,7 +25,7 @@ model Farmer {
 }
 
 model Market {
-  id       String   @id @unique @default(cuid())
+  name       String   @id @unique
   location String?
   schedule String?
   Farmer   Farmer[]
@@ -34,7 +34,7 @@ model Market {
 
 model Stand {
   id       String @id @unique @default(cuid())
-  market   Market @relation(fields: [marketId], references: [id])
+  market   Market @relation(fields: [marketId], references: [name])
   marketId String
   farmer   Farmer @relation(fields: [farmerId], references: [id])
   farmerId String
