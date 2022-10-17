@@ -1,0 +1,16 @@
+FROM node:18-bullseye-slim
+
+RUN mkdir /lo-mercat-app
+COPY lo-mercat-app/*.json /lo-mercat-app/
+
+WORKDIR /lo-mercat-app
+
+RUN npm i
+
+COPY lo-mercat-app/ /lo-mercat-app/
+
+WORKDIR /lo-mercat-app/adminjs
+
+ENTRYPOINT node adminjs.js
+
+

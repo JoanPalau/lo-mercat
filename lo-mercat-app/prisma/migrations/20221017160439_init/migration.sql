@@ -13,11 +13,11 @@ CREATE TABLE "Farmer" (
 
 -- CreateTable
 CREATE TABLE "Market" (
-    "id" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
     "location" TEXT,
     "schedule" TEXT,
 
-    CONSTRAINT "Market_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "Market_pkey" PRIMARY KEY ("name")
 );
 
 -- CreateTable
@@ -97,7 +97,7 @@ CREATE UNIQUE INDEX "Farmer_id_key" ON "Farmer"("id");
 CREATE UNIQUE INDEX "Farmer_email_key" ON "Farmer"("email");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Market_id_key" ON "Market"("id");
+CREATE UNIQUE INDEX "Market_name_key" ON "Market"("name");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Stand_id_key" ON "Stand"("id");
@@ -124,10 +124,10 @@ CREATE UNIQUE INDEX "Customer_id_key" ON "Customer"("id");
 CREATE UNIQUE INDEX "Customer_email_key" ON "Customer"("email");
 
 -- AddForeignKey
-ALTER TABLE "Farmer" ADD CONSTRAINT "Farmer_marketId_fkey" FOREIGN KEY ("marketId") REFERENCES "Market"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Farmer" ADD CONSTRAINT "Farmer_marketId_fkey" FOREIGN KEY ("marketId") REFERENCES "Market"("name") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Stand" ADD CONSTRAINT "Stand_marketId_fkey" FOREIGN KEY ("marketId") REFERENCES "Market"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Stand" ADD CONSTRAINT "Stand_marketId_fkey" FOREIGN KEY ("marketId") REFERENCES "Market"("name") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "Stand" ADD CONSTRAINT "Stand_farmerId_fkey" FOREIGN KEY ("farmerId") REFERENCES "Farmer"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
