@@ -6,9 +6,8 @@ import Button from 'react-bootstrap/Button';
 
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch('http://localhost:3000/api/farmers')
-  const data = await res.json()
-
+  //const res = await fetch('http://localhost:3000/api/hello')
+  const data = {};
   // Pass data to the page via props
   return { props: { data } }
 }
