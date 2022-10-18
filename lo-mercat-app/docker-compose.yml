@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile.lo-mercat
     depends_on:
-      - postgres
+      - adminjs
     ports:
       - "3000:3000"
   adminjs:
@@ -13,12 +13,14 @@ services:
       context: .
       dockerfile: Dockerfile.adminjs
     depends_on:
-      - postgres
+      - db
     ports:
       - "3001:3000"
-  postgres:
+  db:
     image: "postgres:latest"
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     expose:
       - "5432"
+    ports:
+      - "5432:5432"

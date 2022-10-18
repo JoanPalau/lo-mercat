@@ -4,6 +4,7 @@ FROM node:18-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
+
 # Install dependencies based on the preferred package manager
 COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
 RUN \
@@ -16,16 +17,20 @@ RUN \
 
 FROM node:18-alpine AS runner
 
+RUN npm i -g prisma@4.5.0
+
+WORKDIR /app/
+
 COPY --from=deps /app/node_modules ./node_modules
 
-RUN mkdir /app
+COPY .adminjs ./.adminjs
+COPY adminjs ./adminjs
+COPY prisma ./prisma
+COPY *.json *.js *.ts *.env *.sh ./
 
-COPY . .
 
-RUN prisma generate
+# WORKDIR /app/adminjs
 
-WORKDIR /app/adminjs
-
-ENTRYPOINT node adminjs.js
+ENTRYPOINT ./adminjs_entrypoint.sh
 
 

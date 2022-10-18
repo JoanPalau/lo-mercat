@@ -33,7 +33,7 @@ AdminJS.registerAdapter({
   Database: AdminJSPrisma.Database,
 })
 
-const PORT = 3000
+const PORT = 3001;
 
 const start = async () => {
   const app = express()

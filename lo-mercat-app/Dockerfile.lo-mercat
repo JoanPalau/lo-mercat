@@ -13,6 +13,11 @@ RUN \
   else echo "Lockfile not found." && exit 1; \
   fi
 
+RUN npm i -g prisma@4.5.0
+
+COPY prisma prisma
+
+RUN prisma generate
 
 # Rebuild the source code only when needed
 FROM node:18-alpine AS builder
