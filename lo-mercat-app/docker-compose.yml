@@ -1,10 +1,24 @@
-version: "1.0"
+version: "3.3"
 services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.lo-mercat
+    depends_on:
+      - postgres
     ports:
-      - "8000:5000"
+      - "3000:3000"
+  adminjs:
+    build:
+      context: .
+      dockerfile: Dockerfile.adminjs
+    depends_on:
+      - postgres
+    ports:
+      - "3001:3000"
   postgres:
     image: "postgres:latest"
-    ports:
-      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    expose:
+      - "5432"
