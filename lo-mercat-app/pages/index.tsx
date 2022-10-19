@@ -3,16 +3,22 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Button from 'react-bootstrap/Button';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 export async function getServerSideProps() {
   // Fetch data from external API
   //const res = await fetch('http://localhost:3000/api/hello')
-  const data = {};
+  // const data = {};
+  const products = await prisma.product.findMany();
+  console.log(products);
   // Pass data to the page via props
-  return { props: { data } }
+  return { props: { products } }
 }
 
-const Home: NextPage = ({ data } : any) => {
+const Home: NextPage = ({ products } : any) => {
+  let name = products[1].name;
   return (
     <div className={styles.container}>
       <Head>
@@ -23,7 +29,7 @@ const Home: NextPage = ({ data } : any) => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js! {data["name"]}</a>
+          Welcome to <a href="https://nextjs.org">Next.js! {name}</a>
         </h1>
 
         <p className={styles.description}>

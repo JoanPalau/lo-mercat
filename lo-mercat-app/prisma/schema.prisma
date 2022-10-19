@@ -12,12 +12,12 @@ datasource db {
 
 model Farmer {
   id                String    @id @unique @default(cuid())
+  name              String
   email             String    @unique
   password          String
-  name              String
   registration_time DateTime  @default(now())
   birthday          DateTime
-  market            Market    @relation(fields: [marketId], references: [name])
+  market            Market    @relation(fields: [marketId], references: [id])
   marketId          String
   Stand             Stand[]
   Stock             Stock[]
@@ -25,7 +25,8 @@ model Farmer {
 }
 
 model Market {
-  name       String   @id @unique @default(cuid())
+  id       String    @id @unique @default(cuid())
+  name     String   
   location String?
   schedule String?
   Farmer   Farmer[]
@@ -34,7 +35,7 @@ model Market {
 
 model Stand {
   id       String @id @unique @default(cuid())
-  market   Market @relation(fields: [marketId], references: [name])
+  market   Market @relation(fields: [marketId], references: [id])
   marketId String
   farmer   Farmer @relation(fields: [farmerId], references: [id])
   farmerId String

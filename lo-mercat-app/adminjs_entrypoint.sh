@@ -1,6 +1,7 @@
 #/bin/sh
 
 prisma generate
-prisma db push
+prisma db push --accept-data-loss
+prisma db seed
 
 node adminjs/adminjs.js
