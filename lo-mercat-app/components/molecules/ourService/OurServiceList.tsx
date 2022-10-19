@@ -2,8 +2,6 @@ import styled from '@emotion/styled';
 
 import OurServiceListElement from './OurServiceListElement';
 
-const sampleText = "Lorem ipsum dolor sit amet consectetur adipisicing emotionReact ";
-
 const ImageTextList = styled.ul`
 list-style: none;
   display: flex;
@@ -21,7 +19,7 @@ const OurServiceList = () => {
         url: '/market-info.svg',
         alt: 'Market Information',
       },
-      text: sampleText
+      text: "Here we can see all the market statistics"
     },
     {
       title: "Customer Info",
@@ -29,7 +27,7 @@ const OurServiceList = () => {
         url: '/customer.svg',
         alt: 'Customer Information'
       },
-      text: sampleText
+      text: "Here we can see all our customer statistics"
     },
     {
       title: "Farmer Info",
@@ -37,7 +35,7 @@ const OurServiceList = () => {
         url: '/farmer-info.svg',
         alt: 'Farmer Information'
       },
-      text: sampleText
+      text: "Here we can see information about our farmers"
     }
   ]
   return (

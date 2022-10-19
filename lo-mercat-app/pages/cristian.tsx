@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import OurServiceList from '../components/molecules/ourService/OurServiceList';
 
 
-const Joan: NextPage = () => {
+const Cri: NextPage = () => {
     return (
         <div>
             <OurServiceList />
@@ -12,4 +12,4 @@ const Joan: NextPage = () => {
     );
 }
 
-export default Joan;
+export default Cri;
