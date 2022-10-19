@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Button from 'react-bootstrap/Button';
+import {signIn} from "next-auth/react";
 
 export async function getServerSideProps() {
   // Fetch data from external API
@@ -32,7 +33,9 @@ const Home: NextPage = ({ data } : any) => {
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
-        <Button>TEST button</Button>
+        <Button onClick={() => {
+          signIn();
+        }}>TEST Sign in</Button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
