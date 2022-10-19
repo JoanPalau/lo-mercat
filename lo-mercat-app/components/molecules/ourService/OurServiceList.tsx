@@ -19,7 +19,8 @@ const OurServiceList = () => {
         url: '/market-info.svg',
         alt: 'Market Information',
       },
-      text: "Here we can see all the market statistics"
+      text: "Here we can see all the market statistics",
+      url:"/marketinfo"
     },
     {
       title: "Customer Info",
@@ -27,7 +28,8 @@ const OurServiceList = () => {
         url: '/customer.svg',
         alt: 'Customer Information'
       },
-      text: "Here we can see all our customer statistics"
+      text: "Here we can see all our customer statistics",
+      url:"/customerinfo"
     },
     {
       title: "Farmer Info",
@@ -35,7 +37,8 @@ const OurServiceList = () => {
         url: '/farmer-info.svg',
         alt: 'Farmer Information'
       },
-      text: "Here we can see information about our farmers"
+      text: "Here we can see information about our farmers",
+      url:"/farmerinfo"
     }
   ]
   return (

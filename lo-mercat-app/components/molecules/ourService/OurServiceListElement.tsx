@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { useRouter } from 'next/router'
 
 import Image from 'next/image';
 import ImageData from '../../../commons/types/ImageDataType';
@@ -8,7 +9,7 @@ const ImageTextListElement = styled.li`
   flex-flow: nowrap;
   justify-content: space-between;
   align-items: center;
-  width: 20rem;
+
   margin-top: 20px;
 `;
 
@@ -18,26 +19,37 @@ const ImageWrapper = styled.div`
   text-align: center;
   `;
 
+const ImageCustom = styled.img`
+  transition: transform .2s;
+  margin-bottom: 10px;
+  
+  &: hover{
+    transform: scale(1.3);
+}
+`;
 
 
 const OurServiceListElement = (props: OurServiceListElementProps) => {
-  const { title, img, text } = props;
+  const router = useRouter()
+  const { title, img, text, url } = props;
   return (
     <ImageTextListElement>
-      <ImageWrapper>
+      <ImageWrapper >
         <h1>{title}</h1>
-        <Image src={img.url} alt={img.alt} width={300} height={300} />
+        <ImageCustom src={img.url} width={300} height={300} onClick={() => router.push(url)}/>
         <p>
           {text}
         </p>
       </ImageWrapper>
     </ImageTextListElement >
   )
+
 }
 
 interface OurServiceListElementProps {
   title: string,
   img: ImageData,
   text: string,
+  url: string
 }
 export default OurServiceListElement;
