@@ -1,13 +1,5 @@
 version: "3.3"
 services:
-  web:
-    build:
-      context: .
-      dockerfile: Dockerfile.lo-mercat
-    depends_on:
-      - adminjs
-    ports:
-      - "3000:3000"
   adminjs:
     build:
       context: .
@@ -15,7 +7,7 @@ services:
     depends_on:
       - db
     ports:
-      - "3001:3000"
+      - "3001:3001"
   db:
     image: "postgres:latest"
     environment:
