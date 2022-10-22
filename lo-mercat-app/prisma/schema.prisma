@@ -1,0 +1,104 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Farmer {
+  id                String    @id @unique @default(cuid())
+  name              String
+  email             String    @unique
+  password          String
+  registration_time DateTime  @default(now())
+  birthday          DateTime
+  market            Market    @relation(fields: [marketId], references: [id])
+  marketId          String
+  Stand             Stand[]
+  Stock             Stock[]
+  Product           Product[]
+}
+
+model Market {
+  id       String    @id @unique @default(cuid())
+  name     String   
+  location String?
+  schedule String?
+  Farmer   Farmer[]
+  Stand    Stand[]
+}
+
+model Stand {
+  id       String @id @unique @default(cuid())
+  market   Market @relation(fields: [marketId], references: [id])
+  marketId String
+  farmer   Farmer @relation(fields: [farmerId], references: [id])
+  farmerId String
+}
+
+model Stock {
+  id        String  @id @unique @default(cuid())
+  quantity  Int
+  cost      Int
+  farmer    Farmer  @relation(fields: [farmerId], references: [id])
+  farmerId  String
+  product   Product @relation(fields: [productId], references: [id])
+  productId String
+}
+
+model Product {
+  id               String      @id @unique @default(cuid())
+  name             String
+  Stock            Stock[]
+  customby         Farmer?     @relation(fields: [custombyFarmerId], references: [id])
+  custombyFarmerId String?
+  OrderLine        OrderLine[]
+}
+
+model OrderLine {
+  id        String  @id @unique @default(cuid())
+  quantity  Int
+  cost      Int
+  product   Product @relation(fields: [productId], references: [id])
+  productId String
+  order     Order   @relation(fields: [orderId], references: [id])
+  orderId   String
+}
+
+model Order {
+  id         String      @id @unique @default(cuid())
+  completed  Boolean
+  OrderLine  OrderLine[]
+  purchase   Purchase    @relation(fields: [purchaseId], references: [id])
+  purchaseId String
+}
+
+model Purchase {
+  id         String   @id @unique @default(cuid())
+  created_at DateTime @default(now())
+  Order      Order[]
+  customer   Customer @relation(fields: [customerId], references: [id])
+  customerId String
+}
+
+// enum Gender {
+//   Male
+//   Female
+//   Other
+//   NoStatement
+// }
+
+model Customer {
+  id       String     @id @unique @default(cuid())
+  email    String     @unique
+  password String
+  name     String
+  birthday DateTime
+  Purchase Purchase[]
+  gender   String
+}
