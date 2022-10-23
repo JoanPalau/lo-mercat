@@ -36,7 +36,7 @@ const OurServiceListElement = (props: OurServiceListElementProps) => {
     <ImageTextListElement>
       <ImageWrapper >
         <h1>{title}</h1>
-        <ImageCustom src={img.url} width={300} height={300} onClick={() => router.push(url)}/>
+        <ImageCustom src={img.url} width={300} height={300} onClick={() => router.push(router.asPath+url)}/>
         <p>
           {text}
         </p>

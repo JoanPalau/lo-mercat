@@ -18,7 +18,7 @@ export async function getServerSideProps() {
 }
 
 const Home: NextPage = ({ products } : any) => {
-  let name = products[1].name;
+  let name = products[0].name;
   return (
     <div className={styles.container}>
       <Head>
