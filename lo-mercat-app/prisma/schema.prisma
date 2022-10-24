@@ -17,19 +17,16 @@ model Farmer {
   password          String
   registration_time DateTime  @default(now())
   birthday          DateTime
-  market            Market    @relation(fields: [marketId], references: [id])
-  marketId          String
   Stand             Stand[]
   Stock             Stock[]
   Product           Product[]
 }
 
 model Market {
-  id       String    @id @unique @default(cuid())
-  name     String   
+  id       String  @id @unique @default(cuid())
+  name     String
   location String?
   schedule String?
-  Farmer   Farmer[]
   Stand    Stand[]
 }
 
