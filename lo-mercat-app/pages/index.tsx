@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Button from 'react-bootstrap/Button';
 import {signIn} from "next-auth/react";
+import { useSession } from "next-auth/react"
 
 export async function getServerSideProps() {
   // Fetch data from external API
@@ -15,6 +16,7 @@ export async function getServerSideProps() {
 }
 
 const Home: NextPage = ({ data } : any) => {
+  const { data: session } = useSession()
   return (
     <div className={styles.container}>
       <Head>
