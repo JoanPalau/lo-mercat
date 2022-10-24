@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import styled from '@emotion/styled'
 
-import MarketList from '../../components/molecules/marketInfo/MarketList';
+import AddProductForm from '../../components/molecules/productStock/AddProductStock';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -10,19 +10,19 @@ export async function getServerSideProps() {
     // Fetch data from external API
     //const res = await fetch('http://localhost:3000/api/hello')
     // const data = {};
-    const markets = await prisma.market.findMany();
-    console.log(markets);
+    const product = await prisma.product.findMany();
+    console.log(product);
     // Pass data to the page via props
-    return { props: { markets } }
+    return { props: { product } }
 }
 
-const MarketPage: NextPage = ({markets}:any) => {
+const AddProductPage: NextPage = ({product}:any) => {
 
     return (
         <div>
-            <MarketList markets={markets} />
+            <AddProductForm product={product}/>
         </div>
     );
 }
 
-export default MarketPage;
+export default AddProductPage;
