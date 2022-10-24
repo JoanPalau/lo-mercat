@@ -19,6 +19,16 @@ export async function getServerSideProps() {
 
 const Home: NextPage = ({ products } : any) => {
   let name = products[1].name;
+
+  async function setStock(){
+    let x = await fetch(
+      '/api/stock/create?product_id=cl9fudgt10004k2c6m3uj26k5&farmer_id=cl9n07k7w0000s1ebklxh8nry',
+      {
+        method: 'PUT'
+      }
+      )
+    console.log(x);
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -37,7 +47,7 @@ const Home: NextPage = ({ products } : any) => {
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
-        <Button>TEST button</Button>
+        <Button onClick={setStock}>TEST button</Button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
