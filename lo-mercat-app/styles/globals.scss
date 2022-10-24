@@ -24,3 +24,17 @@ a {
     background: black;
   }
 }
+
+$theme-colors: (
+  'primary': #596B36,
+  'secondary': #7F8587,
+  'success': #519c49,
+  'info': #1e201b,
+  'warning': #ce8b11,
+  'danger': #f44336,
+  'light': #E0E7D8,
+  'dark-accent': #958166,
+  'dark': #1F211C
+);
+
+@import '/node_modules/bootstrap/scss/bootstrap.scss';
