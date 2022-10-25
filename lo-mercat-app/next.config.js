@@ -44,7 +44,5 @@ module.exports = withPWA({
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
-});
+  output: 'standalone'
+})
