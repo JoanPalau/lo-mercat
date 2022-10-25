@@ -1,10 +1,9 @@
 import NextAuth, {NextAuthOptions} from "next-auth";
 import CredentialsProvider from 'next-auth/providers/credentials'
-import { userAgent } from "next/server";
-import { useContext } from "react";
-import { UserContext } from "../../_app";
 
-
+import { Role } from "@prisma/client";
+import { NextResponse } from "next/server";
+import { withAuth } from "next-auth/middleware";
 
 
 export default NextAuth({

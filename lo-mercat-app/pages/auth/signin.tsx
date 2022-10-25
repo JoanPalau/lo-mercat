@@ -6,7 +6,7 @@ interface Props {}
 
 const SignIn: NextPage = (props): JSX.Element => {
     const context = useContext(UserContext);
-    const[userInfo, setUserInfo] = useState({email: '', password:'', role:'User'});
+    const[userInfo, setUserInfo] = useState({email: '', password:'', role:'Farmer'});
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
         setUserInfo({... userInfo, role:'User'})
         e.preventDefault()

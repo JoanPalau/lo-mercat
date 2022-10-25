@@ -20,7 +20,7 @@ const Protected: FC<Props> = ({ children}): JSX.Element => {
 
   if (status === "authenticated")
     return (
-      <div>Hola </div>
+      <div>Hola {session.user?.role}</div>
     );
 
   return <div>loading</div>
