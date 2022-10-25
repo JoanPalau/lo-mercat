@@ -22,7 +22,7 @@ const Home: NextPage = ({ products } : any) => {
 
   async function setStock(){
     let x = await fetch(
-      '/api/stock/create?product_id=cl9fudgt10004k2c6m3uj26k5&farmer_id=cl9n07k7w0000s1ebklxh8nry',
+      '/api/stock/create?product_id=cl9n3nbvm0002o0cnlxl0k1b6&farmer_id=cl9n3nbw1000ao0cn2tzhs3nq',
       {
         method: 'PUT'
       }
