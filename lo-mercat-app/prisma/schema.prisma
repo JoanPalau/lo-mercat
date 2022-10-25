@@ -11,15 +11,14 @@ datasource db {
 }
 
 model Farmer {
-  id                String    @id @unique @default(cuid())
-  name              String
-  email             String    @unique
-  password          String
-  registration_time DateTime  @default(now())
-  birthday          DateTime
-  Stand             Stand[]
-  Stock             Stock[]
-  Product           Product[]
+  id       String    @id @unique @default(cuid())
+  name     String
+  birthday DateTime
+  Stand    Stand[]
+  Stock    Stock[]
+  Product  Product[]
+  user     User      @relation(fields: [userId], references: [id])
+  userId   String
 }
 
 model Market {
@@ -92,27 +91,26 @@ model Purchase {
 
 model Customer {
   id       String     @id @unique @default(cuid())
-  email    String     @unique
-  password String
-  name     String
   birthday DateTime
   Purchase Purchase[]
   gender   String
+  user     User       @relation(fields: [userId], references: [id])
+  userId   String
 }
 
 model Account {
-  id                 String  @id @default(cuid())
-  userId             String  @map("user_id")
-  type               String
-  provider           String
-  providerAccountId  String  @map("provider_account_id")
-  refresh_token      String? @db.Text
-  access_token       String? @db.Text
-  expires_at         Int?
-  token_type         String?
-  scope              String?
-  id_token           String? @db.Text
-  session_state      String?
+  id                String  @id @default(cuid())
+  userId            String  @map("user_id")
+  type              String
+  provider          String
+  providerAccountId String  @map("provider_account_id")
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -131,14 +129,18 @@ model Session {
 }
 
 model User {
-  id              String           @id @default(cuid())
-  name            String?
-  email           String           @unique
-  emailVerified   DateTime?
-  image           String?
-  accounts        Account[]
-  sessions        Session[]
-  role            Role             @default(USER)
+  id                String     @id @default(cuid())
+  name              String?
+  email             String     @unique
+  emailVerified     DateTime?
+  password          String
+  image             String?
+  accounts          Account[]
+  sessions          Session[]
+  role              Role       @default(USER)
+  registration_time DateTime   @default(now())
+  Farmer            Farmer[]
+  Customer          Customer[]
 }
 
 model VerificationToken {
@@ -149,6 +151,7 @@ model VerificationToken {
   @@unique([identifier, token])
   @@map("verificationtokens")
 }
+
 enum Role {
   ADMIN
   USER
