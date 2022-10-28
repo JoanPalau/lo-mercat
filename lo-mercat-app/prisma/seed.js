@@ -54,10 +54,21 @@ async function createFarmer(f) {
   return await updateOrCreate({
     schema: prisma.farmer,
     where: {
-      email: f.email
+      name: f.name
     },
     update: f,
     create: f
+  });
+}
+
+async function createUser(u) {
+  return await updateOrCreate({
+    schema: prisma.user,
+    where: {
+      name: u.email
+    },
+    update: u,
+    create: u
   });
 }
 
@@ -126,21 +137,32 @@ async function main() {
     }
   );
 
+  let user_alpha = await createUser({
+    email: 'alpha@gmail.com',
+    password: '123',
+    name: 'alpha',
+  });
+
+  let user_beta = await createUser({
+    email: 'beta@gmail.com',
+    password: '123',
+    name: 'beta',
+
+  });
+
   let alpha = await createFarmer(
     {
       name: 'Alpha',
-      email: 'alpha@a.com',
-      password: '123',
-      birthday: new Date(2022, 1, 1)
+      birthday: new Date(2022, 1, 1),
+      userId: user_alpha.obj.id
     }
   );
 
   let beta = await createFarmer(
     {
       name: 'Beta',
-      email: 'beta@a.com',
-      password: '123',
       birthday: new Date(1990, 1, 1),
+      userId: user_beta.obj.id
     }
   );
 

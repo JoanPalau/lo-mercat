@@ -6,6 +6,8 @@ import Button from 'react-bootstrap/Button';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
+import {signIn} from "next-auth/react";
+import { useSession } from "next-auth/react"
 
 export async function getServerSideProps() {
   // Fetch data from external API
@@ -29,6 +31,7 @@ const Home: NextPage = ({ products } : any) => {
       )
     console.log(x);
   }
+  const { data: session } = useSession()
   return (
     <div className={styles.container}>
       <Head>
@@ -47,7 +50,7 @@ const Home: NextPage = ({ products } : any) => {
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
-        <Button onClick={setStock}>TEST button</Button>
+        <Button onClick={signIn}>TEST Sign in</Button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
