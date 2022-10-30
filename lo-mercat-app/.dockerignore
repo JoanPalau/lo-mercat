@@ -1,0 +1,11 @@
+Dockerfile.adminjs
+Dockerfile.lo-mercat
+docker-compose.yml
+docker-compose-next.yml
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+README-docker.md
+.next
+.git

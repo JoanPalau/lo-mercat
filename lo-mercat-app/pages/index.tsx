@@ -3,16 +3,35 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from 'styles/Home.module.scss'
 import Button from 'react-bootstrap/Button';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
+import {signIn} from "next-auth/react";
+import { useSession } from "next-auth/react"
 
 export async function getServerSideProps() {
   // Fetch data from external API
   //const res = await fetch('http://localhost:3000/api/hello')
-  const data = {};
+  // const data = {};
+  const products = await prisma.product.findMany();
+  console.log(products);
   // Pass data to the page via props
-  return { props: { data } }
+  return { props: { products } }
 }
 
-const Home: NextPage = ({ data } : any) => {
+const Home: NextPage = ({ products } : any) => {
+  let name = products[1].name;
+
+  async function setStock(){
+    let x = await fetch(
+      '/api/stock/create?product_id=cl9n3nbvm0002o0cnlxl0k1b6&farmer_id=cl9n3nbw1000ao0cn2tzhs3nq',
+      {
+        method: 'PUT'
+      }
+      )
+    console.log(x);
+  }
+  const { data: session } = useSession()
   return (
     <div className={styles.container}>
       <Head>
@@ -23,7 +42,7 @@ const Home: NextPage = ({ data } : any) => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js! {data["name"]}</a>
+          Welcome to <a href="https://nextjs.org">Next.js! {name}</a>
         </h1>
 
         <p className={styles.description}>
@@ -31,7 +50,7 @@ const Home: NextPage = ({ data } : any) => {
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
-        <Button>TEST button</Button>
+        <Button onClick={signIn}>TEST Sign in</Button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
