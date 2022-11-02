@@ -5,22 +5,12 @@ import styles from 'styles/Home.module.scss'
 import Button from 'react-bootstrap/Button';
 import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
 import {signIn} from "next-auth/react";
 import { useSession } from "next-auth/react"
 
-export async function getServerSideProps() {
-  // Fetch data from external API
-  //const res = await fetch('http://localhost:3000/api/hello')
-  // const data = {};
-  const products = await prisma.product.findMany();
-  console.log(products);
-  // Pass data to the page via props
-  return { props: { products } }
-}
-
 const Home: NextPage = ({ products } : any) => {
-  let name = products[1].name;
+  const { data: session } = useSession()
+  let name = session?.user?.name;
 
   async function setStock(){
     let x = await fetch(
@@ -31,7 +21,6 @@ const Home: NextPage = ({ products } : any) => {
       )
     console.log(x);
   }
-  const { data: session } = useSession()
   return (
     <div className={styles.container}>
       <Head>
