@@ -1,4 +1,4 @@
-import NextAuth, {NextAuthOptions} from "next-auth";
+import NextAuth, {NextAuthOptions, Session} from "next-auth";
 import CredentialsProvider from 'next-auth/providers/credentials'
 import GoogleProvider from "next-auth/providers/google"
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
@@ -41,17 +41,17 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     })],
     callbacks: {
-        jwt({ token, user }) {
+        jwt({ token, user }:any) {
           if (user) {
             token.role = user.role;
           }
           return token;
         },
-        session({ session, token, user }) {
+        session({ session, token, user }: any) {
           if (session.user) {
             session.user.role = token.role;
           }
-          return session;
+          return session as Session;
         },
       },
 })
