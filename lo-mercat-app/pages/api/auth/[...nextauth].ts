@@ -16,7 +16,6 @@ export default NextAuth({
     pages: {
         signIn: "/auth/signin",
         error: "/auth/signin",
-        register: ""
       },
     adapter: PrismaAdapter(prisma),
     providers:[CredentialsProvider({
@@ -24,16 +23,9 @@ export default NextAuth({
         credentials:{},
         async authorize(credentials,req){
           const{email,password, role}=credentials as {email: string; password: string; role: string};
-          const prisma = new PrismaClient();
-          const newUser = await prisma.user.create({
-            data: {
-            password: password,
-            email: email,
-            }
-        })
 
           const user = await prisma.user.findFirst({
-            where: { email: email },
+            where: { email: email , password:password },
           });
     }}),
     GoogleProvider({
