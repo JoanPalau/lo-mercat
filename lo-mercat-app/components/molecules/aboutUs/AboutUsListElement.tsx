@@ -8,13 +8,15 @@ const ImageTextListElement = styled.li<{stripe: boolean}>`
   flex-flow: ${props => props.stripe ? 'row' : 'row-reverse'} nowrap;
   justify-content: space-between;
   align-items: center;
+
+  min-width: 60%;
 `;
 
 const AboutUsListElement = (props : AboutUsListElementProps) => {
     const {img, text, stripe} = props;
     return (
         <ImageTextListElement stripe={stripe}>
-				<Image src={img.url} alt={img.alt} width={72} height={16} />
+				<Image src={img.url} alt={img.alt} width={256} height={256} />
 				<p>
 					{text}
 				</p>
