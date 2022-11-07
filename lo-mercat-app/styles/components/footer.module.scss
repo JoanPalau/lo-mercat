@@ -13,3 +13,26 @@
         width: 80%;
     }
 }
+
+.web {
+    background-color: variables.$dark;
+    color: variables.$light;
+
+    h1 {
+        font-size: large;
+    }
+    h2 {
+        font-size: medium;
+    }
+
+    a {
+        display: block;
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
