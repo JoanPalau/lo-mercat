@@ -17,20 +17,15 @@ export default NextAuth({
         signIn: "/auth/signin",
         error: "/auth/signin",
       },
-    adapter: PrismaAdapter(prisma),
     providers:[CredentialsProvider({
         type: 'credentials',
         credentials:{},
         async authorize(credentials,req){
-          const{email,password, role}=credentials as {email: string; password: string; role: string};
-          try{
-            const user = await prisma.user.findFirst({
-              where: { email: email , password:password },
-            });
-            console.log("E; " + email + " p: " + password + " u " + user);
-          } catch (e)  {
-            console.log("E; " + e);
-          }
+          const{email, password, role}=credentials as {email: string; password: string; role: string};
+          const user = await prisma.user.findFirst({
+            where: { email: email , password:password },
+          });
+          return user;
     }}),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
