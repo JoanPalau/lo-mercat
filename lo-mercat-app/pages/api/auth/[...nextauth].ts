@@ -1,4 +1,4 @@
-import NextAuth, {NextAuthOptions} from "next-auth";
+import NextAuth, {NextAuthOptions, Session} from "next-auth";
 import CredentialsProvider from 'next-auth/providers/credentials'
 
 import { Role } from "@prisma/client";
@@ -18,7 +18,8 @@ export default NextAuth({
         type: 'credentials',
         credentials:{},
         async authorize(credentials,req){
-            const{email,password, role}=credentials;
+            const{email,password, role}=credentials as {email: string; password: string; role: string};
+
 
             if(email !== "didac@exemple.com" || password!=="1234"){
                 throw new Error('Ep! Credencials invalides!')
@@ -29,17 +30,17 @@ export default NextAuth({
         }
     })],
     callbacks: {
-        jwt({ token, user }) {
+        jwt({ token, user }:any) {
           if (user) {
             token.role = user.role;
           }
           return token;
         },
-        session({ session, token, user }) {
+        session({ session, token, user }: any) {
           if (session.user) {
             session.user.role = token.role;
           }
-          return session;
+          return session as Session;
         },
       },
 })

@@ -11,7 +11,7 @@ const ROLES_ALLOWED_TO_AUTH = new Set<Role>([
 export default withAuth({
   callbacks: {
     authorized: ({ token }) =>
-      token?.role !== undefined && ROLES_ALLOWED_TO_AUTH.has(token.role),
+      token?.role !== undefined && ROLES_ALLOWED_TO_AUTH.has(token.role as Role),
   },
 });
 

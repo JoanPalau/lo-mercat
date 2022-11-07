@@ -39,7 +39,7 @@ const Home: NextPage = ({ products } : any) => {
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
-        <Button onClick={signIn}>TEST Sign in</Button>
+        <Button onClick={x => signIn()}>TEST Sign in</Button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
