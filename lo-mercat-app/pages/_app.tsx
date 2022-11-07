@@ -14,11 +14,11 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
 
   return (
     <div>
-      <BarraNavegacio/>
       <UserContext.Provider value={{user, setUser}}>
-        <SessionProvider session={session}>
-          <Component {...pageProps} />
-        </SessionProvider>
+          <SessionProvider session={session}>
+            <BarraNavegacio/>
+              <Component {...pageProps} />
+          </SessionProvider>
       </UserContext.Provider>
     </div>
    );

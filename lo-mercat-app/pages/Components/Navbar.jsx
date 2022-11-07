@@ -1,9 +1,17 @@
+import { useSession } from 'next-auth/react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { signOut } from "next-auth/react"
 
-function BarraNavegacio() {
+function LogOut(status){
+  if(status == "authenticated"){
+    return <Nav.Link href="/auth/logout" onClick={()=>signOut({ callbackUrl: 'http://localhost:3000/' })}>Log Out</Nav.Link>
+  }
+}
+function BarraNavegacio(props) {
+  const { status, data:session } = useSession();
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -22,8 +30,8 @@ function BarraNavegacio() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav.Link href="/auth/logout">Log Out</Nav.Link>
-        </Navbar.Collapse>
+          {LogOut(status)}
+          </Navbar.Collapse>
       </Container>
     </Navbar>
   );
