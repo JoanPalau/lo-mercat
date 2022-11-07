@@ -3,6 +3,9 @@ import { signIn } from "next-auth/react";
 import { FormEventHandler, useContext, useState } from "react";
 import { UserContext } from "../_app";
 interface Props {}
+import { PrismaClient } from '@prisma/client'
+
+
 
 const SignIn: NextPage = (props): JSX.Element => {
     const context = useContext(UserContext);
@@ -10,6 +13,8 @@ const SignIn: NextPage = (props): JSX.Element => {
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
         setUserInfo({... userInfo, role:'User'})
         e.preventDefault()
+        // run inside `async` function
+         
         signIn('credentials',{
             email: userInfo.email,
             password: userInfo.password,

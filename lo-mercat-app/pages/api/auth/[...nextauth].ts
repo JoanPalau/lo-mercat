@@ -1,9 +1,12 @@
 import NextAuth, {NextAuthOptions} from "next-auth";
 import CredentialsProvider from 'next-auth/providers/credentials'
-
-import { Role } from "@prisma/client";
+import GoogleProvider from "next-auth/providers/google"
+import { PrismaAdapter } from "@next-auth/prisma-adapter"
+import prisma from "../../../prisma/lib/prismadb"
 import { NextResponse } from "next/server";
 import { withAuth } from "next-auth/middleware";
+import { GOOGLE_FONT_PROVIDER } from "next/dist/shared/lib/constants";
+import { PrismaClient } from "@prisma/client";
 
 
 export default NextAuth({
@@ -13,21 +16,29 @@ export default NextAuth({
     pages: {
         signIn: "/auth/signin",
         error: "/auth/signin",
+        register: ""
       },
+    adapter: PrismaAdapter(prisma),
     providers:[CredentialsProvider({
         type: 'credentials',
         credentials:{},
         async authorize(credentials,req){
-            const{email,password, role}=credentials as {email: string; password: string; role: string};
-
-
-            if(email !== "didac@exemple.com" || password!=="1234"){
-                throw new Error('Ep! Credencials invalides!')
+          const{email,password, role}=credentials as {email: string; password: string; role: string};
+          const prisma = new PrismaClient();
+          const newUser = await prisma.user.create({
+            data: {
+            password: password,
+            email: email,
             }
-            else{
-            }
-            return {id: '1234', name:'Didac', email:'didac@exemple.com', role: role};
-        }
+        })
+
+          const user = await prisma.user.findFirst({
+            where: { email: email },
+          });
+    }}),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     })],
     callbacks: {
         jwt({ token, user }) {
