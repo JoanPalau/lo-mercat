@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from 'next'
 
 export async function getServerSideProps() {
   // Fetch data from external API
@@ -11,10 +11,9 @@ export async function getServerSideProps() {
 const Joan: NextPage = ({ data } : any) => {
   return (
     <div>
-      Hello World!
+      Hello Mobile World!
     </div>
   )
 }
 
 export default Joan
-

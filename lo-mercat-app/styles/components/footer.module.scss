@@ -1,0 +1,15 @@
+@use "./variables" as variables;
+@use "./containers" as containers;
+@use "sass:map";
+
+.mobile {
+    @include containers.vertical-centered-container();
+
+    background-color: variables.$dark;
+    color: variables.$light;
+    width: 100%;
+
+    button {
+        width: 80%;
+    }
+}

@@ -6,8 +6,12 @@ const sampleText = "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
 
 const ImageTextList = styled.ul`
   list-style: none;
+  padding: 0;
+  margin: auto;
+
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
 `;
 
 const AboutUsList = () => {
@@ -15,15 +19,15 @@ const AboutUsList = () => {
   const data = [
     {
       img: {
-        url: '/vercel.svg',
-        alt: 'Vercel Logo'
+        url: '/fresh.png',
+        alt: 'fresh products'
       },
       text: sampleText
     },
     {
       img: {
-        url: '/vercel.svg',
-        alt: 'Vercel Logo'
+        url: '/fruit.png',
+        alt: 'Fruits and vegetables'
       },
       text: sampleText
     }
