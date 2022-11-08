@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  adminjs:
+    build:
+      context: .
+      dockerfile: Dockerfile.adminjs
+    depends_on:
+      - db
+    ports:
+      - "3001:3001"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/initdb
+  db:
+    image: "postgres:latest"
+    environment:
+      POSTGRES_PASSWORD: postgres
+    expose:
+      - "5432"
+    ports:
+      - "5432:5432"
