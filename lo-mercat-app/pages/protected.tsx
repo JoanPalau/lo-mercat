@@ -7,8 +7,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-
-
 const Protected: FC<Props> = ({ children}): JSX.Element => {
   const { status, data:session } = useSession();
   const context = useContext(UserContext);
@@ -20,7 +18,10 @@ const Protected: FC<Props> = ({ children}): JSX.Element => {
 
   if (status === "authenticated")
     return (
-      <div>Hola {session.user?.role}</div>
+      <div>
+        Hola {session.user?.role}
+        <a href="/addstock">Manage Farmer</a>
+      </div>
     );
 
   return <div>loading</div>

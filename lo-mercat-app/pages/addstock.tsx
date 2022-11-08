@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import styled from '@emotion/styled'
 
-import AddProductForm from '../../components/molecules/productStock/AddProductStock';
+import AddProductForm from '../components/molecules/productStock/AddProductStock';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -16,8 +16,8 @@ export async function getServerSideProps() {
     return { props: { product } }
 }
 
-const AddProductPage: NextPage = ({product}:any) => {
-
+const AddProductStockPage: NextPage = ({product,session}:any) => {
+    console.log({session});
     return (
         <div>
             <AddProductForm product={product}/>
@@ -25,4 +25,4 @@ const AddProductPage: NextPage = ({product}:any) => {
     );
 }
 
-export default AddProductPage;
+export default AddProductStockPage;
