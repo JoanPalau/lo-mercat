@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import { PrismaClient } from '@prisma/client';
 import {signIn} from "next-auth/react";
 import { useSession } from "next-auth/react"
+import RegisterForm from '../components/molecules/register/registerForm';
 
 export async function getServerSideProps() {
   // Fetch data from external API
@@ -33,6 +34,7 @@ const DesktopLandingPage: NextPage = ({ data } : any) => {
         This is the landing page for desktop view for user {name}
       </p>
       <Button>This is the test button</Button>
+      <div><RegisterForm/></div>
     </main>
   )
 }
