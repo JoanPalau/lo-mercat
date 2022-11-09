@@ -21,9 +21,11 @@ const Protected: FC<Props> = ({ children}): JSX.Element => {
       <div>
         Hola {session.user?.role}
         <a href="/addstock">Manage Farmer</a>
+        <p>
+        <a href="/joinmarket">Join Market</a>
+        </p>
       </div>
     );
-
   return <div>loading</div>
 };
 

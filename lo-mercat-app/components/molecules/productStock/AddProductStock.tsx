@@ -22,7 +22,7 @@ type Inputs = {
 
 async function setStock(data: any) {
     console.log(data);
-    let currentFarmer = "cla8eqrrb000hnxer4w6hviuz";
+    let currentFarmer = "cla9ub43w000inxerc0mtq95b";
     let x = await fetch(
         '/api/stock/create?product_id=' + data.productSelected + '&farmer_id=' + currentFarmer + '&quantity=' + data.quantity + '&cost=' + data.cost,
         {
