@@ -119,21 +119,24 @@ async function main() {
     {
       name: 'Balafia',
       location: 'Balafia',
-      schedule: 'Sabado'
+      schedule: 'Sabado',
+      type: 'PUBLIC'
     }
   );
   let tarragona = await createMarket(
     {
       name: 'Tarragona',
       location: 'Tarragona',
-      schedule: 'Dilluns-Dissabte'
+      schedule: 'Dilluns-Dissabte',
+      type: 'PUBLIC'
     }
   );
   let barcelona = await createMarket(
     {
       name: 'Barcelona',
       location: 'Barcelona',
-      schedule: 'Dilluns-Dissabte'
+      schedule: 'Dilluns-Dissabte',
+      type: 'PUBLIC'
     }
   );
 
