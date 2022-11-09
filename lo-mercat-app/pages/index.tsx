@@ -2,8 +2,12 @@ import type { NextPage } from 'next'
 import Button from 'react-bootstrap/Button';
 import {signIn} from "next-auth/react";
 import { useSession } from "next-auth/react"
+<<<<<<< HEAD
 import RegisterForm from '../components/molecules/register/registerForm';
 import { PrismaClient, Prisma, Role } from '@prisma/client'
+=======
+import RegisterForm from '../components/molecules/register/RegisterForm';
+>>>>>>> 98c21d2171256eb6b04a414276505d447150bd4b
 
 export async function getServerSideProps() {
   // Fetch data from external API
