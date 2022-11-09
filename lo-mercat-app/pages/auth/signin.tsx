@@ -9,7 +9,7 @@ import { PrismaClient } from '@prisma/client'
 
 const SignIn: NextPage = (props): JSX.Element => {
     const context = useContext(UserContext);
-    const[userInfo, setUserInfo] = useState({email: '', password:'', role:'Farmer'});
+    const[userInfo, setUserInfo] = useState({email: '', password:'', role:'Farmer', name:''});
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
         setUserInfo({... userInfo, role:'User'})
         e.preventDefault()

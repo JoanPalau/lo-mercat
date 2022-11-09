@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import Button from 'react-bootstrap/Button';
-import { PrismaClient } from '@prisma/client';
 import {signIn} from "next-auth/react";
 import { useSession } from "next-auth/react"
 import RegisterForm from '../components/molecules/register/registerForm';
+import { PrismaClient, Prisma, Role } from '@prisma/client'
 
 export async function getServerSideProps() {
   // Fetch data from external API
@@ -15,9 +15,11 @@ export async function getServerSideProps() {
   return { props: { products } }
 }
 
+
 const DesktopLandingPage: NextPage = ({ data } : any) => {
   const { data: session } = useSession()
   let name = session?.user?.name;
+
 
   async function setStock(){
     let x = await fetch(

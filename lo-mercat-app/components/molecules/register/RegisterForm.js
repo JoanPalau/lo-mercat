@@ -1,6 +1,5 @@
 import { Prisma, PrismaClient } from '@prisma/client';
-import React from 'react'
-
+import React from 'react';
 
 class registerForm extends React.Component{
     constructor(){
