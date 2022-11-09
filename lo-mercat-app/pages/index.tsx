@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import { PrismaClient } from '@prisma/client';
 import {signIn} from "next-auth/react";
 import { useSession } from "next-auth/react"
-import RegisterForm from '../components/molecules/register/registerForm';
+import RegisterForm from '../components/molecules/register/RegisterForm';
 
 export async function getServerSideProps() {
   // Fetch data from external API
