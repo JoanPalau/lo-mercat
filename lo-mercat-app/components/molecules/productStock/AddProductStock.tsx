@@ -1,19 +1,45 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
+import {Link, Routes, Route, useNavigate} from 'react-router-dom';
+
 
 import { useForm, SubmitHandler } from "react-hook-form";
+import { redirect } from 'next/dist/server/api-utils';
+
+const MyDiv = styled.div`
+
+margin: auto;
+width: 50%;
+padding: 10px;
+
+`;
 
 type Inputs = {
-    example: string,
-    exampleRequired: string,
+    quantity: number,
+    cost: number,
+    productSelected: string,
 };
+
+async function setStock(data: any) {
+    console.log(data);
+    let currentFarmer = "cla9ub43w000inxerc0mtq95b";
+    let x = await fetch(
+        '/api/stock/create?product_id=' + data.productSelected + '&farmer_id=' + currentFarmer + '&quantity=' + data.quantity + '&cost=' + data.cost,
+        {
+            method: 'PUT'
+        }
+    )
+    //console.log(x);
+}
 
 const AddProductForm = ({ product }: any) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
-
-    console.log(watch("example")) // watch input value by passing the name of it
-
+    const onSubmit: SubmitHandler<Inputs> = data =>{
+    setStock(data).then(
+    (res) =>{window.location.href = '/protected'},
+    (res) =>{console.log("error")}
+    )
+    }
     const results: any = []
     product.forEach((product: any) => {
         results.push(
@@ -23,16 +49,45 @@ const AddProductForm = ({ product }: any) => {
 
     return (
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-        <form onSubmit={handleSubmit(onSubmit)}>
-            {/* register your input into the hook by invoking the "register" function */}
-            <input placeholder='test' {...register("example")} />
-            {/* include validation with required or other standard HTML validation rules */}
-            <input {...register("exampleRequired", { required: true })} />
-            {/* errors will return when field validation fails  */}
-            {errors.exampleRequired && <span>This field is required</span>}
-            <select>{results}</select>
-            <input type="submit" />
-        </form>
+        <MyDiv>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <div className='row g-3 mt-0'>
+                    <div className='col-auto col-sm-4'>
+                        <label htmlFor="Quantity1">Quantity</label>
+                    </div>
+                    <div className='col-auto col-sm-4'>
+                        <input placeholder='Enter Quantity' className="form-control" {...register("quantity", { required: true, pattern: /^[0-9]+$/i })} />
+                    </div>
+                    <div className='col-auto col-sm-4'>
+                        {errors.quantity && "Invalid value, This field is required"}
+                    </div>
+                </div>
+                <div className='row g-3 mt-0'>
+                    <div className='col-auto col-sm-4'>
+                        <label htmlFor="Cost1">Cost</label>
+                    </div>
+                    <div className='col-auto col-sm-4'>
+                        <input className="form-control" placeholder='Enter Cost'{...register("cost", { required: true, pattern: /^[0-9]+$/i })} />
+                    </div>
+                    <div className='col-auto col-sm-4'>
+                        {errors.cost && "Invalid value, This field is required"}
+                    </div>
+                </div>
+                <div className='row g-3 mt-0'>
+                    <div className='col-auto col-sm-4'>
+                        <label htmlFor="exampleFormControlSelect1">Select Product</label>
+                    </div>
+                    <div className='col-auto'>
+                        <select className="form-control" {...register("productSelected", { required: true })}>{results}</select>
+                    </div>
+                    <div className='col-auto col-sm-4'>
+                        {errors.productSelected && "Invalid value, This field is required"}
+                        <a href="/addproduct">Add A new Product</a>
+                    </div>
+                    <input type="submit" className="btn-primary" />
+                </div>
+            </form>
+        </MyDiv >
     );
 }
 

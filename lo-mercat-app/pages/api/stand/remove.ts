@@ -6,42 +6,37 @@ const prisma = new PrismaClient();
 
 export default async function entrypoint(req: NextApiRequest, res: NextApiResponse) {
     const {
-        query: { product_id, farmer_id,quantity, cost },
+        query: { farmer_id, market_id },
         method,
     } = req
 
     console.log("[LOG] " + method + " with query " + JSON.stringify(req.query));
     //res.status(200).json({hello:'world'});
     switch (method) {
-        case 'PUT':
+        case 'DELETE':
             let farmerId = farmer_id as string;
-            let productId = product_id as string;
-            let Quantity: number =+ (quantity as string);
-            let Cost: number =+ (cost as string);
-
-            
+            let marketId = market_id as string;
     
             // Update or create data in your database
-            let stock = await updateOrCreate({
-                schema: prisma.stock,
+            let findstand = await prisma.stand.findFirst({
                 where: {
                     farmerId,
-                    productId,
-                },
-                update: {
-                    quantity:Quantity,
-                    cost: Cost,
-                },
-                create: {
-                    quantity:Quantity,
-                    cost:Cost,
-                    farmerId,
-                    productId
+                    marketId,
                 },
             }
             );
-
-            res.status(200).json({ stock })
+            let stand
+            if(findstand!=null){
+                stand= await prisma.stand.delete({
+                    where: {
+                        id:findstand.id,
+                    },
+                }
+                );
+    
+            }
+            console.log("REMOVE");
+            res.status(200).json({ stand })
             break
         default:
             res.setHeader('Allow', ['PUT'])

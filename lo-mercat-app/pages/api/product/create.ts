@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 
 export default async function entrypoint(req: NextApiRequest, res: NextApiResponse) {
     const {
-        query: { product_id, farmer_id,quantity, cost },
+        query: { name, customby },
         method,
     } = req
 
@@ -14,34 +14,26 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     //res.status(200).json({hello:'world'});
     switch (method) {
         case 'PUT':
-            let farmerId = farmer_id as string;
-            let productId = product_id as string;
-            let Quantity: number =+ (quantity as string);
-            let Cost: number =+ (cost as string);
-
+            let Name = name as string;
+            let Customby = customby as string;
             
-    
             // Update or create data in your database
-            let stock = await updateOrCreate({
-                schema: prisma.stock,
+            let product = await updateOrCreate({
+                schema: prisma.product,
                 where: {
-                    farmerId,
-                    productId,
+                    name:Name,
+                    custombyFarmerId:Customby,
                 },
                 update: {
-                    quantity:Quantity,
-                    cost: Cost,
                 },
                 create: {
-                    quantity:Quantity,
-                    cost:Cost,
-                    farmerId,
-                    productId
+                    name:Name,
+                    custombyFarmerId:Customby,
                 },
             }
             );
 
-            res.status(200).json({ stock })
+            res.status(200).json({ product })
             break
         default:
             res.setHeader('Allow', ['PUT'])
