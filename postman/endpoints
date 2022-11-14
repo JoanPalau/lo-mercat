@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "828dc401-7635-4e13-9b30-f9bc24a35782",
+		"name": "LoMercat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "stands",
+			"item": [
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/stand?market_id=clah1j33x0006qwdfize1zhi9&farmer_id=clah1j357000iqwdfi3p2tvp8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"stand"
+							],
+							"query": [
+								{
+									"key": "market_id",
+									"value": "clah1j33x0006qwdfize1zhi9"
+								},
+								{
+									"key": "farmer_id",
+									"value": "clah1j357000iqwdfi3p2tvp8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
