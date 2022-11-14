@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
-import {Link, Routes, Route, useNavigate} from 'react-router-dom';
+import {Routes, Route, useNavigate} from 'react-router-dom';
 
 
 import { useForm, SubmitHandler } from "react-hook-form";
 import { redirect } from 'next/dist/server/api-utils';
+import Link from 'next/link';
 
 const MyDiv = styled.div`
 
@@ -82,7 +83,7 @@ const AddProductForm = ({ product }: any) => {
                     </div>
                     <div className='col-auto col-sm-4'>
                         {errors.productSelected && "Invalid value, This field is required"}
-                        <a href="/addproduct">Add A new Product</a>
+                        <Link href="/addproduct">Add A new Product</Link>
                     </div>
                     <input type="submit" className="btn-primary" />
                 </div>
