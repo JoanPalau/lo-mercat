@@ -12,15 +12,11 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     console.log("[LOG] " + method + " with query " + JSON.stringify(req.query) + " and body " + JSON.stringify(req.body));
     let farmerId = req.body.farmer_id as string;
     let marketId = req.body.market_id as string;
+    let location = req.body.location as string;
     let stand = null;
     //res.status(200).json({hello:'world'});
     switch (method) {
-        case 'PUT':
-<<<<<<< HEAD
-=======
-
-            console.log('HOLAAAAAAAAAAAAAAAAAAAAAAAAAAA');
->>>>>>> 8652164efffb6b40ceb6ef392687557abf1fa960
+        case 'POST':
             // Update or create data in your database
             stand = await updateOrCreate({
                 schema: prisma.stand,
@@ -32,12 +28,13 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
                 },
                 create: {
                     farmerId,
-                    marketId
+                    marketId,
+                    location
                 },
             }
             );
 
-            res.status(200).json({ stand })
+            res.status(200).json( stand )
             break
         case 'DELETE':
             // Update or create data in your database
@@ -58,14 +55,14 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
 
             }
             console.log("REMOVE");
-            res.status(200).json({ stand })
+            res.status(204)
             break
         case 'GET':
             // Get Stands
             let findstands = await prisma.stand.findMany();
             
             console.log("GET");
-            res.status(200).json({ findstands })
+            res.status(200).json( findstands )
             break
         default:
             res.setHeader('Allow', ['PUT'])
