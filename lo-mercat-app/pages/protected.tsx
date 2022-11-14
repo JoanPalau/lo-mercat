@@ -1,4 +1,5 @@
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 import Router from "next/router";
 import React, { FC, useContext, useEffect } from "react";
 import { UserContext } from "./_app";
@@ -20,9 +21,9 @@ const Protected: FC<Props> = ({ children}): JSX.Element => {
     return (
       <div>
         Hola {session.user?.role}
-        <a href="/addstock">Manage Farmer</a>
+        <Link href="/addstock">Manage Farmer</Link>
         <p>
-        <a href="/joinmarket">Join Market</a>
+        <Link href="/joinmarket">Join Market</Link>
         </p>
       </div>
     );
