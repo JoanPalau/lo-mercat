@@ -108,7 +108,7 @@ const config: PlaywrightTestConfig = {
   webServer: {
     command: 'make run-dev',
     url: baseURL,
-    timeout: 120 * 1000,
+    timeout: 360 * 1000,
     reuseExistingServer: !process.env.CI,
   },
 };
