@@ -85,6 +85,62 @@ async function createUser(u) {
   });
 }
 
+async function createPurchase({customerId, id}) {
+  return await updateOrCreate({
+    schema: prisma.purchase,
+    where: {
+      id: id
+    },
+    update: {
+      customerId
+    },
+    create: {
+      customerId,
+      id
+    }
+  });
+}
+
+async function createOrder({purchaseId, id}) {
+  return await updateOrCreate({
+    schema: prisma.order,
+    where: {
+      id: id
+    },
+    update: {
+      purchaseId,
+      completed: false,
+    },
+    create: {
+      purchaseId,
+      completed: false,
+      id
+    }
+  });
+}
+
+async function createOrderLine({stockId, orderId, quantity, cost, id}) {
+  return await updateOrCreate({
+    schema: prisma.orderLine,
+    where: {
+      id: id
+    },
+    update: {
+      stockId,
+      orderId,
+      quantity,
+      cost
+    },
+    create: {
+      stockId,
+      orderId,
+      quantity,
+      cost,
+      id
+    }
+  });
+}
+
 async function createStock({farmer, product, quantity, cost, id}) {
   return await updateOrCreate({
     schema: prisma.stock,
@@ -299,6 +355,29 @@ async function main() {
     }
   );
 
+  let purchase1 = await createPurchase(
+    {
+      customerId: customerA.obj.id,
+      id: '1'
+    }
+  );
+
+  let order1 = await createOrder(
+    {
+      purchaseId: purchase1.obj.id,
+      id: '1'
+    }
+  );
+
+  let orderLine1 = await createOrderLine(
+    {
+      stockId: beta_potato.obj.id,
+      orderId: order1.obj.id,
+      quantity: 13,
+      cost: 20,
+      id: '1'
+    }
+  );
   
 }
 
