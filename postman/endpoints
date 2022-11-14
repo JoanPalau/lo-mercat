@@ -13,8 +13,17 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"market_id\": \"clah2bs0h0006pjdfxyflo102\",\n    \"farmer_id\": \"clah2bs1r000jpjdf6086pjq9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:3000/api/stand?market_id=clah1j33x0006qwdfize1zhi9&farmer_id=clah1j357000iqwdfi3p2tvp8",
+							"raw": "http://localhost:3000/api/stand",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -23,18 +32,66 @@
 							"path": [
 								"api",
 								"stand"
-							],
-							"query": [
-								{
-									"key": "market_id",
-									"value": "clah1j33x0006qwdfize1zhi9"
-								},
-								{
-									"key": "farmer_id",
-									"value": "clah1j357000iqwdfi3p2tvp8"
-								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/stand",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"stand"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "market",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
