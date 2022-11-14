@@ -23,7 +23,6 @@ jobs:
       working-directory: ./lo-mercat-app
       run: npx playwright test
     - uses: actions/upload-artifact@v3
-      working-directory: ./lo-mercat-app
       if: always()
       with:
         name: playwright-report
