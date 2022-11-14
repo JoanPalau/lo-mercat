@@ -26,15 +26,18 @@ async function updateOrCreate({ schema, where, update, create }) {
   return { created, obj };
 }
 
-async function createProduct (name) {
+async function createProduct (name, id) {
   return await updateOrCreate({
     schema: prisma.product,
     where: {
       name
     },
-    update: {},
+    update: {
+      id
+    },
     create: {
-      name
+      name,
+      id
     }
   });
 }
@@ -72,7 +75,7 @@ async function createUser(u) {
   });
 }
 
-async function createStock({farmer, product, quantity, cost}) {
+async function createStock({farmer, product, quantity, cost, id}) {
   return await updateOrCreate({
     schema: prisma.stock,
     where: {
@@ -81,18 +84,20 @@ async function createStock({farmer, product, quantity, cost}) {
     },
     update: {
       quantity,
-      cost
+      cost, 
+      id
     },
     create: {
       productId: product.id,
       farmerId: farmer.id,
       quantity,
-      cost
+      cost,
+      id
     }
   });
 }
 
-async function createStand({farmer, market}) {
+async function createStand({farmer, market, id}) {
   return await updateOrCreate({
     schema: prisma.stand,
     where: {
@@ -100,10 +105,12 @@ async function createStand({farmer, market}) {
       farmerId: farmer.id,
     },
     update: {
+      id
     },
     create: {
       marketId: market.id,
       farmerId: farmer.id,
+      id
     }
   });
 }
@@ -111,12 +118,13 @@ async function createStand({farmer, market}) {
 
 async function main() {
 
-  let potato = await createProduct('Potato');
-  let pineapple = await  createProduct('Pineapple');
-  let apple = await createProduct('Apple');
+  let potato = await createProduct('Potato', '1');
+  let pineapple = await  createProduct('Pineapple', '2');
+  let apple = await createProduct('Apple', '3');
 
   let balafia = await createMarket(
     {
+      id: '1',
       name: 'Balafia',
       location: 'Balafia',
       schedule: 'Sabado',
@@ -125,6 +133,7 @@ async function main() {
   );
   let tarragona = await createMarket(
     {
+      id: '2',
       name: 'Tarragona',
       location: 'Tarragona',
       schedule: 'Dilluns-Dissabte',
@@ -133,6 +142,7 @@ async function main() {
   );
   let barcelona = await createMarket(
     {
+      id: '3',
       name: 'Barcelona',
       location: 'Barcelona',
       schedule: 'Dilluns-Dissabte',
@@ -141,12 +151,14 @@ async function main() {
   );
 
   let user_alpha = await createUser({
+    id: '1',
     email: 'alpha@gmail.com',
     password: '123',
     name: 'alpha',
   });
 
   let user_beta = await createUser({
+    id: '2',
     email: 'beta@gmail.com',
     password: '123',
     name: 'beta',
@@ -155,6 +167,7 @@ async function main() {
 
   let alpha = await createFarmer(
     {
+      id: '1',
       name: 'Alpha',
       birthday: new Date(2022, 1, 1),
       userId: user_alpha.obj.id
@@ -163,6 +176,7 @@ async function main() {
 
   let beta = await createFarmer(
     {
+      id: '2',
       name: 'Beta',
       birthday: new Date(1990, 1, 1),
       userId: user_beta.obj.id
@@ -173,62 +187,71 @@ async function main() {
     farmer: alpha.obj,
     product: apple.obj,
     quantity: 30,
-    cost: 25
+    cost: 25,
+    id: '1'
   });
 
   let alpha_pineapple = await createStock({
     farmer: alpha.obj,
     product: pineapple.obj,
     quantity: 50,
-    cost: 30
+    cost: 30,
+    id: '2'
   });
 
   let alpha_potato = await createStock({
     farmer: alpha.obj,
     product: potato.obj,
     quantity: 15,
-    cost: 10
+    cost: 10,
+    id: '3'
   });
 
   let beta_apple = await createStock({
     farmer: beta.obj,
     product: apple.obj,
     quantity: 30,
-    cost: 25
+    cost: 25,
+    id: '4'
   });
 
   let beta_pineapple = await createStock({
     farmer: beta.obj,
     product: pineapple.obj,
     quantity: 50,
-    cost: 30
+    cost: 30,
+    id: '5'
   });
 
   let beta_potato = await createStock({
     farmer: beta.obj,
     product: potato.obj,
     quantity: 15,
-    cost: 10
+    cost: 10,
+    id: '6'
   });
 
   let barcelona_alpha = await createStand(
     {
       farmer: alpha.obj,
-      market: barcelona.obj
+      market: barcelona.obj,
+      id: '1'
     }
   );
 
   let balafia_alpha = await createStand(
     {
       farmer: alpha.obj,
-      market: balafia.obj
+      market: balafia.obj,
+      id: '2'
     }
   );
 
   let tarragona_alpha = await createStand(
     {
       farmer: alpha.obj,
-      market: tarragona.obj
+      market: tarragona.obj,
+      id: '3'
     }
   );
 

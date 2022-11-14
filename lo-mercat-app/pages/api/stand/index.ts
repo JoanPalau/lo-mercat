@@ -16,11 +16,6 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     //res.status(200).json({hello:'world'});
     switch (method) {
         case 'PUT':
-<<<<<<< HEAD
-=======
-
-            console.log('HOLAAAAAAAAAAAAAAAAAAAAAAAAAAA');
->>>>>>> 8652164efffb6b40ceb6ef392687557abf1fa960
             // Update or create data in your database
             stand = await updateOrCreate({
                 schema: prisma.stand,
@@ -65,7 +60,7 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
             let findstands = await prisma.stand.findMany();
             
             console.log("GET");
-            res.status(200).json({ findstands })
+            res.status(200).json(findstands)
             break
         default:
             res.setHeader('Allow', ['PUT'])
