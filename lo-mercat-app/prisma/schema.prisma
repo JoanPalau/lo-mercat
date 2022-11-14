@@ -31,8 +31,8 @@ model Market {
 
 model Stand {
   id       String  @id @unique @default(cuid())
-  market   Market  @relation(fields: [marketId], references: [id])
-  marketId String
+  market   Market? @relation(fields: [marketId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  marketId String?
   farmer   Farmer  @relation(fields: [farmerId], references: [id])
   farmerId String
   location String?
@@ -93,6 +93,7 @@ model Purchase {
 
 model Customer {
   id       String     @id @unique @default(cuid())
+  name     String
   birthday DateTime
   Purchase Purchase[]
   gender   String

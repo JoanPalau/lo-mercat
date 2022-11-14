@@ -53,6 +53,16 @@ async function createMarket (m) {
   });
 }
 
+async function createCustomer(c) {
+  return await updateOrCreate({
+    schema: prisma.customer,
+    where: {
+      name: c.name
+    },
+    update: c,
+    create: c
+  });
+}
 async function createFarmer(f) {
   return await updateOrCreate({
     schema: prisma.farmer,
@@ -162,7 +172,20 @@ async function main() {
     email: 'beta@gmail.com',
     password: '123',
     name: 'beta',
+  });
 
+  let user_customerA = await createUser({
+    id: '3',
+    email: 'customerA@gmail.com',
+    password: '123',
+    name: 'customer',
+  });
+
+  let user_customerB = await createUser({
+    id: '4',
+    email: 'customerB@gmail.com',
+    password: '123',
+    name: 'customer',
   });
 
   let alpha = await createFarmer(
@@ -182,6 +205,27 @@ async function main() {
       userId: user_beta.obj.id
     }
   );
+
+  let customerA = await createCustomer(
+    {
+      id: '1',
+      name: 'Customer1',
+      birthday: new Date(1990, 1, 1),
+      userId: user_customerA.obj.id,
+      gender: 'Not defined'
+    }
+  );
+
+  let customerB = await createCustomer(
+    {
+      id: '2',
+      name: 'Customer2',
+      birthday: new Date(1990, 1, 1),
+      userId: user_customerB.obj.id,
+      gender: 'Not defined'
+    }
+  );
+  
 
   let alpha_apple = await createStock({
     farmer: alpha.obj,
@@ -255,7 +299,7 @@ async function main() {
     }
   );
 
-
+  
 }
 
 main()
