@@ -5,29 +5,34 @@ const prisma = new PrismaClient();
 
 export default async function entrypoint(req: NextApiRequest, res: NextApiResponse) {
     const {
-        query: { },
+        query: { id },
         method,
     } = req
-
-    let productName = req.body.productName as string;
-    
-    console.log("[LOG] " + method + " with query " + JSON.stringify(req.query) + " and body " + JSON.stringify(req.body));
-    
+    let stock = null;
+    console.log("[LOG] " + method + " with query " + JSON.stringify(req.query));
+    //res.status(200).json({hello:'world'});
     switch (method) {
         case 'GET':
-            // let stock = prisma.stock.findMany({
-            //     where: {
-            //         product: {
-            //             name: productName
-            //         }
-            //     }
-            // })
+            // Get Stands
+            stock = await prisma.stock.findMany({
+                where: {
+                    product: {
+                        name: {
+                            contains: req.body.productName,
+                            mode: 'insensitive',
+                        } 
+                    }
+                },
+                include: {
+                    product: true
+                }
+            });
 
-            let stock2 = prisma.stock.findMany();
-            res.status(200).json(stock2);
+            console.log("GET");
+            res.status(200).json(stock);
             break
-            default:  
-                res.setHeader('Allow', ['GET'])
-                res.status(405).end(`Method ${method} Not Allowed`)
-        }
+        default:
+            res.setHeader('Allow', ['PUT'])
+            res.status(405).end(`Method ${method} Not Allowed`)
     }
+}
