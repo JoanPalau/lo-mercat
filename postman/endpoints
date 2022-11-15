@@ -60,7 +60,7 @@
 			]
 		},
 		{
-			"name": "Products",
+			"name": "products",
 			"item": [
 				{
 					"name": "GET",
@@ -81,12 +81,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			]
 		},
 		{
 			"name": "market",
 			"item": [
+				{
+					"name": "search",
+					"item": [
+						{
+							"name": "GET Orange",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
 				{
 					"name": "GET",
 					"request": {
