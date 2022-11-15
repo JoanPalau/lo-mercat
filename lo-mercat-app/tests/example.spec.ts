@@ -1,7 +1,13 @@
 import { test, expect } from '@playwright/test';
 
-test('There is a login page', async ({ page }) => {
-  await page.goto('/');
+test('Can Login as Alpha', async ({ page }) => {
+  await page.goto('http://localhost:3000/');
   await page.getByRole('link', { name: 'Inicia Sessio' }).click();
-  await expect(page).toHaveURL('/auth/signin');
+  await expect(page).toHaveURL('http://localhost:3000/auth/signin');
+  await page.getByPlaceholder('exemple@email.com').click();
+  await page.getByPlaceholder('exemple@email.com').fill('alpha@gmail.com');
+  await page.getByPlaceholder('exemple@email.com').press('Tab');
+  await page.getByPlaceholder('********').fill('123');
+  await page.getByRole('button', { name: 'Login' }).click();
+  await expect(page).toHaveURL('http://localhost:3000/protected');
 });
