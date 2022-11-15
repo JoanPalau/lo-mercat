@@ -67,6 +67,10 @@ const start = async () => {
       options: {},
     },
     {
+      resource: { model: dmmf.modelMap.Order, client: prisma },
+      options: {},
+    },
+    {
       resource: { model: dmmf.modelMap.Purchase, client: prisma },
       options: {},
     },

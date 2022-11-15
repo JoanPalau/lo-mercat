@@ -11,13 +11,14 @@ datasource db {
 }
 
 model Farmer {
-  id       String   @id @unique @default(cuid())
+  id       String    @id @unique @default(cuid())
   name     String
   birthday DateTime
   Stand    Stand[]
   Stock    Stock[]
-  user     User     @relation(fields: [userId], references: [id])
+  user     User      @relation(fields: [userId], references: [id])
   userId   String
+  Product  Product[]
 }
 
 model Market {
@@ -31,8 +32,8 @@ model Market {
 
 model Stand {
   id       String  @id @unique @default(cuid())
-  market   Market  @relation(fields: [marketId], references: [id])
-  marketId String
+  market   Market? @relation(fields: [marketId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  marketId String?
   farmer   Farmer  @relation(fields: [farmerId], references: [id])
   farmerId String
   location String?
@@ -50,22 +51,21 @@ model Stock {
 }
 
 model Product {
-  id        String      @id @unique @default(cuid())
-  name      String
-  Stock     Stock[]
-  OrderLine OrderLine[]
+  id       String  @id @unique @default(cuid())
+  name     String
+  Stock    Stock[]
+  farmer   Farmer? @relation(fields: [farmerId], references: [id])
+  farmerId String?
 }
 
 model OrderLine {
-  id        String   @id @unique @default(cuid())
-  quantity  Int
-  cost      Int
-  stock     Stock    @relation(fields: [stockId], references: [id])
-  stockId   String
-  order     Order    @relation(fields: [orderId], references: [id])
-  orderId   String
-  Product   Product? @relation(fields: [productId], references: [id])
-  productId String?
+  id       String @id @unique @default(cuid())
+  quantity Int
+  cost     Int
+  stock    Stock  @relation(fields: [stockId], references: [id])
+  stockId  String
+  order    Order  @relation(fields: [orderId], references: [id])
+  orderId  String
 }
 
 model Order {
@@ -93,6 +93,7 @@ model Purchase {
 
 model Customer {
   id       String     @id @unique @default(cuid())
+  name     String
   birthday DateTime
   Purchase Purchase[]
   gender   String
