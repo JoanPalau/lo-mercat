@@ -11,7 +11,8 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     } = req
 
     let Name = req.body.name as string;
-    let Customby = req.body.customby as string;
+    let Customby = req.body.farmerId as string;
+    let id = req.body.id as string;
     
     console.log("[LOG] " + method + " with query " + JSON.stringify(req.query) + " and body " + JSON.stringify(req.body));
     //res.status(200).json({hello:'world'});
@@ -22,26 +23,36 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
             console.log("GET");
             res.status(200).json(products)
             break
-        case 'PUT':
-            // Update or create data in your database
+        case 'POST':
+        case 'PATCH':
             let product = await updateOrCreate({
                 schema: prisma.product,
                 where: {
-                    name:Name,
-                    custombyFarmerId:Customby,
+                    id: id,
+                    farmerId:Customby,
                 },
                 update: {
+                    name:Name,
+                    farmerId:Customby,
                 },
                 create: {
                     name:Name,
-                    custombyFarmerId:Customby,
+                    farmerId:Customby,
                 },
             }
             );
 
-            res.status(200).json({ product })
+            res.status(200).json(product)
+            break
+        case 'DELETE':
+            res.status(204).json({})
             break
         default:
+            prisma.product.delete({
+                where: {
+                    id
+                }
+            })
             res.setHeader('Allow', ['PUT'])
             res.status(405).end(`Method ${method} Not Allowed`)
     }
