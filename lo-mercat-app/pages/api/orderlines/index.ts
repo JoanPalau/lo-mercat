@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { PrismaClient } from '@prisma/client';
-import { updateOrCreate } from '../api_utils';
 const prisma = new PrismaClient();
 
 
@@ -10,30 +9,33 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
         method,
     } = req
     console.log("[LOG] " + method + " with query " + JSON.stringify(req.query) + " and body " + JSON.stringify(req.body));
-    let completed = false;
-    let purchaseId = req.body.purchaseId as string;
-    let order = null;
+    let stockId = req.body.stockId as string;
+    let orderId = req.body.orderId as string;
+    let quantity: number = + (req.body.quantity as string);
+    let cost: number = + (req.body.cost as string);
+    let orderline = null;
     //res.status(200).json({hello:'world'});
     switch (method) {
         case 'POST':
             let val : any = {
-                purchaseId,
-                completed
+                stockId,
+                orderId,
+                quantity,
+                cost
             }; 
-            // Update or create data in your database
-            order = await prisma.order.create({
+            orderline = await prisma.orderLine.create({
                 data: val
             }
             );
 
-            res.status(200).json(order)
+            res.status(200).json(orderline)
             break
         case 'GET':
             // Get Stands
-            let findorder = await prisma.order.findMany();
+            orderline = await prisma.orderLine.findMany();
             
             console.log("GET");
-            res.status(200).json(findorder)
+            res.status(200).json(orderline)
             break
         default:
             res.setHeader('Allow', ['PUT'])
