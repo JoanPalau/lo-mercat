@@ -10,8 +10,8 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
         method,
     } = req
     console.log("[LOG] " + method + " with query " + JSON.stringify(req.query) + " and body " + JSON.stringify(req.body));
-    let farmerId = req.body.farmer_id as string;
-    let marketId = req.body.market_id as string;
+    let farmerId = req.body.farmerId as string;
+    let marketId = req.body.marketId as string;
     let location = req.body.location as string;
     let stand = null;
     //res.status(200).json({hello:'world'});
@@ -55,7 +55,7 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
 
             }
             console.log("REMOVE");
-            res.status(204)
+            res.status(204).json({});
             break
         case 'GET':
             // Get Stands
