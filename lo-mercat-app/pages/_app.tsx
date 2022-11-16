@@ -1,17 +1,17 @@
+import React, { useState } from 'react';
+
 import Head from 'next/head';
-import { SessionProvider } from "next-auth/react";
 import { AppProps } from 'next/app';
+import { NextIntlProvider } from 'next-intl';
+import { SessionProvider } from "next-auth/react";
 
 import theme from '../src/theme';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
-import React, { useState } from 'react';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 
 import createEmotionCache from '@common/createEmotionCache';
 import { AppProvider } from '@common/AppContext';
-
-import { NextIntlProvider } from 'next-intl';
 
 import { AppContextInterface } from '../src/types/AppContext';
 import { NavigationParams } from '../src/types/NavigationParams';
