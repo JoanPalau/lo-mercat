@@ -86,9 +86,6 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
                                         <label className="form-check-label" htmlFor="inlineRadioe">Empty</label>
                                     </div>
                                 </div>
-                                <div className="col-md-12 text-center">
-                                    <button type="submit" className="btn btn-primary" onClick={()=>this.submit()}>Submit</button>
-                                </div>
                             </div>
                             <div className="form-row">
                                 <div className="form-group col-md-6">
