@@ -9,8 +9,6 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-
-
 export default function Index() {
 
   const router = useRouter();
@@ -54,7 +52,7 @@ export default function Index() {
 export async function getStaticProps({locale}: GetStaticPropsContext) {
   return {
     props: {
-      messages: (await import(`../locales/${locale}.json`)).default
+      messages: (await import(`../messages/${locale}.json`)).default
     }
   };
 }

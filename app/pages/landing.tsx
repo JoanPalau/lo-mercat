@@ -13,9 +13,9 @@ import { NextPageContext } from 'next';
 
 
 export async function getServerSideProps(context: NextPageContext) {
-
     return {
         props: {
+            messages: (await import(`../messages/${context.locale}.json`)).default,
             isMobile: isMobile(context.req)
         }
     };
@@ -24,9 +24,7 @@ export async function getServerSideProps(context: NextPageContext) {
 export default function Landing(props: NextPage) {
 
   const isMobile = {props};
-  console.log(isMobile);
-
-  const t = useTranslations("Home");
+  const t = useTranslations("Landing");
 
   return (
       <Container maxWidth="lg">
