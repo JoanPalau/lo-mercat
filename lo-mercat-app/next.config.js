@@ -47,4 +47,8 @@ module.exports = withPWA({
   sassOptions: {
       includePaths: [path.join(__dirname, 'styles')],
   },
+  i18n: {
+    locales: ['en', 'es', 'cat'],
+    defaultLocale: 'cat',
+  }
 });

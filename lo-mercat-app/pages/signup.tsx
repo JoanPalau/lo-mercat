@@ -5,9 +5,9 @@ import Router from "next/router";
 import React, { FC, useContext, useEffect } from "react";
 import { UserContext } from "./_app";
 
-import AddProduct from '../components/molecules/addProduct/AddProduct';
+import AddProduct from '../src/components/molecules/addProduct/AddProduct';
 import { PrismaClient } from '@prisma/client';
-import RegisterForm from '@/components/molecules/register/RegisterForm';
+import RegisterForm from '../src/components/molecules/register/RegisterForm';
 
 const prisma = new PrismaClient();
 
