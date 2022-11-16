@@ -2,8 +2,8 @@ import type { NextPage } from 'next'
 import styled from '@emotion/styled'
 
 import { PrismaClient } from '@prisma/client';
-import JoinMarket from '../components/molecules/joinMarket/JoinMarket';
-import ViewJoinMarket from '../components/molecules/joinMarket/ListMarket';
+import JoinMarket from '../src/components/deprecated/joinMarket/JoinMarket';
+import ViewJoinMarket from '../src/components/deprecated/joinMarket/ListMarket';
 
 const prisma = new PrismaClient();
 

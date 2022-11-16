@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import styled from '@emotion/styled'
 
-import AddProductForm from '../components/molecules/productStock/AddProductStock';
+import AddProductForm from '../src/components/deprecated/productStock/AddProductStock';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
