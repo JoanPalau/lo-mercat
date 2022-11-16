@@ -6,6 +6,7 @@ interface _RegisterFormState {
     email:string,
     gender:string,
     password:string,
+    role:string
 }
   
 
@@ -17,6 +18,7 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
             email:null,
             gender:null,
             password:null,
+            role:null
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -26,8 +28,10 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
         const target = event.target;
         var value = target.value as _RegisterFormState;
         const name = target.name as string;
+        const role = target.role as string;
         this.setState({
-            [name]: value
+            [name]: value,
+            [role]:value
         } as any);        
     }
 
@@ -80,6 +84,22 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
                                     <div className="form-check form-check-inline">
                                         <input className="form-check-input" type="radio" name="gender" id="inlineRadioe" value="empty" checked={this.state.gender === "empty"} onChange={this.handleInputChange} />
                                         <label className="form-check-label" htmlFor="inlineRadioe">Empty</label>
+                                    </div>
+                                </div>
+                                <div className="col-md-12 text-center">
+                                    <button type="submit" className="btn btn-primary" onClick={()=>this.submit()}>Submit</button>
+                                </div>
+                            </div>
+                            <div className="form-row">
+                                <div className="form-group col-md-6">
+                                    <label>Role:</label><br />
+                                    <div className="form-check form-check-inline">
+                                        <input className="form-check-input" type="radio" name="role" id="inlineRadiom" value="farmer" checked={this.state.role === "farmer"} onChange={this.handleInputChange} />
+                                        <label className="form-check-label" htmlFor="inlineRadioz">Farmer</label>
+                                    </div>
+                                    <div className="form-check form-check-inline">
+                                        <input className="form-check-input" type="radio" name="role" id="inlineRadiof" value="customer" checked={this.state.role === "customer"} onChange={this.handleInputChange} />
+                                        <label className="form-check-label" htmlFor="inlineRadiov">Customer</label>
                                     </div>
                                 </div>
                                 <div className="col-md-12 text-center">
