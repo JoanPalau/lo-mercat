@@ -39,7 +39,6 @@
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.38.0",
-    "sass": "^1.55.0",
     "tslib": "^2.4.0",
     "ua-parser-js": "^1.0.32"
   },
