@@ -15,7 +15,7 @@ export async function getServerSideProps() {
     const join = await prisma.stand.findMany({
         where: {
             farmer: {
-                id: 'cla9ub43w000inxerc0mtq95b',
+                id: '1',
             },
         },
         include:{
