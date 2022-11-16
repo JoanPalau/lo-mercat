@@ -21,10 +21,12 @@ const Protected: FC<Props> = ({ children}): JSX.Element => {
     return (
       <div>
         Hola {session.user?.role}
-        <Link href="/addstock">Manage Farmer</Link>
         <p>
-        <Link href="/joinmarket">Join Market</Link>
-        <Link href="/marketList">Market List</Link>
+        <Link href="/addstock">Manage Farmer</Link></p>
+        <p>
+        <Link href="/joinmarket">Join Market</Link></p>
+        <p>
+        <Link href="/cristian/marketinfo">Market List</Link>
         </p>
       </div>
     );
