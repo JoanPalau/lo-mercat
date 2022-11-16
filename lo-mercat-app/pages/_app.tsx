@@ -22,7 +22,8 @@ const UserContext= React.createContext(null);
 const clientSideEmotionCache = createEmotionCache();
 
 interface MyAppProps extends AppProps {
-  emotionCache?: EmotionCache;
+  emotionCache?: EmotionCache,
+  session: any,
 }
 
 const defaultContext: AppContextInterface = {
@@ -47,15 +48,16 @@ const defaultContext: AppContextInterface = {
   }
 }
 
-export default function MyApp(props: MyAppProps) {
+export default function MyApp(props : MyAppProps) {
+
   const [user, setUser] = useState(null);
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const { Component, emotionCache = clientSideEmotionCache, pageProps, session } = props;
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
         <NextIntlProvider messages={pageProps.messages}>
           <UserContext.Provider value={{user, setUser}}>
-            <SessionProvider session={null}>
+            <SessionProvider session={session}>
               <AppProvider value={defaultContext}>
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
                 <CssBaseline />
