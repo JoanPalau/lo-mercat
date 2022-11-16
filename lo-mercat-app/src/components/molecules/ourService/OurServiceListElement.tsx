@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { useRouter } from 'next/router'
 
 import Image from 'next/image';
-import ImageData from '../../../commons/types/ImageDataType';
+import ImageData from '../../../types/ImageDataType';
 
 const ImageTextListElement = styled.li`
   display: flex;

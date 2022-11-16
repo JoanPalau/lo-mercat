@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 
-import Styles from 'styles/pages/landing-page.module.scss';
-import LoginFooter from '../../src/components/molecules/footer/mobile/Footer';
+import LoginFooter from '../../src/components/deprecated/footer/mobile/Footer';
 import TextCarousel from '../../src/components/molecules/textCarousel/TextCarousel';
 
 export async function getServerSideProps() {
@@ -13,12 +12,15 @@ export async function getServerSideProps() {
 }
 
 const DesktopLandingPage: NextPage = ({ data } : any) => {
-  return (<div className={Styles.mobile}>
-    <main id="landing-page">
-        <TextCarousel />
-    </main>
-    <LoginFooter />
-  </div>
+  return (
+    /*<div className={Styles.mobile}> */
+    <>
+      <main id="landing-page">
+          <TextCarousel />
+      </main>
+      <LoginFooter />
+    </>
+    /* </div> */
   )
 }
 

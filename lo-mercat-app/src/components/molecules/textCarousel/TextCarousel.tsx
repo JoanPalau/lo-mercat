@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import Styles from 'styles/components/carousel.module.scss';
-
 const data = [
   "Fresh local products",
   "Boost your body!",
@@ -28,7 +26,8 @@ const TextCarousel = () =>{
 const CarouselElement = (props : {text: string}) => {
   const text = props.text;
   return (
-    <h2 className={Styles.text}>{text}</h2>
+    /*<h2 className={Styles.text}>{text}</h2>*/
+    <h2>{text}</h2>
   )
 }
 

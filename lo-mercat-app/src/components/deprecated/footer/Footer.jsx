@@ -1,15 +1,18 @@
 import Link from 'next/link';
 
+/*
 import Container  from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import Styles from 'styles/components/footer.module.scss';
-
+*/
 const Footer = () => {
 	return (
+        <>
+        </>
+        /*
         <Container fluid as='footer' className={Styles.web}>
-            {/* Information */}
             <Row>
                 <Col>
                     <h1>{"Lo Mercat"}</h1>
@@ -39,11 +42,11 @@ const Footer = () => {
                     </nav>
                 </Col>
             </Row>
-            {/* Copyright row */}
             <div className={Styles.copyright}>
                 {"© Copyright: lo-mercat"}
             </div>
         </Container >
+        */
 	);
 }
 

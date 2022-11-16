@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import Image from 'next/image';
-import ImageData from '../../../commons/types/ImageDataType';
+import ImageData from '../../../types/ImageDataType';
 
 const ImageTextListElement = styled.li<{stripe: boolean}>`
   display: flex;
