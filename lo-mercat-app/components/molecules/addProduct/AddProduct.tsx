@@ -18,14 +18,19 @@ type Inputs = {
 
 async function setStock(data: any) {
     console.log(data);
-    let currentFarmer = "cla8eqrrb000hnxer4w6hviuz";
+    let currentFarmer = "1";
     let x = await fetch(
-        '/api/product/create?name=' + data.name + '&customby=' + currentFarmer,
-        {
-            method: 'PUT'
+        '/api/products/',
+        {        
+            body: JSON.stringify({
+                name: data.name,
+                farmerId: currentFarmer,
+            }),
+            headers:new Headers({ 'Content-Type': 'application/json', Accept: 'application/json',}),
+            method: 'POST'
         }
     )
-    //console.log(x);
+    console.log(x);
 }
 
 const AddProductForm = () => {

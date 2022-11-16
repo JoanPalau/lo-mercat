@@ -19,10 +19,15 @@ type Inputs = {
 
 async function removeMarket(data: any) {
     console.log(data);
-    let currentFarmer = "cla9ub43w000inxerc0mtq95b";
+    let currentFarmer = "1";
     let x = await fetch(
-        '/api/stand/remove?market_id=' + data.market.id + '&farmer_id=' + currentFarmer,
+        '/api/stand/',
         {
+            body: JSON.stringify({
+                "farmer_id": currentFarmer,
+                "market_id": data.market.id
+            }),
+            headers:new Headers({ 'Content-Type': 'application/json', Accept: 'application/json',}),
             method: 'DELETE'
         }
     )

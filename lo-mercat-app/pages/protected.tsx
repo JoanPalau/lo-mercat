@@ -24,6 +24,7 @@ const Protected: FC<Props> = ({ children}): JSX.Element => {
         <Link href="/addstock">Manage Farmer</Link>
         <p>
         <Link href="/joinmarket">Join Market</Link>
+        <Link href="/marketList">Market List</Link>
         </p>
       </div>
     );
