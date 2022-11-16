@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@constants/*": ["src/constants/*"],
+      "@common/*": ["src/common/*"],
+      "@types/*": ["src/types/*"]
+    },
     "target": "es5",
     "lib": [
       "dom",
@@ -15,22 +22,17 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "strictNullChecks": false,
     "isolatedModules": true,
     "jsx": "preserve",
     "jsxImportSource": "@emotion/react",
-    "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": ["src/components/*"],
-      "@constants/*": ["src/constants/*"],
-      "@common/*": ["src/common/*"],
-      "@types/*": ["src/types/*"]
-    }
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx" 
+    "**/*.tsx",
+    "pages/api/auth/[...nextauth].ts"
   ],
   "exclude": [
     "node_modules"
