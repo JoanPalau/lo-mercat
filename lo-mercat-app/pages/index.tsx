@@ -1,44 +1,60 @@
-import type { NextPage } from 'next'
-import Button from 'react-bootstrap/Button';
-import {signIn} from "next-auth/react";
-import { useSession } from "next-auth/react"
 
-import RegisterForm from '../components/molecules/register/RegisterForm';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router'
+import {GetStaticPropsContext} from 'next';
+import {useTranslations} from 'next-intl';
 
-export async function getServerSideProps() {
-  // Fetch data from external API
-  //const res = await fetch('http://localhost:3000/api/hello')
-  // const data = {};
-  const products = {};
-  console.log(products);
-  // Pass data to the page via props
-  return { props: { products } }
-}
+import { useTheme } from '@mui/material';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 
 
-const DesktopLandingPage: NextPage = ({ data } : any) => {
-  const { data: session } = useSession()
-  let name = session?.user?.name;
 
+export default function Index() {
 
-  async function setStock(){
-    let x = await fetch(
-      '/api/stock/create?product_id=cl9n3nbvm0002o0cnlxl0k1b6&farmer_id=cl9n3nbw1000ao0cn2tzhs3nq',
-      {
-        method: 'PUT'
-      }
-      )
-    console.log(x);
-  }
+  const router = useRouter();
+  const t = useTranslations("Index");
+
+  const theme = useTheme();
+
+  // Load landing page dynamically on the background
+  useEffect(() => {
+    router.prefetch('/landing');
+  })
+
+  // Automatic redirect to the landing page
+  useEffect(() => {
+    setTimeout(() => {
+      router.push('/landing');
+    }, 1000);
+  });
+
   return (
-    <main id="landing-page">
-      <p>
-        This is the landing page for desktop view for user {name}
-      </p>
-      <Button>This is the test button</Button>
-      <div><RegisterForm/></div>
-    </main>
-  )
+    <Container maxWidth={false} sx={
+      {
+        height: '100vh',
+        width: '100vw',
+        display: 'flex',
+        flexFlow: 'column nowrap',
+        alignContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'primary.main'
+       }
+    }>
+      <StorefrontIcon htmlColor={`${theme.palette.background.default}`}/>
+      <Typography variant="subtitle1" component="h1" color={`${theme.palette.background.default}`} gutterBottom>
+          {t("app")}
+        </Typography>
+    </Container>
+  );
 }
 
-export default DesktopLandingPage;
+export async function getStaticProps({locale}: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: (await import(`../locales/${locale}.json`)).default
+    }
+  };
+}
