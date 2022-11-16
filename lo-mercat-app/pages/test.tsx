@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Footer from '../src/components/deprecated/footer/Footer';
+import Footer from '../src/components/molecules/footer/Footer';
 
 const Test: NextPage = () => {
   return (

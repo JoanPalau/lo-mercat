@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 
 import Styles from 'styles/pages/landing-page.module.scss';
-import LoginFooter from '../../src/components/deprecated/footer/mobile/Footer';
-import TextCarousel from '../../src/components/deprecated/textCarousel/TextCarousel';
+import LoginFooter from '../../src/components/molecules/footer/mobile/Footer';
+import TextCarousel from '../../src/components/molecules/textCarousel/TextCarousel';
 
 export async function getServerSideProps() {
   // Fetch data from external API
