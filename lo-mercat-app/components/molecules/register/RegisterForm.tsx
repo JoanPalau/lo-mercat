@@ -87,7 +87,6 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
                                     </div>
                                 </div>
                             </div>
-                            <div className="form-row">
                                 <div className="form-group col-md-6">
                                     <label>Role:</label><br />
                                     <div className="form-check form-check-inline">
@@ -102,7 +101,6 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
                                 <div className="col-md-12 text-center">
                                     <button type="submit" className="btn btn-primary" onClick={()=>this.submit()}>Submit</button>
                                 </div>
-                            </div>
                         </form>
                     </div>
                 </div>

@@ -18,8 +18,12 @@ class registerForm extends React.Component{
         const target = event.target;
         var value = target.value;
         const name = target.name;
+        const email = target.email;
+        const password = target.password;
         this.setState({
-            [name]: value
+            [name]: name,
+            [password]: password,
+            [email]: email,
         });
         
         
