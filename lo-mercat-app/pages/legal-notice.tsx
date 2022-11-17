@@ -2,7 +2,7 @@ import { ReactElement } from 'react'
 
 import { GetStaticPropsContext } from 'next';
 
-import { NextPageWithLayout } from '../src/types/NextPageWithLayout';
+import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 
 const LegalNotice: NextPageWithLayout = () => {
   return (

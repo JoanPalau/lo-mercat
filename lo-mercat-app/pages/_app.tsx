@@ -12,9 +12,9 @@ import { CacheProvider } from '@emotion/react';
 import createEmotionCache from '@common/createEmotionCache';
 import { AppProvider } from '@common/AppContext';
 
-import { AppContextInterface } from '../src/types/AppContext';
-import { NavigationParams } from '../src/types/NavigationParams';
-import { MyAppProps } from '../src/types/MyAppProps';
+import { AppContextInterface } from '@customTypes/AppContext';
+import { NavigationParams } from '@customTypes/NavigationParams';
+import { MyAppProps } from '@customTypes/MyAppProps';
 
 const UserContext= React.createContext(null);
 
