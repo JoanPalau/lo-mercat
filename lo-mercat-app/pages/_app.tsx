@@ -1,30 +1,25 @@
 import React, { useState } from 'react';
 
 import Head from 'next/head';
-import { AppProps } from 'next/app';
 import { NextIntlProvider } from 'next-intl';
 import { SessionProvider } from "next-auth/react";
 
 import theme from '../src/theme';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
-import { CacheProvider, EmotionCache } from '@emotion/react';
+import { CacheProvider } from '@emotion/react';
 
 import createEmotionCache from '@common/createEmotionCache';
 import { AppProvider } from '@common/AppContext';
 
 import { AppContextInterface } from '../src/types/AppContext';
 import { NavigationParams } from '../src/types/NavigationParams';
+import { MyAppProps } from '../src/types/MyAppProps';
 
 const UserContext= React.createContext(null);
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
-
-interface MyAppProps extends AppProps {
-  emotionCache?: EmotionCache,
-  session: any,
-}
 
 const defaultContext: AppContextInterface = {
   lang: '',
@@ -52,6 +47,8 @@ export default function MyApp(props : MyAppProps) {
 
   const [user, setUser] = useState(null);
   const { Component, emotionCache = clientSideEmotionCache, pageProps, session } = props;
+
+  const getLayout = Component.getLayout ?? ((page) => page)
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
@@ -68,7 +65,7 @@ export default function MyApp(props : MyAppProps) {
                   <meta name="keywords" content="Lo mercat, Lleida, producte fresc, fruites, verdures, mercat" />
                   <link rel="icon" href="/favicon.ico" />
                 </Head>
-                <Component {...pageProps} />
+                {getLayout(<Component {...pageProps} />)}
               </AppProvider>
             </SessionProvider>
           </UserContext.Provider>
