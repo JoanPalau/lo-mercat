@@ -2,7 +2,8 @@ import { ReactElement } from 'react'
 
 import { GetStaticPropsContext } from 'next';
 
-import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
+import Layout from '@common/Layout';
+import type { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 
 const LegalNotice: NextPageWithLayout = () => {
   return (
@@ -12,21 +13,20 @@ const LegalNotice: NextPageWithLayout = () => {
   )
 }
 
-export default LegalNotice;
-
 LegalNotice.getLayout = function getLayout(page: ReactElement) {
   return (
-    <div>
-      Encapuslated page
+    <Layout>
       {page}
-    </div>
+    </Layout>
   )
 }
 
 export async function getStaticProps({locale}: GetStaticPropsContext) {
   return {
     props: {
-      messages: (await import(`../messages/${locale}.json`)).default
+      messages: (await import(`../../messages/${locale}.json`)).default
     }
   };
 }
+
+export default LegalNotice;
