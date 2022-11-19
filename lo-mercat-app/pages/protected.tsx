@@ -13,7 +13,7 @@ const Protected: FC<Props> = ({ children }): JSX.Element => {
   const { status, data: session } = useSession();
   const context = useContext(UserContext);
   const router = useRouter();
-  const market=1;
+  const market=2;
   const redirect = () => {
 
     router.push('/market/'+market+'/viewproduct/');
@@ -40,7 +40,7 @@ const Protected: FC<Props> = ({ children }): JSX.Element => {
           <Link href="/market/1/viewproduct/ ">market Product list market 1</Link>
         </p>
         <p>
-          <button onClick={redirect}>Click Me</button>
+          <button onClick={redirect}>Product Market 2</button>
         </p>
       </div>
     );
