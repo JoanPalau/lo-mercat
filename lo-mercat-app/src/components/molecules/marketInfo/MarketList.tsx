@@ -39,7 +39,6 @@ const MarketList = ({ markets }: any) => {
   const results: any = []
   markets.forEach((markets: any) => {
     results.push(
-      
       <BorderListElement key={markets.id}>
               <ImageTextListElement><h2>{markets.name}</h2></ImageTextListElement>
               <ImageTextListElement>Location: {markets.location}</ImageTextListElement>
@@ -53,6 +52,7 @@ const MarketList = ({ markets }: any) => {
 return (
   <ImageTextList>
       {results}
+      
   </ImageTextList>
 );
 }
