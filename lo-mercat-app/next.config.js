@@ -44,9 +44,6 @@ module.exports = withPWA({
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
-  sassOptions: {
-      includePaths: [path.join(__dirname, 'styles')],
-  },
   i18n: {
     locales: ['en', 'es', 'cat'],
     defaultLocale: 'cat',

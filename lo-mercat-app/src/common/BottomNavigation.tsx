@@ -4,7 +4,7 @@ import Paper from '@mui/material/Paper';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 
-import { BottomNavigationProps } from '../types/BottomNavigationProps';
+import { BottomNavigationProps } from '@customTypes/BottomNavigationProps';
 
 export default function GenericBottomNavigation(props: [BottomNavigationProps]) {
   const [value, setValue] = React.useState('home');
