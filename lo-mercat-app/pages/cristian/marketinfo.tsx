@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import styled from '@emotion/styled'
 
-import MarketList from '../../components/molecules/marketInfo/MarketList';
+import MarketList from '../../src/components/molecules/marketInfo/MarketList';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();

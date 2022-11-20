@@ -41,7 +41,7 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
                 },
             }
             );
-
+            console.log("POST");
             res.status(200).json(product)
             break
         case 'DELETE':

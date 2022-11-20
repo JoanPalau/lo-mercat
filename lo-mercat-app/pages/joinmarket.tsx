@@ -2,8 +2,8 @@ import type { NextPage } from 'next'
 import styled from '@emotion/styled'
 
 import { PrismaClient } from '@prisma/client';
-import JoinMarket from '../components/molecules/joinMarket/JoinMarket';
-import ViewJoinMarket from '../components/molecules/joinMarket/ListMarket';
+import JoinMarket from '../src/components/molecules/joinMarket/JoinMarket';
+import ViewJoinMarket from '../src/components/molecules/joinMarket/ListMarket';
 
 const prisma = new PrismaClient();
 
@@ -15,7 +15,7 @@ export async function getServerSideProps() {
     const join = await prisma.stand.findMany({
         where: {
             farmer: {
-                id: 'cla9ub43w000inxerc0mtq95b',
+                id: '1',
             },
         },
         include:{

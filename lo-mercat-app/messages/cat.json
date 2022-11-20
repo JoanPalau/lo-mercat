@@ -1,0 +1,11 @@
+{
+  "Index": {
+    "app": "Lo Mercat"
+  },
+  "Home": {
+    "hello": "Hola Next.js!"
+  },
+  "Landing": {
+    "hello": "test"
+  }
+}

@@ -1,9 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Can Login as Alpha', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
-  await page.getByRole('link', { name: 'Inicia Sessio' }).click();
-  await expect(page).toHaveURL('http://localhost:3000/auth/signin');
+  await page.goto('http://localhost:3000/auth/signin');
   await page.getByPlaceholder('exemple@email.com').click();
   await page.getByPlaceholder('exemple@email.com').fill('alpha@gmail.com');
   await page.getByPlaceholder('exemple@email.com').press('Tab');
