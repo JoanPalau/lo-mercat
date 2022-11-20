@@ -1,5 +1,5 @@
 const { PrismaClient } = require('@prisma/client');
-
+const bcrypt = require("bcrypt");
 const prisma = new PrismaClient()
 
 async function updateOrCreate({ schema, where, update, create }) {
@@ -75,6 +75,7 @@ async function createFarmer(f) {
 }
 
 async function createUser(u) {
+  u.password = await bcrypt.hash(u.password, 10);
   return await updateOrCreate({
     schema: prisma.user,
     where: {
