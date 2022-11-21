@@ -5,6 +5,9 @@ import MarketList from '@components/molecules/marketInfo/MarketList';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
+const Myh1 = styled.h1`
+text-align:center;
+`;
 
 export async function getServerSideProps() {
     // Fetch data from external API
@@ -20,6 +23,7 @@ const MarketSelector: NextPage = ({markets}:any) => {
 
     return (
         <div>
+            <Myh1>Select a Market</Myh1>
             <MarketList markets={markets} />
         </div>
     );

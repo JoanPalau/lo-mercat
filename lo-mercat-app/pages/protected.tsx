@@ -27,7 +27,7 @@ console.log(status);
         <p>
           <Link href="/joinmarket">Join Market</Link></p>
         <p>
-          <Link href="/">Start Shopping</Link>
+          <Link href="/marketselector">Start Shopping</Link>
         </p>
         </div>
     );

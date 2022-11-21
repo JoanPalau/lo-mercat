@@ -10,14 +10,15 @@ const ImageTextListElement = styled.li`
   flex-flow: nowrap;
   justify-content: space-between;
   align-items: center;
+  padding: 5px,0px;
 
   margin-top: 20px;
 `;
 
 const ImageWrapper = styled.div`
-  margin-left: 20px;
-  margin-right: 20px;
+
   text-align: center;
+  border: 1px solid;
   `;
 
 const ImageCustom = styled.img`
