@@ -4,6 +4,7 @@ import { FormEventHandler, useContext, useState } from "react";
 import { UserContext } from "../_app";
 interface Props {}
 import { PrismaClient } from '@prisma/client'
+import { Box, Button, Grid, TextField, ThemeProvider, Typography } from "@mui/material";
 
 
 
@@ -26,37 +27,43 @@ const SignIn: NextPage = (props): JSX.Element => {
     };
     return(<div className="Auth-form-container">
         <form className="Auth-form" onSubmit={handleSubmit}>
-            <div className="Auth-form-content">
-                <h3 className="Auth-form-title">Sign In</h3>
-                    <div className="form-group mt-3">
-                        <label>Email address</label>
+        <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        style={{ minHeight: '100vh' }}
+        >
+
+                    <Typography variant="h3">Sign In</Typography>
+                    <Box sx={{ mx: 'auto', height: 20 }}/>
+                    <Typography variant="h5">Email address</Typography>
                             <br></br>
-                            <input 
+                            <TextField 
                             value={userInfo.email} 
                             onChange={({ target })=>
                                 setUserInfo({... userInfo, email:target.value})
                             }
-                            type='email' 
+                            type='email'
+                            variant="filled"
                             placeholder='exemple@email.com'/>
-                    </div>
-                    <div className="form-group mt-3">
-                        <label>Password</label>
+                        <Box sx={{ mx: 'auto', height: 20 }}/>
+                    <Typography variant="h5">Password</Typography>
                         <br></br>
-                        <input 
+                        <TextField 
                         value={userInfo.password}
-                        onChange={({ target })=>
+                        onChange={({ target }: any)=>
                             setUserInfo({... userInfo, password:target.value})
                         } 
+                        variant="filled"
                         type='password' 
                         placeholder="********" />
-                    </div>
-                    <div className="d-grid gap-2 mt-3">                    
-                        <input 
-                        type='submit' 
-                        value='Login' 
-                        className="btn btn-primary"/>
-                    </div>
-            </div>
+                    <Box sx={{ mx: 'auto', height: 20 }}/>
+                    <Button type='submit' variant="contained">
+                        Login
+                    </Button>
+            </Grid>
         </form>
 
     </div>)
