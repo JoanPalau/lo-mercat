@@ -8,6 +8,7 @@ import { UserContext } from "./_app";
 import AddProduct from '../src/components/molecules/addProduct/AddProduct';
 import { PrismaClient } from '@prisma/client';
 import RegisterForm from '../src/components/molecules/register/RegisterForm';
+import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
 
 const prisma = new PrismaClient();
 

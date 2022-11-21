@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import { PrismaClient } from '@prisma/client';
 import JoinMarket from '../src/components/molecules/joinMarket/JoinMarket';
 import ViewJoinMarket from '../src/components/molecules/joinMarket/ListMarket';
+import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
 
 const prisma = new PrismaClient();
 
@@ -31,10 +32,17 @@ export async function getServerSideProps() {
 
 const joinMarketPage: NextPage = ({ market, join }: any) => {
     return (
-        <div>
+        <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        style={{ minHeight: '100vh' }}
+        >
             <JoinMarket market={market} />
             <ViewJoinMarket join={join} />
-        </div>
+        </Grid>
     );
 }
 
