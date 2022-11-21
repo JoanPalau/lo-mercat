@@ -6,6 +6,48 @@
         "hello": "Hello Next.js!"
     },
     "Landing": {
-        "hello": "test"
-      }
+        "hello": "Hello"
+    },
+    "SignIn": {
+        "signin": "Sign In",
+        "email": "Email address",
+        "pass": "Password",
+        "login": "login"
+    },
+    "MarketSelector": {
+        "select": "Select a Market"
+    },
+    "Protected": {
+        "txtrole":"Hello",
+        "loading": "Loading",
+        "farmermanager": "Manage Farmer",
+        "joinmarket": "Join Market",
+        "startshopping": "Start Shopping"
+    },
+    "Signup": {
+        "loading": "Loading"
+    },
+    "AddProduct": {
+        "productname": "Product Name",
+        "placeholder": "Enter Product Name",
+        "button": "Add product",
+        "error": "Invalid value, This field is required"
+    },
+    "JoinMarket": {
+        "title":"Select Market",
+        "err":"Invalid value, This field is required",
+        "labloc":"Your Location",
+        "placeholderloc":"Enter Your Location",
+        "button": "Join a Market"
+    },
+    "ListMarket": {
+        "remove": "Remove",
+        "tablename": "You have a stand in the market"
+    },
+    "MarketList":{
+        "button": "View Product",
+        "loc":"Location",
+        "sched":"Location"
+    }
+
 }

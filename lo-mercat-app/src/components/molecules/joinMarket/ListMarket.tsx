@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
 import { Link, Routes, Route, useNavigate } from 'react-router-dom';
+import { useTranslations } from 'next-intl';
 
 
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -27,7 +28,7 @@ async function removeMarket(data: any) {
                 "farmer_id": currentFarmer,
                 "market_id": data.market.id
             }),
-            headers:new Headers({ 'Content-Type': 'application/json', Accept: 'application/json',}),
+            headers: new Headers({ 'Content-Type': 'application/json', Accept: 'application/json', }),
             method: 'DELETE'
         }
     )
@@ -35,26 +36,28 @@ async function removeMarket(data: any) {
 }
 
 
-const ListMarket = ({ join }: any) => {
+const ListMarket = ({ join, props }: any) => {
+    const isMobile = { props };
+    const t = useTranslations("ListMarket");
     const results: any = []
-    const rem: any = (data:any) =>{
+    const rem: any = (data: any) => {
         removeMarket(data).then(
-        (res) =>{window.location.href = '/joinmarket'},
-        (res) =>{console.log("error")}
+            (res) => { window.location.href = '/joinmarket' },
+            (res) => { console.log("error") }
         )
-        }
+    }
     join.forEach((join: any) => {
         results.push(
-            <li className="list-group-item" >{join.market.name} <h1 onClick={(data) => rem(join)}>Remove</h1></li>
+            <li className="list-group-item" >{join.market.name} <h3 onClick={(data) => rem(join)}>{t("remove")}</h3></li>
         );
-        
+
     });
 
 
     return (
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
         <MyDiv>
-            <h2>You have a stand in the market</h2>
+            <h2>{t("tablename")}</h2>
             <ul className="list-group">{results} </ul>
         </MyDiv>
     );

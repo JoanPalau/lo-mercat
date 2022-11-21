@@ -3,11 +3,22 @@ import { signIn } from "next-auth/react";
 import { FormEventHandler, useContext, useState } from "react";
 import { UserContext } from "../_app";
 interface Props {}
-import { PrismaClient } from '@prisma/client'
+import {useTranslations} from 'next-intl';
+import { isMobile } from '@common/DeviceDetection';
+import { NextPageContext } from 'next';
 
-
-
+export async function getServerSideProps(context: NextPageContext) {
+    return {
+        props: {
+            messages: (await import(`../../messages/${context.locale}.json`)).default,
+            isMobile: isMobile(context.req)
+        }
+    };
+}
 const SignIn: NextPage = (props): JSX.Element => {
+    const isMobile = {props};
+    const t = useTranslations("SignIn");
+    
     const context = useContext(UserContext);
     const[userInfo, setUserInfo] = useState({email: '', password:'', role:'Farmer', name:''});
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
@@ -27,9 +38,9 @@ const SignIn: NextPage = (props): JSX.Element => {
     return(<div className="Auth-form-container">
         <form className="Auth-form" onSubmit={handleSubmit}>
             <div className="Auth-form-content">
-                <h3 className="Auth-form-title">Sign In</h3>
+                <h3 className="Auth-form-title">{t("signin")}</h3>
                     <div className="form-group mt-3">
-                        <label>Email address</label>
+                        <label>{t("Email")}</label>
                             <br></br>
                             <input 
                             value={userInfo.email} 
@@ -40,7 +51,7 @@ const SignIn: NextPage = (props): JSX.Element => {
                             placeholder='exemple@email.com'/>
                     </div>
                     <div className="form-group mt-3">
-                        <label>Password</label>
+                        <label>{t("pass")}</label>
                         <br></br>
                         <input 
                         value={userInfo.password}
@@ -53,7 +64,7 @@ const SignIn: NextPage = (props): JSX.Element => {
                     <div className="d-grid gap-2 mt-3">                    
                         <input 
                         type='submit' 
-                        value='Login' 
+                        value={t("login")}
                         className="btn btn-primary"/>
                     </div>
             </div>

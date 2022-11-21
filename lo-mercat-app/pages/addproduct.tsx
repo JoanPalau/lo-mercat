@@ -4,23 +4,27 @@ import { useSession } from "next-auth/react";
 import Router from "next/router";
 import React, { FC, useContext, useEffect } from "react";
 import { UserContext } from "./_app";
+import { isMobile } from '@common/DeviceDetection';
+import { NextPageContext } from 'next';
 
 import AddProduct from '../src/components/molecules/addProduct/AddProduct';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-export async function getServerSideProps() {
+
+export async function getServerSideProps(context: NextPageContext) {
     // Fetch data from external API
     //const res = await fetch('http://localhost:3000/api/hello')
     // const data = {};
     const product = await prisma.product.findMany();
-    console.log(product);
-    // Pass data to the page via props
-    return { props: { product } }
+    
+    
+    return { props: { product,messages: (await import(`../messages/${context.locale}.json`)).default,
+    isMobile: isMobile(context.req) } }
 }
 
-const AddProductPage: NextPage = () => {
+const AddProductPage: NextPage = ({props}:any) => {
     const { status, data: session } = useSession();
     const context = useContext(UserContext);
     useEffect(() => {
@@ -30,11 +34,11 @@ const AddProductPage: NextPage = () => {
     if (status === "authenticated")
         return (
             <div>
-                <AddProduct />
+                <AddProduct props={props}/>
             </div>
         );
 
-    return <div>loading</div>
+    return <div>loading</div>;
 }
 
 export default AddProductPage;
