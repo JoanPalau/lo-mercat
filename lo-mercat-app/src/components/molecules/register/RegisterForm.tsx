@@ -1,6 +1,6 @@
 import { Prisma, PrismaClient } from '@prisma/client';
 import React, { MouseEventHandler } from 'react'
-import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid, RadioGroup, Radio, FormControlLabel, FormControl } from '@mui/material';
+import { Typography, Link, Item, Button, TextField, Select, MenuItem, Box, Grid, RadioGroup, Radio, FormControlLabel, FormControl } from '@mui/material';
 
 
 interface _RegisterFormState {
@@ -31,10 +31,9 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
         const target = event.target;
         var value = target.value as _RegisterFormState;
         const name = target.name as string;
-        const role = target.role as string;
+        console.log("changed" + target.name)
         this.setState({
             [name]: value,
-            [role]:value
         } as any);        
     }
 
@@ -47,11 +46,14 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
                     "name": this.state.name,
                     "password": this.state.password,
                     "email": this.state.email,
+                    "gender": this.state.gender,
+                    "role": this.state.role,
                 }),
                 headers:new Headers({ 'Content-Type': 'application/json', Accept: 'application/json',}),
                 method: 'POST'
             }
         )
+        window.location.href = '/auth/signin'
     }
     render(){
         return(
@@ -85,7 +87,7 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
                         <label>Confirm Password :</label>
                         <TextField variant="filled" type="password" className="form-control" name="password_check" onChange={this.handleInputChange} tabIndex={4}/>
                     </div>
-                    <RadioGroup onChange={this.handleInputChange}>
+                    <RadioGroup name="gender" onChange={this.handleInputChange}>
                         <label>Gender :</label><br />
                         <FormControlLabel name="gender" value="male" control={<Radio />} label="Male"  />
                         <FormControlLabel name="gender" value="female" control={<Radio />} label="Female"  />
@@ -93,10 +95,10 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
                         <FormControlLabel name="gender" value="empty" control={<Radio />} label="Empty"  />
                     </RadioGroup>
                     <Box sx={{ mx: 'auto', height: 20 }}/>
-                    <RadioGroup onChange={this.handleInputChange}>
+                    <RadioGroup name="role" onChange={this.handleInputChange}>
                         <label>Role :</label><br />
-                        <FormControlLabel name="gender" value="farmer" control={<Radio />} label="Farmer"  />
-                        <FormControlLabel name="gender" value="customer" control={<Radio />} label="Customer"  />
+                        <FormControlLabel name="role" value="FARMER" control={<Radio />} label="Farmer"  />
+                        <FormControlLabel name="role" value="CUSTOMER" control={<Radio />} label="Customer"  />
                     </RadioGroup>
                 <Button type="submit" variant="contained" onClick={this.submit}>
                     Submit

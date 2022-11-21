@@ -3,11 +3,11 @@ import styled from '@emotion/styled'
 import { useSession } from "next-auth/react";
 import Router from "next/router";
 import React, { FC, useContext, useEffect } from "react";
-import { UserContext } from "./_app";
+import { UserContext } from "../_app";
 
-import AddProduct from '../src/components/molecules/addProduct/AddProduct';
+import AddProduct from '../../src/components/molecules/addProduct/AddProduct';
 import { PrismaClient } from '@prisma/client';
-import RegisterForm from '../src/components/molecules/register/RegisterForm';
+import RegisterForm from '../../src/components/molecules/register/RegisterForm';
 import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
 
 const prisma = new PrismaClient();
