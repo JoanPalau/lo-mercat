@@ -1,17 +1,38 @@
 import { NextResponse, userAgent } from 'next/server'
+
+import { Role } from "@prisma/client";
+import { withAuth } from "next-auth/middleware";
+
 import type { NextRequest } from 'next/server'
 
-const mobileRedirects = new Set<string>(['/', '/joan']);
+const ROLES_ALLOWED_TO_AUTH = new Set<Role>([
+  Role.ADMIN,
+  Role.USER,
+  Role.FARMER
+]);
 
-export function middleware (request: NextRequest) {
+const mobileRedirects = new Set<string>(['/']);
+
+const customActions = (request: NextRequest) => {
   const { device } = userAgent(request);
 
-  // If on beta.example.com, redirect to example.com/beta
-  const url = request.nextUrl.clone();
-
-  if(device.type === 'mobile' && mobileRedirects.has(url.pathname)){
-    url.pathname = '/mobile' + url.pathname;
-    return NextResponse.redirect(url);
+  if(device.type !== 'mobile' && mobileRedirects.has(request.nextUrl.pathname)){
+    return NextResponse.redirect(new URL('/landing', request.url));
   }
   return NextResponse.next();
 }
+
+export default withAuth(
+  function middleware(request: NextRequest) {
+    return customActions(request);
+  },
+  {
+  callbacks: {
+    authorized: ({ token }) =>
+      token?.role !== undefined && ROLES_ALLOWED_TO_AUTH.has(token.role as Role),
+  },
+});
+
+export const config = {
+  matcher: ["/admin/:path*", "/nonAdminButSecure/:path*"],
+};
