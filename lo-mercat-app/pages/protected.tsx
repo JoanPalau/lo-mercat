@@ -13,18 +13,11 @@ const Protected: FC<Props> = ({ children }): JSX.Element => {
   const { status, data: session } = useSession();
   const context = useContext(UserContext);
   const router = useRouter();
-  const market=2;
-  const redirect = () => {
-
-    router.push('/market/'+market+'/viewproduct/');
-
-  }
-  console.log(context);
-
+  
   useEffect(() => {
     if (status === "unauthenticated") Router.replace("/auth/signin");
   }, [status]);
-
+console.log(status);
   if (status === "authenticated")
     return (
       <div>
@@ -34,15 +27,9 @@ const Protected: FC<Props> = ({ children }): JSX.Element => {
         <p>
           <Link href="/joinmarket">Join Market</Link></p>
         <p>
-          <Link href="/cristian/marketinfo">Market List</Link>
+          <Link href="/">Start Shopping</Link>
         </p>
-        <p>
-          <Link href="/market/1/viewproduct/ ">market Product list market 1</Link>
-        </p>
-        <p>
-          <button onClick={redirect}>Product Market 2</button>
-        </p>
-      </div>
+        </div>
     );
   return <div>loading</div>
 };

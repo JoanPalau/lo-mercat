@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
+import router from 'next/router';
 
 const ImageTextList = styled.ul`
 list-style: none;
@@ -35,12 +36,18 @@ text-align:center;
 padding:0px;
 `;
 
-const MarketList = ({ markets }: any) => {
+const MarketList = ({ markets}: any) => {
   const results: any = []
+
+  const redirect = (market:any) => {
+    router.push('/market/'+market+'/viewproduct/');
+
+  }
   markets.forEach((markets: any) => {
     results.push(
-      <BorderListElement key={markets.id}>
+      <BorderListElement key={markets.id} >
               <ImageTextListElement><h2>{markets.name}</h2></ImageTextListElement>
+              <ImageTextListElement><button onClick={() => redirect(markets.id)}>View Product</button></ImageTextListElement>
               <ImageTextListElement>Location: {markets.location}</ImageTextListElement>
               <ImageTextListElement>Schedule: {markets.schedule}</ImageTextListElement>
               <ImageTextListElement><Image src={"/farmer-info.svg"} alt="" width={200} height={200} /></ImageTextListElement>
