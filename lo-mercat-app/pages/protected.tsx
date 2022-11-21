@@ -1,5 +1,6 @@
+import { Grid, Link } from "@mui/material";
 import { useSession } from "next-auth/react";
-import Link from "next/link";
+// import Link from "next/link";
 import Router from "next/router";
 import React, { FC, useContext, useEffect } from "react";
 import { UserContext } from "./_app";
@@ -19,8 +20,15 @@ const Protected: FC<Props> = ({ children}): JSX.Element => {
 
   if (status === "authenticated")
     return (
-      <div>
-        Hola {session.user?.role}
+      <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        style={{ minHeight: '100vh' }}
+        >
+        Hola {session.user?.name}
         <p>
         <Link href="/addstock">Manage Farmer</Link></p>
         <p>
@@ -28,7 +36,7 @@ const Protected: FC<Props> = ({ children}): JSX.Element => {
         <p>
         <Link href="/cristian/marketinfo">Market List</Link>
         </p>
-      </div>
+      </Grid>
     );
   return <div>loading</div>
 };

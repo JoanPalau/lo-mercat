@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
-import { Link, Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
+import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
 
 import { useForm, SubmitHandler } from "react-hook-form";
 
@@ -52,33 +53,37 @@ const JoinMarket = ({ market }: any) => {
 
     return (
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-        <MyDiv>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div className='row g-3 mt-0'>
-                    <div className='col-auto col-sm-4'>
-                        <label htmlFor="form-control">Select Market</label>
-                    </div>
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <Grid
+            container
+            spacing={0}
+            direction="column"
+            alignItems="center"
+            justifyContent="center"
+            style={{ minHeight: '100vh' }}
+            >
+                <Typography variant="h3">Select Market</Typography>
                     <div className='col-auto'>
                         <select className="form-control" {...register("marketSelected", { required: true })}>{results}</select>
                     </div>
                     <div className='col-auto col-sm-4'>
                         {errors.marketSelected && "Invalid value, This field is required"}
                     </div>
+                <div className='col-auto col-sm-4'>
+                    <label htmlFor="Location">Your Location</label>
                 </div>
-                <div className='row g-3 mt-0'>
-                    <div className='col-auto col-sm-4'>
-                        <label htmlFor="Location">Your Location</label>
-                    </div>
-                    <div className='col-auto'>
-                        <input className="form-control" placeholder='Enter Your Location' {...register("location", {pattern: /^[A-Za-z]+$/i })} />
-                    </div>
-                    <div className='col-auto col-sm-4'>
-                        {errors.location && "Invalid value, This field is required"}
-                    </div>
-                    <input type="submit" className="btn-primary" />
+                <div className='col-auto'>
+                    <TextField variant="filled" placeholder='Enter Your Location' {...register("location", {pattern: /^[A-Za-z]+$/i })} />
                 </div>
-            </form>
-        </MyDiv >
+                <div className='col-auto col-sm-4'>
+                    {errors.location && "Invalid value, This field is required"}
+                </div>
+                <Box sx={{ mx: 'auto', width: 40 }}/>
+                <Button type="submit" variant="contained">
+                    Submit
+                </Button>
+            </Grid>
+        </form>
     );
 }
 

@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 
 import AddProductForm from '../src/components/molecules/productStock/AddProductStock';
 import { PrismaClient } from '@prisma/client';
+import { Grid } from '@mui/material';
 
 const prisma = new PrismaClient();
 
@@ -19,9 +20,8 @@ export async function getServerSideProps() {
 const AddProductStockPage: NextPage = ({product,session}:any) => {
     console.log({session});
     return (
-        <div>
+        
             <AddProductForm product={product}/>
-        </div>
     );
 }
 

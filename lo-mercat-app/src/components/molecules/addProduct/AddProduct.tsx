@@ -1,16 +1,8 @@
 import styled from '@emotion/styled';
+import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
 import Image from 'next/image';
 
 import { useForm, SubmitHandler } from "react-hook-form";
-
-const MyDiv = styled.div`
-
-margin: auto;
-margin-top: 20px;
-width: 50%;
-padding: 10px;
-
-`;
 
 type Inputs = {
     name: string,
@@ -43,20 +35,27 @@ const AddProductForm = () => {
         }
     return (
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-        <MyDiv>
-            <form onSubmit={handleSubmit(onSubmit)} className='row g-3'>
-                <div className='col-auto'>
-                    <label htmlFor="Name1">Product Name</label>
-                </div>
-                <div className="col-auto">
-                    <input className="form-control" placeholder='Enter Product Name' {...register("name", { required: true, pattern: /^[A-Za-z]+$/i })} />
-                </div>
+        <form onSubmit={handleSubmit(onSubmit)} className='row g-3'>
+        <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        style={{ minHeight: '100vh' }}
+        >
+                <Typography variant="h3">Product Name</Typography>
+                <Box sx={{ mx: 'auto', height: 20 }}/>
+                <TextField variant="filled" placeholder='Enter Product Name' {...register("name", { required: true, pattern: /^[A-Za-z]+$/i })} />
                 <div className="col-auto">
                     {errors.name && "Invalid value, This field is required"}
                 </div>
-                <input type="submit" className="btn-primary" />
-            </form >
-        </MyDiv >
+                <Box sx={{ mx: 'auto', height: 20 }}/>
+                <Button type="submit" variant="contained">
+                    Submit
+                </Button>
+            </Grid >
+        </form >
     );
 }
 
