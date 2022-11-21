@@ -23,7 +23,6 @@ export default NextAuth({
         credentials:{},
         async authorize(credentials,req){
           let {email, password, role}=credentials as {email: string; password: string; role: string};
-          console.log(password);
           const user = await prisma.user.findFirst({
             where: { email: email },
           });

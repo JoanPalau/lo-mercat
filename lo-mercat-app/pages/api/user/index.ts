@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { PrismaClient } from '@prisma/client';
 import { updateOrCreate } from '../api_utils';
+import * as bcrypt from 'bcrypt';
 const prisma = new PrismaClient();
 
 
@@ -15,6 +16,7 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     let Name = req.body.name as string;
     let Email = req.body.email as string;
     let Password = req.body.password as string;
+    Password = await bcrypt.hash(Password, 10);
     let Role = req.body.role as string;
 
     switch (method) {
