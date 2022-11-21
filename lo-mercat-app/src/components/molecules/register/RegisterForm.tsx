@@ -1,5 +1,5 @@
 import { Prisma, PrismaClient } from '@prisma/client';
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 
 interface _RegisterFormState {
     name:string,
@@ -22,6 +22,7 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.submit = this.submit.bind(this);
     }
 
     handleInputChange(event:any) {
@@ -35,9 +36,21 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
         } as any);        
     }
 
-    submit(){
+    async submit(event :any){
+        event.preventDefault();
+        let x = await fetch(
+            '/api/user/',
+            {        
+                body: JSON.stringify({
+                    "name": this.state.name,
+                    "password": this.state.password,
+                    "email": this.state.email,
+                }),
+                headers:new Headers({ 'Content-Type': 'application/json', Accept: 'application/json',}),
+                method: 'POST'
+            }
+        )
     }
-
     render(){
         return(
             <div>
@@ -99,7 +112,7 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
                                     </div>
                                 </div>
                                 <div className="col-md-12 text-center">
-                                    <button type="submit" className="btn btn-primary" onClick={()=>this.submit()}>Submit</button>
+                                    <button type="submit" className="btn btn-primary" onClick={this.submit}>Submit</button>
                                 </div>
                         </form>
                     </div>
