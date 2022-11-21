@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import Image from 'next/image';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 
+import { useSession } from "next-auth/react";
 import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
 
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -13,13 +14,18 @@ type Inputs = {
 };
 
 async function joinMarket(data: any) {
-    let currentFarmer = "1";
+    const { status, data:session } = useSession();
+    console.log(({
+        marketId: data.marketSelected,
+        farmerId:  "1",
+        location: data.location
+    }))
     let x = await fetch(
         '/api/stand/',
         {        
             body: JSON.stringify({
                 marketId: data.marketSelected,
-                farmerId: "1",
+                farmerId:  "1",
                 location: data.location
             }),
             headers:new Headers({ 'Content-Type': 'application/json', Accept: 'application/json',}),

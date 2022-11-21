@@ -24,8 +24,6 @@ export async function getServerSideProps() {
 
         }
     });
-
-    console.log(join);
     // Pass data to the page via props
     return { props: { market, join } }
 }

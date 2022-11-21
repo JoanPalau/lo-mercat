@@ -43,10 +43,24 @@ export default NextAuth({
           }
           return token;
         },
-        session({ session, token, user }: any) {
+        async session({ session, token, user }: any) {
           if (session.user) {
             session.user.role = token.role;
+            let user = await prisma.user.findFirst({
+              where: { email: session.email },
+            });
+            let id : string = user.id;
+            session.farmer = await prisma.farmer.findFirst({
+              where: { userId: id },
+            })
+            
+            session.customer = await prisma.customer.findFirst({
+              where: { userId: id },
+            })
+            // console.log(session);
           }
+
+          
           return session as Session;
         },
       },
