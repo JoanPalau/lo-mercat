@@ -16,11 +16,6 @@ export default function Index() {
 
   const theme = useTheme();
 
-  // Load landing page dynamically on the background
-  useEffect(() => {
-    router.prefetch('/landing');
-  })
-
   // Automatic redirect to the landing page
   useEffect(() => {
     setTimeout(() => {
