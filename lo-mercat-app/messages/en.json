@@ -6,7 +6,10 @@
         "hello": "Hello Next.js!"
     },
     "Landing": {
-        "hello": "Hello"
+        "SignIn": "Sign In",
+        "text": "Already have an account? ",
+        "motivation": "Get to know us in only 3 steps!",
+        "SignUp": "Sign Up"
     },
     "LegalNotice": {
         "intro": [
