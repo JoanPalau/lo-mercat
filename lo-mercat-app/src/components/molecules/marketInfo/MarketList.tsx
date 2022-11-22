@@ -1,5 +1,13 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
+import { Grid, Link } from "@mui/material";
+import { useSession } from "next-auth/react";
+// import Link from "next/link";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+
 
 const ImageTextList = styled.ul`
 list-style: none;
@@ -37,16 +45,33 @@ padding:0px;
 
 const MarketList = ({ markets }: any) => {
   const results: any = []
-  markets.forEach((markets: any) => {
+  markets.map((markets: any) => {
     results.push(
-      
-      <BorderListElement key={markets.id}>
-              <ImageTextListElement><h2>{markets.name}</h2></ImageTextListElement>
-              <ImageTextListElement>Location: {markets.location}</ImageTextListElement>
-              <ImageTextListElement>Schedule: {markets.schedule}</ImageTextListElement>
-              <ImageTextListElement><Image src={"/farmer-info.svg"} alt="" width={200} height={200} /></ImageTextListElement>
-      </BorderListElement >
-      
+        <BorderListElement key={markets.id}>
+        <Card sx={{
+          display: 'block',
+          width: '15vw',
+          transitionDuration: '0.3s',
+          height: '14vw'
+        }}>
+          <CardActionArea>
+            <Link href="https://http.cat/400">
+              <Image src={"/farmer-info.svg"} alt="" width={270} height={150} />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {markets.name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Location: {markets.location}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Schedule: {markets.schedule}
+                </Typography>
+              </CardContent>
+            </Link>
+          </CardActionArea>
+        </Card>
+        </BorderListElement>
   );
 });
 
