@@ -1,23 +1,32 @@
 import { ReactElement } from 'react';
 
-import { Grid } from '@mui/material';
+import { Container, Grid } from '@mui/material';
 
+import Home from "@mui/icons-material/Home";
 
+import TopNavigation from './TopNavigation';
+import GenericBottomNavigation from './BottomNavigation';
+
+const myActions = 
+    {
+        label: "Home",
+        value: "home",
+        icon: <Home />,
+        href: "/",
+    }
 const Layout = (props: { children: ReactElement }) => {
     return (
       <Grid>
-        <nav>
-            This is the future navBar
-        </nav>
+        <TopNavigation />
         <aside>
             This is the future Drawer section
         </aside>
         <main>
-            {props.children}
-        </main> 
-        <footer>
-            This is the future footer
-        </footer>
+            <Container maxWidth="lg" sx={{ mt: "3rem", mb: "4rem"}}>
+                {props.children}
+            </Container>
+        </main>
+        <GenericBottomNavigation actions={[myActions]} />
       </Grid>
     )
   }
