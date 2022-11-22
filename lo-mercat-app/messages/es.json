@@ -6,7 +6,10 @@
       "hello": "Hello Next.js!"
   },
   "Landing": {
-      "hello": "test"
+    "SignIn": "Iniciar sessión",
+    "text": "Ya dispones de una cuenta? ",
+    "motivation": "Disfruta ya de productos locales de gran calidad!",
+    "SignUp": "Registrarse"
   },
   "LegalNotice": {
       "intro": [
