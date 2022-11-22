@@ -46,6 +46,6 @@ module.exports = withPWA({
   swcMinify: true,
   i18n: {
     locales: ['en', 'es', 'cat'],
-    defaultLocale: 'cat',
+    defaultLocale: 'es',
   }
 });

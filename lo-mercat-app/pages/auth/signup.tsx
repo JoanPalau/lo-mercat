@@ -9,13 +9,11 @@ import AddProduct from '../../src/components/molecules/addProduct/AddProduct';
 import {useTranslations} from 'next-intl';
 import { isMobile } from '@common/DeviceDetection';
 import { NextPageContext } from 'next';
-import { PrismaClient } from '@prisma/client';
 import RegisterForm from '../../src/components/molecules/register/RegisterForm';
 import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
 import Layout from '@common/Layout';
 import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 
-const prisma = new PrismaClient();
 
 export async function getServerSideProps(context: NextPageContext) {
     return {
