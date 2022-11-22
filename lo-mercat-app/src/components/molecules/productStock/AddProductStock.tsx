@@ -79,7 +79,6 @@ const AddProductForm = ({ product }: any) => {
             <div className='col-auto col-sm-4'>
                 {errors.quantity && "Invalid value, This field is required"}
             </div>
-            <div className='row g-3 mt-0'>
             <Typography variant="h5">Cost</Typography>
                 <div className='col-auto col-sm-4'>
                     <TextField variant="filled" className="form-control" placeholder='Enter Cost'{...register("cost", { required: true, pattern: /^[0-9]+$/i })} />
@@ -87,7 +86,6 @@ const AddProductForm = ({ product }: any) => {
                 <div className='col-auto col-sm-4'>
                     {errors.cost && "Invalid value, This field is required"}
                 </div>
-            </div>
             <Box sx={{ mx: 'auto', height: 20 }}/>
             <Typography variant="h5">Select Product</Typography>
             <Select
