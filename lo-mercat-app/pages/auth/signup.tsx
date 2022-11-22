@@ -6,6 +6,9 @@ import React, { FC, ReactElement, useContext, useEffect } from "react";
 import { UserContext } from "../_app";
 
 import AddProduct from '../../src/components/molecules/addProduct/AddProduct';
+import {useTranslations} from 'next-intl';
+import { isMobile } from '@common/DeviceDetection';
+import { NextPageContext } from 'next';
 import { PrismaClient } from '@prisma/client';
 import RegisterForm from '../../src/components/molecules/register/RegisterForm';
 import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
@@ -14,17 +17,20 @@ import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 
 const prisma = new PrismaClient();
 
-export async function getServerSideProps() {
-    // Fetch data from external API
-    //const res = await fetch('http://localhost:3000/api/hello')
-    // const data = {};
-    const product = await prisma.product.findMany();
-    console.log(product);
-    // Pass data to the page via props
-    return { props: { product } }
+export async function getServerSideProps(context: NextPageContext) {
+    return {
+        props: {
+            messages: (await import(`../../messages/${context.locale}.json`)).default,
+            isMobile: isMobile(context.req)
+        }
+    };
 }
 
-const AddProductPage: NextPageWithLayout = () => {
+const AddProductPage: NextPageWithLayout = ({props}:any) => {
+    
+    const isMobile = {props};
+    const t = useTranslations("Signup");
+    
     const { status, data: session } = useSession();
     const context = useContext(UserContext);
     useEffect(() => {
@@ -38,7 +44,7 @@ const AddProductPage: NextPageWithLayout = () => {
             </div>
         );
 
-    return <div>loading</div>
+    return <div> {t("loading")}</div>
 }
 
 AddProductPage.getLayout = function getLayout(page: ReactElement) {

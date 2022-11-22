@@ -8,6 +8,8 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
+import router from 'next/router';
+import { useTranslations } from 'next-intl';
 
 const ImageTextList = styled.ul`
 list-style: none;
@@ -42,8 +44,13 @@ text-align:center;
 padding:0px;
 `;
 
-const MarketList = ({ markets }: any) => {
+const MarketList = ({ markets, props}: any) => {
   const results: any = []
+  const isMobile = {props};
+  const t = useTranslations("MarketList");
+  const redirect = (market:any,props:any) => {
+    router.push('/market/'+market+'/viewproduct/');
+  }
   markets.map((markets: any) => {
     results.push(
         <BorderListElement key={markets.id}>
@@ -59,22 +66,23 @@ const MarketList = ({ markets }: any) => {
                   {markets.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Location: {markets.location}
+                {t("loc")}:: {markets.location}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Schedule: {markets.schedule}
+                {t("sched")}: {markets.schedule}
                 </Typography>
               </CardContent>
             </Link>
           </CardActionArea>
         </Card>
-        </BorderListElement>
+    </BorderListElement>
   );
 });
 
 return (
   <ImageTextList>
       {results}
+      
   </ImageTextList>
 );
 }

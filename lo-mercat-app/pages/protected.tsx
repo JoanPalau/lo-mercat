@@ -1,9 +1,7 @@
 import { Grid, Link } from "@mui/material";
 import { useSession } from "next-auth/react";
 // import Link from "next/link";
-import Router from "next/router";
 import React, { FC, useContext, useEffect } from "react";
-import { UserContext } from "./_app";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -15,20 +13,36 @@ import Layout from '@common/Layout';
 import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 import { ReactElement } from 'react';
 
+import Router, { useRouter } from "next/router";
+
+import { UserContext } from "./_app";
+import { useTranslations } from 'next-intl';
+import { isMobile } from '@common/DeviceDetection';
+import { NextPageContext } from 'next';
 
 interface Props {
   children: React.ReactNode;
 }
 
-const Protected: FC<Props> = ({ children}): any => {
-  const { status, data:session } = useSession();
-  const context = useContext(UserContext);
-  console.log(context);
+export async function getServerSideProps(context: NextPageContext) {
+  return {
+    props: {
+      messages: (await import(`../messages/${context.locale}.json`)).default,
+      isMobile: isMobile(context.req)
+    }
+  };
+}
 
+const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element => {
+  const { status, data: session } = useSession();
+  const context = useContext(UserContext);
+  const router = useRouter();
+  const isMobile = { props };
+  const t = useTranslations("Protected");
   useEffect(() => {
     if (status === "unauthenticated") Router.replace("/auth/signin");
   }, [status]);
-
+  console.log(status);
   if (status === "authenticated")
     return (
       <Layout>
@@ -40,8 +54,7 @@ const Protected: FC<Props> = ({ children}): any => {
         justifyContent="center"
         style={{ minHeight: '100vh' }}
         >
-        Hola {session.user?.name}
-        <p>
+        {t("txtrole")} {session.user?.role}
         <Card sx={{
             display: 'block',
             transitionDuration: '0.3s',
@@ -60,18 +73,30 @@ const Protected: FC<Props> = ({ children}): any => {
             </Link>
           </CardActionArea>
         </Card>
-        </p>
+      <div>
+      {
+        /*
+        {t("txtrole")} {session.user?.role}
         <p>
+          <Link href="/addstock">{t("farmermanager")}</Link></p>
+        <p>
+          <Link href="/joinmarket">{t("joinmarket")}</Link></p>
+        <p>
+          <Link href="/marketselector">{t("startshopping")}</Link>
+        </p>
+        */
+      }
+      <p>
           <Card sx={{
               display: 'block',
               transitionDuration: '0.3s',
           }}>
             <CardActionArea>
-              <Link href="/addstock">
+              <Link href="/joinmarket">
                 <Image src={"/farmer-info.svg"} alt="" width={280} height={150} />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Join to a Market
+                  {t("farmermanager")}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Farmer, come join to one of our market!!
@@ -125,10 +150,22 @@ const Protected: FC<Props> = ({ children}): any => {
             </CardActionArea>
           </Card>
           </p>
+        </div>
         </Grid>
       </Layout>
     );
-  return <div>loading</div>
+  return <div>{t("loading")}</div>
 };
 
+
+Protected.getLayout = function getLayout(page: ReactElement) {
+  return (
+      <Layout>
+      {page}
+      </Layout>
+  )
+}
 export default Protected;
+
+
+

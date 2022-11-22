@@ -8,7 +8,22 @@ import { Box, Button, Grid, TextField, ThemeProvider, Typography } from "@mui/ma
 import Layout from '@common/Layout';
 import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 
+import {useTranslations} from 'next-intl';
+import { isMobile } from '@common/DeviceDetection';
+import { NextPageContext } from 'next';
+
+export async function getServerSideProps(context: NextPageContext) {
+    return {
+        props: {
+            messages: (await import(`../../messages/${context.locale}.json`)).default,
+            isMobile: isMobile(context.req)
+        }
+    };
+}
 const SignIn: NextPageWithLayout = (props): JSX.Element => {
+    const isMobile = {props};
+    const t = useTranslations("SignIn");
+    
     const context = useContext(UserContext);
     const[userInfo, setUserInfo] = useState({email: '', password:'', role:'Farmer', name:''});
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
@@ -21,7 +36,7 @@ const SignIn: NextPageWithLayout = (props): JSX.Element => {
             password: userInfo.password,
             role:userInfo.role,
             redirect: true,
-            callbackUrl: '/protected'
+            callbackUrl: '/en/protected'
         });
         
     };
@@ -36,9 +51,9 @@ const SignIn: NextPageWithLayout = (props): JSX.Element => {
         style={{ minHeight: '100vh' }}
         >
 
-                    <Typography variant="h3">Sign In</Typography>
+                    <Typography variant="h3">{t("signin")}</Typography>
                     <Box sx={{ mx: 'auto', height: 20 }}/>
-                    <Typography variant="h5">Email address</Typography>
+                    <Typography variant="h5">{t("email")}</Typography>
                             <br></br>
                             <TextField 
                             value={userInfo.email} 
@@ -49,7 +64,7 @@ const SignIn: NextPageWithLayout = (props): JSX.Element => {
                             variant="filled"
                             placeholder='exemple@email.com'/>
                         <Box sx={{ mx: 'auto', height: 20 }}/>
-                    <Typography variant="h5">Password</Typography>
+                    <Typography variant="h5">{t("pass")}</Typography>
                         <br></br>
                         <TextField 
                         value={userInfo.password}
@@ -61,7 +76,7 @@ const SignIn: NextPageWithLayout = (props): JSX.Element => {
                         placeholder="********" />
                     <Box sx={{ mx: 'auto', height: 20 }}/>
                     <Button type='submit' variant="contained">
-                        Login
+                    {t("login")}
                     </Button>
             </Grid>
         </form>
