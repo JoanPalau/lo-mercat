@@ -5,11 +5,20 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, SwipeableDrawer } from '@mui/material';
+import { Divider, Grid, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText, SwipeableDrawer } from '@mui/material';
 import React from 'react';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { Home, Shop, Store, Storefront } from '@mui/icons-material';
+import styled from '@emotion/styled';
 
+
+const ImageCustom = styled.img`
+  transition: transform .2s;
+  margin-bottom: 10px;
+
+}
+`;
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
 export default function TopNavigation() {
@@ -43,31 +52,79 @@ export default function TopNavigation() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+      <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Box sx={{ mx: 'auto', height: 20 }}/>
+        <ImageCustom src={'/user.png'} width={150} height={150}/>
+        USER HERE
+        </Grid>   
+        <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        style={{ minHeight: '60vh' }}
+      >
+        <List>
+          <ListItem disablePadding>
+            <Link href="/protected" style={{ textDecoration: 'none' }}>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <Home/>
               </ListItemIcon>
-              <ListItemText primary={text} />
+                <ListItemText primary={'Home'} />  
             </ListItemButton>
+            </Link>
           </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+          <ListItem disablePadding>
+            <Link href="/protected" style={{ textDecoration: 'none' }}>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <Storefront/>
               </ListItemIcon>
-              <ListItemText primary={text} />
+                <ListItemText primary={'Markets'} />
             </ListItemButton>
+            </Link>
           </ListItem>
-        ))}
-      </List>
+          <ListItem disablePadding>
+            <Link href="/protected" style={{ textDecoration: 'none' }}>
+            <ListItemButton>
+              <ListItemIcon>
+                <Store/>
+              </ListItemIcon>
+                <ListItemText primary={'Stands'} />
+            </ListItemButton>
+            </Link>
+          </ListItem>
+          <ListItem disablePadding>
+            <Link href="/protected" style={{ textDecoration: 'none' }}>
+            <ListItemButton>
+              <ListItemIcon>
+                <Shop/>
+              </ListItemIcon>
+                <ListItemText primary={'Purchases'} />
+            </ListItemButton>
+            </Link>
+          </ListItem>
+        </List>
+      </Grid>
+      <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Button variant="outlined" href="#outlined-buttons">
+        Sign Out
+        </Button>
+        </Grid>   
     </Box>
   );
   

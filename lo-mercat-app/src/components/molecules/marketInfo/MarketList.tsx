@@ -21,7 +21,6 @@ const BorderListElement = styled.ul`
 border-radius: 3px;
 list-style: none;
 margin: 20px;
-border: solid 2px;
 padding:0px 10px;
 `;
 
@@ -50,9 +49,7 @@ const MarketList = ({ markets }: any) => {
         <BorderListElement key={markets.id}>
         <Card sx={{
           display: 'block',
-          width: '15vw',
           transitionDuration: '0.3s',
-          height: '14vw'
         }}>
           <CardActionArea>
             <Link href="https://http.cat/400">
