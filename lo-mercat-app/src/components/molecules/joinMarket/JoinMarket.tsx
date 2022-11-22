@@ -13,35 +13,29 @@ type Inputs = {
     location: string
 };
 
-async function joinMarket(data: any) {
-    const { status, data:session } = useSession();
-    console.log(({
-        marketId: data.marketSelected,
-        farmerId:  "1",
-        location: data.location
-    }))
+async function joinMarket(data: any, session: any) {
     let x = await fetch(
         '/api/stand/',
         {        
             body: JSON.stringify({
                 marketId: data.marketSelected,
-                farmerId:  "1",
+                farmerId:  session.farmer.id,
                 location: data.location
             }),
             headers:new Headers({ 'Content-Type': 'application/json', Accept: 'application/json',}),
             method: 'POST'
         }
-    )
-    console.log(x);
-}
-
-const JoinMarket = ({ market }: any) => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
-    const onSubmit: SubmitHandler<Inputs> = data => {
-        joinMarket(data).then(
-            (res) => { window.location.href = '/joinmarket' },
-            (res) => { console.log("error") }
         )
+    }
+    
+    const JoinMarket = ({ market }: any) => {
+        const { status, data:session } = useSession();
+        const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
+        const onSubmit: SubmitHandler<Inputs> = data => {
+            joinMarket(data, session).then(
+                (res) => { window.location.href = '/joinmarket' },
+            (res) => { console.log("error") }
+            )
     }
     const results: any = []
     market.forEach((market: any) => {
