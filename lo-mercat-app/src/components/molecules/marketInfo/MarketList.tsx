@@ -41,7 +41,7 @@ const MarketList = ({ markets, props}: any) => {
   const results: any = []
   const isMobile = {props};
   const t = useTranslations("MarketList");
-  const redirect = (market:any) => {
+  const redirect = (market:any,props:any) => {
     router.push('/market/'+market+'/viewproduct/');
 
   }
@@ -49,7 +49,7 @@ const MarketList = ({ markets, props}: any) => {
     results.push(
       <BorderListElement key={markets.id} >
               <ImageTextListElement><h2>{markets.name}</h2></ImageTextListElement>
-              <ImageTextListElement><button onClick={() => redirect(markets.id)}>{t("button")}</button></ImageTextListElement>
+              <ImageTextListElement><button onClick={() => redirect(markets.id,props)}>{t("button")}</button></ImageTextListElement>
               <ImageTextListElement>{t("loc")}: {markets.location}</ImageTextListElement>
               <ImageTextListElement>{t("sched")}: {markets.schedule}</ImageTextListElement>
               <ImageTextListElement><Image src={"/farmer-info.svg"} alt="" width={200} height={200} /></ImageTextListElement>

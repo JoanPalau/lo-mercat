@@ -1,11 +1,70 @@
 {
-    "Index": {
-        "app": "Lo Mercat"
-      },
-    "Home": {
-        "hello": "Hola Next.js!"
-    },
-    "Landing": {
-        "hello": "Hola"
-      }
+  "Index": {
+      "app": "Lo Mercat"
+  },
+  "Home": {
+      "hello": "Hola Next.js!"
+  },
+  "Landing": {
+      "hello": "Hola"
+  },
+  "SignIn": {
+      "signin": "Iniciar sesión",
+      "email": "Correo electrónico",
+      "pass": "Contraseña",
+      "login": "Inicio de sesión"
+  },
+  "MarketSelector": {
+      "select": "Seleccionar un mercado"
+  },
+  "Protected": {
+      "txtrole": "Hola",
+      "loading": "Cargando",
+      "farmermanager": "Gestión del Campesino",
+      "joinmarket": "Unirse al mercado",
+      "startshopping": "Empieza a comprar"
+  },
+  "Signup": {
+      "loading": "Cargando"
+  },
+  "AddProduct": {
+      "productname": "Nombre del producto",
+      "placeholder": "Introducir el nombre del producto",
+      "button": "Añadir producto",
+      "error": "Valor no válido, Este campo es obligatorio"
+  },
+  "JoinMarket": {
+      "title": "Seleccionar un Mercado",
+      "err": "Valor no válido, Este campo es obligatorio",
+      "labloc": "Ubicación del Mercado",
+      "placeholderloc": "Introducir la ubicación del Mercado",
+      "button": "Unirse al mercado"
+  },
+  "ListMarket": {
+      "remove": "Suprimir",
+      "tablename": "Tienes un espacio en el mercado de"
+  },
+  "MarketList": {
+      "button": "Ver productos",
+      "loc": "Ubicación",
+      "sched": "horario"
+  },
+  "AddStock": {
+     "labquantity" :"Cantidad",
+     "placeholderquantity":"Introducir Cantidad",
+     "labcost":"Coste",
+     "placeholdercost":"introducir el coste",
+     "selector":"Seleccionar producto",
+     "addprod":"Añadir un nuevo producto",
+     "err": "Valor no válido, Este campo es obligatorio",
+     "button": "Añadir Stock"
+  },
+  "Product": {
+      "price":"Precio",
+      "kg":"por kilo",
+      "remaining":"Resto en stock",
+      "produced":"Cultivado por",
+      "button":"Añadir al carrito",
+      "marketof":"Mercado de"
+  }
 }

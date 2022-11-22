@@ -31,7 +31,7 @@ const SignIn: NextPage = (props): JSX.Element => {
             password: userInfo.password,
             role:userInfo.role,
             redirect: true,
-            callbackUrl: '/protected'
+            callbackUrl: '/en/protected'
         });
         
     };
@@ -40,7 +40,7 @@ const SignIn: NextPage = (props): JSX.Element => {
             <div className="Auth-form-content">
                 <h3 className="Auth-form-title">{t("signin")}</h3>
                     <div className="form-group mt-3">
-                        <label>{t("Email")}</label>
+                        <label>{t("email")}</label>
                             <br></br>
                             <input 
                             value={userInfo.email} 

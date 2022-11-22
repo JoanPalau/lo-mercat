@@ -18,7 +18,7 @@
         "select": "Select a Market"
     },
     "Protected": {
-        "txtrole":"Hello",
+        "txtrole": "Hello",
         "loading": "Loading",
         "farmermanager": "Manage Farmer",
         "joinmarket": "Join Market",
@@ -34,20 +34,37 @@
         "error": "Invalid value, This field is required"
     },
     "JoinMarket": {
-        "title":"Select Market",
-        "err":"Invalid value, This field is required",
-        "labloc":"Your Location",
-        "placeholderloc":"Enter Your Location",
+        "title": "Select Market",
+        "err": "Invalid value, This field is required",
+        "labloc": "Your Location",
+        "placeholderloc": "Enter Your Location",
         "button": "Join a Market"
     },
     "ListMarket": {
         "remove": "Remove",
         "tablename": "You have a stand in the market"
     },
-    "MarketList":{
-        "button": "View Product",
-        "loc":"Location",
-        "sched":"Location"
+    "MarketList": {
+        "button": "View Products",
+        "loc": "Location",
+        "sched": "Schedule"
+    },
+    "AddStock": {
+       "labquantity" :"Quantity",
+       "placeholderquantity":"Enter Quantity",
+       "labcost":"Cost",
+       "placeholdercost":"Enter Cost",
+       "selector":"Select Product",
+       "addprod":"Add A new Product",
+       "err": "Invalid value, This field is required",
+       "button": "Add Stock"
+    },
+    "Product": {
+        "price":"Price",
+        "kg":"per kilo",
+        "remaining":"Remaining in stock",
+        "produced":"Farmed By",
+        "button":"Add to cart",
+        "marketof":"Market of"
     }
-
 }

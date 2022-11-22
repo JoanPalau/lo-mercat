@@ -28,14 +28,14 @@ export async function getServerSideProps(context: NextPageContext) {
     }
 }
 
-const MarketSelector: NextPage = ({ markets }: any,props:NextPage) => {
+const MarketSelector: NextPage = ({ markets,props }: any) => {
 
     const isMobile = {props};
     const t = useTranslations("MarketSelector");
     return (
         <div>
             <Myh1>{t("select")}</Myh1>
-            <MarketList markets={markets} />
+            <MarketList markets={markets}{...props} />
         </div>
     );
 }

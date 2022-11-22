@@ -3,6 +3,7 @@ import Product from '@types/ProductType';
 import Farmer from '@types/FarmerType';
 import { useRouter } from 'next/router'
 import Stand from '@types/StandType';
+import { useTranslations } from 'next-intl';
 
 
 const ImageTextListElement = styled.li`
@@ -34,16 +35,17 @@ const ImageCustom = styled.img`
 const ViewProductElement = (props: ViewProductElementProps) => {
     const router = useRouter()
     const { cost,product, quantity ,farmer, stand} = props;
-
+    const isMobile = {props};
+    const t = useTranslations("Product");
     
     return (
         <ImageTextListElement>
             <ImageWrapper >
                 <h2>{product.name}</h2>
-                <p><h2>Price: {cost} € per kilo</h2></p>
-                <p>Remaining in stock: {quantity} </p> 
-                <p><h3>Farmed By: {farmer.name} </h3></p>
-                <button>Add to cart</button>
+                <p><h2>{t("price")}: {cost} € {t("kg")}</h2></p>
+                <p>{t("remaining")}: {quantity} </p> 
+                <p><h3>{t("produced")}: {farmer.name} </h3></p>
+                <button>{t("button")}</button>
             </ImageWrapper>
         </ImageTextListElement >
     )
