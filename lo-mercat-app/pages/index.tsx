@@ -1,15 +1,13 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/router'
-import {GetStaticPropsContext} from 'next';
-import {useTranslations} from 'next-intl';
+import { GetStaticPropsContext } from 'next';
+import { useTranslations } from 'next-intl';
 
-import { useTheme } from '@mui/material';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-
-
+import { useTheme } from '@mui/material/styles';
 
 export default function Index() {
 
@@ -43,8 +41,8 @@ export default function Index() {
         backgroundColor: 'primary.main'
        }
     }>
-      <StorefrontIcon htmlColor={`${theme.palette.background.default}`}/>
-      <Typography variant="subtitle1" component="h1" color={`${theme.palette.background.default}`} gutterBottom>
+      <StorefrontIcon htmlColor={`${theme.palette.background.default}`} titleAccess={t("app")} fontSize='large'/>
+      <Typography variant="h5" component="h1" color={`${theme.palette.background.default}`} gutterBottom>
           {t("app")}
         </Typography>
     </Container>

@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import Link from '@common/Link';
@@ -8,6 +9,7 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
+import Ilustration from '../../../public/landing-ilustration.png'
 
 const BaseLayout = (props: { children: ReactElement }) => {
   const t = useTranslations("Landing");
@@ -24,7 +26,7 @@ const BaseLayout = (props: { children: ReactElement }) => {
         alignItems: 'center'
       }}>
         {props.children}
-        <img src="/landing-ilustration.png" alt="logo" />
+        <Image priority src={Ilustration} alt="Buying ilustration" />
       </Container>
       <Container component="footer" sx={{
         position: 'fixed',
