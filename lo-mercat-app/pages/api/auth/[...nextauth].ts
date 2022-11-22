@@ -6,6 +6,7 @@ import { NextResponse } from "next/server";
 import { withAuth } from "next-auth/middleware";
 import { GOOGLE_FONT_PROVIDER } from "next/dist/shared/lib/constants";
 import { PrismaClient } from "@prisma/client";
+import * as bcrypt from 'bcrypt';
 
 const prisma = new PrismaClient();
 
@@ -21,11 +22,16 @@ export default NextAuth({
         type: 'credentials',
         credentials:{},
         async authorize(credentials,req){
-          const{email, password, role}=credentials as {email: string; password: string; role: string};
+          let {email, password, role}=credentials as {email: string; password: string; role: string};
+          console.log(password);
           const user = await prisma.user.findFirst({
-            where: { email: email , password:password },
+            where: { email: email },
           });
-          return user;
+          let result = await bcrypt.compare(password, user.password);
+          if (result){
+            return user;
+          }
+          return null;
     }}),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
