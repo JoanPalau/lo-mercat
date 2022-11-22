@@ -4,6 +4,9 @@ import styled from '@emotion/styled'
 import AddProductForm from '../src/components/molecules/productStock/AddProductStock';
 import { PrismaClient } from '@prisma/client';
 import { Grid } from '@mui/material';
+import Layout from '@common/Layout';
+import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
+import { ReactElement } from 'react';
 
 const prisma = new PrismaClient();
 
@@ -17,12 +20,19 @@ export async function getServerSideProps() {
     return { props: { product } }
 }
 
-const AddProductStockPage: NextPage = ({product,session}:any) => {
+const AddProductStockPage: NextPageWithLayout = ({product,session}:any) => {
     console.log({session});
     return (
-        
             <AddProductForm product={product}/>
     );
+}
+
+AddProductStockPage.getLayout = function getLayout(page: ReactElement) {
+    return (
+        <Layout>
+        {page}
+        </Layout>
+    )
 }
 
 export default AddProductStockPage;

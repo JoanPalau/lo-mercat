@@ -4,6 +4,10 @@ import { useSession } from "next-auth/react";
 import Router from "next/router";
 import React, { FC, useContext, useEffect } from "react";
 import { UserContext } from "./_app";
+import Layout from '@common/Layout';
+import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
+import { ReactElement } from 'react';
+
 
 interface Props {
   children: React.ReactNode;
@@ -20,23 +24,25 @@ const Protected: FC<Props> = ({ children}): JSX.Element => {
 
   if (status === "authenticated")
     return (
-      <Grid
-        container
-        spacing={0}
-        direction="column"
-        alignItems="center"
-        justifyContent="center"
-        style={{ minHeight: '100vh' }}
-        >
-        Hola {session.user?.name}
-        <p>
-        <Link href="/addstock">Manage Farmer</Link></p>
-        <p>
-        <Link href="/joinmarket">Join Market</Link></p>
-        <p>
-        <Link href="/cristian/marketinfo">Market List</Link>
-        </p>
-      </Grid>
+      <Layout>
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+          style={{ minHeight: '100vh' }}
+          >
+          Hola {session.user?.name}
+          <p>
+          <Link href="/addstock">Manage Farmer</Link></p>
+          <p>
+          <Link href="/joinmarket">Join Market</Link></p>
+          <p>
+          <Link href="/cristian/marketinfo">Market List</Link>
+          </p>
+        </Grid>
+      </Layout>
     );
   return <div>loading</div>
 };

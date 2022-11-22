@@ -3,6 +3,9 @@ import styled from '@emotion/styled'
 
 import MarketList from '../../src/components/molecules/marketInfo/MarketList';
 import { PrismaClient } from '@prisma/client';
+import Layout from '@common/Layout';
+import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
+import { ReactElement } from 'react';
 
 const prisma = new PrismaClient();
 
@@ -16,13 +19,21 @@ export async function getServerSideProps() {
     return { props: { markets } }
 }
 
-const MarketPage: NextPage = ({markets}:any) => {
-
+const MarketPage: NextPageWithLayout = ({markets}:any) => {
     return (
         <div>
             <MarketList markets={markets} />
         </div>
     );
 }
+
+MarketPage.getLayout = function getLayout(page: ReactElement) {
+    return (
+        <Layout>
+        {page}
+        </Layout>
+    )
+}
+
 
 export default MarketPage;
