@@ -6,7 +6,7 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 
 import { BottomNavigationProps } from '@customTypes/BottomNavigationProps';
 
-export default function GenericBottomNavigation(props: [BottomNavigationProps]) {
+export default function GenericBottomNavigation(props: {actions: [BottomNavigationProps]}) {
   const [value, setValue] = React.useState('home');
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
@@ -16,7 +16,9 @@ export default function GenericBottomNavigation(props: [BottomNavigationProps]) 
   return (
     <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0}} elevation={3}>
       <BottomNavigation sx={{ width: '100vw' }} value={value} onChange={handleChange}>
-        {props.map((setup,index) => {
+        {
+        
+        props.actions.map((setup,index) => {
           return (
             <BottomNavigationAction
               {...setup}
@@ -24,7 +26,8 @@ export default function GenericBottomNavigation(props: [BottomNavigationProps]) 
               key={index}
             />
           )
-        })}
+        })
+      }
       </BottomNavigation>
     </Paper>
   );

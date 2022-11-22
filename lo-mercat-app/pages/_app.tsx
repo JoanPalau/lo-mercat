@@ -16,11 +16,14 @@ import { AppContextInterface } from '@customTypes/AppContext';
 import { NavigationParams } from '@customTypes/NavigationParams';
 import { MyAppProps } from '@customTypes/MyAppProps';
 
-const UserContext= React.createContext(null);
+import { wrapper } from "../redux/store";
+import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
+
+const UserContext = React.createContext(null);
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
-
+/*
 const defaultContext: AppContextInterface = {
   lang: '',
   navigation: {
@@ -42,8 +45,8 @@ const defaultContext: AppContextInterface = {
     return { ...context, data };
   }
 }
-
-export default function MyApp(props : MyAppProps) {
+*/
+function MyApp(props : MyAppProps) {
 
   const [user, setUser] = useState(null);
   const { Component, emotionCache = clientSideEmotionCache, pageProps, session } = props;
@@ -53,9 +56,9 @@ export default function MyApp(props : MyAppProps) {
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
         <NextIntlProvider messages={pageProps.messages}>
-          <UserContext.Provider value={{user, setUser}}>
+          <UserContext.Provider value={{ user, setUser }}>
             <SessionProvider session={session}>
-              <AppProvider value={defaultContext}>
+              <>
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
                 <CssBaseline />
                 <Head>
@@ -66,7 +69,7 @@ export default function MyApp(props : MyAppProps) {
                   <link rel="icon" href="/favicon.ico" />
                 </Head>
                 {getLayout(<Component {...pageProps} />)}
-              </AppProvider>
+              </>
             </SessionProvider>
           </UserContext.Provider>
         </NextIntlProvider>
@@ -75,4 +78,6 @@ export default function MyApp(props : MyAppProps) {
   );
 }
 
-export {UserContext};
+export default wrapper.withRedux(MyApp);
+
+export { UserContext };
