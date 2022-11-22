@@ -4,11 +4,13 @@ import { GetStaticPropsContext } from 'next';
 
 import { Typography } from '@mui/material';
 import Layout from '@common/Layout';
-import type { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
+import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 
 type Props = {
   messages: {
-    TermsOfService: {
+    CookiesPolicy: {
+      title: string,
+      intro: string,
       sections: [
         {
           title: string,
@@ -21,13 +23,16 @@ type Props = {
   context: {}
 }
 
-const TermsOfService: NextPageWithLayout<Props> = (props) => {
+const CookiesPolicy: NextPageWithLayout<Props> = (props) => {
 
   const { messages } = props;
-  const t = messages["TermsOfService"];
+  const t = messages["CookiesPolicy"];
 
   return (
     <>
+    <section>
+      <Typography align='justify' gutterBottom={true} paragraph={true} variant="body1">{t["intro"]}</Typography>
+    </section>
     {
         t["sections"].map(
           (section: { title: string, content: [string] }, index: number) => {
@@ -50,7 +55,7 @@ const TermsOfService: NextPageWithLayout<Props> = (props) => {
   )
 }
 
-TermsOfService.getLayout = function getLayout(page: ReactElement) {
+CookiesPolicy.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout>
       {page}
@@ -66,4 +71,4 @@ export async function getStaticProps({locale}: GetStaticPropsContext) {
   };
 }
 
-export default TermsOfService
+export default CookiesPolicy
