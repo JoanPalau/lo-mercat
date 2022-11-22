@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient, User } from '@prisma/client';
 import { updateOrCreate } from '../api_utils';
 import * as bcrypt from 'bcrypt';
 const prisma = new PrismaClient();
@@ -45,7 +45,7 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     switch (method) {
         case 'POST':
             // Update or create data in your database
-            let user = await updateOrCreate({
+            let user = await updateOrCreate<User>({
                 schema: prisma.user,
                 where: {
                     email: Email,
