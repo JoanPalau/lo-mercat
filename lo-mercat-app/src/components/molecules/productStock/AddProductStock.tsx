@@ -67,7 +67,6 @@ const AddProductForm = ({ product, props }: any) => {
 
     return (
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-        /*
         <form onSubmit={handleSubmit(onSubmit)}>
         <Grid
         container
@@ -79,80 +78,40 @@ const AddProductForm = ({ product, props }: any) => {
         >
             <Typography variant="h3">Set Stock</Typography>
             <Box sx={{ mx: 'auto', height: 20 }}/>
-            <Typography variant="h5">Quantity</Typography>
+            <Typography variant="h5">{t("labquantity")}</Typography>
             <div className='col-auto col-sm-4'>
-                <TextField variant="filled" placeholder='Enter Quantity' className="form-control" {...register("quantity", { required: true, pattern: /^[0-9]+$/i })} />
+                <TextField variant="filled" placeholder={t("placeholderquantity")} className="form-control" {...register("quantity", { required: true, pattern: /^[0-9]+$/i })} />
             </div>
             <Box sx={{ mx: 'auto', height: 20 }}/>
             <div className='col-auto col-sm-4'>
-                {errors.quantity && "Invalid value, This field is required"}
+                {errors.quantity && t("err")}
             </div>
-            <Typography variant="h5">Cost</Typography>
+            <Typography variant="h5">{t("labcost")}</Typography>
                 <div className='col-auto col-sm-4'>
-                    <TextField variant="filled" className="form-control" placeholder='Enter Cost'{...register("cost", { required: true, pattern: /^[0-9]+$/i })} />
+                    <TextField variant="filled" className="form-control" placeholder={t("placeholdercost")} {...register("cost", { required: true, pattern: /^[0-9]+$/i })} />
                 </div>
                 <div className='col-auto col-sm-4'>
-                    {errors.cost && "Invalid value, This field is required"}
+                    {errors.cost && t("err")}
                 </div>
             <Box sx={{ mx: 'auto', height: 20 }}/>
             <Typography variant="h5">Select Product</Typography>
             <Select
- {...register("productSelected", { required: true })} label="Product" >{results}</Select>
+ {...register("productSelected", { required: true })} label={t("selector")} >{results}</Select>
             <Box sx={{ mx: 'auto', height: 40 }}/>
             <div className='row g-3 mt-0'>
                 <Grid container spacing={2}>
                     <Button type="submit" variant="outlined">
-                        {errors.productSelected && "Invalid value, This field is required"}
-                        <Link href="/addproduct">Add A new Product</Link>
+                        {errors.productSelected && t("err")}
+                        <Link href="/addproduct">{t("addprod")}</Link>
                     </Button>
                     <Box sx={{ mx: 'auto', width: 20 }}/>
                     <Button type="submit" variant="contained">
-                        Submit
+                        {t("button")}
                     </Button>
                 </Grid>
             </div>
         </Grid>
         </form>
-        */
-        <MyDiv>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div className='row g-3 mt-0'>
-                    <div className='col-auto col-sm-4'>
-                        <label htmlFor="Quantity1">{t("labquantity")}</label>
-                    </div>
-                    <div className='col-auto col-sm-4'>
-                        <input placeholder={t("placeholderquantity")} className="form-control" {...register("quantity", { required: true, pattern: /^[0-9]+$/i })} />
-                    </div>
-                    <div className='col-auto col-sm-4'>
-                        {errors.quantity && t("err")}
-                    </div>
-                </div>
-                <div className='row g-3 mt-0'>
-                    <div className='col-auto col-sm-4'>
-                        <label htmlFor="Cost1">{t("labcost")}</label>
-                    </div>
-                    <div className='col-auto col-sm-4'>
-                        <input className="form-control" placeholder={t("placeholdercost")}{...register("cost", { required: true, pattern: /^[0-9]+$/i })} />
-                    </div>
-                    <div className='col-auto col-sm-4'>
-                        {errors.cost && t("err")}
-                    </div>
-                </div>
-                <div className='row g-3 mt-0'>
-                    <div className='col-auto col-sm-4'>
-                        <label htmlFor="exampleFormControlSelect1">{t("selector")}</label>
-                    </div>
-                    <div className='col-auto'>
-                        <select className="form-control" {...register("productSelected", { required: true })}>{results}</select>
-                    </div>
-                    <div className='col-auto col-sm-4'>
-                        {errors.productSelected && t("err")}
-                        <Link href="/addproduct">{t("addprod")}</Link>
-                    </div>
-                    <input type="submit" value={t("button")} className="btn-primary" />
-                </div>
-            </form>
-        </MyDiv >
     );
 }
 

@@ -30,6 +30,8 @@ const securityHeaders = [
   }
 ];
 
+const prod = process.env.NODE_ENV === 'production';
+
 module.exports = withPWA({
   async headers() {
     return [
@@ -39,6 +41,9 @@ module.exports = withPWA({
         headers: securityHeaders,
       },
     ]
+  },
+  pwa: {
+    disable: prod ? false : true
   },
   output: 'standalone',
   poweredByHeader: false,
