@@ -124,5 +124,68 @@
               ]
           }
       ]
+  },
+  "CookiesPolicy": {
+    "title": "POLÍTICA DE COOKIES",
+    "intro": "Lo Mercat S.L informa sobre l'ús de les cookies a la seva pàgina web: www.lomercat.cat",
+    "sections": [
+      {
+        "title": "Què són les cookies?",
+        "content": [
+          "Les cookies són arxius que es poden descarregar al vostre equip a través de les pàgines web. Són eines que tenen un paper essencial per a la prestació de nombrosos serveis de la societat de la informació. Entre altres, permeten a una pàgina web emmagatzemar i recuperar informació sobre els hàbits de navegació d'un usuari o del vostre equip i, depenent de la informació obtinguda, es poden utilitzar per reconèixer l'usuari i millorar el servei ofert."
+        ]
+      },
+      {
+        "title": "Tipus de cookies",
+        "content": [
+          "Segons qui sigui l'entitat que gestioni el domini des d'on s'envien les galetes i tracti les dades que s'obtinguin es poden distingir dos tipus:",
+           "Cookies pròpies: aquelles que s'envien a l'equip terminal de l'usuari des d'un equip o domini gestionat pel mateix editor i des del qual es presta el servei sol·licitat per l'usuari.",
+           "Cookies de tercers: aquelles que s'envien a l'equip terminal de l'usuari des d'un equip o domini que no és gestionat per l'editor, sinó per una altra entitat que tracta les dades obtingudes a través de les cookies.",
+           "En el cas que les cookies siguin instal·lades des d'un equip o domini gestionat pel mateix editor però la informació que es reculli mitjançant aquestes sigui gestionada per un tercer, no poden ser considerades com a cookies pròpies.",
+           "Existeix també una segona classificació segons el termini de temps que romanen emmagatzemades al navegador del client, podent tractar-se de:",
+           "Cookies de sessió: dissenyades per demanar i emmagatzemar dades mentre l'usuari accedeix a una pàgina web. Se solen emprar per emmagatzemar informació que només interessa conservar per a la prestació del servei sol·licitat per l'usuari en una sola ocasió (p.e. una llista de productes adquirits )",
+           "Cookies persistents: les dades segueixen emmagatzemades al terminal i poden ser accedides i tractades durant un període definit pel responsable de la galeta, i que pot anar d'uns minuts a diversos anys.",
+           "Per últim, hi ha una altra classificació segons la finalitat per a la qual es tractin les dades obtingudes:",
+           "Cookies tècniques: aquelles que permeten a l'usuari la navegació a través d'una pàgina web, plataforma o aplicació i la utilització de les diferents opcions o serveis que hi hagi com, per exemple, controlar el trànsit i la comunicació de dades, identificar la sessió, accedir a parts d'accés restringit, recordar els elements que integren una comanda, fer el procés de compra d'una comanda, fer la sol·licitud d'inscripció o participació en un esdeveniment, utilitzar elements de seguretat durant la navegació, emmagatzemar continguts per a la difusió de vídeos o so o compartir continguts a través de xarxes socials.",
+           "Cookies de personalització: permeten a l'usuari accedir al servei amb algunes característiques de caràcter general predefinides en funció d'una sèrie de criteris al terminal de l'usuari com ara serien l'idioma, el tipus de navegador a través del qual accedeix al servei, la configuració regional des d'on accedeix al servei, etc.",
+           "Cookies d'anàlisi: permeten al responsable de les mateixes, el seguiment i l'anàlisi del comportament dels usuaris dels llocs web als quals estan vinculades. La informació recollida mitjançant aquest tipus de cookies s'utilitza en el mesurament de l'activitat dels llocs web, aplicació o plataforma i per a l'elaboració de perfils de navegació dels usuaris d'aquests llocs, aplicacions i plataformes, per introduir millores en funció de l'anàlisi de les dades d'ús que fan els usuaris del servei.",
+           "Cookies publicitàries: permeten la gestió, de la manera més eficaç possible, dels espais publicitaris.",
+           "Cookies de publicitat comportamental: emmagatzemen informació del comportament dels usuaris obtinguda a través de l'observació continuada dels seus hàbits de navegació, cosa que permet desenvolupar un perfil específic per mostrar publicitat en funció del mateix.",
+           "Cookies de xarxes socials externes: s'utilitzen perquè els visitants puguin interactuar amb el contingut de diferents plataformes socials (facebook, youtube, twitter, linkedIn, etc.) i que es generin únicament per als usuaris d'aquestes xarxes socials. Les condicions de utilització d'aquestes cookies i la informació recopilada es regula per la política de privadesa de la plataforma social corresponent."
+        ]
+      },
+      {
+        "title": "Desactivació i eliminació de cookies",
+        "content": [
+          "Tens l'opció de permetre, bloquejar o eliminar les cookies instal·lades al teu equip mitjançant la configuració de les opcions del navegador instal·lat al seu equip. En desactivar cookies, alguns dels serveis disponibles podrien deixar d'estar operatius. La forma de deshabilitar les cookies és diferent per a cada navegador, però normalment es pot fer des del menú Eines o Opcions. També podeu consultar el menú d'Ajuda del navegador on podeu trobar instruccions. L'usuari podrà en qualsevol moment triar quines cookies vol que funcionin en aquest lloc web.",
+          "Podeu permetre, bloquejar o eliminar les cookies instal·lades al vostre equip mitjançant la configuració de les opcions del navegador instal·lat al vostre ordinador:",
+          "Microsoft Internet Explorer o Microsoft Edge: http://windows.microsoft.com/eses/windows-vista/Block-or-allow-cookies",
+          "Mozilla Firefox: http://support.mozilla.org/es/kb/impedir-que-los-sitios-webguarden-sus-preferencia",
+          "Chrome: https://support.google.com/accounts/answer/61416?hl=ca",
+          "Safari: http://safari.helpmax.net/es/privacidad-y-seguridad/como-gestionar-lascookies/",
+          "Opera: http://help.opera.com/Linux/10.60/es-ES/cookies.html "
+        ]
+      },
+      {
+        "title": "Declaració de cookies utilitzades a www.lomercat.cat",
+        "content": []
+      },
+      {
+        "title": "Acceptació de la Política de cookies",
+        "content": [
+          "www.lomercat.cat assumeix que vostè accepta l'ús de cookies. No obstant això, mostra informació sobre la seva Política de cookies a la part inferior o superior de qualsevol pàgina del portal amb cada inici de sessió per tal que vostè sigui conscient" ,
+           "Davant aquesta informació és possible dur a terme les accions següents:",
+           "Acceptar cookies. No es tornarà a visualitzar aquest avís en accedir a qualsevol pàgina del portal durant aquesta sessió.",
+           "Tancar. S'amaga l'avís a la present pàgina.",
+           "Modificar la vostra configuració. Podeu obtenir més informació sobre què són les galetes, conèixer la Política de galetes de www.lomercat.cat i modificar la configuració del vostre navegador."
+        ]
+      }
+    ]
+  },
+  "DataProtection": {
+
+  },
+  "TermsOfService": {
+
   }
 }
