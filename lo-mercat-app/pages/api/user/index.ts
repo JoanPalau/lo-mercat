@@ -1,8 +1,30 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient, User } from '@prisma/client';
 import { updateOrCreate } from '../api_utils';
 import * as bcrypt from 'bcrypt';
 const prisma = new PrismaClient();
+
+
+async function createCustomer(c: any) {
+    return await updateOrCreate({
+        schema: prisma.customer,
+        where: {
+            name: c.name
+        },
+        update: c,
+        create: c
+    });
+}
+async function createFarmer(f: any) {
+    return await updateOrCreate({
+        schema: prisma.farmer,
+        where: {
+            name: f.name
+        },
+        update: f,
+        create: f
+    });
+}
 
 
 export default async function entrypoint(req: NextApiRequest, res: NextApiResponse) {
@@ -18,11 +40,12 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     let Password = req.body.password as string;
     Password = await bcrypt.hash(Password, 10);
     let Role = req.body.role as string;
+    let Gender = req.body.gender as string;
 
     switch (method) {
         case 'POST':
             // Update or create data in your database
-            let user = await updateOrCreate({
+            let user = await updateOrCreate<User>({
                 schema: prisma.user,
                 where: {
                     email: Email,
@@ -35,10 +58,24 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
                     password: Password,
                     role: Role
                 },
+            });
+            if (Role == "CUSTOMER") {
+                await createCustomer({
+                    name: Name,
+                    birthday: new Date(1990, 1, 1),
+                    userId: user.obj.id,
+                    gender: Gender
+                })
+            } else if (Role == "FARMER") {
+                await createFarmer({
+                    name: Name,
+                    birthday: new Date(1990, 1, 1),
+                    userId: user.obj.id,
+                    gender: Gender
+                })
             }
-            );
 
-            res.status(200).json({ user })
+            res.status(200).json(user)
             break
         default:
             res.setHeader('Allow', ['PUT'])

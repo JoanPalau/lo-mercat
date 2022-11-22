@@ -17,7 +17,7 @@ model Farmer {
   Stand    Stand[]
   Stock    Stock[]
   user     User      @relation(fields: [userId], references: [id])
-  userId   String
+  userId   String    @unique
   Product  Product[]
 }
 
@@ -98,7 +98,7 @@ model Customer {
   Purchase Purchase[]
   gender   String
   user     User       @relation(fields: [userId], references: [id])
-  userId   String
+  userId   String     @unique
 }
 
 model Account {

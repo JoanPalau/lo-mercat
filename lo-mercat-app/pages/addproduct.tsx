@@ -7,6 +7,9 @@ import { UserContext } from "./_app";
 
 import AddProduct from '../src/components/molecules/addProduct/AddProduct';
 import { PrismaClient } from '@prisma/client';
+import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
+import { ReactElement } from 'react';
+import Layout from '@common/Layout';
 
 const prisma = new PrismaClient();
 
@@ -20,7 +23,7 @@ export async function getServerSideProps() {
     return { props: { product } }
 }
 
-const AddProductPage: NextPage = () => {
+const AddProductPage: NextPageWithLayout = () => {
     const { status, data: session } = useSession();
     const context = useContext(UserContext);
     useEffect(() => {
@@ -35,6 +38,14 @@ const AddProductPage: NextPage = () => {
         );
 
     return <div>loading</div>
+}
+
+AddProductPage.getLayout = function getLayout(page: ReactElement) {
+    return (
+        <Layout>
+        {page}
+        </Layout>
+    )
 }
 
 export default AddProductPage;

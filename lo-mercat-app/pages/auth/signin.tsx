@@ -1,14 +1,14 @@
 import { NextPage } from "next";
 import { signIn } from "next-auth/react";
-import { FormEventHandler, useContext, useState } from "react";
+import { FormEventHandler, ReactElement, useContext, useState } from "react";
 import { UserContext } from "../_app";
 interface Props {}
 import { PrismaClient } from '@prisma/client'
 import { Box, Button, Grid, TextField, ThemeProvider, Typography } from "@mui/material";
+import Layout from '@common/Layout';
+import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 
-
-
-const SignIn: NextPage = (props): JSX.Element => {
+const SignIn: NextPageWithLayout = (props): JSX.Element => {
     const context = useContext(UserContext);
     const[userInfo, setUserInfo] = useState({email: '', password:'', role:'Farmer', name:''});
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
@@ -68,5 +68,13 @@ const SignIn: NextPage = (props): JSX.Element => {
 
     </div>)
 };
+
+SignIn.getLayout = function getLayout(page: ReactElement) {
+    return (
+        <Layout>
+        {page}
+        </Layout>
+    )
+}
 
 export default SignIn;

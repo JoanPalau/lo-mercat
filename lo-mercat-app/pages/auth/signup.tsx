@@ -2,12 +2,15 @@ import type { NextPage } from 'next'
 import styled from '@emotion/styled'
 import { useSession } from "next-auth/react";
 import Router from "next/router";
-import React, { FC, useContext, useEffect } from "react";
-import { UserContext } from "./_app";
+import React, { FC, ReactElement, useContext, useEffect } from "react";
+import { UserContext } from "../_app";
 
-import AddProduct from '../src/components/molecules/addProduct/AddProduct';
+import AddProduct from '../../src/components/molecules/addProduct/AddProduct';
 import { PrismaClient } from '@prisma/client';
-import RegisterForm from '../src/components/molecules/register/RegisterForm';
+import RegisterForm from '../../src/components/molecules/register/RegisterForm';
+import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
+import Layout from '@common/Layout';
+import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 
 const prisma = new PrismaClient();
 
@@ -21,7 +24,7 @@ export async function getServerSideProps() {
     return { props: { product } }
 }
 
-const AddProductPage: NextPage = () => {
+const AddProductPage: NextPageWithLayout = () => {
     const { status, data: session } = useSession();
     const context = useContext(UserContext);
     useEffect(() => {
@@ -36,6 +39,14 @@ const AddProductPage: NextPage = () => {
         );
 
     return <div>loading</div>
+}
+
+AddProductPage.getLayout = function getLayout(page: ReactElement) {
+    return (
+        <Layout>
+        {page}
+        </Layout>
+    )
 }
 
 export default AddProductPage;

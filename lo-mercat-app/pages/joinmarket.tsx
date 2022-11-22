@@ -4,6 +4,11 @@ import styled from '@emotion/styled'
 import { PrismaClient } from '@prisma/client';
 import JoinMarket from '../src/components/molecules/joinMarket/JoinMarket';
 import ViewJoinMarket from '../src/components/molecules/joinMarket/ListMarket';
+import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
+import Layout from '@common/Layout';
+import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
+import { ReactElement } from 'react';
+
 
 const prisma = new PrismaClient();
 
@@ -23,19 +28,32 @@ export async function getServerSideProps() {
 
         }
     });
-
-    console.log(join);
     // Pass data to the page via props
     return { props: { market, join } }
 }
 
-const joinMarketPage: NextPage = ({ market, join }: any) => {
+const joinMarketPage: NextPageWithLayout = ({ market, join }: any) => {
     return (
-        <div>
+        <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        style={{ minHeight: '100vh' }}
+        >
             <JoinMarket market={market} />
             <ViewJoinMarket join={join} />
-        </div>
+        </Grid>
     );
+}
+
+joinMarketPage.getLayout = function getLayout(page: ReactElement) {
+    return (
+        <Layout>
+        {page}
+        </Layout>
+    )
 }
 
 export default joinMarketPage;

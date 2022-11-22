@@ -1,11 +1,128 @@
 {
   "Index": {
-    "app": "Lo Mercat"
+      "app": "Lo Mercat"
   },
   "Home": {
-    "hello": "Hola Next.js!"
+      "hello": "Hello Next.js!"
   },
   "Landing": {
-    "hello": "test"
+      "hello": "test"
+  },
+  "LegalNotice": {
+      "intro": [
+        "Lo Mercat, S.L., responsable del lloc web, d'ara endavant RESPONSABLE, posa a disposició dels usuaris aquest document, amb el qual pretén donar compliment a les obligacions disposades a la Llei 34/2002, d'11 de juliol, de Serveis de la Societat de la Informació i del Comerç Electrònic (LSSICE), així com informar tots els usuaris del lloc web respecte a quines són les condicions d'ús.",
+        "Tota persona que accedeixi a aquest lloc web assumeix el paper d'usuari, comprometent-se a l'observança i el compliment rigorós de les disposicions aquí disposades, així com a qualsevol altra disposició legal que fos d'aplicació.",
+        "Lo Mercat, S.L., es reserva el dret de modificar qualsevol tipus d'informació que pogués aparèixer al lloc web, sense que hi hagi obligació de preavisar o posar en coneixement dels usuaris aquestes obligacions, entenent-se com suficient amb la publicació al lloc web del Mercat, S.L."
+      ],
+      "sections": [
+        {
+          "title": "1. DADES IDENTIFICATIVES",
+          "content": [
+            "Denominació social: Lo Mercat S.L",
+            "Nom comercial: Lo Mercat",
+            "NIF: 111111AAA",
+            "Domicili: Lleida",
+            "e-mail: legal@lomercat.com"
+          ]
+        },
+          {
+              "title": "2. OBJECTE",
+              "content": [
+                "A través del Lloc Web, us oferim als Usuaris la possibilitat d'accedir a la informació sobre els nostres serveis."
+              ]
+          },
+          {
+              "title": "3. PRIVACITAT I TRACTAMENT DE DADES",
+              "content": [
+                "Quan per a l'accés a determinats continguts o servei sigui necessari facilitar dades de caràcter personal, els Usuaris garantiran la seva veracitat, exactitud, autenticitat i vigència. L'empresa donarà a les dades el tractament automatitzat que correspongui en funció de la seva naturalesa o finalitat, en els termes indicats a la secció de Política de Privadesa."
+              ]
+          },
+          {
+              "title": "4. PROPIEDAD INDUSTRIAL E INTELECTUAL",
+              "content": [
+                "L'Usuari reconeix i accepta que tots els continguts que es mostren a l'Espai Web i en especial, dissenys, textos, imatges, logos, icones, botons, programari, noms comercials, marques, o qualsevol altre signe susceptible d'utilització industrial i/ o comercial estan subjectes a drets de Propietat Intel·lectual i totes les marques, noms comercials o signes distintius, tots els drets de propietat industrial i intel·lectual, sobre els continguts i/o qualssevol altres elements inserits a la pàgina, que són propietat exclusiva de l'empresa i/o de tercers, els qui tenen el dret exclusiu d'utilitzar-los en el trànsit econòmic, per això l'Usuari es compromet a no reproduir, copiar, distribuir, posar a disposició o de qualsevol altra manera comunicar públicament, transformar o modificar aquests continguts mantenint indemne a l'empresa de qualsevol reclamació que es derivi de l'incompliment d'aquestes obligacions.",
+                "En cap cas l'accés a l'Espai Web implica cap tipus de renúncia, transmissió, llicència o cessió total ni parcial dels drets esmentats, llevat que s'estableixi expressament el contrari. Les presents Condicions Generals d'Ús de l'Espai Web no confereixen als Usuaris cap un altre dret d'utilització, alteració, explotació, reproducció, distribució o comunicació pública de l'Espai Web i/o dels seus continguts diferents dels aquí previstos expressament. a tal efecte per l'empresa o el tercer titular dels drets afectats.",
+                "Els continguts, textos, fotografies, dissenys, logotips, imatges, programes d'ordinador, codis font i, en general, qualsevol creació intel·lectual existent en aquest Espai, així com el mateix Espai en conjunt, com a obra artística multimèdia, estan protegits com drets d'autor per la legislació en matèria de propietat intel·lectual L'empresa és titular dels elements que integren el disseny gràfic de l'Espai Web, els menús, els botons de navegació, el codi HTML, els textos, imatges, textures, gràfics i qualsevol altre contingut de l'Espai Web o, en qualsevol cas, disposa de la corresponent autorització per a la utilització d'aquests elements.. El contingut disposat a l'Espai Web no podrà ser reproduït ni en tot ni en part, ni transmès, ni registrat per cap sistema de recuperació de informació, en cap forma ni en cap mitjà, llevat que es compti amb lautorització prèvia, per escrit, de la citada Entitat.",
+                "Així mateix queda prohibit suprimir, eludir i/o manipular el copyright així com els dispositius tècnics de protecció, o qualsevol mecanisme d'informació que pogués contenir els continguts. L'Usuari d'aquest Espai Web es compromet a respectar els drets enunciats ia evitar qualsevol actuació que pogués perjudicar-los, reservant-se en tot cas l'empresa l'exercici de tots els mitjans o accions legals que li corresponguin en defensa dels seus legítims drets de propietat intel·lectual i industrial."
+              ]
+          },
+          {
+              "title": "5. OBLIGACIONS I RESPONSABILITATS DE L'USUARI DE L'ESPAI WEB",
+              "content": [
+                "L'Usuari es compromet a:",
+                "1. Fer un ús adequat i lícit de l'Espai Web així com dels continguts i serveis, de conformitat amb: (i) la legislació aplicable a cada moment; (ii) les Condicions Generals d'Ús de l'Espai Web; (iii) la moral i bons costums generalment acceptats i (iv) l'ordre públic.",
+                "2. Proveir-se de tots els mitjans i requeriments tècnics que calguin per accedir a l'Espai Web.",
+                "3. Facilitar informació veraç en emplenar amb les vostres dades de caràcter personal els formularis continguts a l'Espai Web ia mantenir-los actualitzats en tot moment de manera que respongui, en cada moment, a la situació real de l'Usuari. L'Usuari serà l'únic responsable de les manifestacions falses o inexactes que realitzi i dels perjudicis que causi a l'empresa oa tercers per la informació que faciliti.",
+                "No obstant el que estableix l'apartat anterior l'Usuari també s'ha d'abstenir de:",
+                "1. Fer un ús no autoritzat o fraudulent de l'Espai Web i/o dels continguts amb fins o efectes il·lícits, prohibits en les presents Condicions Generals d'Ús, lesius dels drets i interessos de tercers, o que de qualsevol manera puguin danyar , inutilitzar, sobrecarregar, deteriorar o impedir la utilització normal dels serveis o els documents, arxius i tota mena de continguts emmagatzemats en qualsevol equip informàtic.",
+                "2. Accedir o intentar accedir a recursos o àrees restringides de l'Espai Web, sense complir les condicions exigides per a aquest accés.",
+                "3. Provocar danys als sistemes físics o lògics de l'Espai Web, dels seus proveïdors o de tercers.",
+                "4. Introduir o difondre a la xarxa virus informàtics o qualssevol altres sistemes físics o lògics que siguin susceptibles de provocar danys als sistemes físics o lògics de l'empresa, proveïdors o de tercers.",
+                "5. Intentar accedir, utilitzar i/o manipular les dades de l'empresa, tercers proveïdors i altres usuaris.",
+                "6. Reproduir o copiar, distribuir, permetre l'accés del públic a través de qualsevol modalitat de comunicació pública, transformar o modificar els continguts, llevat que es compti amb l'autorització del titular dels drets corresponents o això resulti legalment permès." ,
+                "7. Suprimir, ocultar o manipular les notes sobre drets de propietat intel·lectual o industrial i altres dades identificatives dels drets de l'empresa o de tercers incorporats als continguts, així com els dispositius tècnics de protecció o qualsevol mecanisme d'informació que es pugui inserir en els continguts.",
+                "8. Obtenir i intentar obtenir els continguts emprant per a això mitjans o procediments diferents dels que, segons els casos, s'hagin posat a la seva disposició a aquest efecte o s'hagin indicat expressament a les pàgines web on es trobin els continguts o, a general, dels que es facin servir habitualment a Internet per no comportar un risc de dany o inutilització de l'Espai web i/o dels continguts.",
+                "9. En particular, ia títol merament indicatiu i no exhaustiu, l'Usuari es compromet a no transmetre, difondre o posar a disposició de tercers informacions, dades, continguts, missatges, gràfics, dibuixos, arxius de so i/o imatge, fotografies , enregistraments, programari i, en general, qualsevol classe de material que: • De qualsevol manera sigui contrari, menyspreï o atempti contra els drets fonamentals i les llibertats públiques reconegudes constitucionalment, als Tractats Internacionals ia la resta de la legislació vigent. Indueixi, inciti o promogui actuacions delictives, denigratòries, difamatòries, violentes o, en general, contràries a la llei, a la moral, als bons costums generalment acceptats oa l'ordre públic.• Indueixi, inciti o promogui actuacions, actituds o pensaments discriminatoris per raó de sexe, raça, religió, creences, edat o condició. • Incorporeu, poseu a disposició o permeteu accedir a productes, elements, missatges i/o servei delictius, violents, ofensius, nocius, degradants o, en general, contraris a la llei, a la moral i als bons costums generalment acceptats oa l'ordre públic. Indueixi o pugui induir a un estat inacceptable d'ansietat o temor. • Indueixi o inciti a involucrar-se en pràctiques perilloses, de risc o nocives per a la salut i l'equilibri psíquic. • Està protegit per la legislació en matèria de protecció intel·lectual o industrial pertanyent a la societat oa tercers sense que hagi estat autoritzat l'ús que es pretengui realitzar. • Sigui contrari a l'honor, a la intimitat personal i familiar oa la pròpia imatge de les persones. o programa que impedeixi el funcionament normal de l'Espai Web.",
+                "Si per accedir a alguns dels serveis i/o continguts de l'Espai Web, se li proporcionés una contrasenya, s'obliga a fer-la servir de manera diligent, mantenint-la en tot moment en secret. En conseqüència, serà responsable de la seva adequada custòdia i confidencialitat, comprometent-se a no cedir-la a tercers, de manera temporal o permanent, ni a permetre l'accés als serveis i/o continguts esmentats per part de persones alienes, igualment s'obliga a notificar a la societat qualsevol fet que pugui suposar un ús indegut de la seva contrasenya, com, a títol enunciatiu, robatori, pèrdua o accés no autoritzat, a fi de procedir a la seva cancel·lació immediata.En conseqüència, mentre no faci la notificació anterior, l'empresa queda eximida de qualsevol responsabilitat que es pugui derivar ús indegut de la contrasenya, sent de la seva responsabilitat qualsevol utilització il·lícita dels continguts i/o serveis de l'Espai Web per qualsevol tercer il·legítim. Si de manera negligent o dolosa incomplís qualsevol de les obligacions establertes en aquestes Condicions Generals d'Ús, respondrà per tots els danys i perjudicis que es puguin derivar d'aquest incompliment per a l'empresa."
+              ]
+          },
+          {
+              "title": "6. RESPONSABILITATS",
+              "content": [
+                "No es garanteix l'accés continuat, ni la correcta visualització, descàrrega o utilitat dels elements i informacions contingudes a la web que es puguin veure impedits, dificultats o interromputs per factors o circumstàncies que estan fora del seu control. No es fa responsable de les decisions que poguessin adoptar-se com a conseqüència de l'accés als continguts o informacions ofertes.",
+                "Es podrà interrompre el servei, o resoldre de manera immediata la relació amb l'Usuari, si es detecta que un ús del seu Espai Web, o de qualsevol dels serveis oferts en aquest, és contrari a les presents Condicions Generals d'Ús. No ens fem responsables per danys, perjudicis, pèrdues, reclamacions o despeses derivades de l'ús de l'Espai Web.",
+                "Únicament serà responsable d'eliminar, com més aviat millor, els continguts que puguin generar aquests perjudicis, sempre que així es notifiqui. En especial no serem responsables dels perjudicis que es poguessin derivar, entre d'altres, de:",
+                "1. Interferències, interrupcions, fallades, omissions, avaries telefòniques, retards, bloquejos o desconnexions en el funcionament del sistema electrònic, motivades per deficiències, sobrecàrregues i errors en les línies i xarxes de telecomunicacions, o per qualsevol altra causa aliena al control de l'empresa.",
+                "2. Intromissions il·legítimes mitjançant l'ús de programes malignes de qualsevol tipus ia través de qualsevol mitjà de comunicació, com ara virus informàtics o qualssevol altres.",
+                "3. Abús indegut o inadequat de l'Espai Web.",
+                "4. Errors de seguretat o navegació produïts per un mal funcionament del navegador o per l'ús de versions no actualitzades del mateix. L'administrador de l'espai web es reserven el dret de retirar, totalment o parcialment, qualsevol contingut o informació present a l'Espai Web.",
+                "L'empresa exclou qualsevol responsabilitat pels danys i perjudicis de tota naturalesa que poguessin deure's a la mala utilització dels serveis de lliure disposició i ús per part dels Usuaris d'Espai Web. Així mateix queda exonerat de qualsevol responsabilitat pel contingut i informacions que puguin ser rebudes com a conseqüència dels formularis de recollida de dades, estant els mateixos únicament per a la prestació dels serveis de consultes i dubtes. ser l'Usuari reclamat pels danys o perjudicis causats.",
+                "Vostè mantindrà l'empresa indemne davant de qualsevol dany i perjudici que es derivin de reclamacions, accions o demandes de tercers com a conseqüència del seu accés o ús de l'Espai Web. Així mateix, vostè s'obliga a indemnitzar davant de qualsevol dany i perjudici, que es derivin de l'ús per part seva de robots, spiders, crawlers o eines similars emprades per tal de demanar o extreure dades o de qualsevol altra actuació per part seva que imposi una càrrega irraonable sobre el funcionament de l'Espai Web ."
+              ]
+          },
+          {
+              "title": "7. HIPERVINCLES",
+              "content": [
+                "L'Usuari s'obliga a no reproduir de cap manera, ni tan sols mitjançant un hiperenllaç o hipervincle, l'Espai Web, així com cap dels seus continguts, excepte autorització expressa i per escrit del responsable del fitxer.",
+                "L'Espai Web pot incloure enllaços a altres espais web, gestionats per tercers, a fi de facilitar l'accés de l'Usuari a la informació d'empreses col·laboradores i/o patrocinadores. D'acord amb això, la societat no es responsabilitza del contingut d'aquests Espais web , ni se situa en una posició de garant ni/o de part ofertant dels serveis i/o informació que es puguin oferir a tercers a través dels enllaços de tercers.",
+                "Es concedeix a l'Usuari un dret limitat, revocable i no exclusiu a crear enllaços a la pàgina principal de l'Espai Web exclusivament per a ús privat i no comercial. Els Espais web que incloguin enllaç al nostre Espai Web (i) no podran falsejar la seva relació ni afirmar que s'ha autoritzat aquest enllaç, ni incloure marques, denominacions, noms comercials, logotips o altres signes distintius de la nostra societat;(ii) no podran incloure continguts que puguin considerar-se de mal gust, obscens, ofensius, controvertits, que incitin a la violència o discriminació per raó de sexe, raça o religió, contraris a l'ordre públic o il·lícits, (iii) no podran enllaçar a cap pàgina de l'Espai Web diferent de la pàgina principal, (iv) haurà d'enllaçar amb la pròpia adreça de l'Espai Web , sense permetre que l'Espai web que realitzi l'enllaç reprodueixi l'Espai Web com a part de la seva web o dins d'un dels seus “frames” o crear un “browser” sobre qualsevol de les pàgines de l'Espaque io Web. L'empresa podrà sol·licitar, en qualsevol moment, que elimini qualsevol enllaç a l'Espai Web, després d'això haurà de procedir immediatament a la seva eliminació.",
+                "L'empresa no pot controlar la informació, els continguts, els productes o els serveis facilitats per altres Espais web que tinguin establerts enllaços amb destinació a l'Espai Web."
+              ]
+          },
+          {
+              "title": "8. PROTECCIÓ DE DADES",
+              "content": [
+                "Per utilitzar alguns dels Serveis, l'Usuari ha de proporcionar prèviament certes dades de caràcter personal. L'empresa tractarà automatitzadament aquestes dades i aplicarà les mesures de seguretat corresponents, tot això en compliment del RGPD, LOPDGDD i LSSI. L'Usuari pot accedir a la política seguida en el tractament de les dades personals, així com l'establiment de les finalitats prèviament establertes, en les condicions definides a la Política de Privadesa."
+              ]
+          },
+          {
+              "title": "9.COOKIES",
+              "content": [
+                "L'empresa es reserva el dret d'utilitzar la tecnologia “cookie” a l'Espai Web, per tal de reconèixer-ho com a Usuari freqüent i personalitzar l'ús que realitzi de l'Espai Web mitjançant la preselecció del vostre idioma, o continguts més desitjats o específics." ,
+                "Les galetes recopilen l'adreça IP de l'usuari i és Google el responsable del tractament d'aquesta informació.",
+                "Les cookies són fitxers enviats a un navegador, per mitjà d'un servidor web, per registrar la navegació de l'Usuari a l'Espai Web, quan l'Usuari permeti la seva recepció. Si ho desitja pot configurar el seu navegador per ser avisat a la pantalla de la recepció de cookies i per impedir la instal·lació de cookies al disc dur. Si us plau consulteu les instruccions i manuals del vostre navegador per ampliar aquesta informació.",
+                "Gràcies a les cookies, és possible que es pugui reconèixer el navegador de l'ordinador utilitzat per l'Usuari amb la finalitat de facilitar continguts i oferir les preferències de navegació o publicitàries que l'Usuari, als perfils demogràfics dels Usuaris així com per mesurar les visites i paràmetres del trànsit, controlar el progrés i el nombre d'entrades."
+              ]
+          },
+          {
+              "title": "10. DECLARACIONS I GARANTIES",
+              "content": [
+                "En general, els continguts i serveis oferts a l'Espai Web tenen caràcter merament informatiu. Per tant, en oferir-los, no s'atorga cap garantia ni declaració en relació amb els continguts i serveis oferts a l'Espai web, incloent-hi, a títol enunciatiu, garanties de licitud, fiabilitat, utilitat, veracitat, exactitud, o comerciabilitat, excepte en la mesura que per llei no es puguin excloure aquestes declaracions i garanties."
+              ]
+          },
+          {
+              "title": "11. FORÇA MAJOR",
+              "content": [
+                "L'empresa no serà responsable en tot en cas d'impossibilitat de prestar servei, si aquesta és deguda a interrupcions prolongades del subministrament elèctric, línies de telecomunicacions, conflictes socials, vagues, rebel·lió, explosions, inundacions, actes i omissions del Govern, i en general tots els supòsits de força major o de cas fortuït."
+              ]
+          },
+          {
+              "title": "12. RESOLUCIÓ DE CONTROVÈRSIES. LLEI APLICABLE I JURISDICCIÓ",
+              "content": [
+                "Les presents Condicions Generals d'Ús, així com l'ús de l'Espai Web, es regiran per la legislació espanyola. Per a la resolució de qualsevol controvèrsia les parts se sotmetran als Jutjats i Tribunals del domicili social del Responsable del lloc web.",
+                "En cas que qualsevol estipulació de les presents Condicions Generals d'Ús resultés inexigible o nul·la en virtut de la legislació aplicable o com a conseqüència d'una resolució judicial o administrativa, aquesta inexigibilitat o nul·litat no farà que les presents Condicions Generals d'Ús resultin inexigibles o nul·les en conjunt. En aquests casos, l'empresa ha de procedir a la modificació o substitució d'aquesta estipulació per una altra que sigui vàlida i exigible i que, en la mesura que sigui possible, aconsegueixi l'objectiu i la pretensió reflectits en l'estipulació original."
+              ]
+          }
+      ]
   }
 }

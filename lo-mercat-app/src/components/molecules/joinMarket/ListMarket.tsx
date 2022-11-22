@@ -4,14 +4,8 @@ import { Link, Routes, Route, useNavigate } from 'react-router-dom';
 
 
 import { useForm, SubmitHandler } from "react-hook-form";
+import { Box, Button, Grid } from '@mui/material';
 
-const MyDiv = styled.div`
-
-margin: auto;
-width: 50%;
-padding: 10px;
-
-`;
 
 type Inputs = {
     marketSelected: string,
@@ -42,10 +36,22 @@ const ListMarket = ({ join }: any) => {
         (res) =>{window.location.href = '/joinmarket'},
         (res) =>{console.log("error")}
         )
-        }
+    }
     join.forEach((join: any) => {
         results.push(
-            <li className="list-group-item" >{join.market.name} <h1 onClick={(data) => rem(join)}>Remove</h1></li>
+            <li className="list-group-item" >
+                <Grid
+                container
+                spacing={0}
+                >
+                    {join.market.name}
+                    <Box sx={{ mx: 'auto', width: 4 }}/>
+                    <Button variant="contained" color='error' onClick={(data) => rem(join)}>
+                        Remove
+                    </Button>
+                </Grid>
+                <Box sx={{ mx: 'auto', height: 10 }}/>
+            </li>
         );
         
     });
@@ -53,10 +59,10 @@ const ListMarket = ({ join }: any) => {
 
     return (
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-        <MyDiv>
-            <h2>You have a stand in the market</h2>
+        <div>
+            <h2>You have a stand in the markets:</h2>
             <ul className="list-group">{results} </ul>
-        </MyDiv>
+        </div>
     );
 }
 
