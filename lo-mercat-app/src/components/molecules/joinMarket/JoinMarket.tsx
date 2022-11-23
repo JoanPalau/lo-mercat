@@ -73,7 +73,7 @@ const JoinMarket = ({ market,props }: any) => {
                 <Box sx={{ mx: 'auto', height: 20 }}/>
                 <Typography variant="h5">{t("labloc")}</Typography>
                 <div className='col-auto'>
-                    <TextField variant="filled" placeholder={t("placeholderloc")} {...register("location", {pattern: /^[A-Za-z]+$/i })} />
+                    <TextField variant="filled" placeholder={t("placeholderloc")} {...register("location", {pattern: /^[A-Za-z0-9]+$/i })} />
                 </div>
                 <div className='col-auto col-sm-4'>
                     {errors.location && t("err")}
