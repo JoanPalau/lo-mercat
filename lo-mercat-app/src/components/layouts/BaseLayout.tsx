@@ -38,12 +38,12 @@ const BaseLayout = (props: { children: ReactElement }) => {
           textAlign: 'center',
           paddingTop: '1.5rem'
         }} spacing={2}>
-          <Button fullWidth variant="contained" size='large' href="auth/signUp">
+          <Button fullWidth variant="contained" size='large' href="auth/signup">
             {t("SignUp")}
           </Button>
           <Typography color="whitesmoke">
             {t("text")}
-            <Link href="auth/signIn">{t("SignIn")}</Link>
+            <Link href="auth/signin">{t("SignIn")}</Link>
           </Typography>
         </Stack>
       </Container>

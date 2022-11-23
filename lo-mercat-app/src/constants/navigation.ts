@@ -30,7 +30,7 @@ export const LOGIN = {
     nav: 'Login'
 }
 export const SIGN_IN = {
-    url: 'auth/signIn',
+    url: 'auth/signin',
     title: name + ' - Sign In',
     nav: 'Sign In'
 }
