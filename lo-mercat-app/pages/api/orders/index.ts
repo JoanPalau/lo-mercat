@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { PrismaClient } from '@prisma/client';
-import { updateOrCreate } from '../api_utils';
-const prisma = new PrismaClient();
+import { prisma } from '../../../lib/prisma';
 
 
 export default async function entrypoint(req: NextApiRequest, res: NextApiResponse) {

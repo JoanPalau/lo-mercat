@@ -1,10 +1,7 @@
 import type { NextPage } from 'next'
-import styled from '@emotion/styled'
-
 import MarketList from '../../src/components/molecules/marketInfo/MarketList';
-import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+import { prisma } from '../../lib/prisma';
 
 export async function getServerSideProps() {
     // Fetch data from external API

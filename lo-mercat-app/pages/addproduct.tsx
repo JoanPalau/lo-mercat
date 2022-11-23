@@ -4,9 +4,9 @@ import Router from "next/router";
 import  { useEffect } from "react";
 
 import AddProduct from '../src/components/molecules/addProduct/AddProduct';
-import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+import { prisma } from '../lib/prisma';
+
 
 export async function getServerSideProps() {
     // Fetch data from external API

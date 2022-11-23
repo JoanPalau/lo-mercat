@@ -3,8 +3,8 @@ import { useTranslations } from 'next-intl';
 import { ReactElement, useState } from 'react';
 
 
-// import { Purchase } from '@prisma/client';
-// import { prisma } from '../../lib/prisma';
+import { Purchase } from '@prisma/client';
+import { prisma } from '../../lib/prisma';
 
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
