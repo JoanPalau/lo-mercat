@@ -1,9 +1,7 @@
 import type { NextPage } from 'next'
-import styled from '@emotion/styled'
 import { useSession } from "next-auth/react";
 import Router from "next/router";
-import React, { FC, useContext, useEffect } from "react";
-import { UserContext } from "./_app";
+import  { useEffect } from "react";
 
 import AddProduct from '../src/components/molecules/addProduct/AddProduct';
 import { PrismaClient } from '@prisma/client';
@@ -22,7 +20,6 @@ export async function getServerSideProps() {
 
 const AddProductPage: NextPage = () => {
     const { status, data: session } = useSession();
-    const context = useContext(UserContext);
     useEffect(() => {
         if (status === "unauthenticated") Router.replace("/auth/signin");
     }, [status]);

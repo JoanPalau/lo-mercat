@@ -1,14 +1,8 @@
 import { NextPage } from "next";
 import { signIn } from "next-auth/react";
-import { FormEventHandler, useContext, useState } from "react";
-import { UserContext } from "../_app";
-interface Props {}
-import { PrismaClient } from '@prisma/client'
-
-
+import { FormEventHandler, useState } from "react";
 
 const SignIn: NextPage = (props): JSX.Element => {
-    const context = useContext(UserContext);
     const[userInfo, setUserInfo] = useState({email: '', password:'', role:'Farmer', name:''});
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
         setUserInfo({... userInfo, role:'User'})
