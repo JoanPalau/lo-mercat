@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 
 
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useSession } from 'next-auth/react';
 
 type Inputs = {
     name: string,
@@ -12,15 +13,13 @@ type Inputs = {
 
 
 
-async function setStock(data: any) {
-    console.log(data);
-    let currentFarmer = "1";
+async function setStock(data: any,session: any) {
     let x = await fetch(
         '/api/products/',
         {
             body: JSON.stringify({
                 name: data.name,
-                farmerId: currentFarmer,
+                farmerId:  session.farmer.id,
             }),
             headers: new Headers({ 'Content-Type': 'application/json', Accept: 'application/json', }),
             method: 'POST'
@@ -34,8 +33,9 @@ const AddProductForm = ({props}:any) => {
 
     const isMobile = {props};
     const t = useTranslations("AddProduct");
+    const { status, data:session } = useSession();
     const onSubmit: SubmitHandler<Inputs> = data => {
-        setStock(data).then(
+        setStock(data,session).then(
             (res) => { window.location.href = '/addstock' },
             (res) => { console.log("error") }
         )

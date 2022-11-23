@@ -5,6 +5,7 @@ import { redirect } from 'next/dist/server/api-utils';
 // import Link from 'next/link';
 import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
 import React from 'react';
+import { useSession } from 'next-auth/react';
 
 const MyDiv = styled.div`
 
@@ -20,15 +21,14 @@ type Inputs = {
     productSelected: string,
 };
 
-async function setStock(data: any) {
+async function setStock(data: any, session: any) {
     console.log(data);
-    let currentFarmer = "1";
     let x = await fetch(
         '/api/stock/',
         {
             body: JSON.stringify({
                 product_id: data.productSelected,
-                farmer_id: currentFarmer,
+                farmer_id: session.farmer.id,
                 quantity: data.quantity,
                 cost: data.cost,
             }),
@@ -43,8 +43,9 @@ const AddProductForm = ({ product, props }: any) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
     const isMobile = { props };
     const t = useTranslations("AddStock");
+    const { status, data:session } = useSession();
     const onSubmit: SubmitHandler<Inputs> = data => {
-        setStock(data).then(
+        setStock(data, session).then(
             (res) => { window.location.href = '/protected' },
             (res) => { console.log("error") }
         )

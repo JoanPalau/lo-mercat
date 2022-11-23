@@ -6,20 +6,20 @@ import { useTranslations } from 'next-intl';
 
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Box, Button, Grid } from '@mui/material';
+import { useSession } from 'next-auth/react';
 
 
 type Inputs = {
     marketSelected: string,
 };
 
-async function removeMarket(data: any) {
+async function removeMarket(data: any, session: any) {
     console.log(data);
-    let currentFarmer = "1";
     let x = await fetch(
         '/api/stand/',
         {
             body: JSON.stringify({
-                "farmer_id": currentFarmer,
+                "farmer_id": session.farmer.id,
                 "market_id": data.market.id
             }),
             headers: new Headers({ 'Content-Type': 'application/json', Accept: 'application/json', }),
@@ -34,8 +34,9 @@ const ListMarket = ({ join, props }: any) => {
     const isMobile = { props };
     const t = useTranslations("ListMarket");
     const results: any = []
+    const { status, data:session } = useSession();
     const rem: any = (data: any) => {
-        removeMarket(data).then(
+        removeMarket(data, session).then(
             (res) => { window.location.href = '/joinmarket' },
             (res) => { console.log("error") }
         )
