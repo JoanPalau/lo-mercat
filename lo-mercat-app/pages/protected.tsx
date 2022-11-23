@@ -1,4 +1,4 @@
-import { Grid, Link } from "@mui/material";
+import { Box, Grid, Link } from "@mui/material";
 import { useSession } from "next-auth/react";
 // import Link from "next/link";
 import React, { FC, useContext, useEffect } from "react";
@@ -54,7 +54,8 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
         justifyContent="center"
         style={{ minHeight: '100vh' }}
         >
-        {t("txtrole")} {session.user?.role}
+          <Box sx={{ mx: 'auto', height: 20 }}/>
+        { t("txtrole")} {session.user?.name}
         <Card sx={{
             display: 'block',
             transitionDuration: '0.3s',
