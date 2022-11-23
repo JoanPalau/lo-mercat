@@ -9,8 +9,10 @@ import { Divider, Grid, Link, List, ListItem, ListItemButton, ListItemIcon, List
 import React from 'react';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { Home, Shop, Store, Storefront } from '@mui/icons-material';
+import { Home, Inventory, Shop, Store, Storefront } from '@mui/icons-material';
 import styled from '@emotion/styled';
+import { signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 
 const ImageCustom = styled.img`
@@ -21,6 +23,17 @@ const ImageCustom = styled.img`
 `;
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
+function loginBut(status: string) {
+  console.log(status);
+  if (status === "unauthenticated") {
+    return <Button color="inherit" onClick={() => {window.location.href = '/auth/signin'}}>
+    Login
+    </Button>
+  }
+  return <></>
+}
+
+
 export default function TopNavigation() {
   const [state, setState] = React.useState({
       top: false,
@@ -28,6 +41,12 @@ export default function TopNavigation() {
       bottom: false,
       right: false,
     });
+
+    const { status, data: session } = useSession();
+    let hiMsg = ""
+    if (session != null) {
+      hiMsg = session.user.name;
+    }
     
     let showDrawer = state['left'];
     // let setState = (x:any) => {}
@@ -64,7 +83,7 @@ export default function TopNavigation() {
         >
         <Box sx={{ mx: 'auto', height: 20 }}/>
         <ImageCustom src={'/user.png'} width={150} height={150}/>
-        USER HERE
+          {hiMsg}
         </Grid>   
         <Grid
         container
@@ -86,7 +105,17 @@ export default function TopNavigation() {
             </Link>
           </ListItem>
           <ListItem disablePadding>
-            <Link href="/protected" style={{ textDecoration: 'none' }}>
+            <Link href="/addstock" style={{ textDecoration: 'none' }}>
+            <ListItemButton>
+              <ListItemIcon>
+                <Inventory/>
+              </ListItemIcon>
+                <ListItemText primary={'Stock'} />
+            </ListItemButton>
+            </Link>
+          </ListItem>
+          <ListItem disablePadding>
+            <Link href="/joinMarket" style={{ textDecoration: 'none' }}>
             <ListItemButton>
               <ListItemIcon>
                 <Storefront/>
@@ -96,7 +125,7 @@ export default function TopNavigation() {
             </Link>
           </ListItem>
           <ListItem disablePadding>
-            <Link href="/protected" style={{ textDecoration: 'none' }}>
+            <Link href="/marketInfo" style={{ textDecoration: 'none' }}>
             <ListItemButton>
               <ListItemIcon>
                 <Store/>
@@ -124,8 +153,8 @@ export default function TopNavigation() {
         alignItems="center"
         justifyContent="center"
         >
-        <Button variant="outlined" href="#outlined-buttons">
-        Sign Out
+        <Button variant="outlined" onClick={() => signOut({callbackUrl: '/'})}>
+          Sign Out
         </Button>
         </Grid>   
     </Box>
@@ -159,7 +188,7 @@ export default function TopNavigation() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Lo Mercat
           </Typography>
-          <Button color="inherit">Login</Button>
+            {loginBut(status)}
         </Toolbar>
       </AppBar>
     </Box>

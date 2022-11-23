@@ -10,7 +10,7 @@ const prisma = new PrismaClient();
 
 export async function getServerSideProps(context:any) {
   const { id } = context.query;
-  const res = await fetch("http://localhost:3000/api/markets/" + id + "/product")
+  const res = await fetch("/api/markets/" + id + "/product")
   const market = await prisma.market.findFirst({
     where: { id: id }
   });

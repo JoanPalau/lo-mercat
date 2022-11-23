@@ -70,8 +70,7 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
                 await createFarmer({
                     name: Name,
                     birthday: new Date(1990, 1, 1),
-                    userId: user.obj.id,
-                    gender: Gender
+                    userId: user.obj.id
                 })
             }
 

@@ -9,6 +9,7 @@ import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 import { ReactElement } from 'react';
 import { isMobile } from '@common/DeviceDetection';
 import { NextPageContext } from 'next';
+import { useSession } from "next-auth/react";
 
 
 const prisma = new PrismaClient();
@@ -23,7 +24,7 @@ export async function getServerSideProps(context: NextPageContext) {
     return {
         props: {
             product, messages: (await import(`../messages/${context.locale}.json`)).default,
-            isMobile: isMobile(context.req)
+            isMobile: isMobile(context.req),
         }
     }
 }
