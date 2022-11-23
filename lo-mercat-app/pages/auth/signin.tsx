@@ -35,10 +35,9 @@ const SignIn: NextPageWithLayout = (props): JSX.Element => {
             email: userInfo.email,
             password: userInfo.password,
             role:userInfo.role,
-            redirect: true,
-            callbackUrl: '/en/protected'
+            redirect: false,
         });
-        
+        window.location.href = '/protected'
     };
     return(<div className="Auth-form-container">
         <form className="Auth-form" onSubmit={handleSubmit}>

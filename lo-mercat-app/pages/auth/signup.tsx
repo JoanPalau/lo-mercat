@@ -24,28 +24,23 @@ export async function getServerSideProps(context: NextPageContext) {
     };
 }
 
-const AddProductPage: NextPageWithLayout = ({props}:any) => {
+const RegisterFormPage: NextPageWithLayout = ({props}:any) => {
     
     const isMobile = {props};
     const t = useTranslations("Signup");
     
     const { status, data: session } = useSession();
     const context = useContext(UserContext);
-    useEffect(() => {
-        if (status === "unauthenticated") Router.replace("/auth/signin");
-    }, [status]);
-
-    if (status === "authenticated")
-        return (
-            <div>
-                <RegisterForm />
-            </div>
-        );
+    return (
+        <div>
+            <RegisterForm />
+        </div>
+    );
 
     return <div> {t("loading")}</div>
 }
 
-AddProductPage.getLayout = function getLayout(page: ReactElement) {
+RegisterFormPage.getLayout = function getLayout(page: ReactElement) {
     return (
         <Layout>
         {page}
@@ -53,4 +48,4 @@ AddProductPage.getLayout = function getLayout(page: ReactElement) {
     )
 }
 
-export default AddProductPage;
+export default RegisterFormPage;
