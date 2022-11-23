@@ -1,382 +1,408 @@
 {
-  "Index": {
-      "app": "Lo Mercat"
-  },
-  "Home": {
-      "hello": "Hello Next.js!"
-  },
-  "Landing": {
-      "SignIn": "Inicia sessió",
-      "text": "Ja tens un compte? ",
-      "motivation": "Impulsa el comerç local i el teu entorn!",
-      "SignUp": "Registra't"
-  },
-  "LegalNotice": {
-      "intro": [
-        "Lo Mercat, S.L., responsable del lloc web, d'ara endavant RESPONSABLE, posa a disposició dels usuaris aquest document, amb el qual pretén donar compliment a les obligacions disposades a la Llei 34/2002, d'11 de juliol, de Serveis de la Societat de la Informació i del Comerç Electrònic (LSSICE), així com informar tots els usuaris del lloc web respecte a quines són les condicions d'ús.",
-        "Tota persona que accedeixi a aquest lloc web assumeix el paper d'usuari, comprometent-se a l'observança i el compliment rigorós de les disposicions aquí disposades, així com a qualsevol altra disposició legal que fos d'aplicació.",
-        "Lo Mercat, S.L., es reserva el dret de modificar qualsevol tipus d'informació que pogués aparèixer al lloc web, sense que hi hagi obligació de preavisar o posar en coneixement dels usuaris aquestes obligacions, entenent-se com suficient amb la publicació al lloc web del Mercat, S.L."
-      ],
-      "sections": [
-        {
-          "title": "1. DADES IDENTIFICATIVES",
-          "content": [
-            "Denominació social: Lo Mercat S.L",
-            "Nom comercial: Lo Mercat",
-            "NIF: 111111AAA",
-            "Domicili: Lleida",
-            "e-mail: legal@lomercat.com"
-          ]
-        },
-          {
-              "title": "2. OBJECTE",
-              "content": [
-                "A través del Lloc Web, us oferim als Usuaris la possibilitat d'accedir a la informació sobre els nostres serveis."
-              ]
-          },
-          {
-              "title": "3. PRIVACITAT I TRACTAMENT DE DADES",
-              "content": [
-                "Quan per a l'accés a determinats continguts o servei sigui necessari facilitar dades de caràcter personal, els Usuaris garantiran la seva veracitat, exactitud, autenticitat i vigència. L'empresa donarà a les dades el tractament automatitzat que correspongui en funció de la seva naturalesa o finalitat, en els termes indicats a la secció de Política de Privadesa."
-              ]
-          },
-          {
-              "title": "4. PROPIEDAD INDUSTRIAL E INTELECTUAL",
-              "content": [
-                "L'Usuari reconeix i accepta que tots els continguts que es mostren a l'Espai Web i en especial, dissenys, textos, imatges, logos, icones, botons, programari, noms comercials, marques, o qualsevol altre signe susceptible d'utilització industrial i/ o comercial estan subjectes a drets de Propietat Intel·lectual i totes les marques, noms comercials o signes distintius, tots els drets de propietat industrial i intel·lectual, sobre els continguts i/o qualssevol altres elements inserits a la pàgina, que són propietat exclusiva de l'empresa i/o de tercers, els qui tenen el dret exclusiu d'utilitzar-los en el trànsit econòmic, per això l'Usuari es compromet a no reproduir, copiar, distribuir, posar a disposició o de qualsevol altra manera comunicar públicament, transformar o modificar aquests continguts mantenint indemne a l'empresa de qualsevol reclamació que es derivi de l'incompliment d'aquestes obligacions.",
-                "En cap cas l'accés a l'Espai Web implica cap tipus de renúncia, transmissió, llicència o cessió total ni parcial dels drets esmentats, llevat que s'estableixi expressament el contrari. Les presents Condicions Generals d'Ús de l'Espai Web no confereixen als Usuaris cap un altre dret d'utilització, alteració, explotació, reproducció, distribució o comunicació pública de l'Espai Web i/o dels seus continguts diferents dels aquí previstos expressament. a tal efecte per l'empresa o el tercer titular dels drets afectats.",
-                "Els continguts, textos, fotografies, dissenys, logotips, imatges, programes d'ordinador, codis font i, en general, qualsevol creació intel·lectual existent en aquest Espai, així com el mateix Espai en conjunt, com a obra artística multimèdia, estan protegits com drets d'autor per la legislació en matèria de propietat intel·lectual L'empresa és titular dels elements que integren el disseny gràfic de l'Espai Web, els menús, els botons de navegació, el codi HTML, els textos, imatges, textures, gràfics i qualsevol altre contingut de l'Espai Web o, en qualsevol cas, disposa de la corresponent autorització per a la utilització d'aquests elements.. El contingut disposat a l'Espai Web no podrà ser reproduït ni en tot ni en part, ni transmès, ni registrat per cap sistema de recuperació de informació, en cap forma ni en cap mitjà, llevat que es compti amb lautorització prèvia, per escrit, de la citada Entitat.",
-                "Així mateix queda prohibit suprimir, eludir i/o manipular el copyright així com els dispositius tècnics de protecció, o qualsevol mecanisme d'informació que pogués contenir els continguts. L'Usuari d'aquest Espai Web es compromet a respectar els drets enunciats ia evitar qualsevol actuació que pogués perjudicar-los, reservant-se en tot cas l'empresa l'exercici de tots els mitjans o accions legals que li corresponguin en defensa dels seus legítims drets de propietat intel·lectual i industrial."
-              ]
-          },
-          {
-              "title": "5. OBLIGACIONS I RESPONSABILITATS DE L'USUARI DE L'ESPAI WEB",
-              "content": [
-                "L'Usuari es compromet a:",
-                "1. Fer un ús adequat i lícit de l'Espai Web així com dels continguts i serveis, de conformitat amb: (i) la legislació aplicable a cada moment; (ii) les Condicions Generals d'Ús de l'Espai Web; (iii) la moral i bons costums generalment acceptats i (iv) l'ordre públic.",
-                "2. Proveir-se de tots els mitjans i requeriments tècnics que calguin per accedir a l'Espai Web.",
-                "3. Facilitar informació veraç en emplenar amb les vostres dades de caràcter personal els formularis continguts a l'Espai Web ia mantenir-los actualitzats en tot moment de manera que respongui, en cada moment, a la situació real de l'Usuari. L'Usuari serà l'únic responsable de les manifestacions falses o inexactes que realitzi i dels perjudicis que causi a l'empresa oa tercers per la informació que faciliti.",
-                "No obstant el que estableix l'apartat anterior l'Usuari també s'ha d'abstenir de:",
-                "1. Fer un ús no autoritzat o fraudulent de l'Espai Web i/o dels continguts amb fins o efectes il·lícits, prohibits en les presents Condicions Generals d'Ús, lesius dels drets i interessos de tercers, o que de qualsevol manera puguin danyar , inutilitzar, sobrecarregar, deteriorar o impedir la utilització normal dels serveis o els documents, arxius i tota mena de continguts emmagatzemats en qualsevol equip informàtic.",
-                "2. Accedir o intentar accedir a recursos o àrees restringides de l'Espai Web, sense complir les condicions exigides per a aquest accés.",
-                "3. Provocar danys als sistemes físics o lògics de l'Espai Web, dels seus proveïdors o de tercers.",
-                "4. Introduir o difondre a la xarxa virus informàtics o qualssevol altres sistemes físics o lògics que siguin susceptibles de provocar danys als sistemes físics o lògics de l'empresa, proveïdors o de tercers.",
-                "5. Intentar accedir, utilitzar i/o manipular les dades de l'empresa, tercers proveïdors i altres usuaris.",
-                "6. Reproduir o copiar, distribuir, permetre l'accés del públic a través de qualsevol modalitat de comunicació pública, transformar o modificar els continguts, llevat que es compti amb l'autorització del titular dels drets corresponents o això resulti legalment permès." ,
-                "7. Suprimir, ocultar o manipular les notes sobre drets de propietat intel·lectual o industrial i altres dades identificatives dels drets de l'empresa o de tercers incorporats als continguts, així com els dispositius tècnics de protecció o qualsevol mecanisme d'informació que es pugui inserir en els continguts.",
-                "8. Obtenir i intentar obtenir els continguts emprant per a això mitjans o procediments diferents dels que, segons els casos, s'hagin posat a la seva disposició a aquest efecte o s'hagin indicat expressament a les pàgines web on es trobin els continguts o, a general, dels que es facin servir habitualment a Internet per no comportar un risc de dany o inutilització de l'Espai web i/o dels continguts.",
-                "9. En particular, ia títol merament indicatiu i no exhaustiu, l'Usuari es compromet a no transmetre, difondre o posar a disposició de tercers informacions, dades, continguts, missatges, gràfics, dibuixos, arxius de so i/o imatge, fotografies , enregistraments, programari i, en general, qualsevol classe de material que: • De qualsevol manera sigui contrari, menyspreï o atempti contra els drets fonamentals i les llibertats públiques reconegudes constitucionalment, als Tractats Internacionals ia la resta de la legislació vigent. Indueixi, inciti o promogui actuacions delictives, denigratòries, difamatòries, violentes o, en general, contràries a la llei, a la moral, als bons costums generalment acceptats oa l'ordre públic.• Indueixi, inciti o promogui actuacions, actituds o pensaments discriminatoris per raó de sexe, raça, religió, creences, edat o condició. • Incorporeu, poseu a disposició o permeteu accedir a productes, elements, missatges i/o servei delictius, violents, ofensius, nocius, degradants o, en general, contraris a la llei, a la moral i als bons costums generalment acceptats oa l'ordre públic. Indueixi o pugui induir a un estat inacceptable d'ansietat o temor. • Indueixi o inciti a involucrar-se en pràctiques perilloses, de risc o nocives per a la salut i l'equilibri psíquic. • Està protegit per la legislació en matèria de protecció intel·lectual o industrial pertanyent a la societat oa tercers sense que hagi estat autoritzat l'ús que es pretengui realitzar. • Sigui contrari a l'honor, a la intimitat personal i familiar oa la pròpia imatge de les persones. o programa que impedeixi el funcionament normal de l'Espai Web.",
-                "Si per accedir a alguns dels serveis i/o continguts de l'Espai Web, se li proporcionés una contrasenya, s'obliga a fer-la servir de manera diligent, mantenint-la en tot moment en secret. En conseqüència, serà responsable de la seva adequada custòdia i confidencialitat, comprometent-se a no cedir-la a tercers, de manera temporal o permanent, ni a permetre l'accés als serveis i/o continguts esmentats per part de persones alienes, igualment s'obliga a notificar a la societat qualsevol fet que pugui suposar un ús indegut de la seva contrasenya, com, a títol enunciatiu, robatori, pèrdua o accés no autoritzat, a fi de procedir a la seva cancel·lació immediata.En conseqüència, mentre no faci la notificació anterior, l'empresa queda eximida de qualsevol responsabilitat que es pugui derivar ús indegut de la contrasenya, sent de la seva responsabilitat qualsevol utilització il·lícita dels continguts i/o serveis de l'Espai Web per qualsevol tercer il·legítim. Si de manera negligent o dolosa incomplís qualsevol de les obligacions establertes en aquestes Condicions Generals d'Ús, respondrà per tots els danys i perjudicis que es puguin derivar d'aquest incompliment per a l'empresa."
-              ]
-          },
-          {
-              "title": "6. RESPONSABILITATS",
-              "content": [
-                "No es garanteix l'accés continuat, ni la correcta visualització, descàrrega o utilitat dels elements i informacions contingudes a la web que es puguin veure impedits, dificultats o interromputs per factors o circumstàncies que estan fora del seu control. No es fa responsable de les decisions que poguessin adoptar-se com a conseqüència de l'accés als continguts o informacions ofertes.",
-                "Es podrà interrompre el servei, o resoldre de manera immediata la relació amb l'Usuari, si es detecta que un ús del seu Espai Web, o de qualsevol dels serveis oferts en aquest, és contrari a les presents Condicions Generals d'Ús. No ens fem responsables per danys, perjudicis, pèrdues, reclamacions o despeses derivades de l'ús de l'Espai Web.",
-                "Únicament serà responsable d'eliminar, com més aviat millor, els continguts que puguin generar aquests perjudicis, sempre que així es notifiqui. En especial no serem responsables dels perjudicis que es poguessin derivar, entre d'altres, de:",
-                "1. Interferències, interrupcions, fallades, omissions, avaries telefòniques, retards, bloquejos o desconnexions en el funcionament del sistema electrònic, motivades per deficiències, sobrecàrregues i errors en les línies i xarxes de telecomunicacions, o per qualsevol altra causa aliena al control de l'empresa.",
-                "2. Intromissions il·legítimes mitjançant l'ús de programes malignes de qualsevol tipus ia través de qualsevol mitjà de comunicació, com ara virus informàtics o qualssevol altres.",
-                "3. Abús indegut o inadequat de l'Espai Web.",
-                "4. Errors de seguretat o navegació produïts per un mal funcionament del navegador o per l'ús de versions no actualitzades del mateix. L'administrador de l'espai web es reserven el dret de retirar, totalment o parcialment, qualsevol contingut o informació present a l'Espai Web.",
-                "L'empresa exclou qualsevol responsabilitat pels danys i perjudicis de tota naturalesa que poguessin deure's a la mala utilització dels serveis de lliure disposició i ús per part dels Usuaris d'Espai Web. Així mateix queda exonerat de qualsevol responsabilitat pel contingut i informacions que puguin ser rebudes com a conseqüència dels formularis de recollida de dades, estant els mateixos únicament per a la prestació dels serveis de consultes i dubtes. ser l'Usuari reclamat pels danys o perjudicis causats.",
-                "Vostè mantindrà l'empresa indemne davant de qualsevol dany i perjudici que es derivin de reclamacions, accions o demandes de tercers com a conseqüència del seu accés o ús de l'Espai Web. Així mateix, vostè s'obliga a indemnitzar davant de qualsevol dany i perjudici, que es derivin de l'ús per part seva de robots, spiders, crawlers o eines similars emprades per tal de demanar o extreure dades o de qualsevol altra actuació per part seva que imposi una càrrega irraonable sobre el funcionament de l'Espai Web ."
-              ]
-          },
-          {
-              "title": "7. HIPERVINCLES",
-              "content": [
-                "L'Usuari s'obliga a no reproduir de cap manera, ni tan sols mitjançant un hiperenllaç o hipervincle, l'Espai Web, així com cap dels seus continguts, excepte autorització expressa i per escrit del responsable del fitxer.",
-                "L'Espai Web pot incloure enllaços a altres espais web, gestionats per tercers, a fi de facilitar l'accés de l'Usuari a la informació d'empreses col·laboradores i/o patrocinadores. D'acord amb això, la societat no es responsabilitza del contingut d'aquests Espais web , ni se situa en una posició de garant ni/o de part ofertant dels serveis i/o informació que es puguin oferir a tercers a través dels enllaços de tercers.",
-                "Es concedeix a l'Usuari un dret limitat, revocable i no exclusiu a crear enllaços a la pàgina principal de l'Espai Web exclusivament per a ús privat i no comercial. Els Espais web que incloguin enllaç al nostre Espai Web (i) no podran falsejar la seva relació ni afirmar que s'ha autoritzat aquest enllaç, ni incloure marques, denominacions, noms comercials, logotips o altres signes distintius de la nostra societat;(ii) no podran incloure continguts que puguin considerar-se de mal gust, obscens, ofensius, controvertits, que incitin a la violència o discriminació per raó de sexe, raça o religió, contraris a l'ordre públic o il·lícits, (iii) no podran enllaçar a cap pàgina de l'Espai Web diferent de la pàgina principal, (iv) haurà d'enllaçar amb la pròpia adreça de l'Espai Web , sense permetre que l'Espai web que realitzi l'enllaç reprodueixi l'Espai Web com a part de la seva web o dins d'un dels seus “frames” o crear un “browser” sobre qualsevol de les pàgines de l'Espaque io Web. L'empresa podrà sol·licitar, en qualsevol moment, que elimini qualsevol enllaç a l'Espai Web, després d'això haurà de procedir immediatament a la seva eliminació.",
-                "L'empresa no pot controlar la informació, els continguts, els productes o els serveis facilitats per altres Espais web que tinguin establerts enllaços amb destinació a l'Espai Web."
-              ]
-          },
-          {
-              "title": "8. PROTECCIÓ DE DADES",
-              "content": [
-                "Per utilitzar alguns dels Serveis, l'Usuari ha de proporcionar prèviament certes dades de caràcter personal. L'empresa tractarà automatitzadament aquestes dades i aplicarà les mesures de seguretat corresponents, tot això en compliment del RGPD, LOPDGDD i LSSI. L'Usuari pot accedir a la política seguida en el tractament de les dades personals, així com l'establiment de les finalitats prèviament establertes, en les condicions definides a la Política de Privadesa."
-              ]
-          },
-          {
-              "title": "9.COOKIES",
-              "content": [
-                "L'empresa es reserva el dret d'utilitzar la tecnologia “cookie” a l'Espai Web, per tal de reconèixer-ho com a Usuari freqüent i personalitzar l'ús que realitzi de l'Espai Web mitjançant la preselecció del vostre idioma, o continguts més desitjats o específics." ,
-                "Les galetes recopilen l'adreça IP de l'usuari i és Google el responsable del tractament d'aquesta informació.",
-                "Les cookies són fitxers enviats a un navegador, per mitjà d'un servidor web, per registrar la navegació de l'Usuari a l'Espai Web, quan l'Usuari permeti la seva recepció. Si ho desitja pot configurar el seu navegador per ser avisat a la pantalla de la recepció de cookies i per impedir la instal·lació de cookies al disc dur. Si us plau consulteu les instruccions i manuals del vostre navegador per ampliar aquesta informació.",
-                "Gràcies a les cookies, és possible que es pugui reconèixer el navegador de l'ordinador utilitzat per l'Usuari amb la finalitat de facilitar continguts i oferir les preferències de navegació o publicitàries que l'Usuari, als perfils demogràfics dels Usuaris així com per mesurar les visites i paràmetres del trànsit, controlar el progrés i el nombre d'entrades."
-              ]
-          },
-          {
-              "title": "10. DECLARACIONS I GARANTIES",
-              "content": [
-                "En general, els continguts i serveis oferts a l'Espai Web tenen caràcter merament informatiu. Per tant, en oferir-los, no s'atorga cap garantia ni declaració en relació amb els continguts i serveis oferts a l'Espai web, incloent-hi, a títol enunciatiu, garanties de licitud, fiabilitat, utilitat, veracitat, exactitud, o comerciabilitat, excepte en la mesura que per llei no es puguin excloure aquestes declaracions i garanties."
-              ]
-          },
-          {
-              "title": "11. FORÇA MAJOR",
-              "content": [
-                "L'empresa no serà responsable en tot en cas d'impossibilitat de prestar servei, si aquesta és deguda a interrupcions prolongades del subministrament elèctric, línies de telecomunicacions, conflictes socials, vagues, rebel·lió, explosions, inundacions, actes i omissions del Govern, i en general tots els supòsits de força major o de cas fortuït."
-              ]
-          },
-          {
-              "title": "12. RESOLUCIÓ DE CONTROVÈRSIES. LLEI APLICABLE I JURISDICCIÓ",
-              "content": [
-                "Les presents Condicions Generals d'Ús, així com l'ús de l'Espai Web, es regiran per la legislació espanyola. Per a la resolució de qualsevol controvèrsia les parts se sotmetran als Jutjats i Tribunals del domicili social del Responsable del lloc web.",
-                "En cas que qualsevol estipulació de les presents Condicions Generals d'Ús resultés inexigible o nul·la en virtut de la legislació aplicable o com a conseqüència d'una resolució judicial o administrativa, aquesta inexigibilitat o nul·litat no farà que les presents Condicions Generals d'Ús resultin inexigibles o nul·les en conjunt. En aquests casos, l'empresa ha de procedir a la modificació o substitució d'aquesta estipulació per una altra que sigui vàlida i exigible i que, en la mesura que sigui possible, aconsegueixi l'objectiu i la pretensió reflectits en l'estipulació original."
-              ]
-          }
-      ]
-  },
-  "CookiesPolicy": {
-    "title": "POLÍTICA DE COOKIES",
-    "intro": "Lo Mercat S.L informa sobre l'ús de les cookies a la seva pàgina web: www.lomercat.cat",
-    "sections": [
-      {
-        "title": "Què són les cookies?",
-        "content": [
-          "Les cookies són arxius que es poden descarregar al vostre equip a través de les pàgines web. Són eines que tenen un paper essencial per a la prestació de nombrosos serveis de la societat de la informació. Entre altres, permeten a una pàgina web emmagatzemar i recuperar informació sobre els hàbits de navegació d'un usuari o del vostre equip i, depenent de la informació obtinguda, es poden utilitzar per reconèixer l'usuari i millorar el servei ofert."
-        ]
-      },
-      {
-        "title": "Tipus de cookies",
-        "content": [
-          "Segons qui sigui l'entitat que gestioni el domini des d'on s'envien les galetes i tracti les dades que s'obtinguin es poden distingir dos tipus:",
-           "Cookies pròpies: aquelles que s'envien a l'equip terminal de l'usuari des d'un equip o domini gestionat pel mateix editor i des del qual es presta el servei sol·licitat per l'usuari.",
-           "Cookies de tercers: aquelles que s'envien a l'equip terminal de l'usuari des d'un equip o domini que no és gestionat per l'editor, sinó per una altra entitat que tracta les dades obtingudes a través de les cookies.",
-           "En el cas que les cookies siguin instal·lades des d'un equip o domini gestionat pel mateix editor però la informació que es reculli mitjançant aquestes sigui gestionada per un tercer, no poden ser considerades com a cookies pròpies.",
-           "Existeix també una segona classificació segons el termini de temps que romanen emmagatzemades al navegador del client, podent tractar-se de:",
-           "Cookies de sessió: dissenyades per demanar i emmagatzemar dades mentre l'usuari accedeix a una pàgina web. Se solen emprar per emmagatzemar informació que només interessa conservar per a la prestació del servei sol·licitat per l'usuari en una sola ocasió (p.e. una llista de productes adquirits )",
-           "Cookies persistents: les dades segueixen emmagatzemades al terminal i poden ser accedides i tractades durant un període definit pel responsable de la galeta, i que pot anar d'uns minuts a diversos anys.",
-           "Per últim, hi ha una altra classificació segons la finalitat per a la qual es tractin les dades obtingudes:",
-           "Cookies tècniques: aquelles que permeten a l'usuari la navegació a través d'una pàgina web, plataforma o aplicació i la utilització de les diferents opcions o serveis que hi hagi com, per exemple, controlar el trànsit i la comunicació de dades, identificar la sessió, accedir a parts d'accés restringit, recordar els elements que integren una comanda, fer el procés de compra d'una comanda, fer la sol·licitud d'inscripció o participació en un esdeveniment, utilitzar elements de seguretat durant la navegació, emmagatzemar continguts per a la difusió de vídeos o so o compartir continguts a través de xarxes socials.",
-           "Cookies de personalització: permeten a l'usuari accedir al servei amb algunes característiques de caràcter general predefinides en funció d'una sèrie de criteris al terminal de l'usuari com ara serien l'idioma, el tipus de navegador a través del qual accedeix al servei, la configuració regional des d'on accedeix al servei, etc.",
-           "Cookies d'anàlisi: permeten al responsable de les mateixes, el seguiment i l'anàlisi del comportament dels usuaris dels llocs web als quals estan vinculades. La informació recollida mitjançant aquest tipus de cookies s'utilitza en el mesurament de l'activitat dels llocs web, aplicació o plataforma i per a l'elaboració de perfils de navegació dels usuaris d'aquests llocs, aplicacions i plataformes, per introduir millores en funció de l'anàlisi de les dades d'ús que fan els usuaris del servei.",
-           "Cookies publicitàries: permeten la gestió, de la manera més eficaç possible, dels espais publicitaris.",
-           "Cookies de publicitat comportamental: emmagatzemen informació del comportament dels usuaris obtinguda a través de l'observació continuada dels seus hàbits de navegació, cosa que permet desenvolupar un perfil específic per mostrar publicitat en funció del mateix.",
-           "Cookies de xarxes socials externes: s'utilitzen perquè els visitants puguin interactuar amb el contingut de diferents plataformes socials (facebook, youtube, twitter, linkedIn, etc.) i que es generin únicament per als usuaris d'aquestes xarxes socials. Les condicions de utilització d'aquestes cookies i la informació recopilada es regula per la política de privadesa de la plataforma social corresponent."
-        ]
-      },
-      {
-        "title": "Desactivació i eliminació de cookies",
-        "content": [
-          "Tens l'opció de permetre, bloquejar o eliminar les cookies instal·lades al teu equip mitjançant la configuració de les opcions del navegador instal·lat al seu equip. En desactivar cookies, alguns dels serveis disponibles podrien deixar d'estar operatius. La forma de deshabilitar les cookies és diferent per a cada navegador, però normalment es pot fer des del menú Eines o Opcions. També podeu consultar el menú d'Ajuda del navegador on podeu trobar instruccions. L'usuari podrà en qualsevol moment triar quines cookies vol que funcionin en aquest lloc web.",
-          "Podeu permetre, bloquejar o eliminar les cookies instal·lades al vostre equip mitjançant la configuració de les opcions del navegador instal·lat al vostre ordinador."
-        ]
-      },
-      {
-        "title": "Declaració de cookies utilitzades a www.lomercat.cat",
-        "content": []
-      },
-      {
-        "title": "Acceptació de la Política de cookies",
-        "content": [
-          "www.lomercat.cat assumeix que vostè accepta l'ús de cookies. No obstant això, mostra informació sobre la seva Política de cookies a la part inferior o superior de qualsevol pàgina del portal amb cada inici de sessió per tal que vostè sigui conscient" ,
-           "Davant aquesta informació és possible dur a terme les accions següents:",
-           "Acceptar cookies. No es tornarà a visualitzar aquest avís en accedir a qualsevol pàgina del portal durant aquesta sessió.",
-           "Tancar. S'amaga l'avís a la present pàgina.",
-           "Modificar la vostra configuració. Podeu obtenir més informació sobre què són les galetes, conèixer la Política de galetes de www.lomercat.cat i modificar la configuració del vostre navegador."
-        ]
-      }
-    ]
-  },
-  "DataProtection": {},
-  "TermsOfService": {
-    "sections": [
-        {
-            "title": "Información general",
-            "content": [
-                "Este sitio web es operado por Lo Mercat S.L. con nombre comercial lo Mercat. En todo el sitio, los términos “nosotros”, “nos” y “nuestro” se refieren a Lo Mercat S.L. con nombre comercial lo Mercat ofrece este sitio web, incluyendo toda la información, herramientas y servicios disponibles para ti en este sitio, el usuario, está condicionado a la aceptación de todos los términos, condiciones, políticas y notificaciones aquí establecidos.",
-                "Al visitar nuestro sitio y/o comprar algo de nosotros, participas en nuestro “Servicio” y aceptas los siguientes términos y condiciones (“Términos de Servicio”, “Términos”), incluidos todos los términos y condiciones adicionales y las políticas a las que se hace referencia en el presente documento y/o disponible a través de hipervínculos. Estas Condiciones de Servicio se aplican a todos los usuarios del sitio, incluyendo sin limitación a usuarios que sean navegadores, proveedores, clientes, comerciantes, y/o colaboradores de contenido.",
-                "Por favor, lee estos Términos de Servicio cuidadosamente antes de acceder o utilizar nuestro sitio web. Al acceder o utilizar cualquier parte del sitio, estás aceptando los Términos de Servicio. Si no estás de acuerdo con todos los términos y condiciones de este acuerdo, entonces no deberías acceder a la página web o usar cualquiera de los servicios. Si las Términos de Servicio son considerados una oferta, la aceptación está expresamente limitada a estos Términos de Servicio.",
-                "Cualquier función nueva o herramienta que se añadan a la tienda actual, también estarán sujetas a los Términos de Servicio. Puedes revisar la versión actualizada de los Términos de Servicio, en cualquier momento en esta página. Nos reservamos el derecho de actualizar, cambiar o reemplazar cualquier parte de los Términos de Servicio mediante la publicación de actualizaciones y/o cambios en nuestro sitio web. Es tu responsabilidad chequear esta página periódicamente para verificar cambios. Tu uso continuo o el acceso al sitio web después de la publicación de cualquier cambio constituye la aceptación de dichos cambios."
-            ]
-        },
-        {
-            "title": "Sección 1 - Términos de la tienda en línea",
-            "content": [
-                "Al utilizar este sitio, declaras que tienes al menos la mayoría de edad en tu estado o provincia de residencia, o que tienes la mayoría de edad en tu estado o provincia de residencia y que nos has dado tu consentimiento para permitir que cualquiera de tus dependientes menores use este sitio.",
-                "No puedes usar nuestros productos con ningún propósito ilegal o no autorizado tampoco puedes, en el uso del Servicio, violar cualquier ley en tu jurisdicción (incluyendo pero no limitado a las leyes de derecho de autor).",
-                "No debes transmitir gusanos, virus o cualquier código de naturaleza destructiva.",
-                "El incumplimiento o violación de cualquiera de estos Términos darán lugar al cese inmediato de tus Servicios."
-            ]
-        },
-        {
-            "title": "Sección 2 - Condiciones generales",
-            "content": [
-                "Nos reservamos el derecho de rechazar la prestación de servicio a cualquier persona, por cualquier motivo y en cualquier momento.",
-                "Entiendes que tu contenido (sin incluir la información de tu tarjeta de crédito), puede ser transferida sin encriptar e involucrar (a) transmisiones a través de varias redes; y (b) cambios para ajustarse o adaptarse a los requisitos técnicos de conexión de redes o dispositivos. La información de tarjetas de crédito está siempre encriptada durante la transferencia a través de las redes.",
-                "Estás de acuerdo con no reproducir, duplicar, copiar, vender, revender o explotar cualquier parte del Servicio, uso del Servicio, o acceso al Servicio o cualquier contacto en el sitio web a través del cual se presta el servicio, sin el expreso permiso por escrito de nuestra parte.",
-                "Los títulos utilizados en este acuerdo se incluyen solo por conveniencia y no limita o afecta a estos Términos."
-            ]
-        },
-        {
-            "title": "Sección 3 - Exactitud, exhaustividad y actualidad de la información",
-            "content": [
-                "No nos hacemos responsables si la información disponible en este sitio no es exacta, completa o actual. El material en este sitio es provisto sólo para información general y no debe confiarse en ella o utilizarse como la única base para la toma de decisiones sin consultar primeramente, información más precisa, completa u oportuna. Cualquier dependencia en el materia de este sitio es bajo su propio riesgo.",
-                "Este sitio puede contener cierta información histórica. La información histórica, no es necesariamente actual y es provista únicamente para tu referencia. Nos reservamos el derecho de modificar los contenidos de este sitio en cualquier momento, pero no tenemos obligación de actualizar cualquier información en nuestro sitio. Aceptas que es tu responsabilidad de monitorear los cambios en nuestro sitio."
-            ]
-        },
-        {
-            "title": "Sección 4 - Modificaciones al servicio y precios",
-            "content": [
-                "Los precios de nuestros productos están sujetos a cambio sin aviso.",
-                "Nos reservamos el derecho de modificar o discontinuar el Servicio (o cualquier parte del contenido) en cualquier momento sin aviso previo.",
-                "No seremos responsables ante ti o alguna tercera parte por cualquier modificación, cambio de precio, suspensión o discontinuidad del Servicio."
-            ]
-        },
-        {
-            "title": "Sección 5 - Productos o servicios",
-            "content": [
-                "Ciertos productos o servicios pueden estar disponibles exclusivamente en línea a través del sitio web. Estos productos o servicios pueden tener cantidades limitadas y estar sujetas a devolución o cambio de acuerdo a nuestra política de devolución solamente.",
-                "Hemos hecho el esfuerzo de mostrar los colores y las imágenes de nuestros productos, en la tienda, con la mayor precisión de colores posible. No podemos garantizar que el monitor de tu computadora muestre los colores de manera exacta.",
-                "Todos los productos son sujetos a disponibilidad. Las imágenes de los banners son ilustrativas. Estos legales cubren todas las publicaciones hechas en todos los medios.",
-                "Todas las promociones no son acumulable con otras promociones. Aplican hasta agotar existencias y están restringidas a una por persona.",
-                "El uso de cupones es personal, solo un cupón por usuario. Cupón por orden. Cada cupón puede tener restricciones particulares que serán comunicadas en el banner.",
-                "Nos reservamos el derecho, pero no estamos obligados, para limitar las ventas de nuestros productos o servicios a cualquier persona, región geográfica o jurisdicción. Podemos ejercer este derecho basados en cada caso. Nos reservamos el derecho de limitar las cantidades de los productos o servicios que ofrecemos. Todas las descripciones de productos o precios de los productos están sujetos a cambios en cualquier momento sin previo aviso, a nuestra sola discreción. Nos reservamos el derecho de discontinuar cualquier producto en cualquier momento. Cualquier oferta de producto o servicio hecho en este sitio es nulo donde esté prohibido.",
-                "No garantizamos que la calidad de los productos, servicios, información u otro material comprado u obtenido por ti cumpla con tus expectativas, o que cualquier error en el Servicio será corregido.",
-                "Lo Mercat S.L. se compromete a proporcionar los mejores productos que cumpla con nuestros estándares de aseo de la moda, así como cumplir con la más alta seguridad de la salud y los requisitos reglamentarios aplicables relacionados. En el caso de que alguno de nuestros productos no cumpla con los más altos estándares, no nos hacemos responsables de los daños resultantes de la falta de uso o defecto de los productos, y se retirará el producto de nuestro mercado de inmediato."
-            ]
-        },
-        {
-            "title": "Sección 6 - Exactitud de facturación e información de cuenta",
-            "content": [
-                "Nos reservamos el derecho de rechazar cualquier pedido que realice con nosotros. Podemos, a nuestra discreción, limitar o cancelar las cantidades compradas por persona, por hogar o por pedido. Estas restricciones pueden incluir pedidos realizados por o bajo la misma cuenta de cliente, la misma tarjeta de crédito, y/o pedidos que utilizan la misma facturación y/o dirección de envío.",
-                "Precios pueden variar sin previo aviso debido a factores externos: devaluaciones monetarias, alteraciones drásticas en el tipo de cambio, entre otras.",
-                "En el caso de que hagamos un cambio o cancelemos una orden, podemos intentar notificarle poniéndonos en contacto vía correo electrónico y/o dirección de facturación / número de teléfono proporcionado en el momento que se hizo pedido. Nos reservamos el derecho de limitar o prohibir las órdenes que, a nuestro juicio, parecen ser colocado por los concesionarios, revendedores o distribuidores.",
-                "Te comprometes a proporcionar información actual, completa y precisa de la compra y cuenta utilizada para todas las compras realizadas en nuestra tienda. Te comprometes a actualizar rápidamente tu cuenta y otra información, incluyendo tu dirección de correo electrónico y números de tarjetas de crédito y fechas de vencimiento, para que podamos completar tus transacciones y contactarte cuando sea necesario.",
-                "Para más detalles, por favor revisa nuestra Política de Devoluciones, en la sección 18 de este documento."
-            ]
-        },
-        {
-            "title": "Sección 7 - Herramientas opcionales",
-            "content": [
-                "Es posible que te proporcionamos acceso a herramientas de terceros a los cuales no monitoreamos y sobre los que no tenemos control ni entrada.",
-                "Reconoces y aceptas que proporcionamos acceso a este tipo de herramientas «tal cual» y «según disponibilidad» sin garantías, representaciones o condiciones de ningún tipo y sin ningún respaldo. No tendremos responsabilidad alguna derivada de o relacionada con tu uso de herramientas proporcionadas por terceras partes.",
-                "Cualquier uso que hagas de las herramientas opcionales que se ofrecen a través del sitio bajo tu propio riesgo y discreción y debes asegurarte de estar familiarizado y aprobar los términos bajo los cuales estas herramientas son proporcionadas por el o los proveedores de terceros.",
-                "También es posible que, en el futuro, te ofrezcamos nuevos servicios y/o características a través del sitio web (incluyendo el lanzamiento de nuevas herramientas y recursos). Estas nuevas características y/o servicios también estarán sujetos a estos Términos de Servicio."
-            ]
-        },
-        {
-            "title": "Sección 8 - Enlaces de terceras partes",
-            "content": [
-                "Cierto contenido, productos y servicios disponibles vía nuestro Servicio puede incluir material de terceras partes.",
-                "Enlaces de terceras partes en este sitio pueden redireccionarse a sitios web de terceras partes que no están afiliadas con nosotros. No nos responsabilizamos de examinar o evaluar el contenido o exactitud y no garantizamos ni tendremos ninguna obligación o responsabilidad por cualquier material de terceros o sitios web, o de cualquier material, productos o servicios de terceros.",
-                "No nos hacemos responsables de cualquier daño o daños relacionados con la adquisición o utilización de bienes, servicios, recursos, contenidos, o cualquier otra transacción realizadas en conexión con sitios web de terceros. Por favor revisa cuidadosamente las políticas y prácticas de terceros y asegúrate de entenderlas antes de participar en cualquier transacción. Quejas, reclamos, inquietudes o preguntas con respecto a productos de terceros deben ser dirigidas a la tercera parte."
-            ]
-        },
-        {
-            "title": "Sección 9 - Comentarios de usuarios, captación y otros envíos",
-            "content": [
-                "Si, a pedido nuestro, envías ciertas presentaciones específicas (por ejemplo la participación en concursos) o sin un pedido de nuestra parte envías ideas creativas, sugerencias, proposiciones, planes, u otros materiales, ya sea en línea, por email, por correo postal, o de otra manera (colectivamente, ‘comentarios’), aceptas que podamos, en cualquier momento, sin restricción, editar, copiar, publicar, distribuir, traducir o utilizar por cualquier medio comentarios que nos hayas enviado. No tenemos ni tendremos ninguna obligación (1) de mantener ningún comentario confidencialmente; (2) de pagar compensación por comentarios; o (3) de responder a comentarios.",
-                "Nosotros podemos, pero no tenemos obligación de, monitorear, editar o remover contenido que consideremos sea ilegítimo, ofensivo, amenazante, calumnioso, difamatorio, pornográfico, obsceno u objetable o viole la propiedad intelectual de cualquiera de las partes o los Términos de Servicio.",
-                "Aceptas que tus comentarios no violará los derechos de terceras partes, incluyendo derechos de autor, marca, privacidad, personalidad u otro derechos personal o de propiedad. Asimismo, aceptas que tus comentarios no contienen material difamatorio o ilegal, abusivo u obsceno, o contienen virus informáticos u otro malware que pudiera, de alguna manera, afectar el funcionamiento del Servicio o de cualquier sitio web relacionado. No puedes utilizar una dirección de correo electrónico falsa, usar otra identidad que no sea legítima, o engañar a terceras partes o a nosotros en cuanto al origen de tus comentarios. Tu eres el único responsable por los comentarios que haces y su precisión. No nos hacemos responsables y no asumimos ninguna obligación con respecto a los comentarios publicados por ti o cualquier tercer parte."
-            ]
-        },
-        {
-            "title": "Sección 10 - Información personal",
-            "content": [
-                "Tu presentación de información personal a través del sitio se rige por nuestra Política de Privacidad. Para ver nuestro Aviso de Privacidad."
-            ]
-        },
-        {
-            "title": "Sección 11 - Errores, inexactitudes y omisiones",
-            "content": [
-                "De vez en cuando puede haber información en nuestro sitio o en el Servicio que contiene errores tipográficos, inexactitudes u omisiones que puedan estar relacionadas con las descripciones de productos, precios, promociones, ofertas, gastos de envío del producto, el tiempo de tránsito y la disponibilidad. Nos reservamos el derecho de corregir los errores, inexactitudes u omisiones y de cambiar o actualizar la información o cancelar pedidos si alguna información en el Servicio o en cualquier sitio web relacionado es inexacta en cualquier momento sin previo aviso (incluso después de que hayas enviado tu orden) .",
-                "No asumimos ninguna obligación de actualizar, corregir o aclarar la información en el Servicio o en cualquier sitio web relacionado, incluyendo, sin limitación, la información de precios, excepto cuando sea requerido por la ley. Ninguna especificación actualizada o fecha de actualización aplicada en el Servicio o en cualquier sitio web relacionado, debe ser tomada para indicar que toda la información en el Servicio o en cualquier sitio web relacionado ha sido modificado o actualizado."
-            ]
-        },
-        {
-            "title": "Sección 12 - Usos prohibidos",
-            "content": [
-                "En adición a otras prohibiciones como se establece en los Términos de Servicio, se prohíbe el uso del sitio o su contenido: (a) para ningún propósito ilegal; (b) para pedirle a otros que realicen o participen en actos ilícitos; (c) para violar cualquier regulación, reglas, leyes internacionales, federales, provinciales o estatales, u ordenanzas locales; (d) para infringir o violar el derecho de propiedad intelectual nuestro o de terceras partes; (e) para acosar, abusar, insultar, dañar, difamar, calumniar, desprestigiar, intimidar o discriminar por razones de género, orientación sexual, religión, etnia, raza, edad, nacionalidad o discapacidad; (f) para presentar información falsa o engañosa; (g) para cargar o transmitir virus o cualquier otro tipo de código malicioso que sea o pueda ser utilizado en cualquier forma que pueda comprometer la funcionalidad o el funcionamiento del Servicio o de cualquier sitio web relacionado, otros sitios o Internet; (h) para recopilar o rastrear información personal de otros; (i) para generar spam, phish, pharm, pretext, spider, crawl, or scrape; (j) para cualquier propósito obsceno o inmoral; o (k) para interferir con o burlar los elementos de seguridad del Servicio o cualquier sitio web relacionado¿ otros sitios o Internet. Nos reservamos el derecho de suspender el uso del Servicio o de cualquier sitio web relacionado por violar cualquiera de los ítems de los usos prohibidos."
-            ]
-        },
-        {
-            "title": "Sección 13 - Exclusión de garantías; limitación de responsabilidad",
-            "content": [
-                "No garantizamos ni aseguramos que el uso de nuestro servicio será ininterrumpido, puntual, seguro o libre de errores.",
-                "No garantizamos que los resultados que se puedan obtener del uso del servicio serán exactos o confiables.",
-                "Aceptas que de vez en cuando podemos quitar el servicio por períodos de tiempo indefinidos o cancelar el servicio en cualquier momento sin previo aviso.",
-                "Aceptas expresamente que el uso de, o la posibilidad de utilizar, el servicio es bajo tu propio riesgo. El servicio y todos los productos y servicios proporcionados a través del servicio son (salvo lo expresamente manifestado por nosotros) proporcionados «tal cual» y «según esté disponible» para su uso, sin ningún tipo de representación, garantías o condiciones de ningún tipo, ya sea expresa o implícita, incluidas todas las garantías o condiciones implícitas de comercialización, calidad comercializable, la aptitud para un propósito particular, durabilidad, título y no infracción.",
-                "En ningún caso Lo Mercat S.L., nuestros directores, funcionarios, empleados, afiliados, agentes, contratistas, internos, proveedores, prestadores de servicios o licenciantes serán responsables por cualquier daño, pérdida, reclamo, o daños directos, indirectos, incidentales, punitivos, especiales o consecuentes de cualquier tipo, incluyendo, sin limitación, pérdida de beneficios, pérdida de ingresos, pérdida de ahorros, pérdida de datos, costos de reemplazo, o cualquier daño similar, ya sea basado en contrato, agravio (incluyendo negligencia), responsabilidad estricta o de otra manera, como consecuencia del uso de cualquiera de los servicios o productos adquiridos mediante el servicio, o por cualquier otro reclamo relacionado de alguna manera con el uso del servicio o cualquier producto, incluyendo pero no limitado, a cualquier error u omisión en cualquier contenido, o cualquier pérdida o daño de cualquier tipo incurridos como resultados de la utilización del servicio o cualquier contenido (o producto) publicado, transmitido, o que se pongan a disposición a través del servicio, incluso si se avisa de su posibilidad. Debido a que algunos estados o jurisdicciones no permiten la exclusión o la limitación de responsabilidad por daños consecuenciales o incidentales, en tales estados o jurisdicciones, nuestra responsabilidad se limitará en la medida máxima permitida por la ley."
-            ]
-        },
-        {
-            "title": "Sección 14 - Indemnización",
-            "content": [
-                "Aceptas indemnizar, defender y mantener indemne Lo Mercat S.L. y nuestras matrices, subsidiarias, afiliados, socios, funcionarios, directores, agentes, contratistas, concesionarios, proveedores de servicios, subcontratistas, proveedores, internos y empleados, de cualquier reclamo o demanda, incluyendo honorarios razonables de abogados, hechos por cualquier tercero a causa o como resultado de tu incumplimiento de las Condiciones de Servicio o de los documentos que incorporan como referencia, o la violación de cualquier ley o de los derechos de un tercero."
-            ]
-        },
-        {
-            "title": "Sección 15 - Divisibilidad",
-            "content": [
-                "En el caso de que se determine que cualquier disposición de estas Condiciones de Servicio sea ilegal, nula o inejecutable, dicha disposición será, no obstante, efectiva a obtener la máxima medida permitida por la ley aplicable, y la parte no exigible se considerará separada de estos Términos de Servicio, dicha determinación no afectará la validez de aplicabilidad de las demás disposiciones restantes."
-            ]
-        },
-        {
-            "title": "Sección 16 - Rescisión",
-            "content": [
-                "Las obligaciones y responsabilidades de las partes que hayan incurrido con anterioridad a la fecha de terminación sobrevivirán a la terminación de este acuerdo a todos los efectos.",
-                "Estas Condiciones de servicio son efectivos a menos que y hasta que sea terminado por ti o nosotros. Puedes terminar estos Términos de Servicio en cualquier momento por avisarnos que ya no deseas utilizar nuestros servicios, o cuando dejes de usar nuestro sitio.",
-                "Si a nuestro juicio, fallas, o se sospecha que haz fallado, en el cumplimiento de cualquier término o disposición de estas Condiciones de Servicio, también podemos terminar este acuerdo en cualquier momento sin previo aviso, y seguirás siendo responsable de todos los montos adeudados hasta incluida la fecha de terminación; y/o en consecuencia podemos negar el acceso a nuestros servicios (o cualquier parte del mismo)."
-            ]
-        },
-        {
-            "title": "Sección 17 - Acuerdo completo",
-            "content": [
-                "Nuestra falla para ejercer o hacer valer cualquier derecho o disposición de estas Condiciones de Servicio no constituirá una renuncia a tal derecho o disposición.",
-                "Estas Condiciones del servicio y las políticas o reglas de operación publicadas por nosotros en este sitio o con respecto al servicio constituyen el acuerdo completo y el entendimiento entre tú y nosotros y rigen el uso del Servicio y reemplaza cualquier acuerdo, comunicaciones y propuestas anteriores o contemporáneas, ya sea oral o escrita, entre tu y nosotros (incluyendo, pero no limitado a, cualquier versión previa de los Términos de Servicio).",
-                "Cualquier ambigüedad en la interpretación de estas Condiciones del servicio no se interpretarán en contra del grupo de redacción."
-            ]
-        },
-        {
-            "title": "Sección 18 - Política de devoluciones",
-            "content": [
-                "Plazo",
-                "Disponemos de un plazo para devoluciones de  a partir de la fecha en que la paquetería entregó tu pedido en el domicilio indicado al realizar la compra. Debes notificar acerca de la devolución antes de que se cumplan los  a través de alguno de nuestros canales de atención:",
-                "En cualquiera de las tiendas asociadas del país, presentando tu factura o ticket, uno de nuestros asesores de venta te ayudará en el proceso. - Solicitar la devolución dentro del plazo de devolución por correo electrónico.",
-                "Condiciones",
-                "Para ser elegible para una devolución, el artículo debe:",
-                "Estar sin usar y en las mismas condiciones en que lo recibiste. También debe estar en su embalaje original. - Existen varios tipos de bienes que están exentos de ser devueltos. Productos perecederos tales como alimentos no pueden ser devueltos pasados los días indicados para devoluciones.",
-                "Hay algunas situaciones donde solo se pueden garantizar reembolsos parciales:",
-                "Cualquier producto que no se encuentre en su condición original, que esté dañado o le falten partes por razones ajenas a nosotros.",
-                "Libros con obvios signos de uso. - CD, DVD, cintas VHS, software, juegos de video, cassettes, o discos de vinilo que hayan sido abiertos.",
-                "Si deseas hacer la devolución de alguno de nuestros productos, lo puedes hacer de las siguientes maneras:",
-                "En cualquiera de las tiendas asociadas del país, presentando tu factura o ticket, uno de nuestros asesores de venta te ayudará en el proceso. - Solicitar la devolución dentro del plazo de devolución por correo electrónico.",
-                "Procedimiento",
-                "Devolución del dinero (solo aplica para casos de garantía y ley de retracto): - A través de transferencia (cuenta de ahorros, cuenta corriente, ahorro a la mano): se realiza aproximadamente dentro de los cinco días hábiles siguientes de recibir el producto nuevamente en nuestra bodega. - A través de reversión del pago: quince días hábiles después de recibir el producto en nuestra bodega. Ésta reversión corre por cuenta y orden de tu entidad bancaria, cualquier duda debes comunicarte directamente con ellos. - Cambio del producto (Sujeto a disponibilidad de inventario en el momento del cambio). Sólo se podrán realizar cambios por productos con valor igual o inferior al original y la diferencia en caso de aplicar, se entregará en un cupón para una nueva compra en la tienda online. En caso de no contar con disponibilidad para el cambio, se entregará el valor del producto(s) en un cupón para una nueva compra. - Cupón para realizar una nueva compra (Este cupón tiene validez por seis meses a partir de la fecha de creación). 2. Cambio del producto (Sujeto a disponibilidad de inventario en el momento del cambio). Sólo se podrán realizar cambios por productos con valor igual o inferior al original y la diferencia en caso de aplicar, se entregará en un cupón para una nueva compra en la tienda online. En caso de no contar con disponibilidad para el cambio, se entregará el valor del producto(s) en un cupón para una nueva compra. 3. Cupón para realizar una nueva compra (Este cupón tiene validez por seis meses a partir de la fecha de creación).",
-                "Condiciones del producto",
-                "El producto deberá devolverse en óptimas condiciones, sin rastros de haber sido utilizado, con las etiquetas originales o en su defecto, si ya fueron retiradas, debes introducirlas en el empaque. Una vez recibido el producto en nuestra bodega, verificaremos las condiciones del mismo y de acuerdo con los resultados, se te enviará un producto nuevo o se te entregará un cupón para una nueva compra.",
-                "Productos que aplican",
-                "- Frutas de temporada",
-                "- Productos en promoción",
-                "Plazo de respuesta",
-                "Reembolso del dinero: Dependiendo del medio de pago que hayas utilizado para tu compra, el reembolso se hará a través de una transferencia electrónica o a tu tarjeta de crédito. Los reembolsos parciales se procesarán por medio de transferencia electrónica. Los cambios se despacharán aproximadamente en 3 días hábiles después de recibido el producto en la bodega y aplicarán los mismos tiempos de una entrega regular.",
-                "Costos de envío",
-                "El Usuario podrá devolver sin ningún costo, cualquier producto que presente defectos de fábrica. Los costos de transporte y los demás que conlleve una devolución por motivos diferentes a defectos de fábrica serán cubiertos por el cliente."
-            ]
-        },
-        {
-            "title": "Sección 19 - Ley",
-            "content": [
-                "Para la interpretación y cumplimiento de los presentes términos y condiciones, las partes se someten a la jurisdicción de los tribunales de la Ciudad de renunciado expresamente a cualquier otro fuero que pudiere corresponderles por razón de sus domicilios presentes o futuros."
-            ]
-        },
-        {
-            "title": "Sección 20 - Cambios en los términos de servicio",
-            "content": [
-                "Puedes revisar la versión más actualizada de los Términos de Servicio en cualquier momento en esta página.",
-                "Nos reservamos el derecho, a nuestra sola discreción, de actualizar, modificar o reemplazar cualquier parte de estas Condiciones del servicio mediante la publicación de las actualizaciones y los cambios en nuestro sitio web. Es tu responsabilidad revisar nuestro sitio web periódicamente para verificar los cambios. El uso continuo de o el acceso a nuestro sitio Web o el Servicio después de la publicación de cualquier cambio en estas Condiciones de servicio implica la aceptación de dichos cambios."
-            ]
-        },
-        {
-            "title": "Sección 21 - Información de contacto",
-            "content": [
-                "Preguntas acerca de los Términos de Servicio deben ser enviadas a legal@lomercat.cat.",
-                "Última actualización de este documento de términos y condiciones: 20/11/2022"
-            ]
+    "Index": {
+        "app": "Lo Mercat"
+    },
+    "Home": {
+        "hello": "Hello Next.js!"
+    },
+    "CustomerHome": {
+        "navigation": {
+            "orderHistory": "Anar al històric d'ordres",
+            "purchaseHistory": "Anar al històric de compres",
+            "buyFlow": "Realitzar una comanda",
+            "searchFlow": "Cerca productes o stands"
         }
-    ]
-  }
+    },
+    "OrderHistory": {
+        "header": "Les meves comandes",
+        "title": "Comanda nº {number}",
+        "status": {
+            "text": "Estat: {status}",
+            "completed": "Completada",
+            "pending": "En proces"
+        },
+        "total": "Total: {amount} {currency}"
+    },
+    "PurchaseHistory": {
+        "header": "Les meves compres",
+        "title": "Id: {id}",
+        "total": "Total: {amount} {currency}",
+        "subtotal": "{amount} {currency}",
+        "order": "# {order_id}",
+        "stand": "Comerç nº: {stand_id}"
+    },
+    "Landing": {
+        "SignIn": "Inicia sessió",
+        "text": "Ja tens un compte? ",
+        "motivation": "Impulsa el comerç local i el teu entorn!",
+        "SignUp": "Registra't"
+    },
+    "LegalNotice": {
+        "intro": [
+            "Lo Mercat, S.L., responsable del lloc web, d'ara endavant RESPONSABLE, posa a disposició dels usuaris aquest document, amb el qual pretén donar compliment a les obligacions disposades a la Llei 34/2002, d'11 de juliol, de Serveis de la Societat de la Informació i del Comerç Electrònic (LSSICE), així com informar tots els usuaris del lloc web respecte a quines són les condicions d'ús.",
+            "Tota persona que accedeixi a aquest lloc web assumeix el paper d'usuari, comprometent-se a l'observança i el compliment rigorós de les disposicions aquí disposades, així com a qualsevol altra disposició legal que fos d'aplicació.",
+            "Lo Mercat, S.L., es reserva el dret de modificar qualsevol tipus d'informació que pogués aparèixer al lloc web, sense que hi hagi obligació de preavisar o posar en coneixement dels usuaris aquestes obligacions, entenent-se com suficient amb la publicació al lloc web del Mercat, S.L."
+        ],
+        "sections": [
+            {
+                "title": "1. DADES IDENTIFICATIVES",
+                "content": [
+                    "Denominació social: Lo Mercat S.L",
+                    "Nom comercial: Lo Mercat",
+                    "NIF: 111111AAA",
+                    "Domicili: Lleida",
+                    "e-mail: legal@lomercat.com"
+                ]
+            },
+            {
+                "title": "2. OBJECTE",
+                "content": [
+                    "A través del Lloc Web, us oferim als Usuaris la possibilitat d'accedir a la informació sobre els nostres serveis."
+                ]
+            },
+            {
+                "title": "3. PRIVACITAT I TRACTAMENT DE DADES",
+                "content": [
+                    "Quan per a l'accés a determinats continguts o servei sigui necessari facilitar dades de caràcter personal, els Usuaris garantiran la seva veracitat, exactitud, autenticitat i vigència. L'empresa donarà a les dades el tractament automatitzat que correspongui en funció de la seva naturalesa o finalitat, en els termes indicats a la secció de Política de Privadesa."
+                ]
+            },
+            {
+                "title": "4. PROPIEDAD INDUSTRIAL E INTELECTUAL",
+                "content": [
+                    "L'Usuari reconeix i accepta que tots els continguts que es mostren a l'Espai Web i en especial, dissenys, textos, imatges, logos, icones, botons, programari, noms comercials, marques, o qualsevol altre signe susceptible d'utilització industrial i/ o comercial estan subjectes a drets de Propietat Intel·lectual i totes les marques, noms comercials o signes distintius, tots els drets de propietat industrial i intel·lectual, sobre els continguts i/o qualssevol altres elements inserits a la pàgina, que són propietat exclusiva de l'empresa i/o de tercers, els qui tenen el dret exclusiu d'utilitzar-los en el trànsit econòmic, per això l'Usuari es compromet a no reproduir, copiar, distribuir, posar a disposició o de qualsevol altra manera comunicar públicament, transformar o modificar aquests continguts mantenint indemne a l'empresa de qualsevol reclamació que es derivi de l'incompliment d'aquestes obligacions.",
+                    "En cap cas l'accés a l'Espai Web implica cap tipus de renúncia, transmissió, llicència o cessió total ni parcial dels drets esmentats, llevat que s'estableixi expressament el contrari. Les presents Condicions Generals d'Ús de l'Espai Web no confereixen als Usuaris cap un altre dret d'utilització, alteració, explotació, reproducció, distribució o comunicació pública de l'Espai Web i/o dels seus continguts diferents dels aquí previstos expressament. a tal efecte per l'empresa o el tercer titular dels drets afectats.",
+                    "Els continguts, textos, fotografies, dissenys, logotips, imatges, programes d'ordinador, codis font i, en general, qualsevol creació intel·lectual existent en aquest Espai, així com el mateix Espai en conjunt, com a obra artística multimèdia, estan protegits com drets d'autor per la legislació en matèria de propietat intel·lectual L'empresa és titular dels elements que integren el disseny gràfic de l'Espai Web, els menús, els botons de navegació, el codi HTML, els textos, imatges, textures, gràfics i qualsevol altre contingut de l'Espai Web o, en qualsevol cas, disposa de la corresponent autorització per a la utilització d'aquests elements.. El contingut disposat a l'Espai Web no podrà ser reproduït ni en tot ni en part, ni transmès, ni registrat per cap sistema de recuperació de informació, en cap forma ni en cap mitjà, llevat que es compti amb lautorització prèvia, per escrit, de la citada Entitat.",
+                    "Així mateix queda prohibit suprimir, eludir i/o manipular el copyright així com els dispositius tècnics de protecció, o qualsevol mecanisme d'informació que pogués contenir els continguts. L'Usuari d'aquest Espai Web es compromet a respectar els drets enunciats ia evitar qualsevol actuació que pogués perjudicar-los, reservant-se en tot cas l'empresa l'exercici de tots els mitjans o accions legals que li corresponguin en defensa dels seus legítims drets de propietat intel·lectual i industrial."
+                ]
+            },
+            {
+                "title": "5. OBLIGACIONS I RESPONSABILITATS DE L'USUARI DE L'ESPAI WEB",
+                "content": [
+                    "L'Usuari es compromet a:",
+                    "1. Fer un ús adequat i lícit de l'Espai Web així com dels continguts i serveis, de conformitat amb: (i) la legislació aplicable a cada moment; (ii) les Condicions Generals d'Ús de l'Espai Web; (iii) la moral i bons costums generalment acceptats i (iv) l'ordre públic.",
+                    "2. Proveir-se de tots els mitjans i requeriments tècnics que calguin per accedir a l'Espai Web.",
+                    "3. Facilitar informació veraç en emplenar amb les vostres dades de caràcter personal els formularis continguts a l'Espai Web ia mantenir-los actualitzats en tot moment de manera que respongui, en cada moment, a la situació real de l'Usuari. L'Usuari serà l'únic responsable de les manifestacions falses o inexactes que realitzi i dels perjudicis que causi a l'empresa oa tercers per la informació que faciliti.",
+                    "No obstant el que estableix l'apartat anterior l'Usuari també s'ha d'abstenir de:",
+                    "1. Fer un ús no autoritzat o fraudulent de l'Espai Web i/o dels continguts amb fins o efectes il·lícits, prohibits en les presents Condicions Generals d'Ús, lesius dels drets i interessos de tercers, o que de qualsevol manera puguin danyar , inutilitzar, sobrecarregar, deteriorar o impedir la utilització normal dels serveis o els documents, arxius i tota mena de continguts emmagatzemats en qualsevol equip informàtic.",
+                    "2. Accedir o intentar accedir a recursos o àrees restringides de l'Espai Web, sense complir les condicions exigides per a aquest accés.",
+                    "3. Provocar danys als sistemes físics o lògics de l'Espai Web, dels seus proveïdors o de tercers.",
+                    "4. Introduir o difondre a la xarxa virus informàtics o qualssevol altres sistemes físics o lògics que siguin susceptibles de provocar danys als sistemes físics o lògics de l'empresa, proveïdors o de tercers.",
+                    "5. Intentar accedir, utilitzar i/o manipular les dades de l'empresa, tercers proveïdors i altres usuaris.",
+                    "6. Reproduir o copiar, distribuir, permetre l'accés del públic a través de qualsevol modalitat de comunicació pública, transformar o modificar els continguts, llevat que es compti amb l'autorització del titular dels drets corresponents o això resulti legalment permès.",
+                    "7. Suprimir, ocultar o manipular les notes sobre drets de propietat intel·lectual o industrial i altres dades identificatives dels drets de l'empresa o de tercers incorporats als continguts, així com els dispositius tècnics de protecció o qualsevol mecanisme d'informació que es pugui inserir en els continguts.",
+                    "8. Obtenir i intentar obtenir els continguts emprant per a això mitjans o procediments diferents dels que, segons els casos, s'hagin posat a la seva disposició a aquest efecte o s'hagin indicat expressament a les pàgines web on es trobin els continguts o, a general, dels que es facin servir habitualment a Internet per no comportar un risc de dany o inutilització de l'Espai web i/o dels continguts.",
+                    "9. En particular, ia títol merament indicatiu i no exhaustiu, l'Usuari es compromet a no transmetre, difondre o posar a disposició de tercers informacions, dades, continguts, missatges, gràfics, dibuixos, arxius de so i/o imatge, fotografies , enregistraments, programari i, en general, qualsevol classe de material que: • De qualsevol manera sigui contrari, menyspreï o atempti contra els drets fonamentals i les llibertats públiques reconegudes constitucionalment, als Tractats Internacionals ia la resta de la legislació vigent. Indueixi, inciti o promogui actuacions delictives, denigratòries, difamatòries, violentes o, en general, contràries a la llei, a la moral, als bons costums generalment acceptats oa l'ordre públic.• Indueixi, inciti o promogui actuacions, actituds o pensaments discriminatoris per raó de sexe, raça, religió, creences, edat o condició. • Incorporeu, poseu a disposició o permeteu accedir a productes, elements, missatges i/o servei delictius, violents, ofensius, nocius, degradants o, en general, contraris a la llei, a la moral i als bons costums generalment acceptats oa l'ordre públic. Indueixi o pugui induir a un estat inacceptable d'ansietat o temor. • Indueixi o inciti a involucrar-se en pràctiques perilloses, de risc o nocives per a la salut i l'equilibri psíquic. • Està protegit per la legislació en matèria de protecció intel·lectual o industrial pertanyent a la societat oa tercers sense que hagi estat autoritzat l'ús que es pretengui realitzar. • Sigui contrari a l'honor, a la intimitat personal i familiar oa la pròpia imatge de les persones. o programa que impedeixi el funcionament normal de l'Espai Web.",
+                    "Si per accedir a alguns dels serveis i/o continguts de l'Espai Web, se li proporcionés una contrasenya, s'obliga a fer-la servir de manera diligent, mantenint-la en tot moment en secret. En conseqüència, serà responsable de la seva adequada custòdia i confidencialitat, comprometent-se a no cedir-la a tercers, de manera temporal o permanent, ni a permetre l'accés als serveis i/o continguts esmentats per part de persones alienes, igualment s'obliga a notificar a la societat qualsevol fet que pugui suposar un ús indegut de la seva contrasenya, com, a títol enunciatiu, robatori, pèrdua o accés no autoritzat, a fi de procedir a la seva cancel·lació immediata.En conseqüència, mentre no faci la notificació anterior, l'empresa queda eximida de qualsevol responsabilitat que es pugui derivar ús indegut de la contrasenya, sent de la seva responsabilitat qualsevol utilització il·lícita dels continguts i/o serveis de l'Espai Web per qualsevol tercer il·legítim. Si de manera negligent o dolosa incomplís qualsevol de les obligacions establertes en aquestes Condicions Generals d'Ús, respondrà per tots els danys i perjudicis que es puguin derivar d'aquest incompliment per a l'empresa."
+                ]
+            },
+            {
+                "title": "6. RESPONSABILITATS",
+                "content": [
+                    "No es garanteix l'accés continuat, ni la correcta visualització, descàrrega o utilitat dels elements i informacions contingudes a la web que es puguin veure impedits, dificultats o interromputs per factors o circumstàncies que estan fora del seu control. No es fa responsable de les decisions que poguessin adoptar-se com a conseqüència de l'accés als continguts o informacions ofertes.",
+                    "Es podrà interrompre el servei, o resoldre de manera immediata la relació amb l'Usuari, si es detecta que un ús del seu Espai Web, o de qualsevol dels serveis oferts en aquest, és contrari a les presents Condicions Generals d'Ús. No ens fem responsables per danys, perjudicis, pèrdues, reclamacions o despeses derivades de l'ús de l'Espai Web.",
+                    "Únicament serà responsable d'eliminar, com més aviat millor, els continguts que puguin generar aquests perjudicis, sempre que així es notifiqui. En especial no serem responsables dels perjudicis que es poguessin derivar, entre d'altres, de:",
+                    "1. Interferències, interrupcions, fallades, omissions, avaries telefòniques, retards, bloquejos o desconnexions en el funcionament del sistema electrònic, motivades per deficiències, sobrecàrregues i errors en les línies i xarxes de telecomunicacions, o per qualsevol altra causa aliena al control de l'empresa.",
+                    "2. Intromissions il·legítimes mitjançant l'ús de programes malignes de qualsevol tipus ia través de qualsevol mitjà de comunicació, com ara virus informàtics o qualssevol altres.",
+                    "3. Abús indegut o inadequat de l'Espai Web.",
+                    "4. Errors de seguretat o navegació produïts per un mal funcionament del navegador o per l'ús de versions no actualitzades del mateix. L'administrador de l'espai web es reserven el dret de retirar, totalment o parcialment, qualsevol contingut o informació present a l'Espai Web.",
+                    "L'empresa exclou qualsevol responsabilitat pels danys i perjudicis de tota naturalesa que poguessin deure's a la mala utilització dels serveis de lliure disposició i ús per part dels Usuaris d'Espai Web. Així mateix queda exonerat de qualsevol responsabilitat pel contingut i informacions que puguin ser rebudes com a conseqüència dels formularis de recollida de dades, estant els mateixos únicament per a la prestació dels serveis de consultes i dubtes. ser l'Usuari reclamat pels danys o perjudicis causats.",
+                    "Vostè mantindrà l'empresa indemne davant de qualsevol dany i perjudici que es derivin de reclamacions, accions o demandes de tercers com a conseqüència del seu accés o ús de l'Espai Web. Així mateix, vostè s'obliga a indemnitzar davant de qualsevol dany i perjudici, que es derivin de l'ús per part seva de robots, spiders, crawlers o eines similars emprades per tal de demanar o extreure dades o de qualsevol altra actuació per part seva que imposi una càrrega irraonable sobre el funcionament de l'Espai Web ."
+                ]
+            },
+            {
+                "title": "7. HIPERVINCLES",
+                "content": [
+                    "L'Usuari s'obliga a no reproduir de cap manera, ni tan sols mitjançant un hiperenllaç o hipervincle, l'Espai Web, així com cap dels seus continguts, excepte autorització expressa i per escrit del responsable del fitxer.",
+                    "L'Espai Web pot incloure enllaços a altres espais web, gestionats per tercers, a fi de facilitar l'accés de l'Usuari a la informació d'empreses col·laboradores i/o patrocinadores. D'acord amb això, la societat no es responsabilitza del contingut d'aquests Espais web , ni se situa en una posició de garant ni/o de part ofertant dels serveis i/o informació que es puguin oferir a tercers a través dels enllaços de tercers.",
+                    "Es concedeix a l'Usuari un dret limitat, revocable i no exclusiu a crear enllaços a la pàgina principal de l'Espai Web exclusivament per a ús privat i no comercial. Els Espais web que incloguin enllaç al nostre Espai Web (i) no podran falsejar la seva relació ni afirmar que s'ha autoritzat aquest enllaç, ni incloure marques, denominacions, noms comercials, logotips o altres signes distintius de la nostra societat;(ii) no podran incloure continguts que puguin considerar-se de mal gust, obscens, ofensius, controvertits, que incitin a la violència o discriminació per raó de sexe, raça o religió, contraris a l'ordre públic o il·lícits, (iii) no podran enllaçar a cap pàgina de l'Espai Web diferent de la pàgina principal, (iv) haurà d'enllaçar amb la pròpia adreça de l'Espai Web , sense permetre que l'Espai web que realitzi l'enllaç reprodueixi l'Espai Web com a part de la seva web o dins d'un dels seus “frames” o crear un “browser” sobre qualsevol de les pàgines de l'Espaque io Web. L'empresa podrà sol·licitar, en qualsevol moment, que elimini qualsevol enllaç a l'Espai Web, després d'això haurà de procedir immediatament a la seva eliminació.",
+                    "L'empresa no pot controlar la informació, els continguts, els productes o els serveis facilitats per altres Espais web que tinguin establerts enllaços amb destinació a l'Espai Web."
+                ]
+            },
+            {
+                "title": "8. PROTECCIÓ DE DADES",
+                "content": [
+                    "Per utilitzar alguns dels Serveis, l'Usuari ha de proporcionar prèviament certes dades de caràcter personal. L'empresa tractarà automatitzadament aquestes dades i aplicarà les mesures de seguretat corresponents, tot això en compliment del RGPD, LOPDGDD i LSSI. L'Usuari pot accedir a la política seguida en el tractament de les dades personals, així com l'establiment de les finalitats prèviament establertes, en les condicions definides a la Política de Privadesa."
+                ]
+            },
+            {
+                "title": "9.COOKIES",
+                "content": [
+                    "L'empresa es reserva el dret d'utilitzar la tecnologia “cookie” a l'Espai Web, per tal de reconèixer-ho com a Usuari freqüent i personalitzar l'ús que realitzi de l'Espai Web mitjançant la preselecció del vostre idioma, o continguts més desitjats o específics.",
+                    "Les galetes recopilen l'adreça IP de l'usuari i és Google el responsable del tractament d'aquesta informació.",
+                    "Les cookies són fitxers enviats a un navegador, per mitjà d'un servidor web, per registrar la navegació de l'Usuari a l'Espai Web, quan l'Usuari permeti la seva recepció. Si ho desitja pot configurar el seu navegador per ser avisat a la pantalla de la recepció de cookies i per impedir la instal·lació de cookies al disc dur. Si us plau consulteu les instruccions i manuals del vostre navegador per ampliar aquesta informació.",
+                    "Gràcies a les cookies, és possible que es pugui reconèixer el navegador de l'ordinador utilitzat per l'Usuari amb la finalitat de facilitar continguts i oferir les preferències de navegació o publicitàries que l'Usuari, als perfils demogràfics dels Usuaris així com per mesurar les visites i paràmetres del trànsit, controlar el progrés i el nombre d'entrades."
+                ]
+            },
+            {
+                "title": "10. DECLARACIONS I GARANTIES",
+                "content": [
+                    "En general, els continguts i serveis oferts a l'Espai Web tenen caràcter merament informatiu. Per tant, en oferir-los, no s'atorga cap garantia ni declaració en relació amb els continguts i serveis oferts a l'Espai web, incloent-hi, a títol enunciatiu, garanties de licitud, fiabilitat, utilitat, veracitat, exactitud, o comerciabilitat, excepte en la mesura que per llei no es puguin excloure aquestes declaracions i garanties."
+                ]
+            },
+            {
+                "title": "11. FORÇA MAJOR",
+                "content": [
+                    "L'empresa no serà responsable en tot en cas d'impossibilitat de prestar servei, si aquesta és deguda a interrupcions prolongades del subministrament elèctric, línies de telecomunicacions, conflictes socials, vagues, rebel·lió, explosions, inundacions, actes i omissions del Govern, i en general tots els supòsits de força major o de cas fortuït."
+                ]
+            },
+            {
+                "title": "12. RESOLUCIÓ DE CONTROVÈRSIES. LLEI APLICABLE I JURISDICCIÓ",
+                "content": [
+                    "Les presents Condicions Generals d'Ús, així com l'ús de l'Espai Web, es regiran per la legislació espanyola. Per a la resolució de qualsevol controvèrsia les parts se sotmetran als Jutjats i Tribunals del domicili social del Responsable del lloc web.",
+                    "En cas que qualsevol estipulació de les presents Condicions Generals d'Ús resultés inexigible o nul·la en virtut de la legislació aplicable o com a conseqüència d'una resolució judicial o administrativa, aquesta inexigibilitat o nul·litat no farà que les presents Condicions Generals d'Ús resultin inexigibles o nul·les en conjunt. En aquests casos, l'empresa ha de procedir a la modificació o substitució d'aquesta estipulació per una altra que sigui vàlida i exigible i que, en la mesura que sigui possible, aconsegueixi l'objectiu i la pretensió reflectits en l'estipulació original."
+                ]
+            }
+        ]
+    },
+    "CookiesPolicy": {
+        "title": "POLÍTICA DE COOKIES",
+        "intro": "Lo Mercat S.L informa sobre l'ús de les cookies a la seva pàgina web: www.lomercat.cat",
+        "sections": [
+            {
+                "title": "Què són les cookies?",
+                "content": [
+                    "Les cookies són arxius que es poden descarregar al vostre equip a través de les pàgines web. Són eines que tenen un paper essencial per a la prestació de nombrosos serveis de la societat de la informació. Entre altres, permeten a una pàgina web emmagatzemar i recuperar informació sobre els hàbits de navegació d'un usuari o del vostre equip i, depenent de la informació obtinguda, es poden utilitzar per reconèixer l'usuari i millorar el servei ofert."
+                ]
+            },
+            {
+                "title": "Tipus de cookies",
+                "content": [
+                    "Segons qui sigui l'entitat que gestioni el domini des d'on s'envien les galetes i tracti les dades que s'obtinguin es poden distingir dos tipus:",
+                    "Cookies pròpies: aquelles que s'envien a l'equip terminal de l'usuari des d'un equip o domini gestionat pel mateix editor i des del qual es presta el servei sol·licitat per l'usuari.",
+                    "Cookies de tercers: aquelles que s'envien a l'equip terminal de l'usuari des d'un equip o domini que no és gestionat per l'editor, sinó per una altra entitat que tracta les dades obtingudes a través de les cookies.",
+                    "En el cas que les cookies siguin instal·lades des d'un equip o domini gestionat pel mateix editor però la informació que es reculli mitjançant aquestes sigui gestionada per un tercer, no poden ser considerades com a cookies pròpies.",
+                    "Existeix també una segona classificació segons el termini de temps que romanen emmagatzemades al navegador del client, podent tractar-se de:",
+                    "Cookies de sessió: dissenyades per demanar i emmagatzemar dades mentre l'usuari accedeix a una pàgina web. Se solen emprar per emmagatzemar informació que només interessa conservar per a la prestació del servei sol·licitat per l'usuari en una sola ocasió (p.e. una llista de productes adquirits )",
+                    "Cookies persistents: les dades segueixen emmagatzemades al terminal i poden ser accedides i tractades durant un període definit pel responsable de la galeta, i que pot anar d'uns minuts a diversos anys.",
+                    "Per últim, hi ha una altra classificació segons la finalitat per a la qual es tractin les dades obtingudes:",
+                    "Cookies tècniques: aquelles que permeten a l'usuari la navegació a través d'una pàgina web, plataforma o aplicació i la utilització de les diferents opcions o serveis que hi hagi com, per exemple, controlar el trànsit i la comunicació de dades, identificar la sessió, accedir a parts d'accés restringit, recordar els elements que integren una comanda, fer el procés de compra d'una comanda, fer la sol·licitud d'inscripció o participació en un esdeveniment, utilitzar elements de seguretat durant la navegació, emmagatzemar continguts per a la difusió de vídeos o so o compartir continguts a través de xarxes socials.",
+                    "Cookies de personalització: permeten a l'usuari accedir al servei amb algunes característiques de caràcter general predefinides en funció d'una sèrie de criteris al terminal de l'usuari com ara serien l'idioma, el tipus de navegador a través del qual accedeix al servei, la configuració regional des d'on accedeix al servei, etc.",
+                    "Cookies d'anàlisi: permeten al responsable de les mateixes, el seguiment i l'anàlisi del comportament dels usuaris dels llocs web als quals estan vinculades. La informació recollida mitjançant aquest tipus de cookies s'utilitza en el mesurament de l'activitat dels llocs web, aplicació o plataforma i per a l'elaboració de perfils de navegació dels usuaris d'aquests llocs, aplicacions i plataformes, per introduir millores en funció de l'anàlisi de les dades d'ús que fan els usuaris del servei.",
+                    "Cookies publicitàries: permeten la gestió, de la manera més eficaç possible, dels espais publicitaris.",
+                    "Cookies de publicitat comportamental: emmagatzemen informació del comportament dels usuaris obtinguda a través de l'observació continuada dels seus hàbits de navegació, cosa que permet desenvolupar un perfil específic per mostrar publicitat en funció del mateix.",
+                    "Cookies de xarxes socials externes: s'utilitzen perquè els visitants puguin interactuar amb el contingut de diferents plataformes socials (facebook, youtube, twitter, linkedIn, etc.) i que es generin únicament per als usuaris d'aquestes xarxes socials. Les condicions de utilització d'aquestes cookies i la informació recopilada es regula per la política de privadesa de la plataforma social corresponent."
+                ]
+            },
+            {
+                "title": "Desactivació i eliminació de cookies",
+                "content": [
+                    "Tens l'opció de permetre, bloquejar o eliminar les cookies instal·lades al teu equip mitjançant la configuració de les opcions del navegador instal·lat al seu equip. En desactivar cookies, alguns dels serveis disponibles podrien deixar d'estar operatius. La forma de deshabilitar les cookies és diferent per a cada navegador, però normalment es pot fer des del menú Eines o Opcions. També podeu consultar el menú d'Ajuda del navegador on podeu trobar instruccions. L'usuari podrà en qualsevol moment triar quines cookies vol que funcionin en aquest lloc web.",
+                    "Podeu permetre, bloquejar o eliminar les cookies instal·lades al vostre equip mitjançant la configuració de les opcions del navegador instal·lat al vostre ordinador."
+                ]
+            },
+            {
+                "title": "Declaració de cookies utilitzades a www.lomercat.cat",
+                "content": []
+            },
+            {
+                "title": "Acceptació de la Política de cookies",
+                "content": [
+                    "www.lomercat.cat assumeix que vostè accepta l'ús de cookies. No obstant això, mostra informació sobre la seva Política de cookies a la part inferior o superior de qualsevol pàgina del portal amb cada inici de sessió per tal que vostè sigui conscient",
+                    "Davant aquesta informació és possible dur a terme les accions següents:",
+                    "Acceptar cookies. No es tornarà a visualitzar aquest avís en accedir a qualsevol pàgina del portal durant aquesta sessió.",
+                    "Tancar. S'amaga l'avís a la present pàgina.",
+                    "Modificar la vostra configuració. Podeu obtenir més informació sobre què són les galetes, conèixer la Política de galetes de www.lomercat.cat i modificar la configuració del vostre navegador."
+                ]
+            }
+        ]
+    },
+    "DataProtection": {},
+    "TermsOfService": {
+        "sections": [
+            {
+                "title": "Información general",
+                "content": [
+                    "Este sitio web es operado por Lo Mercat S.L. con nombre comercial lo Mercat. En todo el sitio, los términos “nosotros”, “nos” y “nuestro” se refieren a Lo Mercat S.L. con nombre comercial lo Mercat ofrece este sitio web, incluyendo toda la información, herramientas y servicios disponibles para ti en este sitio, el usuario, está condicionado a la aceptación de todos los términos, condiciones, políticas y notificaciones aquí establecidos.",
+                    "Al visitar nuestro sitio y/o comprar algo de nosotros, participas en nuestro “Servicio” y aceptas los siguientes términos y condiciones (“Términos de Servicio”, “Términos”), incluidos todos los términos y condiciones adicionales y las políticas a las que se hace referencia en el presente documento y/o disponible a través de hipervínculos. Estas Condiciones de Servicio se aplican a todos los usuarios del sitio, incluyendo sin limitación a usuarios que sean navegadores, proveedores, clientes, comerciantes, y/o colaboradores de contenido.",
+                    "Por favor, lee estos Términos de Servicio cuidadosamente antes de acceder o utilizar nuestro sitio web. Al acceder o utilizar cualquier parte del sitio, estás aceptando los Términos de Servicio. Si no estás de acuerdo con todos los términos y condiciones de este acuerdo, entonces no deberías acceder a la página web o usar cualquiera de los servicios. Si las Términos de Servicio son considerados una oferta, la aceptación está expresamente limitada a estos Términos de Servicio.",
+                    "Cualquier función nueva o herramienta que se añadan a la tienda actual, también estarán sujetas a los Términos de Servicio. Puedes revisar la versión actualizada de los Términos de Servicio, en cualquier momento en esta página. Nos reservamos el derecho de actualizar, cambiar o reemplazar cualquier parte de los Términos de Servicio mediante la publicación de actualizaciones y/o cambios en nuestro sitio web. Es tu responsabilidad chequear esta página periódicamente para verificar cambios. Tu uso continuo o el acceso al sitio web después de la publicación de cualquier cambio constituye la aceptación de dichos cambios."
+                ]
+            },
+            {
+                "title": "Sección 1 - Términos de la tienda en línea",
+                "content": [
+                    "Al utilizar este sitio, declaras que tienes al menos la mayoría de edad en tu estado o provincia de residencia, o que tienes la mayoría de edad en tu estado o provincia de residencia y que nos has dado tu consentimiento para permitir que cualquiera de tus dependientes menores use este sitio.",
+                    "No puedes usar nuestros productos con ningún propósito ilegal o no autorizado tampoco puedes, en el uso del Servicio, violar cualquier ley en tu jurisdicción (incluyendo pero no limitado a las leyes de derecho de autor).",
+                    "No debes transmitir gusanos, virus o cualquier código de naturaleza destructiva.",
+                    "El incumplimiento o violación de cualquiera de estos Términos darán lugar al cese inmediato de tus Servicios."
+                ]
+            },
+            {
+                "title": "Sección 2 - Condiciones generales",
+                "content": [
+                    "Nos reservamos el derecho de rechazar la prestación de servicio a cualquier persona, por cualquier motivo y en cualquier momento.",
+                    "Entiendes que tu contenido (sin incluir la información de tu tarjeta de crédito), puede ser transferida sin encriptar e involucrar (a) transmisiones a través de varias redes; y (b) cambios para ajustarse o adaptarse a los requisitos técnicos de conexión de redes o dispositivos. La información de tarjetas de crédito está siempre encriptada durante la transferencia a través de las redes.",
+                    "Estás de acuerdo con no reproducir, duplicar, copiar, vender, revender o explotar cualquier parte del Servicio, uso del Servicio, o acceso al Servicio o cualquier contacto en el sitio web a través del cual se presta el servicio, sin el expreso permiso por escrito de nuestra parte.",
+                    "Los títulos utilizados en este acuerdo se incluyen solo por conveniencia y no limita o afecta a estos Términos."
+                ]
+            },
+            {
+                "title": "Sección 3 - Exactitud, exhaustividad y actualidad de la información",
+                "content": [
+                    "No nos hacemos responsables si la información disponible en este sitio no es exacta, completa o actual. El material en este sitio es provisto sólo para información general y no debe confiarse en ella o utilizarse como la única base para la toma de decisiones sin consultar primeramente, información más precisa, completa u oportuna. Cualquier dependencia en el materia de este sitio es bajo su propio riesgo.",
+                    "Este sitio puede contener cierta información histórica. La información histórica, no es necesariamente actual y es provista únicamente para tu referencia. Nos reservamos el derecho de modificar los contenidos de este sitio en cualquier momento, pero no tenemos obligación de actualizar cualquier información en nuestro sitio. Aceptas que es tu responsabilidad de monitorear los cambios en nuestro sitio."
+                ]
+            },
+            {
+                "title": "Sección 4 - Modificaciones al servicio y precios",
+                "content": [
+                    "Los precios de nuestros productos están sujetos a cambio sin aviso.",
+                    "Nos reservamos el derecho de modificar o discontinuar el Servicio (o cualquier parte del contenido) en cualquier momento sin aviso previo.",
+                    "No seremos responsables ante ti o alguna tercera parte por cualquier modificación, cambio de precio, suspensión o discontinuidad del Servicio."
+                ]
+            },
+            {
+                "title": "Sección 5 - Productos o servicios",
+                "content": [
+                    "Ciertos productos o servicios pueden estar disponibles exclusivamente en línea a través del sitio web. Estos productos o servicios pueden tener cantidades limitadas y estar sujetas a devolución o cambio de acuerdo a nuestra política de devolución solamente.",
+                    "Hemos hecho el esfuerzo de mostrar los colores y las imágenes de nuestros productos, en la tienda, con la mayor precisión de colores posible. No podemos garantizar que el monitor de tu computadora muestre los colores de manera exacta.",
+                    "Todos los productos son sujetos a disponibilidad. Las imágenes de los banners son ilustrativas. Estos legales cubren todas las publicaciones hechas en todos los medios.",
+                    "Todas las promociones no son acumulable con otras promociones. Aplican hasta agotar existencias y están restringidas a una por persona.",
+                    "El uso de cupones es personal, solo un cupón por usuario. Cupón por orden. Cada cupón puede tener restricciones particulares que serán comunicadas en el banner.",
+                    "Nos reservamos el derecho, pero no estamos obligados, para limitar las ventas de nuestros productos o servicios a cualquier persona, región geográfica o jurisdicción. Podemos ejercer este derecho basados en cada caso. Nos reservamos el derecho de limitar las cantidades de los productos o servicios que ofrecemos. Todas las descripciones de productos o precios de los productos están sujetos a cambios en cualquier momento sin previo aviso, a nuestra sola discreción. Nos reservamos el derecho de discontinuar cualquier producto en cualquier momento. Cualquier oferta de producto o servicio hecho en este sitio es nulo donde esté prohibido.",
+                    "No garantizamos que la calidad de los productos, servicios, información u otro material comprado u obtenido por ti cumpla con tus expectativas, o que cualquier error en el Servicio será corregido.",
+                    "Lo Mercat S.L. se compromete a proporcionar los mejores productos que cumpla con nuestros estándares de aseo de la moda, así como cumplir con la más alta seguridad de la salud y los requisitos reglamentarios aplicables relacionados. En el caso de que alguno de nuestros productos no cumpla con los más altos estándares, no nos hacemos responsables de los daños resultantes de la falta de uso o defecto de los productos, y se retirará el producto de nuestro mercado de inmediato."
+                ]
+            },
+            {
+                "title": "Sección 6 - Exactitud de facturación e información de cuenta",
+                "content": [
+                    "Nos reservamos el derecho de rechazar cualquier pedido que realice con nosotros. Podemos, a nuestra discreción, limitar o cancelar las cantidades compradas por persona, por hogar o por pedido. Estas restricciones pueden incluir pedidos realizados por o bajo la misma cuenta de cliente, la misma tarjeta de crédito, y/o pedidos que utilizan la misma facturación y/o dirección de envío.",
+                    "Precios pueden variar sin previo aviso debido a factores externos: devaluaciones monetarias, alteraciones drásticas en el tipo de cambio, entre otras.",
+                    "En el caso de que hagamos un cambio o cancelemos una orden, podemos intentar notificarle poniéndonos en contacto vía correo electrónico y/o dirección de facturación / número de teléfono proporcionado en el momento que se hizo pedido. Nos reservamos el derecho de limitar o prohibir las órdenes que, a nuestro juicio, parecen ser colocado por los concesionarios, revendedores o distribuidores.",
+                    "Te comprometes a proporcionar información actual, completa y precisa de la compra y cuenta utilizada para todas las compras realizadas en nuestra tienda. Te comprometes a actualizar rápidamente tu cuenta y otra información, incluyendo tu dirección de correo electrónico y números de tarjetas de crédito y fechas de vencimiento, para que podamos completar tus transacciones y contactarte cuando sea necesario.",
+                    "Para más detalles, por favor revisa nuestra Política de Devoluciones, en la sección 18 de este documento."
+                ]
+            },
+            {
+                "title": "Sección 7 - Herramientas opcionales",
+                "content": [
+                    "Es posible que te proporcionamos acceso a herramientas de terceros a los cuales no monitoreamos y sobre los que no tenemos control ni entrada.",
+                    "Reconoces y aceptas que proporcionamos acceso a este tipo de herramientas «tal cual» y «según disponibilidad» sin garantías, representaciones o condiciones de ningún tipo y sin ningún respaldo. No tendremos responsabilidad alguna derivada de o relacionada con tu uso de herramientas proporcionadas por terceras partes.",
+                    "Cualquier uso que hagas de las herramientas opcionales que se ofrecen a través del sitio bajo tu propio riesgo y discreción y debes asegurarte de estar familiarizado y aprobar los términos bajo los cuales estas herramientas son proporcionadas por el o los proveedores de terceros.",
+                    "También es posible que, en el futuro, te ofrezcamos nuevos servicios y/o características a través del sitio web (incluyendo el lanzamiento de nuevas herramientas y recursos). Estas nuevas características y/o servicios también estarán sujetos a estos Términos de Servicio."
+                ]
+            },
+            {
+                "title": "Sección 8 - Enlaces de terceras partes",
+                "content": [
+                    "Cierto contenido, productos y servicios disponibles vía nuestro Servicio puede incluir material de terceras partes.",
+                    "Enlaces de terceras partes en este sitio pueden redireccionarse a sitios web de terceras partes que no están afiliadas con nosotros. No nos responsabilizamos de examinar o evaluar el contenido o exactitud y no garantizamos ni tendremos ninguna obligación o responsabilidad por cualquier material de terceros o sitios web, o de cualquier material, productos o servicios de terceros.",
+                    "No nos hacemos responsables de cualquier daño o daños relacionados con la adquisición o utilización de bienes, servicios, recursos, contenidos, o cualquier otra transacción realizadas en conexión con sitios web de terceros. Por favor revisa cuidadosamente las políticas y prácticas de terceros y asegúrate de entenderlas antes de participar en cualquier transacción. Quejas, reclamos, inquietudes o preguntas con respecto a productos de terceros deben ser dirigidas a la tercera parte."
+                ]
+            },
+            {
+                "title": "Sección 9 - Comentarios de usuarios, captación y otros envíos",
+                "content": [
+                    "Si, a pedido nuestro, envías ciertas presentaciones específicas (por ejemplo la participación en concursos) o sin un pedido de nuestra parte envías ideas creativas, sugerencias, proposiciones, planes, u otros materiales, ya sea en línea, por email, por correo postal, o de otra manera (colectivamente, ‘comentarios’), aceptas que podamos, en cualquier momento, sin restricción, editar, copiar, publicar, distribuir, traducir o utilizar por cualquier medio comentarios que nos hayas enviado. No tenemos ni tendremos ninguna obligación (1) de mantener ningún comentario confidencialmente; (2) de pagar compensación por comentarios; o (3) de responder a comentarios.",
+                    "Nosotros podemos, pero no tenemos obligación de, monitorear, editar o remover contenido que consideremos sea ilegítimo, ofensivo, amenazante, calumnioso, difamatorio, pornográfico, obsceno u objetable o viole la propiedad intelectual de cualquiera de las partes o los Términos de Servicio.",
+                    "Aceptas que tus comentarios no violará los derechos de terceras partes, incluyendo derechos de autor, marca, privacidad, personalidad u otro derechos personal o de propiedad. Asimismo, aceptas que tus comentarios no contienen material difamatorio o ilegal, abusivo u obsceno, o contienen virus informáticos u otro malware que pudiera, de alguna manera, afectar el funcionamiento del Servicio o de cualquier sitio web relacionado. No puedes utilizar una dirección de correo electrónico falsa, usar otra identidad que no sea legítima, o engañar a terceras partes o a nosotros en cuanto al origen de tus comentarios. Tu eres el único responsable por los comentarios que haces y su precisión. No nos hacemos responsables y no asumimos ninguna obligación con respecto a los comentarios publicados por ti o cualquier tercer parte."
+                ]
+            },
+            {
+                "title": "Sección 10 - Información personal",
+                "content": [
+                    "Tu presentación de información personal a través del sitio se rige por nuestra Política de Privacidad. Para ver nuestro Aviso de Privacidad."
+                ]
+            },
+            {
+                "title": "Sección 11 - Errores, inexactitudes y omisiones",
+                "content": [
+                    "De vez en cuando puede haber información en nuestro sitio o en el Servicio que contiene errores tipográficos, inexactitudes u omisiones que puedan estar relacionadas con las descripciones de productos, precios, promociones, ofertas, gastos de envío del producto, el tiempo de tránsito y la disponibilidad. Nos reservamos el derecho de corregir los errores, inexactitudes u omisiones y de cambiar o actualizar la información o cancelar pedidos si alguna información en el Servicio o en cualquier sitio web relacionado es inexacta en cualquier momento sin previo aviso (incluso después de que hayas enviado tu orden) .",
+                    "No asumimos ninguna obligación de actualizar, corregir o aclarar la información en el Servicio o en cualquier sitio web relacionado, incluyendo, sin limitación, la información de precios, excepto cuando sea requerido por la ley. Ninguna especificación actualizada o fecha de actualización aplicada en el Servicio o en cualquier sitio web relacionado, debe ser tomada para indicar que toda la información en el Servicio o en cualquier sitio web relacionado ha sido modificado o actualizado."
+                ]
+            },
+            {
+                "title": "Sección 12 - Usos prohibidos",
+                "content": [
+                    "En adición a otras prohibiciones como se establece en los Términos de Servicio, se prohíbe el uso del sitio o su contenido: (a) para ningún propósito ilegal; (b) para pedirle a otros que realicen o participen en actos ilícitos; (c) para violar cualquier regulación, reglas, leyes internacionales, federales, provinciales o estatales, u ordenanzas locales; (d) para infringir o violar el derecho de propiedad intelectual nuestro o de terceras partes; (e) para acosar, abusar, insultar, dañar, difamar, calumniar, desprestigiar, intimidar o discriminar por razones de género, orientación sexual, religión, etnia, raza, edad, nacionalidad o discapacidad; (f) para presentar información falsa o engañosa; (g) para cargar o transmitir virus o cualquier otro tipo de código malicioso que sea o pueda ser utilizado en cualquier forma que pueda comprometer la funcionalidad o el funcionamiento del Servicio o de cualquier sitio web relacionado, otros sitios o Internet; (h) para recopilar o rastrear información personal de otros; (i) para generar spam, phish, pharm, pretext, spider, crawl, or scrape; (j) para cualquier propósito obsceno o inmoral; o (k) para interferir con o burlar los elementos de seguridad del Servicio o cualquier sitio web relacionado¿ otros sitios o Internet. Nos reservamos el derecho de suspender el uso del Servicio o de cualquier sitio web relacionado por violar cualquiera de los ítems de los usos prohibidos."
+                ]
+            },
+            {
+                "title": "Sección 13 - Exclusión de garantías; limitación de responsabilidad",
+                "content": [
+                    "No garantizamos ni aseguramos que el uso de nuestro servicio será ininterrumpido, puntual, seguro o libre de errores.",
+                    "No garantizamos que los resultados que se puedan obtener del uso del servicio serán exactos o confiables.",
+                    "Aceptas que de vez en cuando podemos quitar el servicio por períodos de tiempo indefinidos o cancelar el servicio en cualquier momento sin previo aviso.",
+                    "Aceptas expresamente que el uso de, o la posibilidad de utilizar, el servicio es bajo tu propio riesgo. El servicio y todos los productos y servicios proporcionados a través del servicio son (salvo lo expresamente manifestado por nosotros) proporcionados «tal cual» y «según esté disponible» para su uso, sin ningún tipo de representación, garantías o condiciones de ningún tipo, ya sea expresa o implícita, incluidas todas las garantías o condiciones implícitas de comercialización, calidad comercializable, la aptitud para un propósito particular, durabilidad, título y no infracción.",
+                    "En ningún caso Lo Mercat S.L., nuestros directores, funcionarios, empleados, afiliados, agentes, contratistas, internos, proveedores, prestadores de servicios o licenciantes serán responsables por cualquier daño, pérdida, reclamo, o daños directos, indirectos, incidentales, punitivos, especiales o consecuentes de cualquier tipo, incluyendo, sin limitación, pérdida de beneficios, pérdida de ingresos, pérdida de ahorros, pérdida de datos, costos de reemplazo, o cualquier daño similar, ya sea basado en contrato, agravio (incluyendo negligencia), responsabilidad estricta o de otra manera, como consecuencia del uso de cualquiera de los servicios o productos adquiridos mediante el servicio, o por cualquier otro reclamo relacionado de alguna manera con el uso del servicio o cualquier producto, incluyendo pero no limitado, a cualquier error u omisión en cualquier contenido, o cualquier pérdida o daño de cualquier tipo incurridos como resultados de la utilización del servicio o cualquier contenido (o producto) publicado, transmitido, o que se pongan a disposición a través del servicio, incluso si se avisa de su posibilidad. Debido a que algunos estados o jurisdicciones no permiten la exclusión o la limitación de responsabilidad por daños consecuenciales o incidentales, en tales estados o jurisdicciones, nuestra responsabilidad se limitará en la medida máxima permitida por la ley."
+                ]
+            },
+            {
+                "title": "Sección 14 - Indemnización",
+                "content": [
+                    "Aceptas indemnizar, defender y mantener indemne Lo Mercat S.L. y nuestras matrices, subsidiarias, afiliados, socios, funcionarios, directores, agentes, contratistas, concesionarios, proveedores de servicios, subcontratistas, proveedores, internos y empleados, de cualquier reclamo o demanda, incluyendo honorarios razonables de abogados, hechos por cualquier tercero a causa o como resultado de tu incumplimiento de las Condiciones de Servicio o de los documentos que incorporan como referencia, o la violación de cualquier ley o de los derechos de un tercero."
+                ]
+            },
+            {
+                "title": "Sección 15 - Divisibilidad",
+                "content": [
+                    "En el caso de que se determine que cualquier disposición de estas Condiciones de Servicio sea ilegal, nula o inejecutable, dicha disposición será, no obstante, efectiva a obtener la máxima medida permitida por la ley aplicable, y la parte no exigible se considerará separada de estos Términos de Servicio, dicha determinación no afectará la validez de aplicabilidad de las demás disposiciones restantes."
+                ]
+            },
+            {
+                "title": "Sección 16 - Rescisión",
+                "content": [
+                    "Las obligaciones y responsabilidades de las partes que hayan incurrido con anterioridad a la fecha de terminación sobrevivirán a la terminación de este acuerdo a todos los efectos.",
+                    "Estas Condiciones de servicio son efectivos a menos que y hasta que sea terminado por ti o nosotros. Puedes terminar estos Términos de Servicio en cualquier momento por avisarnos que ya no deseas utilizar nuestros servicios, o cuando dejes de usar nuestro sitio.",
+                    "Si a nuestro juicio, fallas, o se sospecha que haz fallado, en el cumplimiento de cualquier término o disposición de estas Condiciones de Servicio, también podemos terminar este acuerdo en cualquier momento sin previo aviso, y seguirás siendo responsable de todos los montos adeudados hasta incluida la fecha de terminación; y/o en consecuencia podemos negar el acceso a nuestros servicios (o cualquier parte del mismo)."
+                ]
+            },
+            {
+                "title": "Sección 17 - Acuerdo completo",
+                "content": [
+                    "Nuestra falla para ejercer o hacer valer cualquier derecho o disposición de estas Condiciones de Servicio no constituirá una renuncia a tal derecho o disposición.",
+                    "Estas Condiciones del servicio y las políticas o reglas de operación publicadas por nosotros en este sitio o con respecto al servicio constituyen el acuerdo completo y el entendimiento entre tú y nosotros y rigen el uso del Servicio y reemplaza cualquier acuerdo, comunicaciones y propuestas anteriores o contemporáneas, ya sea oral o escrita, entre tu y nosotros (incluyendo, pero no limitado a, cualquier versión previa de los Términos de Servicio).",
+                    "Cualquier ambigüedad en la interpretación de estas Condiciones del servicio no se interpretarán en contra del grupo de redacción."
+                ]
+            },
+            {
+                "title": "Sección 18 - Política de devoluciones",
+                "content": [
+                    "Plazo",
+                    "Disponemos de un plazo para devoluciones de  a partir de la fecha en que la paquetería entregó tu pedido en el domicilio indicado al realizar la compra. Debes notificar acerca de la devolución antes de que se cumplan los  a través de alguno de nuestros canales de atención:",
+                    "En cualquiera de las tiendas asociadas del país, presentando tu factura o ticket, uno de nuestros asesores de venta te ayudará en el proceso. - Solicitar la devolución dentro del plazo de devolución por correo electrónico.",
+                    "Condiciones",
+                    "Para ser elegible para una devolución, el artículo debe:",
+                    "Estar sin usar y en las mismas condiciones en que lo recibiste. También debe estar en su embalaje original. - Existen varios tipos de bienes que están exentos de ser devueltos. Productos perecederos tales como alimentos no pueden ser devueltos pasados los días indicados para devoluciones.",
+                    "Hay algunas situaciones donde solo se pueden garantizar reembolsos parciales:",
+                    "Cualquier producto que no se encuentre en su condición original, que esté dañado o le falten partes por razones ajenas a nosotros.",
+                    "Libros con obvios signos de uso. - CD, DVD, cintas VHS, software, juegos de video, cassettes, o discos de vinilo que hayan sido abiertos.",
+                    "Si deseas hacer la devolución de alguno de nuestros productos, lo puedes hacer de las siguientes maneras:",
+                    "En cualquiera de las tiendas asociadas del país, presentando tu factura o ticket, uno de nuestros asesores de venta te ayudará en el proceso. - Solicitar la devolución dentro del plazo de devolución por correo electrónico.",
+                    "Procedimiento",
+                    "Devolución del dinero (solo aplica para casos de garantía y ley de retracto): - A través de transferencia (cuenta de ahorros, cuenta corriente, ahorro a la mano): se realiza aproximadamente dentro de los cinco días hábiles siguientes de recibir el producto nuevamente en nuestra bodega. - A través de reversión del pago: quince días hábiles después de recibir el producto en nuestra bodega. Ésta reversión corre por cuenta y orden de tu entidad bancaria, cualquier duda debes comunicarte directamente con ellos. - Cambio del producto (Sujeto a disponibilidad de inventario en el momento del cambio). Sólo se podrán realizar cambios por productos con valor igual o inferior al original y la diferencia en caso de aplicar, se entregará en un cupón para una nueva compra en la tienda online. En caso de no contar con disponibilidad para el cambio, se entregará el valor del producto(s) en un cupón para una nueva compra. - Cupón para realizar una nueva compra (Este cupón tiene validez por seis meses a partir de la fecha de creación). 2. Cambio del producto (Sujeto a disponibilidad de inventario en el momento del cambio). Sólo se podrán realizar cambios por productos con valor igual o inferior al original y la diferencia en caso de aplicar, se entregará en un cupón para una nueva compra en la tienda online. En caso de no contar con disponibilidad para el cambio, se entregará el valor del producto(s) en un cupón para una nueva compra. 3. Cupón para realizar una nueva compra (Este cupón tiene validez por seis meses a partir de la fecha de creación).",
+                    "Condiciones del producto",
+                    "El producto deberá devolverse en óptimas condiciones, sin rastros de haber sido utilizado, con las etiquetas originales o en su defecto, si ya fueron retiradas, debes introducirlas en el empaque. Una vez recibido el producto en nuestra bodega, verificaremos las condiciones del mismo y de acuerdo con los resultados, se te enviará un producto nuevo o se te entregará un cupón para una nueva compra.",
+                    "Productos que aplican",
+                    "- Frutas de temporada",
+                    "- Productos en promoción",
+                    "Plazo de respuesta",
+                    "Reembolso del dinero: Dependiendo del medio de pago que hayas utilizado para tu compra, el reembolso se hará a través de una transferencia electrónica o a tu tarjeta de crédito. Los reembolsos parciales se procesarán por medio de transferencia electrónica. Los cambios se despacharán aproximadamente en 3 días hábiles después de recibido el producto en la bodega y aplicarán los mismos tiempos de una entrega regular.",
+                    "Costos de envío",
+                    "El Usuario podrá devolver sin ningún costo, cualquier producto que presente defectos de fábrica. Los costos de transporte y los demás que conlleve una devolución por motivos diferentes a defectos de fábrica serán cubiertos por el cliente."
+                ]
+            },
+            {
+                "title": "Sección 19 - Ley",
+                "content": [
+                    "Para la interpretación y cumplimiento de los presentes términos y condiciones, las partes se someten a la jurisdicción de los tribunales de la Ciudad de renunciado expresamente a cualquier otro fuero que pudiere corresponderles por razón de sus domicilios presentes o futuros."
+                ]
+            },
+            {
+                "title": "Sección 20 - Cambios en los términos de servicio",
+                "content": [
+                    "Puedes revisar la versión más actualizada de los Términos de Servicio en cualquier momento en esta página.",
+                    "Nos reservamos el derecho, a nuestra sola discreción, de actualizar, modificar o reemplazar cualquier parte de estas Condiciones del servicio mediante la publicación de las actualizaciones y los cambios en nuestro sitio web. Es tu responsabilidad revisar nuestro sitio web periódicamente para verificar los cambios. El uso continuo de o el acceso a nuestro sitio Web o el Servicio después de la publicación de cualquier cambio en estas Condiciones de servicio implica la aceptación de dichos cambios."
+                ]
+            },
+            {
+                "title": "Sección 21 - Información de contacto",
+                "content": [
+                    "Preguntas acerca de los Términos de Servicio deben ser enviadas a legal@lomercat.cat.",
+                    "Última actualización de este documento de términos y condiciones: 20/11/2022"
+                ]
+            }
+        ]
+    }
 }
