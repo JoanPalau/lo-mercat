@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Provider } from 'react-redux';
 
 import Head from 'next/head';
 import { NextIntlProvider } from 'next-intl';
@@ -10,14 +11,9 @@ import { ThemeProvider } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
 
 import createEmotionCache from '@common/createEmotionCache';
-import { AppProvider } from '@common/AppContext';
-
-import { AppContextInterface } from '@customTypes/AppContext';
-import { NavigationParams } from '@customTypes/NavigationParams';
 import { MyAppProps } from '@customTypes/MyAppProps';
 
-import { wrapper } from "../redux/store";
-import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
+import { wrapper } from 'redux/store';
 
 const UserContext = React.createContext(null);
 
@@ -46,9 +42,10 @@ const defaultContext: AppContextInterface = {
   }
 }
 */
-function MyApp(props : MyAppProps) {
+const MyApp = (props : MyAppProps) => {
 
   const [user, setUser] = useState(null);
+  const { store } = wrapper.useWrappedStore(props);
   const { Component, emotionCache = clientSideEmotionCache, pageProps, session } = props;
 
   const getLayout = Component.getLayout ?? ((page) => page)
@@ -58,7 +55,7 @@ function MyApp(props : MyAppProps) {
         <NextIntlProvider messages={pageProps.messages}>
           <UserContext.Provider value={{ user, setUser }}>
             <SessionProvider session={session}>
-              <>
+              <Provider store={store} >
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
                 <CssBaseline />
                 <Head>
@@ -69,7 +66,7 @@ function MyApp(props : MyAppProps) {
                   <link rel="icon" href="/favicon.ico" />
                 </Head>
                 {getLayout(<Component {...pageProps} />)}
-              </>
+              </Provider>
             </SessionProvider>
           </UserContext.Provider>
         </NextIntlProvider>
@@ -78,6 +75,6 @@ function MyApp(props : MyAppProps) {
   );
 }
 
-export default wrapper.withRedux(MyApp);
+export default MyApp;
 
 export { UserContext };

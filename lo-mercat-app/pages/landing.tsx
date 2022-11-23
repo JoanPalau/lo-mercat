@@ -1,15 +1,13 @@
+import { NextPage, NextPageContext } from 'next';
+import {useTranslations} from 'next-intl';
+import { ReactElement } from 'react';
+
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-import {useTranslations} from 'next-intl';
-import { NextPage } from 'next';
 import { isMobile } from '@common/DeviceDetection';
-import { NextPageContext } from 'next';
 import BaseLayout from '@components/layouts/BaseLayout';
-
-import { ReactElement, useEffect, useState } from 'react'
-
 
 export async function getServerSideProps(context: NextPageContext) {
     return {
