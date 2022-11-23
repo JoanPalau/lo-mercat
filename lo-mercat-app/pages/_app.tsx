@@ -19,29 +19,7 @@ const UserContext = React.createContext(null);
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
-/*
-const defaultContext: AppContextInterface = {
-  lang: '',
-  navigation: {
-    title: "Lo Mercat",
-    nav: "Lo Mercat",
-    value: undefined
-  },
-  data: {},
-  handleLangChange: (context: AppContextInterface, newLang: string) => {
-    const lang = newLang;
-    return { ...context, lang };
-  },
-  handleNavigationChange: (context: AppContextInterface, newNavigation: NavigationParams) => {
-    const navigation = newNavigation;
-    return { ...context, navigation };
-  },
-  handleDataChange: (context: AppContextInterface, newData: object) => {
-    const data = newData;
-    return { ...context, data };
-  }
-}
-*/
+
 const MyApp = (props : MyAppProps) => {
 
   const [user, setUser] = useState(null);

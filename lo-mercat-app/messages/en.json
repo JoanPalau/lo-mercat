@@ -5,6 +5,32 @@
     "Home": {
         "hello": "Hello Next.js!"
     },
+    "CustomerHome": {
+        "navigation": {
+            "orderHistory": "To order History",
+            "purchaseHistory":"To Purchase History",
+            "buyFlow": "To perform a buy",
+            "searchFlow": "To search for items or stands"
+        }
+    },
+    "OrderHistory": {
+        "header": "My orders",
+        "title": "Order nº {number}",
+        "status": {
+            "text": "Status: {status}",
+            "completed": "Completed",
+            "pending": "In proces"
+        },
+        "total": "Total: {amount} {currency}"
+    },
+    "PurchaseHistory": {
+        "header": "My purchases",
+        "title": "Id: {id}",
+        "total": "Total: {amount} {currency}",
+        "subtotal": "{amount} {currency}",
+        "order": "# {order_id}",
+        "stand": "Stand #: {stand_id}"
+    },
     "Landing": {
         "SignIn": "Sign In",
         "text": "Already have an account? ",
