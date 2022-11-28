@@ -1,5 +1,5 @@
-interface UpdateOrCreatePrisma<T> {
-    schema: T
+interface UpdateOrCreatePrisma {
+    schema: any
     where: any
     update: any
     create: any
@@ -10,7 +10,7 @@ interface UpdateOrCreateReturn<T> {
     obj: T
 }
 
-async function updateOrCreate<T>({ schema, where, update, create }: UpdateOrCreatePrisma<T>): Promise<UpdateOrCreateReturn<T>> {
+async function updateOrCreate<T>({ schema, where, update, create }: UpdateOrCreatePrisma): Promise<UpdateOrCreateReturn<T>> {
     let created = true;
     let pre_defined = await (schema as any).findFirst(
         {

@@ -38,7 +38,6 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
             break
         case 'DELETE':
             // Update or create data in your database
-            console.log("locationnnnnnnnnnnnnnnnn");
             console.log(req.body.location);
             let findstand = await prisma.stand.findFirst({
                 where: {

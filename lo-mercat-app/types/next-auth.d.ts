@@ -1,4 +1,4 @@
-import { Role } from "@prisma/client";
+import { Customer, Farmer, Role } from "@prisma/client";
 import { DefaultSession } from "next-auth";
 import { JWT } from "next-auth/jwt";
 
@@ -20,6 +20,8 @@ declare module "next-auth" {
     user?: {
       role?: string;
     } & DefaultSession["user"];
+    farmer?: Farmer,
+    customer?: Customer
   }
 
   /** Passed as a parameter to the `jwt` callback */

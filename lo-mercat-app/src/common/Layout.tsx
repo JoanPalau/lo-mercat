@@ -18,9 +18,6 @@ const Layout = (props: { children: ReactElement }) => {
     return (
       <Grid>
         <TopNavigation />
-        <aside>
-            This is the future Drawer section
-        </aside>
         <main>
             <Container maxWidth="lg" sx={{ mt: "3rem", mb: "4rem"}}>
                 {props.children}

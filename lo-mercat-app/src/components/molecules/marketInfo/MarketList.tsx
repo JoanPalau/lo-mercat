@@ -1,5 +1,15 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
+import { Grid, Link } from "@mui/material";
+import { useSession } from "next-auth/react";
+// import Link from "next/link";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+
+import router from 'next/router';
+import { useTranslations } from 'next-intl';
 
 const ImageTextList = styled.ul`
 list-style: none;
@@ -13,7 +23,6 @@ const BorderListElement = styled.ul`
 border-radius: 3px;
 list-style: none;
 margin: 20px;
-border: solid 2px;
 padding:0px 10px;
 `;
 
@@ -35,24 +44,45 @@ text-align:center;
 padding:0px;
 `;
 
-const MarketList = ({ markets }: any) => {
+const MarketList = ({ markets, props}: any) => {
   const results: any = []
-  markets.forEach((markets: any) => {
+  const isMobile = {props};
+  const t = useTranslations("MarketList");
+  const redirect = (market:any,props:any) => {
+    router.push('/market/'+market+'/viewproduct/');
+  }
+  markets.map((markets: any) => {
     results.push(
-      
-      <BorderListElement key={markets.id}>
-              <ImageTextListElement><h2>{markets.name}</h2></ImageTextListElement>
-              <ImageTextListElement>Location: {markets.location}</ImageTextListElement>
-              <ImageTextListElement>Schedule: {markets.schedule}</ImageTextListElement>
-              <ImageTextListElement><Image src={"/farmer-info.svg"} alt="" width={200} height={200} /></ImageTextListElement>
-      </BorderListElement >
-      
+        <BorderListElement key={markets.id}>
+        <Card sx={{
+          display: 'block',
+          transitionDuration: '0.3s',
+        }}>
+          <CardActionArea>
+            <Link href="https://http.cat/400">
+              <Image src={"/farmer-info.svg"} alt="" width={270} height={150} />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {markets.name}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                {t("loc")}:: {markets.location}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                {t("sched")}: {markets.schedule}
+                </Typography>
+              </CardContent>
+            </Link>
+          </CardActionArea>
+        </Card>
+    </BorderListElement>
   );
 });
 
 return (
   <ImageTextList>
       {results}
+      
   </ImageTextList>
 );
 }

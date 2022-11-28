@@ -4,8 +4,11 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Author from '../src/Author'
 import Link from '../src/common/Link';
+import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
+import { ReactElement } from 'react';
+import Layout from '@common/Layout';
 
-export default function About() {
+const About : NextPageWithLayout = () => {
   return (
     <Container maxWidth="lg" sx={{marginBottom: '56px'}}>
       <Box
@@ -38,3 +41,13 @@ export default function About() {
     </Container>
   );
 }
+
+About.getLayout = function getLayout(page: ReactElement) {
+  return (
+      <Layout>
+      {page}
+      </Layout>
+  )
+}
+
+export default About;

@@ -1,13 +1,29 @@
 import { NextPage } from "next";
 import { signIn } from "next-auth/react";
-import { FormEventHandler, useContext, useState } from "react";
+import { FormEventHandler, ReactElement, useContext, useState } from "react";
 import { UserContext } from "../_app";
 interface Props {}
 import { PrismaClient } from '@prisma/client'
+import { Box, Button, Grid, TextField, ThemeProvider, Typography } from "@mui/material";
+import Layout from '@common/Layout';
+import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 
+import {useTranslations} from 'next-intl';
+import { isMobile } from '@common/DeviceDetection';
+import { NextPageContext } from 'next';
 
-
-const SignIn: NextPage = (props): JSX.Element => {
+export async function getServerSideProps(context: NextPageContext) {
+    return {
+        props: {
+            messages: (await import(`../../messages/${context.locale}.json`)).default,
+            isMobile: isMobile(context.req)
+        }
+    };
+}
+const SignIn: NextPageWithLayout = (props): JSX.Element => {
+    const isMobile = {props};
+    const t = useTranslations("SignIn");
+    
     const context = useContext(UserContext);
     const[userInfo, setUserInfo] = useState({email: '', password:'', role:'Farmer', name:''});
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
@@ -20,46 +36,59 @@ const SignIn: NextPage = (props): JSX.Element => {
             password: userInfo.password,
             role:userInfo.role,
             redirect: true,
-            callbackUrl: '/protected'
+            callbackUrl: '/en/protected'
         });
-        
     };
     return(<div className="Auth-form-container">
         <form className="Auth-form" onSubmit={handleSubmit}>
-            <div className="Auth-form-content">
-                <h3 className="Auth-form-title">Sign In</h3>
-                    <div className="form-group mt-3">
-                        <label>Email address</label>
+        <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        style={{ minHeight: '100vh' }}
+        >
+
+                    <Typography variant="h3">{t("signin")}</Typography>
+                    <Box sx={{ mx: 'auto', height: 20 }}/>
+                    <Typography variant="h5">{t("email")}</Typography>
                             <br></br>
-                            <input 
+                            <TextField 
                             value={userInfo.email} 
                             onChange={({ target })=>
                                 setUserInfo({... userInfo, email:target.value})
                             }
-                            type='email' 
+                            type='email'
+                            variant="filled"
                             placeholder='exemple@email.com'/>
-                    </div>
-                    <div className="form-group mt-3">
-                        <label>Password</label>
+                        <Box sx={{ mx: 'auto', height: 20 }}/>
+                    <Typography variant="h5">{t("pass")}</Typography>
                         <br></br>
-                        <input 
+                        <TextField 
                         value={userInfo.password}
-                        onChange={({ target })=>
+                        onChange={({ target }: any)=>
                             setUserInfo({... userInfo, password:target.value})
                         } 
+                        variant="filled"
                         type='password' 
                         placeholder="********" />
-                    </div>
-                    <div className="d-grid gap-2 mt-3">                    
-                        <input 
-                        type='submit' 
-                        value='Login' 
-                        className="btn btn-primary"/>
-                    </div>
-            </div>
+                    <Box sx={{ mx: 'auto', height: 20 }}/>
+                    <Button type='submit' variant="contained">
+                    {t("login")}
+                    </Button>
+            </Grid>
         </form>
 
     </div>)
 };
+
+SignIn.getLayout = function getLayout(page: ReactElement) {
+    return (
+        <Layout>
+        {page}
+        </Layout>
+    )
+}
 
 export default SignIn;

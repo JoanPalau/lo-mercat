@@ -1,14 +1,17 @@
 import type { NextPage } from 'next'
 import styled from '@emotion/styled'
+
+import MarketList from '@components/molecules/marketInfo/MarketList';
+import { PrismaClient } from '@prisma/client';
+import { useTranslations } from 'next-intl';
 import { isMobile } from '@common/DeviceDetection';
 import { NextPageContext } from 'next';
-import MarketList from '../../src/components/molecules/marketInfo/MarketList';
-import { PrismaClient } from '@prisma/client';
-import Layout from '@common/Layout';
-import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
-import { ReactElement } from 'react';
+import { UserContext } from "../pages/_app";
 
 const prisma = new PrismaClient();
+const Myh1 = styled.h1`
+text-align:center;
+`;
 
 export async function getServerSideProps(context: NextPageContext) {
     // Fetch data from external API
@@ -19,27 +22,22 @@ export async function getServerSideProps(context: NextPageContext) {
     // Pass data to the page via props
     return {
         props: {
-            markets, messages: (await import(`../../messages/${context.locale}.json`)).default,
+            markets, messages: (await import(`../messages/${context.locale}.json`)).default,
             isMobile: isMobile(context.req)
         }
     }
 }
 
-const MarketPage: NextPageWithLayout = ({markets,props}:any) => {
+const MarketSelector: NextPage = ({ markets,props }: any) => {
+
+    const isMobile = {props};
+    const t = useTranslations("MarketSelector");
     return (
         <div>
+            <Myh1>{t("select")}</Myh1>
             <MarketList markets={markets}{...props} />
         </div>
     );
 }
 
-MarketPage.getLayout = function getLayout(page: ReactElement) {
-    return (
-        <Layout>
-        {page}
-        </Layout>
-    )
-}
-
-
-export default MarketPage;
+export default MarketSelector;

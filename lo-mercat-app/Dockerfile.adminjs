@@ -28,7 +28,7 @@ COPY adminjs ./adminjs
 COPY prisma ./prisma
 COPY *.json *.js *.ts *.env *.sh ./
 
-RUN prisma generate
+RUN npx prisma generate
 
 # WORKDIR /app/adminjs
 

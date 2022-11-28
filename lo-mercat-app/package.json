@@ -43,7 +43,8 @@
     "react-dom": "latest",
     "react-hook-form": "^7.38.0",
     "tslib": "^2.4.0",
-    "ua-parser-js": "^1.0.32"
+    "ua-parser-js": "^1.0.32",
+    "universal-cookie": "^4.0.4"
   },
   "devDependencies": {
     "@playwright/test": "^1.27.1",

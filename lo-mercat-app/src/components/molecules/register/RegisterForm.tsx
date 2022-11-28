@@ -1,5 +1,7 @@
 import { Prisma, PrismaClient } from '@prisma/client';
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
+import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid, RadioGroup, Radio, FormControlLabel, FormControl } from '@mui/material';
+
 
 interface _RegisterFormState {
     name:string,
@@ -22,89 +24,87 @@ class RegisterForm extends React.Component<{}, _RegisterFormState> {
         }
 
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.submit = this.submit.bind(this);
     }
 
     handleInputChange(event:any) {
         const target = event.target;
         var value = target.value as _RegisterFormState;
         const name = target.name as string;
-        const role = target.role as string;
+        console.log("changed" + target.name)
         this.setState({
             [name]: value,
-            [role]:value
         } as any);        
     }
 
-    submit(){
+    async submit(event :any){
+        event.preventDefault();
+        let x = await fetch(
+            '/api/user/',
+            {        
+                body: JSON.stringify({
+                    "name": this.state.name,
+                    "password": this.state.password,
+                    "email": this.state.email,
+                    "gender": this.state.gender,
+                    "role": this.state.role,
+                }),
+                headers:new Headers({ 'Content-Type': 'application/json', Accept: 'application/json',}),
+                method: 'POST'
+            }
+        )
+        window.location.href = '/auth/signin'
     }
-
     render(){
         return(
-            <div>
-                <div className="row">
-                    <div className="col-sm">
-                        <br /><br />
-                        <h3>Register Form</h3><br />
-                        <form>
-                            <div className="row">
-                                <div className="col">
-                                    <label>Full name :</label>
-                                    <input type="text" className="form-control" name="name" onChange={this.handleInputChange} tabIndex={1} />
-                                </div>
-                                <div className="col">
-                                    <label>Password :</label>
-                                    <input type="password" className="form-control" name="password" onChange={this.handleInputChange} tabIndex={3} />
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col">
-                                    <label>Email :</label>
-                                    <input type="email" className="form-control" name="email" onChange={this.handleInputChange} tabIndex={2} />
-                                </div>
-                                <div className="col">
-                                    <label>Confirm Password :</label>
-                                    <input type="password" className="form-control" name="password_check" onChange={this.handleInputChange} tabIndex={4}/>
-                                </div>
-                            </div>
-                            <div className="form-row">
-                                <div className="form-group col-md-6">
-                                    <label>Gender :</label><br />
-                                    <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="radio" name="gender" id="inlineRadiom" value="male" checked={this.state.gender === "male"} onChange={this.handleInputChange} />
-                                        <label className="form-check-label" htmlFor="inlineRadiom">Male</label>
-                                    </div>
-                                    <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="radio" name="gender" id="inlineRadiof" value="female" checked={this.state.gender === "female"} onChange={this.handleInputChange} />
-                                        <label className="form-check-label" htmlFor="inlineRadiof">Female</label>
-                                    </div>
-                                    <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="radio" name="gender" id="inlineRadion" value="nonbinary" checked={this.state.gender === "nonbinary"} onChange={this.handleInputChange} />
-                                        <label className="form-check-label" htmlFor="inlineRadion">Non-binary</label>
-                                    </div>
-                                    <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="radio" name="gender" id="inlineRadioe" value="empty" checked={this.state.gender === "empty"} onChange={this.handleInputChange} />
-                                        <label className="form-check-label" htmlFor="inlineRadioe">Empty</label>
-                                    </div>
-                                </div>
-                            </div>
-                                <div className="form-group col-md-6">
-                                    <label>Role:</label><br />
-                                    <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="radio" name="role" id="inlineRadiom" value="farmer" checked={this.state.role === "farmer"} onChange={this.handleInputChange} />
-                                        <label className="form-check-label" htmlFor="inlineRadioz">Farmer</label>
-                                    </div>
-                                    <div className="form-check form-check-inline">
-                                        <input className="form-check-input" type="radio" name="role" id="inlineRadiof" value="customer" checked={this.state.role === "customer"} onChange={this.handleInputChange} />
-                                        <label className="form-check-label" htmlFor="inlineRadiov">Customer</label>
-                                    </div>
-                                </div>
-                                <div className="col-md-12 text-center">
-                                    <button type="submit" className="btn btn-primary" onClick={()=>this.submit()}>Submit</button>
-                                </div>
-                        </form>
+            <Grid
+            container
+            spacing={0}
+            direction="column"
+            alignItems="center"
+            justifyContent="center"
+            style={{ minHeight: '100vh' }}
+            >
+            <FormControl>
+                <Typography variant="h3">Register Form</Typography><br />
+                <Box sx={{ mx: 'auto', height: 30 }}/>
+                    <div className="col">
+                        <label>Full name :</label>
+                        <TextField variant="filled" name="name" onChange={this.handleInputChange} tabIndex={1} />
                     </div>
-                </div>
-            </div>
+                    <Box sx={{ mx: 'auto', height: 20 }}/>
+                    <div className="col">
+                        <label>Email :</label>
+                        <TextField variant="filled" type="email" className="form-control" name="email" onChange={this.handleInputChange} tabIndex={2} />
+                    </div>
+                    <Box sx={{ mx: 'auto', height: 20 }}/>
+                    <div className="col">
+                        <label>Password :</label>
+                        <TextField variant="filled" type="password" className="form-control" name="password" onChange={this.handleInputChange} tabIndex={3} />
+                    </div>
+                    <Box sx={{ mx: 'auto', height: 20 }}/>
+                    <div className="col">
+                        <label>Confirm Password :</label>
+                        <TextField variant="filled" type="password" className="form-control" name="password_check" onChange={this.handleInputChange} tabIndex={4}/>
+                    </div>
+                    <RadioGroup name="gender" onChange={this.handleInputChange}>
+                        <label>Gender :</label><br />
+                        <FormControlLabel name="gender" value="male" control={<Radio />} label="Male"  />
+                        <FormControlLabel name="gender" value="female" control={<Radio />} label="Female"  />
+                        <FormControlLabel name="gender" value="nonbinary" control={<Radio />} label="Non-binary"  />
+                        <FormControlLabel name="gender" value="empty" control={<Radio />} label="Empty"  />
+                    </RadioGroup>
+                    <Box sx={{ mx: 'auto', height: 20 }}/>
+                    <RadioGroup name="role" onChange={this.handleInputChange}>
+                        <label>Role :</label><br />
+                        <FormControlLabel name="role" value="FARMER" control={<Radio />} label="Farmer"  />
+                        <FormControlLabel name="role" value="CUSTOMER" control={<Radio />} label="Customer"  />
+                    </RadioGroup>
+                <Button type="submit" variant="contained" onClick={this.submit}>
+                    Submit
+                </Button>
+            </FormControl>
+            </Grid>
         )  
     }
 }
