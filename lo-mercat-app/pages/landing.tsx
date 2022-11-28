@@ -8,6 +8,8 @@ import Box from '@mui/material/Box';
 
 import { isMobile } from '@common/DeviceDetection';
 import BaseLayout from '@components/layouts/BaseLayout';
+import Cookies from 'universal-cookie';
+import { Button } from '@mui/material';
 
 export async function getServerSideProps(context: NextPageContext) {
     return {
@@ -18,6 +20,13 @@ export async function getServerSideProps(context: NextPageContext) {
     };
 }
 
+function setLang(locale:string) {
+  const cookies = new Cookies();
+  cookies.set('NEXT_LOCALE', locale, { path: '/' });
+  console.log(cookies.get('NEXT_LOCALE'));
+  window.location.reload();
+}
+
 export default function Landing(props: NextPage) {
 
   const isMobile = {props};
@@ -25,6 +34,15 @@ export default function Landing(props: NextPage) {
 
   return (
       <Container maxWidth="lg">
+        <Button onClick={() => setLang('en')}>
+          English
+        </Button>
+        <Button onClick={() => setLang('es')}>
+          Español
+        </Button>
+        <Button onClick={() => setLang('cat')}>
+          Catalan
+        </Button>
         <Box
           sx={{
             my: 4,
