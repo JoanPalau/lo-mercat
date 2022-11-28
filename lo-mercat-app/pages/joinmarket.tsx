@@ -1,7 +1,5 @@
 import type { NextPage } from 'next'
-import styled from '@emotion/styled'
 
-import { PrismaClient } from '@prisma/client';
 import JoinMarket from '../src/components/molecules/joinMarket/JoinMarket';
 import ViewJoinMarket from '../src/components/molecules/joinMarket/ListMarket';
 import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
@@ -13,7 +11,7 @@ import {useTranslations} from 'next-intl';
 import { isMobile } from '@common/DeviceDetection';
 import { NextPageContext } from 'next';
 
-const prisma = new PrismaClient();
+import { prisma } from '../lib/prisma';
 
 export async function getServerSideProps(context: NextPageContext) {
     // Fetch data from external API

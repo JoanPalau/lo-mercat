@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { PrismaClient, User } from '@prisma/client';
 import { updateOrCreate } from '../api_utils';
+import { prisma } from '../../../lib/prisma';
+import { User } from '@prisma/client';
 import * as bcrypt from 'bcrypt';
-const prisma = new PrismaClient();
 
 
 async function createCustomer(c: any) {

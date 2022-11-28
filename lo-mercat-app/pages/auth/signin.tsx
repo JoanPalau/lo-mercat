@@ -1,10 +1,7 @@
-import { NextPage } from "next";
 import { signIn } from "next-auth/react";
 import { FormEventHandler, ReactElement, useContext, useState } from "react";
-import { UserContext } from "../_app";
 interface Props {}
-import { PrismaClient } from '@prisma/client'
-import { Box, Button, Grid, TextField, ThemeProvider, Typography } from "@mui/material";
+import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import Layout from '@common/Layout';
 import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 
@@ -20,11 +17,10 @@ export async function getServerSideProps(context: NextPageContext) {
         }
     };
 }
-const SignIn: NextPageWithLayout = (props): JSX.Element => {
+const SignIn: NextPageWithLayout = (props:Props): JSX.Element => {
     const isMobile = {props};
     const t = useTranslations("SignIn");
     
-    const context = useContext(UserContext);
     const[userInfo, setUserInfo] = useState({email: '', password:'', role:'Farmer', name:''});
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
         setUserInfo({... userInfo, role:'User'})

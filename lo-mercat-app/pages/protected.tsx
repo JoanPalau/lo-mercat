@@ -1,28 +1,27 @@
-import { Box, Grid, Link } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Link from "@mui/material/Link";
 import { useSession } from "next-auth/react";
-// import Link from "next/link";
-import React, { FC, useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import marketstock from '/Marketplace-bro.png';
-import Image from 'next/image';
 import Layout from '@common/Layout';
 import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 import { ReactElement } from 'react';
+import Image from 'next/image';
 
-import Router, { useRouter } from "next/router";
+import Router from "next/router";
 
-import { UserContext } from "./_app";
 import { useTranslations } from 'next-intl';
-import { isMobile } from '@common/DeviceDetection';
-import { NextPageContext } from 'next';
+import { isMobile } from "@common/DeviceDetection";
+import { NextPageContext } from "next/types";
 
 interface Props {
   children: React.ReactNode;
 }
+
 
 export async function getServerSideProps(context: NextPageContext) {
   return {
@@ -35,8 +34,6 @@ export async function getServerSideProps(context: NextPageContext) {
 
 const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element => {
   const { status, data: session } = useSession();
-  const context = useContext(UserContext);
-  const router = useRouter();
   const isMobile = { props };
   const t = useTranslations("Protected");
   useEffect(() => {

@@ -1,14 +1,11 @@
-import type { NextPage } from 'next'
-import styled from '@emotion/styled'
 import { isMobile } from '@common/DeviceDetection';
 import { NextPageContext } from 'next';
-import MarketList from '../../src/components/molecules/marketInfo/MarketList';
-import { PrismaClient } from '@prisma/client';
+import MarketList from '@components/molecules/marketInfo/MarketList';
 import Layout from '@common/Layout';
 import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 import { ReactElement } from 'react';
 
-const prisma = new PrismaClient();
+import { prisma } from '../../lib/prisma';
 
 export async function getServerSideProps(context: NextPageContext) {
     // Fetch data from external API

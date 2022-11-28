@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Provider } from 'react-redux';
 
 import Head from 'next/head';
@@ -15,14 +14,11 @@ import { MyAppProps } from '@customTypes/MyAppProps';
 
 import { wrapper } from 'redux/store';
 
-const UserContext = React.createContext(null);
-
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
 const MyApp = (props : MyAppProps) => {
 
-  const [user, setUser] = useState(null);
   const { store } = wrapper.useWrappedStore(props);
   const { Component, emotionCache = clientSideEmotionCache, pageProps, session } = props;
 
@@ -31,7 +27,6 @@ const MyApp = (props : MyAppProps) => {
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
         <NextIntlProvider messages={pageProps.messages}>
-          <UserContext.Provider value={{ user, setUser }}>
             <SessionProvider session={session}>
               <Provider store={store} >
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
@@ -46,7 +41,6 @@ const MyApp = (props : MyAppProps) => {
                 {getLayout(<Component {...pageProps} />)}
               </Provider>
             </SessionProvider>
-          </UserContext.Provider>
         </NextIntlProvider>
       </ThemeProvider>
     </CacheProvider>
@@ -54,5 +48,3 @@ const MyApp = (props : MyAppProps) => {
 }
 
 export default MyApp;
-
-export { UserContext };
