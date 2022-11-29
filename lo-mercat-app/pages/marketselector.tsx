@@ -6,7 +6,6 @@ import { PrismaClient } from '@prisma/client';
 import { useTranslations } from 'next-intl';
 import { isMobile } from '@common/DeviceDetection';
 import { NextPageContext } from 'next';
-import { UserContext } from "../pages/_app";
 
 const prisma = new PrismaClient();
 const Myh1 = styled.h1`
