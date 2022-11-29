@@ -46,7 +46,7 @@ const AddProductForm = ({ product, props }: any) => {
     const { status, data:session } = useSession();
     const onSubmit: SubmitHandler<Inputs> = data => {
         setStock(data, session).then(
-            (res) => { window.location.href = '/protected' },
+            (res) => { window.location.href = '/addstock' },
             (res) => { console.log("error") }
         )
     }
