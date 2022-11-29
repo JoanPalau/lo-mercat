@@ -47,7 +47,7 @@ export default NextAuth({
           if (session.user) {
             session.user.role = token.role;
             let user = await prisma.user.findFirst({
-              where: { email: session.email },
+              where: { email: session.user.email },
             });
             let id : string = user.id;
             session.farmer = await prisma.farmer.findFirst({
@@ -57,7 +57,6 @@ export default NextAuth({
             session.customer = await prisma.customer.findFirst({
               where: { userId: id },
             })
-            // console.log(session);
           }
 
           

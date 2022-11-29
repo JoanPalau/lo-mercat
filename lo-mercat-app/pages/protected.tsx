@@ -39,6 +39,8 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
   useEffect(() => {
     if (status === "unauthenticated") Router.replace("/auth/signin");
   }, [status]);
+  console.log("BBBBBBBBB");
+  console.log(session);
   console.log(status);
   if (status === "authenticated")
     return (
