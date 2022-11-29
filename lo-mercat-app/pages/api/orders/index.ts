@@ -28,7 +28,11 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
             break
         case 'GET':
             // Get Stands
-            let findorder = await prisma.order.findMany();
+            let findorder = await prisma.order.findMany({
+                include: {
+                    OrderLine: true,
+                }
+            });
             
             console.log("GET");
             res.status(200).json(findorder)

@@ -30,7 +30,18 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
         
         case 'GET':
             // Get Stands
-            let findpurchase = await prisma.purchase.findMany();
+            let findpurchase = await prisma.purchase.findMany({
+                include: {
+                    Order: {
+                        select: {
+                            id: true,
+                            purchaseId: true,
+                            completed: true,
+                            OrderLine: true
+                        }
+                    }
+                }
+            });
             
             console.log("GET");
             res.status(200).json(findpurchase)
