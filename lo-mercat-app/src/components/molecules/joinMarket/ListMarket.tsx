@@ -7,7 +7,10 @@ import { useTranslations } from 'next-intl';
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Box, Button, Grid } from '@mui/material';
 import { useSession } from 'next-auth/react';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
+const MySwal = withReactContent(Swal)
 
 type Inputs = {
     marketSelected: string,
@@ -36,10 +39,22 @@ const ListMarket = ({ join, props }: any) => {
     const results: any = []
     const { status, data:session } = useSession();
     const rem: any = (data: any) => {
-        removeMarket(data, session).then(
-            (res) => { window.location.href = '/joinmarket' },
-            (res) => { console.log("error") }
-        )
+        console.log("REM");
+        MySwal.fire({
+            title: <p>Are you sure?</p>,
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, archive it!",
+            cancelButtonText: "No, cancel please!",
+          }).then((dialog) => {
+            if (dialog.isConfirmed){
+                removeMarket(data, session).then(
+                    (res) => { window.location.href = '/joinmarket' },
+                    (res) => { console.log("error") }
+                )
+            }
+          })
     }
     join.forEach((join: any) => {
         results.push(

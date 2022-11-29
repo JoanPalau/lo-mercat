@@ -39,9 +39,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
   useEffect(() => {
     if (status === "unauthenticated") Router.replace("/auth/signin");
   }, [status]);
-  console.log("BBBBBBBBB");
-  console.log(session);
-  console.log(status);
+  
   if (status === "authenticated")
     return (
       <Layout>
@@ -54,7 +52,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
         style={{ minHeight: '100vh' }}
         >
           <Box sx={{ mx: 'auto', height: 20 }}/>
-        { t("txtrole")} {session.user?.name}
+        { t("txtrole")} {session.user?.role}
         <Card sx={{
             display: 'block',
             transitionDuration: '0.3s',
