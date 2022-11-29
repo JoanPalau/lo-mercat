@@ -10,10 +10,41 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     } = req
     let stock = null;
     let marketId = id as string;
+    let simplified = !!req.body.simplified;
     console.log("[LOG] " + method + " with query " + JSON.stringify(req.query));
     //res.status(200).json({hello:'world'});
+
     switch (method) {
         case 'GET':
+            console.log(simplified)
+            let query_select = {
+                product: {
+                    select: {
+                        name: true
+                    }
+                }
+            }
+            if (!simplified) {
+                query_select = {
+                    product: {
+                        select: { 
+                            name: true,
+                            id: !simplified,
+                            farmerId: !simplified,
+                        }
+                    },
+                    farmer: {
+                        select: {
+                            Stand: {
+                                where: {
+                                    marketId: marketId
+                                }
+                            },
+                            name:!simplified,                            
+                        },
+                    }
+                } as any
+            }
             // Get Stands
             stock = await prisma.stock.findMany({
                 where: {
@@ -25,25 +56,7 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
                         }
                     },
                 },
-                include: {
-                    product: true,
-                    farmer: {
-                        select: {
-                            Stand: {
-                                where: {
-                                    marketId: marketId
-                                }
-                            },
-                            name:true,
-                            user: {
-                                select: {
-                                    name: true
-                                }
-                            },
-                            
-                        },
-                    }
-                }
+                select: query_select
             });
 
             console.log("GET");
