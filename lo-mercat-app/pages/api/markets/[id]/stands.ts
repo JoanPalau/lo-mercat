@@ -10,7 +10,7 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     } = req
     let stock = null;
     let marketId = id as string;
-    let simplified = !!req.body.simplified;
+    let simplified = req.query.simplified === "true";
     console.log("[LOG] " + method + " with query " + JSON.stringify(req.query));
     //res.status(200).json({hello:'world'});
     switch (method) {
