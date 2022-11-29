@@ -60,7 +60,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
             transitionDuration: '0.3s',
         }}>
           <CardActionArea>
-            <Link href="/addstock">
+            <Link href="/farmers/addstock">
               <Image src={"/add-product.svg"} alt="" width={270} height={150} />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -92,7 +92,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
               transitionDuration: '0.3s',
           }}>
             <CardActionArea>
-              <Link href="/joinmarket">
+              <Link href="/farmers/joinmarket">
                 <Image src={"/farmer-info.svg"} alt="" width={280} height={150} />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
@@ -112,7 +112,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
               transitionDuration: '0.3s',
           }}>
             <CardActionArea>
-              <Link href="/cristian/marketinfo">
+              <Link href="/market/marketinfo">
                 <CardContent>
                   <Image src={"/green-market-list.svg"} alt="" width={265} height={150} />
                 </CardContent>

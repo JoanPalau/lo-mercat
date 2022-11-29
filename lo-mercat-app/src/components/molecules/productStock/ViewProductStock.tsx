@@ -31,7 +31,7 @@ const ViewProductStock = ({ stock, props }: any) => {
     const { status, data: session } = useSession();
     const rem: any = (data: any) => {
         removeStock(data, session).then(
-            (res) => { window.location.href = '/addstock' },
+            (res) => { window.location.href = '/farmers/addstock' },
             (res) => { console.log("error") }
         )
     }

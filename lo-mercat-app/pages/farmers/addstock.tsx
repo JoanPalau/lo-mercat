@@ -6,8 +6,7 @@ import { ReactElement } from 'react';
 import { isMobile } from '@common/DeviceDetection';
 import { NextPageContext } from 'next';
 
-
-import { prisma } from '../lib/prisma';
+import { prisma } from '../../lib/prisma';
 
 export async function getServerSideProps(context: NextPageContext) {
     // Fetch data from external API
@@ -29,7 +28,7 @@ export async function getServerSideProps(context: NextPageContext) {
     // Pass data to the page via props
     return {
         props: {
-            product,stocks, messages: (await import(`../messages/${context.locale}.json`)).default,
+            product,stocks, messages: (await import(`../../messages/${context.locale}.json`)).default,
             isMobile: isMobile(context.req),
         }
     }

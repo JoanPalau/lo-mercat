@@ -4,7 +4,7 @@ import Layout from '@common/Layout';
 import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 import { ReactElement } from 'react';
 
-import OurServiceList from '../../src/components/molecules/ourService/OurServiceList';
+import OurServiceList from '../src/components/molecules/ourService/OurServiceList';
 
 
 const Cri: NextPageWithLayout = () => {

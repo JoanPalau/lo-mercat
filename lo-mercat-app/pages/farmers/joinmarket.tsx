@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 
-import JoinMarket from '../src/components/molecules/joinMarket/JoinMarket';
-import ViewJoinMarket from '../src/components/molecules/joinMarket/ListMarket';
+import JoinMarket from '../../src/components/molecules/joinMarket/JoinMarket';
+import ViewJoinMarket from '../../src/components/molecules/joinMarket/ListMarket';
 import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
 import Layout from '@common/Layout';
 import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
@@ -11,7 +11,7 @@ import {useTranslations} from 'next-intl';
 import { isMobile } from '@common/DeviceDetection';
 import { NextPageContext } from 'next';
 
-import { prisma } from '../lib/prisma';
+import { prisma } from '../../lib/prisma';
 
 export async function getServerSideProps(context: NextPageContext) {
     // Fetch data from external API
@@ -30,7 +30,7 @@ export async function getServerSideProps(context: NextPageContext) {
         }
     });
     // Pass data to the page via props
-    return { props: { market, join,messages: (await import(`../messages/${context.locale}.json`)).default,
+    return { props: { market, join,messages: (await import(`../../messages/${context.locale}.json`)).default,
     isMobile: isMobile(context.req) }  }
 }
 

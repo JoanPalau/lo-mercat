@@ -37,7 +37,7 @@ const ListMarket = ({ join, props }: any) => {
     const { status, data:session } = useSession();
     const rem: any = (data: any) => {
         removeMarket(data, session).then(
-            (res) => { window.location.href = '/joinmarket' },
+            (res) => { window.location.href = '/farmers/joinmarket' },
             (res) => { console.log("error") }
         )
     }
@@ -48,7 +48,7 @@ const ListMarket = ({ join, props }: any) => {
                 container
                 spacing={0}
                 >
-                    {join.market.name}
+                    {join.market.name} {join.location==null ? "": "Stand:"+join.location }
                     <Box sx={{ mx: 'auto', width: 4 }}/>
                     <Button variant="contained" color='error' onClick={(data) => rem(join)}>
                         {t("remove")}
