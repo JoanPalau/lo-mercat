@@ -42,11 +42,12 @@ const ListMarket = ({ join, props }: any) => {
         console.log("REM");
         MySwal.fire({
             title: <p>Are you sure?</p>,
-            type: "warning",
+            template: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Yes, archive it!",
+            confirmButtonText: "Yes, delete it!",
             cancelButtonText: "No, cancel please!",
+            reverseButtons: true,
           }).then((dialog) => {
             if (dialog.isConfirmed){
                 removeMarket(data, session).then(
