@@ -1,4 +1,5 @@
-import AddProductForm from '../src/components/molecules/productStock/AddProductStock';
+import AddProductForm from '@components/molecules/productStock/AddProductStock';
+import ViewProductStock from '@components/molecules/productStock/ViewProductStock';
 import Layout from '@common/Layout';
 import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 import { ReactElement } from 'react';
@@ -13,21 +14,33 @@ export async function getServerSideProps(context: NextPageContext) {
     //const res = await fetch('http://localhost:3000/api/hello')
     // const data = {};
     const product = await prisma.product.findMany();
-    console.log(product);
+    
+    const stocks = await prisma.stock.findMany({
+        where: {
+            farmer: {
+                id: '1',
+            },
+        },
+        include:{
+            product:true
+        }
+    });
+    
     // Pass data to the page via props
     return {
         props: {
-            product, messages: (await import(`../messages/${context.locale}.json`)).default,
+            product,stocks, messages: (await import(`../messages/${context.locale}.json`)).default,
             isMobile: isMobile(context.req),
         }
     }
 }
 
-const AddProductStockPage: NextPageWithLayout = ({ product, session,props}: any) => {
+const AddProductStockPage: NextPageWithLayout = ({ product, stocks,props}: any) => {
     // console.log({ session });
     return (
         <div>
             <AddProductForm product={product}{...props} />
+            <ViewProductStock stock={stocks}/>
         </div>
     );
 }
