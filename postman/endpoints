@@ -1,9 +1,8 @@
 {
 	"info": {
-		"_postman_id": "71da3bb5-a6bf-4581-8e96-ea2933fe6a41",
+		"_postman_id": "5e27d4d3-8de9-4369-a6d0-ecbd94e811a5",
 		"name": "LoMercat",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "24420254"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -344,6 +343,50 @@
 										"markets",
 										"1",
 										"search"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Market Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/markets/1/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"markets",
+										"1",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Market Stands",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/markets/1/stands",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"markets",
+										"1",
+										"stands"
 									]
 								}
 							},
