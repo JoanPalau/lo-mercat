@@ -10,6 +10,7 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     } = req
     let stock = null;
     let marketId = id as string;
+    let simplified = req.query.simplified === "true";
     console.log("[LOG] " + method + " with query " + JSON.stringify(req.query));
     //res.status(200).json({hello:'world'});
     switch (method) {
@@ -25,16 +26,13 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
                         }
                     },
                 },
-                include: {
+                select: {
+                    id: true,
+                    location: true,
+                    marketId: !simplified,
                     farmer: {
                         select: {
-                            name:true,
-                            user: {
-                                select: {
-                                    name: true
-                                }
-                            },
-                            
+                            name:true,                          
                         },
                     }
                 }
