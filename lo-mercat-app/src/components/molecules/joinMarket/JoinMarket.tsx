@@ -22,7 +22,7 @@ async function joinMarket(data: any, session: any) {
         {        
             body: JSON.stringify({
                 marketId: data.marketSelected,
-                farmerId:  session.farmer.id,
+                farmerId: session.farmer.id,
                 location: data.location
             }),
             headers:new Headers({ 'Content-Type': 'application/json', Accept: 'application/json',}),

@@ -10,27 +10,27 @@ import { ReactElement } from 'react';
 import {useTranslations} from 'next-intl';
 import { isMobile } from '@common/DeviceDetection';
 import { NextPageContext } from 'next';
-
+import { getSession, useSession } from 'next-auth/react';
 import { prisma } from '../../lib/prisma';
 
 export async function getServerSideProps(context: NextPageContext) {
     // Fetch data from external API
     //const res = await fetch('http://localhost:3000/api/hello')
     // const data = {};
+    const session= await getSession(context);
     const market = await prisma.market.findMany();
     const join = await prisma.stand.findMany({
         where: {
             farmer: {
-                id: '1',
+                id: session.farmer.id,
             },
         },
         include:{
             market: true,
-
-        }
-    });
+        },
+    })
     // Pass data to the page via props
-    return { props: { market, join,messages: (await import(`../../messages/${context.locale}.json`)).default,
+    return { props: { market,join ,messages: (await import(`../../messages/${context.locale}.json`)).default,
     isMobile: isMobile(context.req) }  }
 }
 

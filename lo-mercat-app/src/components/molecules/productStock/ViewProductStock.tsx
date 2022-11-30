@@ -2,6 +2,10 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { useSession } from 'next-auth/react';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 
 
@@ -26,10 +30,24 @@ const ViewProductStock = ({ stock, props }: any) => {
     const results: any = []
     const { status, data: session } = useSession();
     const rem: any = (data: any) => {
-        removeStock(data, session).then(
-            (res) => { window.location.href = '/farmers/addstock' },
-            (res) => { console.log("error") }
-        )
+        
+        console.log("REM");
+        MySwal.fire({
+            title: <p>Are you sure?</p>,
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel please!",
+            reverseButtons: true,
+          }).then((dialog) => {
+            if (dialog.isConfirmed){
+                removeStock(data, session).then(
+                    (res) => { window.location.href = '/farmers/addstock' },
+                    (res) => { console.log("error") }
+                )
+            }
+          })
     }
 
     console.log(stock);
@@ -56,7 +74,7 @@ const ViewProductStock = ({ stock, props }: any) => {
     return (
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
         <div>
-            <h2>Active Stock:</h2>
+            <h2>{stock.length == 0 ? "":  "Active Stock:"}</h2>
             <ul className="list-group">{results} </ul>
         </div>
     );
