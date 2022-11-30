@@ -17,7 +17,7 @@ type Inputs = {
 };
 
 async function removeMarket(data: any, session: any) {
-    console.log(data);
+    
     let x = await fetch(
         '/api/stand/',
         {
@@ -38,6 +38,7 @@ const ListMarket = ({ join, props }: any) => {
     const t = useTranslations("ListMarket");
     const results: any = []
     const { status, data:session } = useSession();
+    
     const rem: any = (data: any) => {
         
         console.log("REM");
@@ -77,11 +78,10 @@ const ListMarket = ({ join, props }: any) => {
 
     });
 
-
     return (
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
         <div>
-            <h2>{t("tablename")}</h2>
+            <h2>{join.length == 0 ? "":  t("tablename")}</h2>
             <ul className="list-group">{results} </ul>
         </div>
     );
