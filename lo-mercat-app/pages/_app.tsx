@@ -12,17 +12,32 @@ import { CacheProvider } from '@emotion/react';
 import createEmotionCache from '@common/createEmotionCache';
 import { MyAppProps } from '@customTypes/MyAppProps';
 import NextNProgress from 'nextjs-progressbar';
+import {PreventOrientation} from 'prevent-orientation';
 import { wrapper } from 'redux/store';
+import { useEffect, useState } from 'react';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
 const MyApp = (props : MyAppProps) => {
 
+  const [ orientation, setOrientation ] = useState<number>();
+  console.log(orientation);
   const { store } = wrapper.useWrappedStore(props);
   const { Component, emotionCache = clientSideEmotionCache, pageProps, session } = props;
 
   const getLayout = Component.getLayout ?? ((page) => page)
+  useEffect(() => {
+    setOrientation(window.screen.orientation.angle);
+    // const prevent = new PreventOrientation();
+    // prevent.handlePrevent = () => {
+    //   console.log("Handling");
+    // }
+    // prevent.preventLandscape();
+    window.addEventListener('orientationchange', () => setOrientation(window.screen.orientation.angle));
+  }, [])
+
+
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
@@ -38,8 +53,12 @@ const MyApp = (props : MyAppProps) => {
                   <meta name="keywords" content="Lo mercat, Lleida, producte fresc, fruites, verdures, mercat" />
                   <link rel="icon" href="/favicon.ico" />
                 </Head>
-                <NextNProgress />
-                {getLayout(<Component {...pageProps} />)}
+                {orientation === 0 ? <>
+                  <NextNProgress />
+                  {getLayout(<Component {...pageProps} />)}
+                  </> : <><p>Screen orientation not supported. Radu Bro.</p></>
+                }
+                
               </Provider>
             </SessionProvider>
         </NextIntlProvider>
