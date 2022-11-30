@@ -1,6 +1,13 @@
-import { Prisma, PrismaClient } from '@prisma/client';
 import React, { MouseEventHandler } from 'react'
-import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid, RadioGroup, Radio, FormControlLabel, FormControl } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import RadioGroup from '@mui/material/RadioGroup';
+import Radio from '@mui/material/Radio';
+import Box from '@mui/material/Box';
 
 
 interface _RegisterFormState {

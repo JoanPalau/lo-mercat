@@ -3,7 +3,14 @@ import { useTranslations } from 'next-intl';
 import { useForm, SubmitHandler } from "react-hook-form";
 import { redirect } from 'next/dist/server/api-utils';
 // import Link from 'next/link';
-import { Typography, Link, Button, TextField, Select, MenuItem, Box, Grid } from '@mui/material';
+import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import Box from '@mui/material/Box';
 import React from 'react';
 import { useSession } from 'next-auth/react';
 
