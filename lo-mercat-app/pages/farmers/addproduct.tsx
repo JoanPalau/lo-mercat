@@ -7,7 +7,7 @@ import { isMobile } from '@common/DeviceDetection';
 import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 import Layout from '@common/Layout';
 import AddProduct from '@components/molecules/addProduct/AddProduct';
-import { prisma } from '../lib/prisma';
+import { prisma } from '../../lib/prisma';
 
 
 
@@ -20,7 +20,7 @@ export async function getServerSideProps(context: NextPageContext) {
 
     return {
         props: {
-            product, messages: (await import(`../messages/${context.locale}.json`)).default,
+            product, messages: (await import(`../../messages/${context.locale}.json`)).default,
             isMobile: isMobile(context.req)
         }
     }

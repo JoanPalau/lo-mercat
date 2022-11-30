@@ -39,7 +39,7 @@ const JoinMarket = ({ market,props }: any) => {
     const { status, data:session } = useSession();
     const onSubmit: SubmitHandler<Inputs> = data => {
         joinMarket(data, session).then(
-            (res) => { window.location.href = '/joinmarket' },
+            (res) => { window.location.href = '/farmers/joinmarket' },
             (res) => { console.log("error") }
         )
     }
@@ -49,7 +49,7 @@ const JoinMarket = ({ market,props }: any) => {
         const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
         const onSubmit: SubmitHandler<Inputs> = data => {
             joinMarket(data, session).then(
-                (res) => { window.location.href = '/joinmarket' },
+                (res) => { window.location.href = '/farmers/joinmarket' },
             (res) => { console.log("error") }
             )
         }

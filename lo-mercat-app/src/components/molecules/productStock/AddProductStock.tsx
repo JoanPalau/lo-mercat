@@ -53,7 +53,7 @@ const AddProductForm = ({ product, props }: any) => {
     const { status, data:session } = useSession();
     const onSubmit: SubmitHandler<Inputs> = data => {
         setStock(data, session).then(
-            (res) => { window.location.href = '/addstock' },
+            (res) => { window.location.href = '/farmers/addstock' },
             (res) => { console.log("error") }
         )
     }
@@ -110,7 +110,7 @@ const AddProductForm = ({ product, props }: any) => {
                 <Grid container spacing={2}>
                     <Button type="submit" variant="outlined">
                         {errors.productSelected && t("err")}
-                        <Link href="/addproduct">{t("addprod")}</Link>
+                        <Link href="/farmers/addproduct">{t("addprod")}</Link>
                     </Button>
                     <Box sx={{ mx: 'auto', width: 20 }}/>
                     <Button type="submit" variant="contained">
