@@ -5,10 +5,16 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Divider, Grid, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText, SwipeableDrawer } from '@mui/material';
+import Drawer from '@mui/material/Drawer';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import React from 'react';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { Home, Inventory, Shop, Store, Storefront } from '@mui/icons-material';
 import styled from '@emotion/styled';
 import { signOut } from "next-auth/react";
@@ -159,6 +165,36 @@ export default function TopNavigation() {
         </Grid>   
     </Box>
   );
+
+  let drawer = null;
+  const drawerWidth = 240;
+  const isMobile = true;
+
+  if (!isMobile) {
+    drawer = <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
+            boxSizing: 'border-box',
+          },
+        }}
+        variant="permanent"
+        anchor="left"
+      >
+        {list('left')}
+      </Drawer>
+  } else {
+    drawer = <SwipeableDrawer
+    anchor={'left'}
+    open={showDrawer}
+    onClose={toggleDrawer('left', false)}
+    onOpen={toggleDrawer('left', true)}
+  >
+    {list('left')}
+  </SwipeableDrawer>;
+  }
   
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -176,14 +212,7 @@ export default function TopNavigation() {
               </MenuIcon>
             </IconButton>
             <React.Fragment key={'left'}>
-              <SwipeableDrawer
-                anchor={'left'}
-                open={showDrawer}
-                onClose={toggleDrawer('left', false)}
-                onOpen={toggleDrawer('left', true)}
-              >
-                {list('left')}
-              </SwipeableDrawer>
+              {drawer}
             </React.Fragment>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Lo Mercat

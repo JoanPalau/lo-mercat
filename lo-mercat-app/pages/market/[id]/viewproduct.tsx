@@ -1,9 +1,6 @@
 import type { NextPage } from 'next'
-import styled from '@emotion/styled'
 import { isMobile } from '@common/DeviceDetection';
 import ViewProduct from '../../../src/components/molecules/viewProduct/ViewProduct';
-import { PrismaAdapter } from '@next-auth/prisma-adapter';
-import { NextPageContext } from 'next';
 
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();

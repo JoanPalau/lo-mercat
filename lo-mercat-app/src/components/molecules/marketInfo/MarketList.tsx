@@ -1,12 +1,10 @@
 import styled from '@emotion/styled';
 import Image from 'next/image';
-import { Grid, Link } from "@mui/material";
-import { useSession } from "next-auth/react";
-// import Link from "next/link";
+import Link from "@mui/material/Link";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import CardActionArea from '@mui/material/CardActionArea';
 
 import router from 'next/router';
 import { useTranslations } from 'next-intl';

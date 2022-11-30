@@ -6,12 +6,12 @@ import { SessionProvider } from "next-auth/react";
 
 import theme from '../src/theme';
 import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider } from '@mui/material/styles';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import { CacheProvider } from '@emotion/react';
 
 import createEmotionCache from '@common/createEmotionCache';
 import { MyAppProps } from '@customTypes/MyAppProps';
-
+import NextNProgress from 'nextjs-progressbar';
 import { wrapper } from 'redux/store';
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -38,6 +38,7 @@ const MyApp = (props : MyAppProps) => {
                   <meta name="keywords" content="Lo mercat, Lleida, producte fresc, fruites, verdures, mercat" />
                   <link rel="icon" href="/favicon.ico" />
                 </Head>
+                <NextNProgress />
                 {getLayout(<Component {...pageProps} />)}
               </Provider>
             </SessionProvider>

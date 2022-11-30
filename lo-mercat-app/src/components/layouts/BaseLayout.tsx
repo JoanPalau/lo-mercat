@@ -33,6 +33,7 @@ const BaseLayout = (props: { children: ReactElement }) => {
         bottom: 0,
         backgroundColor: '#1F211C',
         height: '20vh',
+        maxWidth: '100vw !important'
       }}>
         <Stack sx={{
           textAlign: 'center',

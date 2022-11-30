@@ -1,11 +1,7 @@
-import styled from '@emotion/styled';
-import Image from 'next/image';
-import { Link, Routes, Route, useNavigate } from 'react-router-dom';
 import { useTranslations } from 'next-intl';
-
-
-import { useForm, SubmitHandler } from "react-hook-form";
-import { Box, Button, Grid } from '@mui/material';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import { useSession } from 'next-auth/react';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
@@ -42,7 +38,7 @@ const ListMarket = ({ join, props }: any) => {
         console.log("REM");
         MySwal.fire({
             title: <p>Are you sure?</p>,
-            template: "warning",
+            icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
             confirmButtonText: "Yes, delete it!",
