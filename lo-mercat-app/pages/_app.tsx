@@ -12,7 +12,6 @@ import { CacheProvider } from '@emotion/react';
 import createEmotionCache from '@common/createEmotionCache';
 import { MyAppProps } from '@customTypes/MyAppProps';
 import NextNProgress from 'nextjs-progressbar';
-import {PreventOrientation} from 'prevent-orientation';
 import { wrapper } from 'redux/store';
 import { useEffect, useState } from 'react';
 
@@ -22,18 +21,12 @@ const clientSideEmotionCache = createEmotionCache();
 const MyApp = (props : MyAppProps) => {
 
   const [ orientation, setOrientation ] = useState<number>();
-  console.log(orientation);
   const { store } = wrapper.useWrappedStore(props);
   const { Component, emotionCache = clientSideEmotionCache, pageProps, session } = props;
 
   const getLayout = Component.getLayout ?? ((page) => page)
   useEffect(() => {
     setOrientation(window.screen.orientation.angle);
-    // const prevent = new PreventOrientation();
-    // prevent.handlePrevent = () => {
-    //   console.log("Handling");
-    // }
-    // prevent.preventLandscape();
     window.addEventListener('orientationchange', () => setOrientation(window.screen.orientation.angle));
   }, [])
 

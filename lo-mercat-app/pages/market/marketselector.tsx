@@ -21,7 +21,7 @@ export async function getServerSideProps(context: NextPageContext) {
     // Pass data to the page via props
     return {
         props: {
-            markets, messages: (await import(`../messages/${context.locale}.json`)).default,
+            markets, messages: (await import(`../../messages/${context.locale}.json`)).default,
             isMobile: isMobile(context.req)
         }
     }
