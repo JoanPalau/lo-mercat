@@ -26,7 +26,7 @@ interface Props {
 export async function getServerSideProps(context: NextPageContext) {
   return {
     props: {
-      messages: (await import(`../messages/${context.locale}.json`)).default,
+      messages: (await import(`../../messages/${context.locale}.json`)).default,
       isMobile: isMobile(context.req)
     }
   };
