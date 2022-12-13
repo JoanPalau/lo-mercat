@@ -28,7 +28,7 @@ interface Props {
 export async function getServerSideProps(context: NextPageContext) {
   return {
     props: {
-      messages: (await import(`../messages/${context.locale}.json`)).default,
+      //messages: (await import(`../messages/${context.locale}.json`)).default,
       isMobile: isMobile(context.req)
     }
   };
@@ -41,10 +41,30 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
   useEffect(() => {
     if (status === "unauthenticated") Router.replace("/auth/signin");
   }, [status]);
-  if (status === "authenticated" && session.farmer)
-    Router.replace("/farmers/home");
- 
-  Router.replace("/customers/home");
+  if (status === "authenticated" && session.farmer){
+    Router.replace("/farmers/home")
+    return(
+      <Layout>
+        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
+          Hello, {session.user.name} we are going to redirect you!!
+          <br />
+          <CircularProgress />
+        </div>
+      </Layout>
+    );
+    
+  }
+  else if(status === "authenticated" && session.customer){
+    Router.replace("/customers/home");
+    return(
+      <Layout>
+        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
+          Hello, {session.user.name} we are going to redirect you!!<br />
+          <CircularProgress />
+        </div>
+      </Layout>
+    );
+  }
 };
 
 

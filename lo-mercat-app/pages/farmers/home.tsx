@@ -26,7 +26,7 @@ interface Props {
 export async function getServerSideProps(context: NextPageContext) {
   return {
     props: {
-      messages: (await import(`../messages/${context.locale}.json`)).default,
+      //messages: (await import(`../messages/${context.locale}.json`)).default,
       isMobile: isMobile(context.req)
     }
   };
@@ -51,7 +51,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
         style={{ minHeight: '100vh' }}
         >
           <Box sx={{ mx: 'auto', height: 20 }}/>
-        { t("txtrole")} {session.user.role}
+          Hello Again, {session.user.name}
         <Card sx={{
             display: 'block',
             transitionDuration: '0.3s',
@@ -93,7 +93,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
                 <Image src={"/farmer-info.svg"} alt="" width={280} height={150} />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                  {t("farmermanager")}
+                  Manage Account
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Farmer, come join to one of our market!!
@@ -151,7 +151,6 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
         </Grid>
       </Layout>
     );
-  Router.replace("/farmers/addstock");
 };
 
 
