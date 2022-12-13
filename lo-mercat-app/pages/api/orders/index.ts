@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { prisma } from '../../../lib/prisma';
+import { updateOrCreate } from '../api_utils';
 
 
 export default async function entrypoint(req: NextApiRequest, res: NextApiResponse) {
@@ -14,10 +15,10 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     //res.status(200).json({hello:'world'});
     switch (method) {
         case 'POST':
-            let val : any = {
+            let val: any = {
                 purchaseId,
                 completed
-            }; 
+            };
             // Update or create data in your database
             order = await prisma.order.create({
                 data: val
@@ -26,6 +27,18 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
 
             res.status(200).json(order)
             break
+        case 'PATCH':
+            order = await prisma.order.update({
+                where: {
+                    id: req.body.myid
+                },
+                data:{
+                    completed: req.body.completed
+                }
+            }
+            );
+            res.status(200).json(order);
+            break
         case 'GET':
             // Get Stands
             let findorder = await prisma.order.findMany({
@@ -33,7 +46,7 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
                     OrderLine: true,
                 }
             });
-            
+
             console.log("GET");
             res.status(200).json(findorder)
             break
