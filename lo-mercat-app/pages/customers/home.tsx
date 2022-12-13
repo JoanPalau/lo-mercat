@@ -26,7 +26,7 @@ interface Props {
 export async function getServerSideProps(context: NextPageContext) {
   return {
     props: {
-      messages: (await import(`../messages/${context.locale}.json`)).default,
+      //messages: (await import(`../messages/${context.locale}.json`)).default,
       isMobile: isMobile(context.req)
     }
   };
@@ -51,26 +51,28 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
         style={{ minHeight: '100vh' }}
         >
           <Box sx={{ mx: 'auto', height: 20 }}/>
-        { t("txtrole")} {session.user.role}
-        <Card sx={{
-            display: 'block',
-            transitionDuration: '0.3s',
-        }}>
-          <CardActionArea>
-            <Link href="/customers/order-history">
-              <Image src={"/historial.svg"} alt="" width={270} height={150} />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {t("navigation.orderHistory")}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Take a look at your Order History!!
-                </Typography>
-              </CardContent>
-            </Link>
-          </CardActionArea>
-        </Card>
-      <div>
+        Hello Again, {session.user.name}
+        <div>
+        <p>
+          <Card sx={{
+              display: 'block',
+              transitionDuration: '0.3s',
+          }}>
+            <CardActionArea>
+              <Link href="/customers/order-history">
+                <Image src={"/historial.svg"} alt="" width={280} height={150} />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    Order History
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Take a look at your Order History!!
+                  </Typography>
+                </CardContent>
+              </Link>
+            </CardActionArea>
+          </Card>
+        </p>
       <p>
           <Card sx={{
               display: 'block',
@@ -81,7 +83,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
                 <Image src={"/purchasesHistory.svg"} alt="" width={280} height={150} />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                  {t("navigation.purchaseHistory")}
+                  Purchases History
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Take a look at your history of purchases!!
@@ -103,7 +105,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
                 </CardContent>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                  {t("navigation.buyFlow")}
+                  Current buy
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Come to buy your local Products!!
@@ -125,7 +127,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
                 </CardContent>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                  {t("navigation.searchFlow")}
+                  Search
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Want to find something?
@@ -139,7 +141,6 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
         </Grid>
       </Layout>
     );
-  Router.replace("/farmers/addstock");
 };
 
 
