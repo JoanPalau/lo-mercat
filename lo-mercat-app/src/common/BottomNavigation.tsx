@@ -19,14 +19,33 @@ export default function GenericBottomNavigation(props: {actions: [BottomNavigati
         {
         
         props.actions.map((setup,index) => {
-          return (
-            <BottomNavigationAction
-              {...setup}
-              component={Link}
-              key={index}
-            />
-            
-          )
+          if (status === "authenticated" && session.farmer)
+            return (
+              <BottomNavigationAction
+                {...setup}
+                component={Link}
+                key={index}
+              />
+              
+            )
+          if (status === "authenticated" && session.customer)
+            return (
+              <BottomNavigationAction
+                {...setup}
+                component={Link}
+                key={index}
+              />
+              
+            )
+          else
+            return (
+              <BottomNavigationAction
+                {...setup}
+                component={Link}
+                key={index}
+              />
+              
+            )
         })
       }
       </BottomNavigation>
