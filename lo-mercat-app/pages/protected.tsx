@@ -46,9 +46,8 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
     return(
       <Layout>
         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
-          Hello, {session.user.name} we are going to redirect you!!
-          <br />
-          <CircularProgress />
+          <p>Hello, {session.user.name} we are going to redirect you!!</p>
+          <p><CircularProgress /></p>
         </div>
       </Layout>
     );
@@ -59,8 +58,8 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
     return(
       <Layout>
         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
-          Hello, {session.user.name} we are going to redirect you!!<br />
-          <CircularProgress />
+          <p>Hello, {session.user.name} we are going to redirect you!!</p>
+          <p><CircularProgress /></p>
         </div>
       </Layout>
     );
