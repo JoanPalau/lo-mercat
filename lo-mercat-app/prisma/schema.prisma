@@ -11,14 +11,15 @@ datasource db {
 }
 
 model Farmer {
-  id       String    @id @unique @default(cuid())
-  name     String
-  birthday DateTime
-  Stand    Stand[]
-  Stock    Stock[]
-  user     User      @relation(fields: [userId], references: [id])
-  userId   String    @unique
-  Product  Product[]
+  id           String    @id @unique @default(cuid())
+  subscription Json?
+  name         String
+  birthday     DateTime
+  Stand        Stand[]
+  Stock        Stock[]
+  user         User      @relation(fields: [userId], references: [id])
+  userId       String    @unique
+  Product      Product[]
 }
 
 model Market {

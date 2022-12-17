@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
 
 const path = require('path');
+const runtimeCaching = require("next-pwa/cache");
+
 const withPWA = require('next-pwa')({
   dest: 'public',
   register: true,
-  skipWaiting: true
+  skipWaiting: true,
+  runtimeCaching,
+  buildExcludes: [/middleware-manifest.json$/]
 });
 
 const securityHeaders = [
@@ -30,8 +34,6 @@ const securityHeaders = [
   }
 ];
 
-const prod = false || process.env.NODE_ENV === 'production';
-
 module.exports = withPWA({
   async headers() {
     return [
@@ -43,7 +45,7 @@ module.exports = withPWA({
     ]
   },
   pwa: {
-    disable: prod ? false : true
+    disable: false
   },
   output: 'standalone',
   poweredByHeader: false,

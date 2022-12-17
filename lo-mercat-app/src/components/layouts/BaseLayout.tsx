@@ -46,6 +46,7 @@ const BaseLayout = (props: { children: ReactElement }) => {
             {t("text")}
             <Link href="auth/signin">{t("SignIn")}</Link>
           </Typography>
+          <Link href="notifications">Notifications Here</Link>
         </Stack>
       </Container>
     </Stack>

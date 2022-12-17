@@ -47,7 +47,8 @@
     "sweetalert2-react-content": "^5.0.7",
     "tslib": "^2.4.0",
     "ua-parser-js": "^1.0.32",
-    "universal-cookie": "^4.0.4"
+    "universal-cookie": "^4.0.4",
+    "web-push": "^3.5.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.27.1",

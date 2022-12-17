@@ -2,12 +2,11 @@ import type { NextPage } from 'next'
 import styled from '@emotion/styled'
 
 import MarketList from '@components/molecules/marketInfo/MarketList';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '../../lib/prisma';
 import { useTranslations } from 'next-intl';
 import { isMobile } from '@common/DeviceDetection';
 import { NextPageContext } from 'next';
 
-const prisma = new PrismaClient();
 const Myh1 = styled.h1`
 text-align:center;
 `;

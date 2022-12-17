@@ -2,8 +2,7 @@ import type { NextPage } from 'next'
 import { isMobile } from '@common/DeviceDetection';
 import ViewProduct from '../../../src/components/molecules/viewProduct/ViewProduct';
 
-import { PrismaClient } from '@prisma/client';
-const prisma = new PrismaClient();
+import { prisma } from '../../../lib/prisma';
 
 export async function getServerSideProps(context:any) {
   const { id } = context.query;

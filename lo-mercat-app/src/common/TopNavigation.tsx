@@ -168,7 +168,7 @@ export default function TopNavigation() {
 
   let drawer = null;
   const drawerWidth = 240;
-  const isMobile = true;
+  const isMobile = false;
 
   if (!isMobile) {
     drawer = <Drawer

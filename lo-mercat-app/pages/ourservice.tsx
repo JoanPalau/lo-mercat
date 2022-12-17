@@ -1,5 +1,3 @@
-import type { NextPage } from 'next'
-import styled from '@emotion/styled'
 import Layout from '@common/Layout';
 import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 import { ReactElement } from 'react';
