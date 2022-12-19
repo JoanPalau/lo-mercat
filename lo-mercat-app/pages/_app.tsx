@@ -14,6 +14,7 @@ import { MyAppProps } from '@customTypes/MyAppProps';
 import NextNProgress from 'nextjs-progressbar';
 import { wrapper } from 'redux/store';
 import { useEffect, useState } from 'react';
+import Grid from '@mui/material/Grid';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -29,6 +30,30 @@ const MyApp = (props : MyAppProps) => {
     setOrientation(window.screen.orientation.angle);
     window.addEventListener('orientationchange', () => setOrientation(window.screen.orientation.angle));
   }, [])
+
+  const screenNotSupported = () => {
+    console.log('test')
+    return <>
+      <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        style={{ minHeight: '100vh' }}
+      >
+
+        <Grid item xs={3}>
+          <b>
+            <p>Screen orientation not supported :(</p>
+            <p>Radu Asked us to put this message in.</p>
+            <p>Hello Radu :D</p>
+          </b>
+        </Grid>   
+        
+      </Grid> 
+    </>
+  }
 
 
   return (
@@ -49,7 +74,7 @@ const MyApp = (props : MyAppProps) => {
                 {orientation === 0 ? <>
                   <NextNProgress />
                   {getLayout(<Component {...pageProps} />)}
-                  </> : <><p>Screen orientation not supported. Radu Bro.</p></>
+                  </> : screenNotSupported()
                 }
                 
               </Provider>
