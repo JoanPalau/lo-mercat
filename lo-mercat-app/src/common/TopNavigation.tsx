@@ -19,6 +19,7 @@ import { Home, Inventory, Shop, Store, Storefront } from '@mui/icons-material';
 import styled from '@emotion/styled';
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
+import useWindowDimensions from 'src/hooks/useWindowDimensions';
 
 
 const ImageCustom = styled.img`
@@ -168,7 +169,8 @@ export default function TopNavigation() {
 
   let drawer = null;
   const drawerWidth = 240;
-  const isMobile = false;
+  const { height, width } = useWindowDimensions();
+  const isMobile = width < 850;
 
   if (!isMobile) {
     drawer = <Drawer
