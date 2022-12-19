@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import { useSession } from "next-auth/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -32,13 +32,88 @@ export async function getServerSideProps(context: NextPageContext) {
   };
 }
 
+const base64ToUint8Array = (base64:string) => {
+  const padding = '='.repeat((4 - (base64.length % 4)) % 4)
+  const b64 = (base64 + padding).replace(/-/g, '+').replace(/_/g, '/')
+
+  const rawData = window.atob(b64)
+  const outputArray = new Uint8Array(rawData.length)
+
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i)
+  }
+  return outputArray
+}
+
 const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element => {
+  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [subscription, setSubscription] = useState(null)
+  const [registration, setRegistration] = useState(null)
+
   const { status, data: session } = useSession();
   const isMobile = { props };
   const t = useTranslations("Protected");
   useEffect(() => {
     if (status === "unauthenticated") Router.replace("/auth/signin");
   }, [status]);
+  const sessionDefined = session == undefined;
+  useEffect(() => {
+    if (session == undefined || session.farmer == null) {
+      return;
+    }
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator && window.workbox !== undefined) {
+      // run only in browser
+      navigator.serviceWorker.ready.then(reg => {
+        reg.pushManager.getSubscription().then(sub => {
+          if (sub && !(sub.expirationTime && Date.now() > sub.expirationTime - 5 * 60 * 1000)) {
+            setSubscription(sub)
+            setIsSubscribed(true)
+          }
+        })
+        setRegistration(reg)
+      })
+    }
+  }, [sessionDefined])
+  
+  useEffect(() => {
+    if (status === "unauthenticated") Router.replace("/auth/signin");
+  }, [status]);
+
+
+  if (session != undefined && session.farmer != null) {
+    const subscribe = async () => {
+      const sub = await registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: base64ToUint8Array(process.env.NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY)
+      })
+
+      setSubscription(sub)
+      setIsSubscribed(true)
+      console.log('web push subscribed!')
+      console.log(sub)
+      
+      await fetch('/api/farmers/' + session.farmer.id + '/register_notification', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify({
+          subscription: sub
+        })
+      })
+      console.log('AAAAAAAAAAAAAA')
+    }
+    if (registration != null && !isSubscribed) {
+      subscribe();
+    }
+  }
+
+
+
+
+
+
+
   if (status === "authenticated" && session.farmer)
     return (
       <Layout>
