@@ -103,7 +103,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
       subscribe();
     }
   }
-  if (status === "authenticated")
+  if (status === "authenticated") {
 
     return (
       <Layout>
