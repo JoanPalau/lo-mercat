@@ -48,7 +48,7 @@ export default function TopNavigation() {
       bottom: false,
       right: false,
     });
-
+    
     const { status, data: session } = useSession();
     let hiMsg = ""
     if (session != null) {
@@ -171,8 +171,23 @@ export default function TopNavigation() {
   const drawerWidth = 240;
   const { height, width } = useWindowDimensions();
   const isMobile = width < 850;
-
-  if (!isMobile) {
+  let drawerIcon = <></>;
+  if (session != null) {
+    drawerIcon = <IconButton
+      size="large"
+      edge="start"
+      color="inherit"
+      aria-label="menu"
+      sx={{ mr: 2 }}
+      onClick={toggleDrawer('left', true)}
+    >
+        <MenuIcon>
+        </MenuIcon>
+      </IconButton>
+  }
+  if (session == null) {
+    drawer = <></>;
+  } else if (!isMobile) {
     drawer = <Drawer
         sx={{
           width: drawerWidth,
@@ -202,17 +217,7 @@ export default function TopNavigation() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" component="nav">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-            onClick={toggleDrawer('left', true)}
-          >
-              <MenuIcon>
-              </MenuIcon>
-            </IconButton>
+            {drawerIcon}
             <React.Fragment key={'left'}>
               {drawer}
             </React.Fragment>

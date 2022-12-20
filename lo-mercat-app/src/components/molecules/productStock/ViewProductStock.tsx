@@ -54,6 +54,7 @@ const ViewProductStock = ({ stock, props }: any) => {
     stock.forEach((stock: any) => {
         results.push(
             <li className="list-group-item" >
+                <Box sx={{ mx: 'auto', height: 10 }} />
                 <Grid
                     container
                     spacing={0}
@@ -64,7 +65,6 @@ const ViewProductStock = ({ stock, props }: any) => {
                         remove
                     </Button>
                 </Grid>
-                <Box sx={{ mx: 'auto', height: 10 }} />
             </li>
         );
 
