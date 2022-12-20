@@ -63,7 +63,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
                 <Image src={"/historial.svg"} alt="" width={280} height={150} />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Order History
+                    Order
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Take a look at your Order History!!
@@ -79,7 +79,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
               transitionDuration: '0.3s',
           }}>
             <CardActionArea>
-              <Link href="/farmers/joinmarket">
+              <Link href="/customers/purchase-history">
                 <Image src={"/purchasesHistory.svg"} alt="" width={280} height={150} />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
