@@ -46,7 +46,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
   if (session != undefined && session.farmer != null) {
     Router.replace("/farmers/home")
   }
-  if (status === "authenticated") {
+  if (session != undefined && session.farmer != null) {
 
     return (
       <Layout>
@@ -58,7 +58,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
     );
     
   }
-  else if(status === "authenticated" && session.customer){
+  else if(status === "authenticated" && session != undefined && session.customer != null){
     Router.replace("/customers/home");
     return(
       <Layout>
@@ -68,6 +68,10 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
         </div>
       </Layout>
     );
+  } else {
+    return <Layout>
+            <p><CircularProgress /></p>
+        </Layout>
   }
 };
 
