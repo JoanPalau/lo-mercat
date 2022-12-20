@@ -21,17 +21,20 @@ const Index = () => {
   const [registration, setRegistration] = useState(null)
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator && window.workbox !== undefined) {
-      // run only in browser
-      navigator.serviceWorker.ready.then(reg => {
-        reg.pushManager.getSubscription().then(sub => {
-          if (sub && !(sub.expirationTime && Date.now() > sub.expirationTime - 5 * 60 * 1000)) {
-            setSubscription(sub)
-            setIsSubscribed(true)
-          }
+      if (typeof window !== 'undefined') {
+        let _window:any = window;
+        if ('serviceWorker' in navigator && _window.workbox !== undefined) {
+        // run only in browser
+        navigator.serviceWorker.ready.then(reg => {
+          reg.pushManager.getSubscription().then(sub => {
+            if (sub && !(sub.expirationTime && Date.now() > sub.expirationTime - 5 * 60 * 1000)) {
+              setSubscription(sub)
+              setIsSubscribed(true)
+            }
+          })
+          setRegistration(reg)
         })
-        setRegistration(reg)
-      })
+      }
     }
   }, [])
 
@@ -61,13 +64,13 @@ const Index = () => {
     subscribe();
   }
 
-  const subscribeButtonOnClick = async event => {
+  const subscribeButtonOnClick = async (event: { preventDefault: () => void }) => {
     event.preventDefault()
     await subscribe()
     
   }
 
-  const unsubscribeButtonOnClick = async event => {
+  const unsubscribeButtonOnClick = async (event: { preventDefault: () => void }) => {
     event.preventDefault()
     await subscription.unsubscribe()
     // TODO: you should call your API to delete or invalidate subscription data on server
@@ -76,7 +79,7 @@ const Index = () => {
     console.log('web push unsubscribed!')
   }
 
-  const sendNotificationButtonOnClick = async event => {
+  const sendNotificationButtonOnClick = async (event: { preventDefault: () => void }) => {
     event.preventDefault()
     if (subscription == null) {
       console.error('web push not subscribed')

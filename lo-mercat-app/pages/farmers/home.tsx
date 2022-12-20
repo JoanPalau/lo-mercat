@@ -61,18 +61,21 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
     if (session == undefined || session.farmer == null) {
       return;
     }
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator && window.workbox !== undefined) {
-      // run only in browser
-      navigator.serviceWorker.ready.then(reg => {
-        reg.pushManager.getSubscription().then(sub => {
-          if (sub && !(sub.expirationTime && Date.now() > sub.expirationTime - 5 * 60 * 1000)) {
-            setSubscription(sub)
-            setIsSubscribed(true)
-          }
+    if (typeof window !== 'undefined') {
+      let _window:any = window;
+      if ('serviceWorker' in navigator && _window.workbox !== undefined) {
+        // run only in browser
+        navigator.serviceWorker.ready.then(reg => {
+          reg.pushManager.getSubscription().then(sub => {
+            if (sub && !(sub.expirationTime && Date.now() > sub.expirationTime - 5 * 60 * 1000)) {
+              setSubscription(sub)
+              setIsSubscribed(true)
+            }
+          })
+          setRegistration(reg)
         })
-        setRegistration(reg)
-      })
-    }
+      }
+    } 
   }, [sessionDefined])
   
   useEffect(() => {
