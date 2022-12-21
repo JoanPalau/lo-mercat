@@ -99,7 +99,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
               transitionDuration: '0.3s',
           }}>
             <CardActionArea>
-              <Link href="/market/marketinfo">
+              <Link href="/customers/purchase">
                 <CardContent>
                   <Image src={"/buyFlow.svg"} alt="" width={265} height={150} />
                 </CardContent>
