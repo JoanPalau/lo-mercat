@@ -33,7 +33,7 @@ export default async function Notification(req:NextApiRequest, res:NextApiRespon
       webPush
       .sendNotification(
         subscription,
-        JSON.stringify({ title: 'Hello Web Push', message: 'Your web push notification is here!' })
+        JSON.stringify({ title: 'Purchase done', message: 'You have received a purchase in Lo Mercat!' })
       )
       
     });
