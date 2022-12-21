@@ -7,6 +7,7 @@ import { isMobile } from '@common/DeviceDetection';
 import { NextPageContext } from 'next';
 import { getSession, useSession } from 'next-auth/react';
 import { prisma } from '../../lib/prisma';
+import Grid from '@mui/material/Grid';
 
 export async function getServerSideProps(context: NextPageContext) {
     // Fetch data from external API
@@ -38,10 +39,17 @@ export async function getServerSideProps(context: NextPageContext) {
 const AddProductStockPage: NextPageWithLayout = ({ product, stocks,props}: any) => {
     // console.log({ session });
     return (
-        <div>
+        <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        style={{ minHeight: '100vh' }}
+        >
             <AddProductForm product={product}{...props} />
             <ViewProductStock stock={stocks}{...props}/>
-        </div>
+        </Grid>
     );
 }
 

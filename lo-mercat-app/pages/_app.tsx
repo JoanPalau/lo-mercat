@@ -32,7 +32,6 @@ const MyApp = (props : MyAppProps) => {
   }, [])
 
   const screenNotSupported = () => {
-    console.log('test')
     return <>
       <Grid
         container
