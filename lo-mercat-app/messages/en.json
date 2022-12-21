@@ -51,7 +51,15 @@
     "confirmation-dialog": "Are you sure?"
   },
   "Search": {
-    "apply-filter": "Search"
+    "apply-filter": "Search",
+    "empty": "No results",
+    "products": "Products",
+    "product": "Product",
+    "stand": "Stand",
+    "search-type": "Search Type",
+    "quantity": "Available quantity: {quantity} Kg",
+    "farmer": "Provider Id {id}",
+    "results": "Found items:"
   },
   "Landing": {
     "SignIn": "Sign In",

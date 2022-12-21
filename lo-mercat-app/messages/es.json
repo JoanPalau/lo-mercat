@@ -51,7 +51,15 @@
     "confirmation-dialog": "Seguro que quieres seguir?"
   },
   "Search": {
-    "apply-filter": "Buscar"
+    "apply-filter": "Buscar",
+    "empty": "Sin resultados",
+    "products": "Productos",
+    "product": "Producto",
+    "stand": "Tienda",
+    "search-type": "Tipo de búsqueda",
+    "quantity": "Cantidad disponible: {quantity} Kg",
+    "farmer": "Id del proveedor {id}",
+    "results": "Resultados:"
   },
   "Landing": {
     "SignIn": "Iniciar sessión",

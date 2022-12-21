@@ -51,7 +51,15 @@
         "confirmation-dialog": "Estas segur?"
     },
     "Search": {
-        "apply-filter": "Cerca"
+        "apply-filter": "Cerca",
+        "empty": "Sense resultats",
+        "products": "Productes",
+        "product": "Producte",
+        "stand": "Parada",
+        "search-type": "Tipus de cerca",
+        "quantity": "Quantitat disponible: {quantity} Kg",
+        "farmer": "Id del proveidor {id}",
+        "results": "Resultats:"
     },
     "Landing": {
         "SignIn": "Inicia sessió",
