@@ -149,18 +149,6 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
           </CardActionArea>
         </Card>
       <div>
-      {
-        /*
-        {t("txtrole")} {session.user?.role}
-        <p>
-          <Link href="/addstock">{t("farmermanager")}</Link></p>
-        <p>
-          <Link href="/joinmarket">{t("joinmarket")}</Link></p>
-        <p>
-          <Link href="/marketselector">{t("startshopping")}</Link>
-        </p>
-        */
-      }
       <p>
           <Card sx={{
               display: 'block',

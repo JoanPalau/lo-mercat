@@ -15,7 +15,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import React from 'react';
-import { Home, Inventory, Shop, Store, Storefront } from '@mui/icons-material';
+import { Home, Inventory, Paid, Search, Shop, Store, Storefront } from '@mui/icons-material';
 import styled from '@emotion/styled';
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
@@ -51,8 +51,117 @@ export default function TopNavigation() {
     
     const { status, data: session } = useSession();
     let hiMsg = ""
+    let drawerList = <></>;
     if (session != null) {
       hiMsg = session.user.name;
+
+      if(session.farmer != null) {
+        drawerList = <List>
+                      <ListItem disablePadding>
+                        <Link href="/protected" style={{ textDecoration: 'none' }}>
+                        <ListItemButton>
+                          <ListItemIcon>
+                            <Home/>
+                          </ListItemIcon>
+                            <ListItemText primary={'Home'} />  
+                        </ListItemButton>
+                        </Link>
+                      </ListItem>
+                      <ListItem disablePadding>
+                        <Link href="/farmers/addstock" style={{ textDecoration: 'none' }}>
+                        <ListItemButton>
+                          <ListItemIcon>
+                            <Inventory/>
+                          </ListItemIcon>
+                            <ListItemText primary={'Stock'} />
+                        </ListItemButton>
+                        </Link>
+                      </ListItem>
+                      <ListItem disablePadding>
+                        <Link href="/farmers/addstock" style={{ textDecoration: 'none' }}>
+                        <ListItemButton>
+                          <ListItemIcon>
+                            <Storefront/>
+                          </ListItemIcon>
+                            <ListItemText primary={'Markets'} />
+                        </ListItemButton>
+                        </Link>
+                      </ListItem>
+                      <ListItem disablePadding>
+                        <Link href="/market/marketinfo" style={{ textDecoration: 'none' }}>
+                        <ListItemButton>
+                          <ListItemIcon>
+                            <Store/>
+                          </ListItemIcon>
+                            <ListItemText primary={'Stands'} />
+                        </ListItemButton>
+                        </Link>
+                      </ListItem>
+                      <ListItem disablePadding>
+                        <Link href="/farmers/orderlines" style={{ textDecoration: 'none' }}>
+                        <ListItemButton>
+                          <ListItemIcon>
+                            <Shop/>
+                          </ListItemIcon>
+                            <ListItemText primary={'Purchases'} />
+                        </ListItemButton>
+                        </Link>
+                      </ListItem>
+                    </List>;
+      } else {
+        drawerList = <List>
+                      <ListItem disablePadding>
+                        <Link href="/protected" style={{ textDecoration: 'none' }}>
+                        <ListItemButton>
+                          <ListItemIcon>
+                            <Home/>
+                          </ListItemIcon>
+                            <ListItemText primary={'Home'} />  
+                        </ListItemButton>
+                        </Link>
+                      </ListItem>
+                      <ListItem disablePadding>
+                        <Link href="/customers/order-history" style={{ textDecoration: 'none' }}>
+                        <ListItemButton>
+                          <ListItemIcon>
+                            <Inventory/>
+                          </ListItemIcon>
+                            <ListItemText primary={'Order History'} />
+                        </ListItemButton>
+                        </Link>
+                      </ListItem>
+                      <ListItem disablePadding>
+                        <Link href="/customers/purchase-history" style={{ textDecoration: 'none' }}>
+                        <ListItemButton>
+                          <ListItemIcon>
+                            <Paid/>
+                          </ListItemIcon>
+                            <ListItemText primary={'Purchase History'} />
+                        </ListItemButton>
+                        </Link>
+                      </ListItem>
+                      <ListItem disablePadding>
+                        <Link href="/market/marketinfo" style={{ textDecoration: 'none' }}>
+                        <ListItemButton>
+                          <ListItemIcon>
+                            <Store/>
+                          </ListItemIcon>
+                            <ListItemText primary={'Markets'} />
+                        </ListItemButton>
+                        </Link>
+                      </ListItem>
+                      <ListItem disablePadding>
+                        <Link href="/customers/search" style={{ textDecoration: 'none' }}>
+                        <ListItemButton>
+                          <ListItemIcon>
+                            <Search/>
+                          </ListItemIcon>
+                            <ListItemText primary={'Search'} />
+                        </ListItemButton>
+                        </Link>
+                      </ListItem>
+                    </List>;
+      }
     }
     
     let showDrawer = state['left'];
@@ -100,58 +209,7 @@ export default function TopNavigation() {
         justifyContent="center"
         style={{ minHeight: '60vh' }}
         >
-        <List>
-          <ListItem disablePadding>
-            <Link href="/protected" style={{ textDecoration: 'none' }}>
-            <ListItemButton>
-              <ListItemIcon>
-                <Home/>
-              </ListItemIcon>
-                <ListItemText primary={'Home'} />  
-            </ListItemButton>
-            </Link>
-          </ListItem>
-          <ListItem disablePadding>
-            <Link href="/addstock" style={{ textDecoration: 'none' }}>
-            <ListItemButton>
-              <ListItemIcon>
-                <Inventory/>
-              </ListItemIcon>
-                <ListItemText primary={'Stock'} />
-            </ListItemButton>
-            </Link>
-          </ListItem>
-          <ListItem disablePadding>
-            <Link href="/joinMarket" style={{ textDecoration: 'none' }}>
-            <ListItemButton>
-              <ListItemIcon>
-                <Storefront/>
-              </ListItemIcon>
-                <ListItemText primary={'Markets'} />
-            </ListItemButton>
-            </Link>
-          </ListItem>
-          <ListItem disablePadding>
-            <Link href="/marketInfo" style={{ textDecoration: 'none' }}>
-            <ListItemButton>
-              <ListItemIcon>
-                <Store/>
-              </ListItemIcon>
-                <ListItemText primary={'Stands'} />
-            </ListItemButton>
-            </Link>
-          </ListItem>
-          <ListItem disablePadding>
-            <Link href="/protected" style={{ textDecoration: 'none' }}>
-            <ListItemButton>
-              <ListItemIcon>
-                <Shop/>
-              </ListItemIcon>
-                <ListItemText primary={'Purchases'} />
-            </ListItemButton>
-            </Link>
-          </ListItem>
-        </List>
+          {drawerList}
       </Grid>
       <Grid
         container

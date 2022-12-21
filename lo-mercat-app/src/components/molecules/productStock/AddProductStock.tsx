@@ -82,7 +82,6 @@ const AddProductForm = ({ product, props }: any) => {
         direction="column"
         alignItems="center"
         justifyContent="center"
-        style={{ minHeight: '100vh' }}
         >
             <Typography variant="h3">Set Stock</Typography>
             <Box sx={{ mx: 'auto', height: 20 }}/>

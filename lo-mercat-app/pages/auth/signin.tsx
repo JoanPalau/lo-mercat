@@ -1,13 +1,14 @@
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { FormEventHandler, ReactElement, useContext, useState } from "react";
 interface Props {}
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import { Box, Button, CircularProgress, Grid, TextField, Typography } from "@mui/material";
 import Layout from '@common/Layout';
 import { NextPageWithLayout } from '@customTypes/NextPageWithLayout';
 
 import {useTranslations} from 'next-intl';
 import { isMobile } from '@common/DeviceDetection';
 import { NextPageContext } from 'next';
+import Router from "next/router";
 
 export async function getServerSideProps(context: NextPageContext) {
     return {
@@ -35,6 +36,19 @@ const SignIn: NextPageWithLayout = (props:Props): JSX.Element => {
             callbackUrl: '/en/protected'
         });
     };
+
+    const { status, data: session } = useSession();
+    if (session != null) {
+        Router.replace("/protected");
+        return(
+        <Layout>
+            <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
+            <p>Hello, {session.user.name} we are going to redirect you!!</p>
+            <p><CircularProgress /></p>
+            </div>
+        </Layout>
+        );
+    }
     return(<div className="Auth-form-container">
         <form className="Auth-form" onSubmit={handleSubmit}>
         <Grid

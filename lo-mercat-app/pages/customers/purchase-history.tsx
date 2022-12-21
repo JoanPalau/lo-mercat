@@ -163,7 +163,7 @@ export const PurchaseHistory: NextPageWithLayout<Props> = (props: Props) => {
   }
 
   return (
-    <Stack component="article">
+    <Stack component="article" style={{ paddingTop: '50px', paddingLeft: '10%', paddingRight: '10%' }}>
       <Typography variant="h6" component="h1" gutterBottom>{t('header')}</Typography>
       <List>
         {

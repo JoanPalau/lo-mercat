@@ -73,8 +73,8 @@ const ViewProductStock = ({ stock, props }: any) => {
 
     return (
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-        <div>
-            <h2>{stock.length == 0 ? "":  "Active Stock:"}</h2>
+        <div style={{ paddingRight: '10%', paddingLeft: '10%' }}>
+            <h2>{stock.length == 0 ? "No current stock!":  "Active Stock:"}</h2>
             <ul className="list-group">{results} </ul>
         </div>
     );
