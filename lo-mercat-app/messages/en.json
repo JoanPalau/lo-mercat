@@ -1,161 +1,183 @@
 {
-    "Index": {
-        "app": "Lo Mercat"
+  "Index": {
+    "app": "Lo Mercat"
+  },
+  "Home": {
+    "hello": "Hello Next.js!"
+  },
+  "CustomerHome": {
+    "navigation": {
+      "orderHistory": "To order History",
+      "purchaseHistory": "To Purchase History",
+      "buyFlow": "To perform a buy",
+      "searchFlow": "To search for items or stands"
+    }
+  },
+  "OrderHistory": {
+    "header": "My orders",
+    "title": "Order nº {number}",
+    "status": {
+      "text": "Status: {status}",
+      "completed": "Completed",
+      "pending": "In proces"
     },
-    "Home": {
-        "hello": "Hello Next.js!"
-    },
-    "CustomerHome": {
-        "navigation": {
-            "orderHistory": "To order History",
-            "purchaseHistory":"To Purchase History",
-            "buyFlow": "To perform a buy",
-            "searchFlow": "To search for items or stands"
-        }
-    },
-    "OrderHistory": {
-        "header": "My orders",
-        "title": "Order nº {number}",
-        "status": {
-            "text": "Status: {status}",
-            "completed": "Completed",
-            "pending": "In proces"
-        },
-        "total": "Total: {amount} {currency}"
-    },
-    "PurchaseHistory": {
-        "header": "My purchases",
-        "title": "Id: {id}",
-        "total": "Total: {amount} {currency}",
-        "subtotal": "{amount} {currency}",
-        "order": "# {order_id}",
-        "stand": "Stand #: {stand_id}"
-    },
-    "Landing": {
-        "SignIn": "Sign In",
-        "text": "Already have an account? ",
-        "motivation": "From the farm to your home",
-        "SignUp": "Sign Up"
-    },
-    "LegalNotice": {
-      "intro": [
-        "Lo Mercat, S.L., responsible for the website, hereinafter RESPONSIBLE, makes this document available to users, with which it aims to comply with the obligations set out in Law 34/2002, of 11 July, on Information Society Services and Electronic Commerce (LSSICE), as well as to inform all users of the website about the conditions of use",
-        "Any person accessing this website assumes the role of user, undertaking to strictly observe and comply with the provisions herein, as well as any other legal provision that may be applicable",
-        "Lo Mercat, S.L., reserves the right to modify any type of information that may appear on the website, without any obligation to give prior notice or inform users of said obligations, with publication on the Lo Mercat, S.L. website being understood to be sufficient",
-        "Lo Mercat, S.L., reserves the right to modify any type of information that may appear on the website, without any obligation to give prior notice or inform users of said obligations, with publication on the Lo Mercat, S.L. website being understood to be sufficient"
-      ],
-      "sections": [
-        {
-          "title": "1. IDENTIFICATION DATA",
-          "content": [
-            "Company name: Lo Mercat S.L.",
-            "Commercial name: Lo Mercat",
-            "NIF: 111111AAA",
-            "Address: Lleida",
-            "e-mail: legal@lomercat.com"
-          ]
-        },
-        {
-          "title": "2. OBJECT",
-          "content": [
-            "Through the Website, we offer Users the possibility to access information about our services"
-          ]
-        },
-        {
-          "title": "3. PRIVACY AND DATA PROCESSING",
-          "content": [
-            "When it is necessary to provide personal data in order to access certain contents or services, Users shall guarantee their truthfulness, accuracy, authenticity and validity. The company will give said data the corresponding automated treatment according to its nature or purpose, in the terms indicated in the Privacy Policy section"
-          ]
-        },
-        {
-          "title": "4. INDUSTRIAL AND INTELLECTUAL PROPERTY",
-          "content": [
-            "The User acknowledges and accepts that all the contents shown on the Web Site and, in particular, designs, texts, images, logos, icons, buttons, software, commercial names, brands or any other signs susceptible of industrial and/or commercial use are subject to Intellectual Property rights and all brands, commercial names or distinctive signs, all industrial and intellectual property rights on the contents and/or any other elements inserted on the page, which are the exclusive property of the company and/or third parties, who have the exclusive right to use them in the course of trade. Therefore, the User undertakes not to reproduce, copy, distribute, make available or in any other way publicly communicate, transform or modify such content, holding the company harmless from any claim arising from the breach of such obligations",
-            "Under no circumstances does access to the Web Site imply any kind of waiver, transmission, licence or total or partial transfer of said rights, unless expressly stated otherwise. These General Conditions of Use of the Web Site do not grant Users any other right of use, alteration, exploitation, reproduction, distribution or public communication of the Web Site and/or its Contents other than those expressly provided for herein. Any other use or exploitation of any other rights shall be subject to the prior and express authorisation specifically granted for this purpose by the company or the third party owner of the rights affected,",
-            "The contents, texts, photographs, designs, logos, images, computer programmes, source codes and, in general, any intellectual creation existing in this Space, as well as the Space itself as a whole, as a multimedia artistic work, are protected as copyright by intellectual property legislation. The company is the owner of the elements that make up the graphic design of the Web Site, the menus, navigation buttons, HTML code, texts, images, textures, graphics and any other content of the Web Site or, in any case, has the corresponding authorisation for the use of these elements. The content provided on the Web Site may not be reproduced in whole or in part, or transmitted, or recorded by any information retrieval system, in any form or by any means, without the prior written authorisation of the aforementioned Entity",
-            "It is also forbidden to remove, evade and/or manipulate the «copyright» as well as the technical protection devices or any information mechanisms that may be contained in the contents. The User of this Website undertakes to respect the aforementioned rights and to avoid any action that could damage them, and in any case the company reserves the right to exercise any legal means or actions that may correspond to it in defence of its legitimate intellectual and industrial property rights"
-          ]
-        },
-        {
-          "title": "5. OBLIGATIONS AND RESPONSIBILITIES OF THE USER OF THE WEBSITE",
-          "content": [
-            "The User undertakes to:",
-            "1. To make appropriate and lawful use of the Web Site and its contents and services, in accordance with: (i) the legislation applicable at all times; (ii) the General Conditions of Use of the Web Site; (iii) generally accepted morals and good customs and (iv) public order",
-            "2. To provide all the technical means and requirements necessary to access the Webspace",
-            "3. To provide truthful information when filling in the forms contained in the Web Site with their personal data and to keep them updated at all times so that they correspond, at all times, to the User's real situation. The User shall be solely responsible for any false or inaccurate statements made and for any damage caused to the company or to third parties as a result of the information provided",
-            "Notwithstanding the provisions of the previous section, the User must also refrain from:",
-            "1. Making unauthorised or fraudulent use of the Web Site and/or its contents for illicit purposes or effects, prohibited in these General Conditions of Use, harmful to the rights and interests of third parties, or which in any way may damage, render useless, overload, deteriorate or impede the normal use of the services or the documents, files and all types of contents stored in any computer equipment",
-            "2. Accessing or attempting to access resources or restricted areas of the Webspace, without complying with the conditions required for such access",
-            "3. Causing damage to the physical or logical systems of the Webspace, its suppliers or third parties",
-            "4. Introduce or disseminate computer viruses or any other physical or logical systems that are likely to cause damage to the physical or logical systems of the company, its suppliers or third parties",
-            "5. Attempting to access, use and/or manipulate the data of the company, third party suppliers and other Users",
-            "6. Reproduce or copy, distribute, allow public access through any form of public communication, transform or modify the contents, unless authorised by the holder of the corresponding rights or it is legally permitted to do so",
-            "7. Delete, conceal or manipulate the notes on intellectual or industrial property rights and other data identifying the rights of the company or third parties incorporated in the contents, as well as the technical protection devices or any information mechanisms that may be inserted in the contents",
-            "8. Obtain and attempt to obtain the contents using means or procedures other than those which, as the case may be, have been made available for this purpose or which have been expressly indicated on the web pages where the contents are found or, in general, those which are normally used on the Internet because they do not entail a risk of damage or disablement of the Web space and/or the contents",
-            "9. In particular, and by way of example only and without limitation, the User undertakes not to transmit, disseminate or make available to third parties information, data, content, messages, graphics, drawings, sound and/or image files, photographs, recordings, software and, in general, any kind of material which: - In any way is contrary to, undermines or infringes fundamental rights and public freedoms recognised in the Constitution, in international treaties and in the rest of the legislation in force; - Induces, incites or promotes criminal, denigratory, defamatory, violent or, in general, contrary to the law, morality, generally accepted good customs or public order; - Induces, incites or promotes criminal, denigratory, defamatory or violent actions; - Induces, incites or promotes criminal, defamatory or violent actions or, in general, actions contrary to the law, morality, generally accepted good customs or public order. - Induces, incites or promotes discriminatory actions, attitudes or thoughts on grounds of sex, race, religion, beliefs, age or condition; - Incorporates, makes available or allows access to products, elements, messages and/or services that are criminal, violent, offensive, harmful, degrading or, in general, contrary to the law, morals and generally accepted good customs or public order. Induces or may induce an unacceptable state of anxiety or fear - Induces or incites to engage in dangerous practices, risky or harmful to health and psychological balance - Is protected by legislation on intellectual or industrial protection belonging to the company or to third parties without having been authorised for the intended use. - Is contrary to the honour, personal and family privacy or personal image of persons; - Constitutes any type of advertising; - Includes any type of virus or programme that impedes the normal functioning of the Web Site",
-            "If you are provided with a password to access any of the services and/or contents of the Webspace, you undertake to use it diligently, keeping it secret at all times. Consequently, he/she shall be responsible for its proper custody and confidentiality, undertaking not to cede it to third parties, either temporarily or permanently, nor to allow access to the aforementioned services and/or contents by third parties. Likewise, he/she undertakes to notify the company of any event that may involve the improper use of his/her password, such as, but not limited to, its theft, loss or unauthorised access, in order to proceed to its immediate cancellation. Consequently, until the above notification is made, the company shall be exempt from any liability that may arise from the improper use of your password, and shall be responsible for any unlawful use of the contents and/or services of the Web Site by any illegitimate third party. If the user negligently or fraudulently breaches any of the obligations established in these General Conditions of Use, he/she shall be liable for all damages and losses that may arise for the company as a result of said breach"
-          ]
-        },
-        {
-          "title": "6. RESPONSIBILITIES",
-          "content": [
-            "It does not guarantee continuous access, nor the correct viewing, downloading or use of the elements and information contained on the website, which may be impeded, hindered or interrupted by factors or circumstances beyond its control. It accepts no responsibility for any decisions that may be taken as a result of accessing the content or information offered",
-            "The service may be interrupted, or the relationship with the User may be terminated immediately, if it is detected that any use of the Web Site, or of any of the services offered therein, is contrary to these General Conditions of Use. We shall not be liable for any damages, losses, claims or expenses arising from the use of the Web Site",
-            "We shall only be responsible for removing, as soon as possible, any content that may cause such damage, provided that we are notified of this. In particular, we shall not be liable for damages that may arise from, inter alia:",
-            "We shall only be liable for the removal, as soon as possible, of content that may cause such damage",
-            "1. Interferences, interruptions, failures, omissions, telephone breakdowns, delays, blockages or disconnections in the operation of the electronic system, caused by deficiencies, overloads and errors in the telecommunications lines and networks, or by any other cause beyond the control of the company",
-            "2. Illegitimate intrusions through the use of malware of any kind and through any means of communication, such as computer viruses or any other means",
-            "3. Improper or inappropriate abuse of the Web Site",
-            "4. Security or navigation errors caused by a malfunction of the browser or by the use of non-updated versions of the browser. The webmaster reserves the right to withdraw, in whole or in part, any content or information present on the Webspace",
-            "The company excludes any liability for damages of any kind that may be due to the misuse of the freely available services and use by the users of the Webspace. Likewise, it is exonerated from any responsibility for the content and information that may be received as a result of the data collection forms, these being used solely for the provision of the services of consultations and doubts. On the other hand, in the event of causing damages due to an illicit or incorrect use of said services, the User may be claimed for the damages caused",
-            "You will hold the company harmless against any damages arising from claims, actions or demands from third parties as a result of your access to or use of the Web Site. You also undertake to indemnify us against any damages resulting from your use of robots, spiders, crawlers or similar tools used to collect or extract data or any other action on your part that imposes an unreasonable burden on the operation of the Webspace"
-          ]
-        },
-        {
-          "title": "7. HYPER LINKS",
-          "content": [
-            "The User undertakes not to reproduce in any way, not even by means of a hyperlink or hyperlink, the Web Site or any of its contents, except with the express written authorisation of the party responsible for the file",
-            "The Website may include links to other websites, managed by third parties, in order to facilitate the User's access to the information of collaborating and/or sponsoring companies. Accordingly, the company is not responsible for the content of such websites, nor does it place itself in the position of guarantor and/or provider of the services and/or information that may be offered to third parties through the third party links",
-            "The User is granted a limited, revocable and non-exclusive right to create links to the homepage of the Webspace exclusively for private, non-commercial use. Websites that include a link to our Webspace (i) may not misrepresent their relationship or state that such a link has been authorised, or include trademarks, names, trade names, logos or other distinctive signs of our company; (ii) may not include content that may be considered in bad taste, obscene, offensive, controversial, inciting violence or discrimination on grounds of sex, race or religion, contrary to public order or unlawful; (iii) may not link to any page of the Webspace other than the homepage; (iv) must link to the address of the Webspace itself, without allowing the Webspace making the link to reproduce the Webspace as part of its website or within one of its frames or to create a browser on any of the pages of the Webspace. The Company may request, at any time, that you remove any link to the Webspace, after which you must immediately proceed to remove it",
-            "The company cannot control the information, contents, products or services provided by other Websites that have established links to the Webspace"
-          ]
-        },
-        {
-          "title": "8. DATA PROTECTION",
-          "content": [
-            "To use some of the Services, the User must first provide certain personal data. The company will automatically process this data and will apply the corresponding security measures, all in compliance with the RGPD, LOPDGDD and LSSI. The User may access the policy followed in the processing of personal data, as well as the establishment of the purposes previously established, under the conditions defined in the Privacy Policy"
-          ]
-        },
-        {
-          "title": "9.COOKIES",
-          "content": [
-            "The company reserves the right to use “cookie” technology on the Website in order to recognise you as a frequent User and to personalise your use of the Website by pre-selecting your language, or more desired or specific content",
-            "Cookies collect the user's IP address and Google is responsible for processing this information",
-            "Cookies are files sent to a browser, via a web server, to record the User's browsing on the Website, when the User allows them to be received. If you wish, you can configure your browser to be notified on screen of the reception of cookies and to prevent the installation of cookies on your hard drive. Please consult your browser's instructions and manuals for more information",
-            "Thanks to cookies, it is possible to recognise the browser of the computer used by the User in order to provide content and offer the browsing or advertising preferences of the User, to the demographic profiles of the Users as well as to measure visits and traffic parameters, monitor progress and number of entries"
-          ]
-        },
-        {
-          "title": "10. REPRESENTATIONS AND WARRANTIES",
-          "content": [
-            "In general, the contents and services offered on the Webspace are for information purposes only. Therefore, by offering them, no warranty or representation is given in relation to the contents and services offered on the Web Site, including, but not limited to, warranties of legality, reliability, usefulness, truthfulness, accuracy or merchantability, except to the extent that such statements and warranties cannot be excluded by law"
-          ]
-        },
-        {
-          "title": "11. MAJOR FORCE",
-          "content": [
-            "The company shall not be liable in all cases of impossibility to provide service, if this is due to prolonged interruptions of the electricity supply, telecommunications lines, social conflicts, strikes, rebellion, explosions, floods, acts and omissions of the Government, and in general all cases of force majeure or fortuitous events"
-          ]
-        },
-        {
-          "title": "12. RESOLUTION OF DISPUTES. APPLICABLE LAW AND JURISDICTION",
-          "content": [
-            "These General Conditions of Use, as well as the use of the Website, shall be governed by Spanish law. For the resolution of any dispute, the parties shall submit to the Courts and Tribunals of the registered office of the person responsible for the website",
-            "In the event that any provision of these General Conditions of Use is unenforceable or void under applicable law or as a result of a judicial or administrative decision, such unenforceability or invalidity shall not render these General Conditions of Use unenforceable or void as a whole. In such cases, the company shall proceed to modify or replace such provision with one that is valid and enforceable and that, to the extent possible, achieves the objective and intent reflected in the original provision."
-          ]
-        }
-      ]
-    },
+    "total": "Total: {amount} {currency}"
+  },
+  "PurchaseHistory": {
+    "header": "My purchases",
+    "title": "Id: {id}",
+    "total": "Total: {amount} {currency}",
+    "subtotal": "{amount} {currency}",
+    "order": "# {order_id}",
+    "stand": "Stand #: {stand_id}"
+  },
+  "Purchase": {
+    "header": "My purchases",
+    "title": "Id: {id}",
+    "total": "Total: {amount} {currency}",
+    "subTotal": "Order Total: {amount} {currency}",
+    "lineTotal": "{amount} {currency}",
+    "order": "# {order_id}",
+    "stand": "Stand #: {stand_id}",
+    "next": "Next",
+    "finish": "Finish",
+    "checkout": "Checkout",
+    "pay": "Pay",
+    "summary": "Summary",
+    "payment-method": "Payment Method",
+    "quantity": "Quantity: {quantity} Kg",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "confirmation-dialog": "Are you sure?"
+  },
+  "Search": {
+    "apply-filter": "Search"
+  },
+  "Landing": {
+    "SignIn": "Sign In",
+    "text": "Already have an account? ",
+    "motivation": "From the farm to your home",
+    "SignUp": "Sign Up"
+  },
+  "LegalNotice": {
+    "intro": [
+      "Lo Mercat, S.L., responsible for the website, hereinafter RESPONSIBLE, makes this document available to users, with which it aims to comply with the obligations set out in Law 34/2002, of 11 July, on Information Society Services and Electronic Commerce (LSSICE), as well as to inform all users of the website about the conditions of use",
+      "Any person accessing this website assumes the role of user, undertaking to strictly observe and comply with the provisions herein, as well as any other legal provision that may be applicable",
+      "Lo Mercat, S.L., reserves the right to modify any type of information that may appear on the website, without any obligation to give prior notice or inform users of said obligations, with publication on the Lo Mercat, S.L. website being understood to be sufficient",
+      "Lo Mercat, S.L., reserves the right to modify any type of information that may appear on the website, without any obligation to give prior notice or inform users of said obligations, with publication on the Lo Mercat, S.L. website being understood to be sufficient"
+    ],
+    "sections": [
+      {
+        "title": "1. IDENTIFICATION DATA",
+        "content": [
+          "Company name: Lo Mercat S.L.",
+          "Commercial name: Lo Mercat",
+          "NIF: 111111AAA",
+          "Address: Lleida",
+          "e-mail: legal@lomercat.com"
+        ]
+      },
+      {
+        "title": "2. OBJECT",
+        "content": [
+          "Through the Website, we offer Users the possibility to access information about our services"
+        ]
+      },
+      {
+        "title": "3. PRIVACY AND DATA PROCESSING",
+        "content": [
+          "When it is necessary to provide personal data in order to access certain contents or services, Users shall guarantee their truthfulness, accuracy, authenticity and validity. The company will give said data the corresponding automated treatment according to its nature or purpose, in the terms indicated in the Privacy Policy section"
+        ]
+      },
+      {
+        "title": "4. INDUSTRIAL AND INTELLECTUAL PROPERTY",
+        "content": [
+          "The User acknowledges and accepts that all the contents shown on the Web Site and, in particular, designs, texts, images, logos, icons, buttons, software, commercial names, brands or any other signs susceptible of industrial and/or commercial use are subject to Intellectual Property rights and all brands, commercial names or distinctive signs, all industrial and intellectual property rights on the contents and/or any other elements inserted on the page, which are the exclusive property of the company and/or third parties, who have the exclusive right to use them in the course of trade. Therefore, the User undertakes not to reproduce, copy, distribute, make available or in any other way publicly communicate, transform or modify such content, holding the company harmless from any claim arising from the breach of such obligations",
+          "Under no circumstances does access to the Web Site imply any kind of waiver, transmission, licence or total or partial transfer of said rights, unless expressly stated otherwise. These General Conditions of Use of the Web Site do not grant Users any other right of use, alteration, exploitation, reproduction, distribution or public communication of the Web Site and/or its Contents other than those expressly provided for herein. Any other use or exploitation of any other rights shall be subject to the prior and express authorisation specifically granted for this purpose by the company or the third party owner of the rights affected,",
+          "The contents, texts, photographs, designs, logos, images, computer programmes, source codes and, in general, any intellectual creation existing in this Space, as well as the Space itself as a whole, as a multimedia artistic work, are protected as copyright by intellectual property legislation. The company is the owner of the elements that make up the graphic design of the Web Site, the menus, navigation buttons, HTML code, texts, images, textures, graphics and any other content of the Web Site or, in any case, has the corresponding authorisation for the use of these elements. The content provided on the Web Site may not be reproduced in whole or in part, or transmitted, or recorded by any information retrieval system, in any form or by any means, without the prior written authorisation of the aforementioned Entity",
+          "It is also forbidden to remove, evade and/or manipulate the «copyright» as well as the technical protection devices or any information mechanisms that may be contained in the contents. The User of this Website undertakes to respect the aforementioned rights and to avoid any action that could damage them, and in any case the company reserves the right to exercise any legal means or actions that may correspond to it in defence of its legitimate intellectual and industrial property rights"
+        ]
+      },
+      {
+        "title": "5. OBLIGATIONS AND RESPONSIBILITIES OF THE USER OF THE WEBSITE",
+        "content": [
+          "The User undertakes to:",
+          "1. To make appropriate and lawful use of the Web Site and its contents and services, in accordance with: (i) the legislation applicable at all times; (ii) the General Conditions of Use of the Web Site; (iii) generally accepted morals and good customs and (iv) public order",
+          "2. To provide all the technical means and requirements necessary to access the Webspace",
+          "3. To provide truthful information when filling in the forms contained in the Web Site with their personal data and to keep them updated at all times so that they correspond, at all times, to the User's real situation. The User shall be solely responsible for any false or inaccurate statements made and for any damage caused to the company or to third parties as a result of the information provided",
+          "Notwithstanding the provisions of the previous section, the User must also refrain from:",
+          "1. Making unauthorised or fraudulent use of the Web Site and/or its contents for illicit purposes or effects, prohibited in these General Conditions of Use, harmful to the rights and interests of third parties, or which in any way may damage, render useless, overload, deteriorate or impede the normal use of the services or the documents, files and all types of contents stored in any computer equipment",
+          "2. Accessing or attempting to access resources or restricted areas of the Webspace, without complying with the conditions required for such access",
+          "3. Causing damage to the physical or logical systems of the Webspace, its suppliers or third parties",
+          "4. Introduce or disseminate computer viruses or any other physical or logical systems that are likely to cause damage to the physical or logical systems of the company, its suppliers or third parties",
+          "5. Attempting to access, use and/or manipulate the data of the company, third party suppliers and other Users",
+          "6. Reproduce or copy, distribute, allow public access through any form of public communication, transform or modify the contents, unless authorised by the holder of the corresponding rights or it is legally permitted to do so",
+          "7. Delete, conceal or manipulate the notes on intellectual or industrial property rights and other data identifying the rights of the company or third parties incorporated in the contents, as well as the technical protection devices or any information mechanisms that may be inserted in the contents",
+          "8. Obtain and attempt to obtain the contents using means or procedures other than those which, as the case may be, have been made available for this purpose or which have been expressly indicated on the web pages where the contents are found or, in general, those which are normally used on the Internet because they do not entail a risk of damage or disablement of the Web space and/or the contents",
+          "9. In particular, and by way of example only and without limitation, the User undertakes not to transmit, disseminate or make available to third parties information, data, content, messages, graphics, drawings, sound and/or image files, photographs, recordings, software and, in general, any kind of material which: - In any way is contrary to, undermines or infringes fundamental rights and public freedoms recognised in the Constitution, in international treaties and in the rest of the legislation in force; - Induces, incites or promotes criminal, denigratory, defamatory, violent or, in general, contrary to the law, morality, generally accepted good customs or public order; - Induces, incites or promotes criminal, denigratory, defamatory or violent actions; - Induces, incites or promotes criminal, defamatory or violent actions or, in general, actions contrary to the law, morality, generally accepted good customs or public order. - Induces, incites or promotes discriminatory actions, attitudes or thoughts on grounds of sex, race, religion, beliefs, age or condition; - Incorporates, makes available or allows access to products, elements, messages and/or services that are criminal, violent, offensive, harmful, degrading or, in general, contrary to the law, morals and generally accepted good customs or public order. Induces or may induce an unacceptable state of anxiety or fear - Induces or incites to engage in dangerous practices, risky or harmful to health and psychological balance - Is protected by legislation on intellectual or industrial protection belonging to the company or to third parties without having been authorised for the intended use. - Is contrary to the honour, personal and family privacy or personal image of persons; - Constitutes any type of advertising; - Includes any type of virus or programme that impedes the normal functioning of the Web Site",
+          "If you are provided with a password to access any of the services and/or contents of the Webspace, you undertake to use it diligently, keeping it secret at all times. Consequently, he/she shall be responsible for its proper custody and confidentiality, undertaking not to cede it to third parties, either temporarily or permanently, nor to allow access to the aforementioned services and/or contents by third parties. Likewise, he/she undertakes to notify the company of any event that may involve the improper use of his/her password, such as, but not limited to, its theft, loss or unauthorised access, in order to proceed to its immediate cancellation. Consequently, until the above notification is made, the company shall be exempt from any liability that may arise from the improper use of your password, and shall be responsible for any unlawful use of the contents and/or services of the Web Site by any illegitimate third party. If the user negligently or fraudulently breaches any of the obligations established in these General Conditions of Use, he/she shall be liable for all damages and losses that may arise for the company as a result of said breach"
+        ]
+      },
+      {
+        "title": "6. RESPONSIBILITIES",
+        "content": [
+          "It does not guarantee continuous access, nor the correct viewing, downloading or use of the elements and information contained on the website, which may be impeded, hindered or interrupted by factors or circumstances beyond its control. It accepts no responsibility for any decisions that may be taken as a result of accessing the content or information offered",
+          "The service may be interrupted, or the relationship with the User may be terminated immediately, if it is detected that any use of the Web Site, or of any of the services offered therein, is contrary to these General Conditions of Use. We shall not be liable for any damages, losses, claims or expenses arising from the use of the Web Site",
+          "We shall only be responsible for removing, as soon as possible, any content that may cause such damage, provided that we are notified of this. In particular, we shall not be liable for damages that may arise from, inter alia:",
+          "We shall only be liable for the removal, as soon as possible, of content that may cause such damage",
+          "1. Interferences, interruptions, failures, omissions, telephone breakdowns, delays, blockages or disconnections in the operation of the electronic system, caused by deficiencies, overloads and errors in the telecommunications lines and networks, or by any other cause beyond the control of the company",
+          "2. Illegitimate intrusions through the use of malware of any kind and through any means of communication, such as computer viruses or any other means",
+          "3. Improper or inappropriate abuse of the Web Site",
+          "4. Security or navigation errors caused by a malfunction of the browser or by the use of non-updated versions of the browser. The webmaster reserves the right to withdraw, in whole or in part, any content or information present on the Webspace",
+          "The company excludes any liability for damages of any kind that may be due to the misuse of the freely available services and use by the users of the Webspace. Likewise, it is exonerated from any responsibility for the content and information that may be received as a result of the data collection forms, these being used solely for the provision of the services of consultations and doubts. On the other hand, in the event of causing damages due to an illicit or incorrect use of said services, the User may be claimed for the damages caused",
+          "You will hold the company harmless against any damages arising from claims, actions or demands from third parties as a result of your access to or use of the Web Site. You also undertake to indemnify us against any damages resulting from your use of robots, spiders, crawlers or similar tools used to collect or extract data or any other action on your part that imposes an unreasonable burden on the operation of the Webspace"
+        ]
+      },
+      {
+        "title": "7. HYPER LINKS",
+        "content": [
+          "The User undertakes not to reproduce in any way, not even by means of a hyperlink or hyperlink, the Web Site or any of its contents, except with the express written authorisation of the party responsible for the file",
+          "The Website may include links to other websites, managed by third parties, in order to facilitate the User's access to the information of collaborating and/or sponsoring companies. Accordingly, the company is not responsible for the content of such websites, nor does it place itself in the position of guarantor and/or provider of the services and/or information that may be offered to third parties through the third party links",
+          "The User is granted a limited, revocable and non-exclusive right to create links to the homepage of the Webspace exclusively for private, non-commercial use. Websites that include a link to our Webspace (i) may not misrepresent their relationship or state that such a link has been authorised, or include trademarks, names, trade names, logos or other distinctive signs of our company; (ii) may not include content that may be considered in bad taste, obscene, offensive, controversial, inciting violence or discrimination on grounds of sex, race or religion, contrary to public order or unlawful; (iii) may not link to any page of the Webspace other than the homepage; (iv) must link to the address of the Webspace itself, without allowing the Webspace making the link to reproduce the Webspace as part of its website or within one of its frames or to create a browser on any of the pages of the Webspace. The Company may request, at any time, that you remove any link to the Webspace, after which you must immediately proceed to remove it",
+          "The company cannot control the information, contents, products or services provided by other Websites that have established links to the Webspace"
+        ]
+      },
+      {
+        "title": "8. DATA PROTECTION",
+        "content": [
+          "To use some of the Services, the User must first provide certain personal data. The company will automatically process this data and will apply the corresponding security measures, all in compliance with the RGPD, LOPDGDD and LSSI. The User may access the policy followed in the processing of personal data, as well as the establishment of the purposes previously established, under the conditions defined in the Privacy Policy"
+        ]
+      },
+      {
+        "title": "9.COOKIES",
+        "content": [
+          "The company reserves the right to use “cookie” technology on the Website in order to recognise you as a frequent User and to personalise your use of the Website by pre-selecting your language, or more desired or specific content",
+          "Cookies collect the user's IP address and Google is responsible for processing this information",
+          "Cookies are files sent to a browser, via a web server, to record the User's browsing on the Website, when the User allows them to be received. If you wish, you can configure your browser to be notified on screen of the reception of cookies and to prevent the installation of cookies on your hard drive. Please consult your browser's instructions and manuals for more information",
+          "Thanks to cookies, it is possible to recognise the browser of the computer used by the User in order to provide content and offer the browsing or advertising preferences of the User, to the demographic profiles of the Users as well as to measure visits and traffic parameters, monitor progress and number of entries"
+        ]
+      },
+      {
+        "title": "10. REPRESENTATIONS AND WARRANTIES",
+        "content": [
+          "In general, the contents and services offered on the Webspace are for information purposes only. Therefore, by offering them, no warranty or representation is given in relation to the contents and services offered on the Web Site, including, but not limited to, warranties of legality, reliability, usefulness, truthfulness, accuracy or merchantability, except to the extent that such statements and warranties cannot be excluded by law"
+        ]
+      },
+      {
+        "title": "11. MAJOR FORCE",
+        "content": [
+          "The company shall not be liable in all cases of impossibility to provide service, if this is due to prolonged interruptions of the electricity supply, telecommunications lines, social conflicts, strikes, rebellion, explosions, floods, acts and omissions of the Government, and in general all cases of force majeure or fortuitous events"
+        ]
+      },
+      {
+        "title": "12. RESOLUTION OF DISPUTES. APPLICABLE LAW AND JURISDICTION",
+        "content": [
+          "These General Conditions of Use, as well as the use of the Website, shall be governed by Spanish law. For the resolution of any dispute, the parties shall submit to the Courts and Tribunals of the registered office of the person responsible for the website",
+          "In the event that any provision of these General Conditions of Use is unenforceable or void under applicable law or as a result of a judicial or administrative decision, such unenforceability or invalidity shall not render these General Conditions of Use unenforceable or void as a whole. In such cases, the company shall proceed to modify or replace such provision with one that is valid and enforceable and that, to the extent possible, achieves the objective and intent reflected in the original provision."
+        ]
+      }
+    ]
+  },
   "SignIn": {
     "signin": "Sign In",
     "email": "Email address",

@@ -31,6 +31,28 @@
         "order": "# {order_id}",
         "stand": "Comerç nº: {stand_id}"
     },
+    "Purchase": {
+        "header": "Les meves compres",
+        "title": "Id: {id}",
+        "total": "Total: {amount} {currency}",
+        "subTotal": "Tatal comanda: {amount} {currency}",
+        "lineTotal": "{amount} {currency}",
+        "order": "# {order_id}",
+        "stand": "Comerç nº: {stand_id}",
+        "next": "Continua",
+        "finish": "Finalitzar",
+        "checkout": "Checkout",
+        "pay": "Pagament",
+        "summary": "Resum",
+        "payment-method": "Mètode de Pagament",
+        "quantity": "Quantitat: {quantity} Kg",
+        "confirm": "Confirmar",
+        "cancel": "Cancelar",
+        "confirmation-dialog": "Estas segur?"
+    },
+    "Search": {
+        "apply-filter": "Cerca"
+    },
     "Landing": {
         "SignIn": "Inicia sessió",
         "text": "Ja tens un compte? ",
