@@ -305,7 +305,7 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
         <Stack sx={{ position: "fixed", bottom: "0px", width: "90%", marginBottom: "4rem !important" }}>
           <Stack direction="row-reverse"
             justifyContent="flex-start" sx={{ width: "inherit", maxWidth: "90%" }}>
-            <Button type='submit' >
+            <Button variant="contained" type='submit' >
               {'Pay'}
             </Button>
             <Button color="secondary" onClick={handlePrevious}>
@@ -411,7 +411,7 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
         <Stack direction="row" flexDirection="row-reverse" sx={{ width: "inherit", maxWidth: "90%" }} >
           {
             activeStep !== 1 && activeStep < 3 ?
-              <Button onClick={handleNext}>
+              <Button variant="contained" onClick={handleNext}>
                 {activeStep === steps.length - 1 ? t('finish') : t('next')}
               </Button> :
               null
