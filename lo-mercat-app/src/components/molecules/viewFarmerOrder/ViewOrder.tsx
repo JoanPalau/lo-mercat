@@ -95,7 +95,7 @@ const ListOrder = ({ farmerOrder, props }: any) => {
     return (
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
         <div>
-            <h2>{farmerOrder.length == 0 ? "" : "Order number"}</h2>
+            <h2>{farmerOrder.length == 0 ? "NO ORDERS YET :(" : "Order number"}</h2>
             <ul className="list-group">{results} </ul>
         </div>
     );

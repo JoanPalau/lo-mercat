@@ -112,7 +112,7 @@ export default function TopNavigation() {
             </Link>
           </ListItem>
           <ListItem disablePadding>
-            <Link href="/addstock" style={{ textDecoration: 'none' }}>
+            <Link href="/farmers/addstock" style={{ textDecoration: 'none' }}>
             <ListItemButton>
               <ListItemIcon>
                 <Inventory/>
@@ -122,7 +122,7 @@ export default function TopNavigation() {
             </Link>
           </ListItem>
           <ListItem disablePadding>
-            <Link href="/joinMarket" style={{ textDecoration: 'none' }}>
+            <Link href="/farmers/addstock" style={{ textDecoration: 'none' }}>
             <ListItemButton>
               <ListItemIcon>
                 <Storefront/>
@@ -132,7 +132,7 @@ export default function TopNavigation() {
             </Link>
           </ListItem>
           <ListItem disablePadding>
-            <Link href="/marketInfo" style={{ textDecoration: 'none' }}>
+            <Link href="/market/marketinfo" style={{ textDecoration: 'none' }}>
             <ListItemButton>
               <ListItemIcon>
                 <Store/>
@@ -142,7 +142,7 @@ export default function TopNavigation() {
             </Link>
           </ListItem>
           <ListItem disablePadding>
-            <Link href="/protected" style={{ textDecoration: 'none' }}>
+            <Link href="/farmers/orderlines" style={{ textDecoration: 'none' }}>
             <ListItemButton>
               <ListItemIcon>
                 <Shop/>
