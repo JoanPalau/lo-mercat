@@ -146,7 +146,7 @@ export const Search: NextPageWithLayout<Props> = (props: Props) => {
           <Autocomplete
             disablePortal
             id="search"
-            onChange={(event, value: { id: string, label: string }) => {
+            onChange={(event:any, value: any) => {
               setProduct(value.label);
             }}
             options={props.products}
