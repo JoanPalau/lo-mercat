@@ -52,6 +52,9 @@ const ViewProductStock = ({ stock, props }: any) => {
 
     console.log(stock);
     stock.forEach((stock: any) => {
+        let isKilo = stock.stockType == "KG";
+        let stockWord = isKilo ? "kg" : "unit";
+        let unitWord = isKilo ? "kg" : " - ";
         results.push(
             <li className="list-group-item" >
                 <Box sx={{ mx: 'auto', height: 10 }} />
@@ -59,7 +62,7 @@ const ViewProductStock = ({ stock, props }: any) => {
                     container
                     spacing={0}
                 >
-                    {stock.product.name} {stock.quantity}kg {stock.cost}€/kg
+                    {stock.product.name} {stock.quantity}{unitWord} {stock.cost}€/{stockWord}
                     <Box sx={{ mx: 'auto', width: 4 }} />
                     <Button variant="contained" color='error' onClick={(data) => rem(stock)}>
                         remove

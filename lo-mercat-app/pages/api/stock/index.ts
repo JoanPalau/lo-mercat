@@ -11,6 +11,7 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     } = req
     let productId = req.body.product_id as string;
     let farmerId = req.body.farmer_id as string;
+    let unitSelected = req.body.unitSelected as string;
     let Quantity: number = + (req.body.quantity as string);
     let Cost: number = + (req.body.cost as string);
     let stock = null;
@@ -36,12 +37,14 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
                 update: {
                     quantity: Quantity,
                     cost: Cost,
+                    stockType: unitSelected,
                 },
                 create: {
                     quantity: Quantity,
                     cost: Cost,
                     farmerId,
-                    productId
+                    productId,
+                    stockType: unitSelected,
                 },
             }
             );

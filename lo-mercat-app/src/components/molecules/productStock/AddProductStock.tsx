@@ -26,6 +26,7 @@ type Inputs = {
     quantity: number,
     cost: number,
     productSelected: string,
+    unitSelected: string,
 };
 
 async function setStock(data: any, session: any) {
@@ -37,6 +38,7 @@ async function setStock(data: any, session: any) {
                 product_id: data.productSelected,
                 farmer_id: session.farmer.id,
                 quantity: data.quantity,
+                unitSelected: data.unitSelected,
                 cost: data.cost,
             }),
             headers: new Headers({ 'Content-Type': 'application/json', Accept: 'application/json', }),
@@ -103,7 +105,14 @@ const AddProductForm = ({ product, props }: any) => {
             <Box sx={{ mx: 'auto', height: 20 }}/>
             <Typography variant="h5">Select Product</Typography>
             <Select
- {...register("productSelected", { required: true })} label={t("selector")} >{results}</Select>
+            {...register("productSelected", { required: true })} label={t("selector")} >{results}</Select>
+            <Box sx={{ mx: 'auto', height: 20 }}/>
+            <Typography variant="h5">Select unit type</Typography>
+            <Select
+            {...register("unitSelected", { required: true })} label={t("selector")} >
+                <MenuItem value="KG">kilos</MenuItem>
+                <MenuItem value="UNIT">units</MenuItem>
+            </Select>
             <Box sx={{ mx: 'auto', height: 40 }}/>
             <div className='row g-3 mt-0'>
                 <Grid container spacing={2}>
