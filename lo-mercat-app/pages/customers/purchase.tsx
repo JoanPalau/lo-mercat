@@ -163,6 +163,7 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
 
   const steps = [
     t('checkout'),
+    'Payment Method',
     t('pay'),
     t('summary')
   ]
@@ -212,9 +213,12 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
   }
 
   const handleNext = () => {
+    if (activeStep == steps.length - 2) {
+      sendPushNotification();
+    }
     if (activeStep == steps.length - 1) {
       Router.push('/customers/home');
-      sendPushNotification();
+      
 
     }
     setOpen(new Set());
@@ -269,11 +273,11 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
     handleDialogDisplay();
   }
 
-  const renderPayment = () => {
+  const renderPaymentMethod = () => {
     return (
       <Stack component="form" direction="column" onSubmit={handleSubmit}
-        justifyContent="center"
-        alignItems="center" spacing={2} sx={{ marginTop: "1.5rem", width: "inherit", marginBottom: "4.5rem" }}>
+      justifyContent="center"
+      alignItems="center" spacing={2} sx={{ marginTop: "1.5rem", width: "inherit", marginBottom: "4.5rem" }}>
         <FormControl>
           <FormLabel id="demo-row-radio-buttons-group-label">{t("payment-method")}</FormLabel>
           <RadioGroup
@@ -285,8 +289,40 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
             <FormControlLabel value="Visa" control={<Radio />} label="Visa" />
             <FormControlLabel value="MasterCard" control={<Radio />} label="MasterCard" />
             <FormControlLabel value="AmericanExpress" control={<Radio />} label="AmericanExpress" />
+            <FormControlLabel value="PayPal" control={<Radio />} label="PayPal" />
           </RadioGroup>
         </FormControl>
+        <Stack sx={{ position: "fixed", bottom: "200px", width: "40%", marginBottom: "4rem !important" }}>
+        <Typography
+            variant="h6"
+            component="h1"
+            gutterBottom>
+              By clicking this button you agree to pay the bill directly at the market stand:
+          </Typography>
+            <Button variant="contained" onClick={() => {handleNext(); handleNext()}}>
+              {'Pay Directly with cash'}
+            </Button>
+        </Stack>
+        <Stack sx={{ position: "fixed", bottom: "0px", width: "90%", marginBottom: "4rem !important" }}>
+          <Stack direction="row-reverse"
+            justifyContent="flex-start" sx={{ width: "inherit", maxWidth: "90%" }}>
+            <Button variant="contained" onClick={handleNext}>
+              {'Siguiente'}
+            </Button>
+            <Button color="secondary" onClick={handlePrevious}>
+              {'Cancel'}
+            </Button>
+          </Stack>
+        </Stack>
+      </Stack>
+    )
+  }
+
+  const renderPayment = () => {
+    return (
+      <Stack component="form" direction="column" onSubmit={handleSubmit}
+        justifyContent="center"
+        alignItems="center" spacing={2} sx={{ marginTop: "1.5rem", width: "inherit", marginBottom: "4.5rem" }}>
         <TextField
           required
           id="outlined-required"
@@ -302,7 +338,7 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
           id="outlined-required"
           label="Card Owner"
         />
-        <Stack sx={{ position: "fixed", bottom: "0px", width: "90%", marginBottom: "4rem !important" }}>
+        <Stack sx={{ position: "fixed", bottom: "0px", width: "85%", marginBottom: "4rem !important" }}>
           <Stack direction="row-reverse"
             justifyContent="flex-start" sx={{ width: "inherit", maxWidth: "90%" }}>
             <Button variant="contained" type='submit' >
@@ -404,13 +440,14 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
           ))}
         </Stepper>
         {
-          activeStep === 1 ? renderPayment() : renderList()
+          activeStep === 1 ? renderPaymentMethod() :
+            activeStep === 2 ? renderPayment() : renderList()
         }
       </Stack>
       <Stack sx={{ position: "fixed", bottom: "0px", marginBottom: "4rem", width: "inherit", maxWidth: "inherit" }}>
         <Stack direction="row" flexDirection="row-reverse" sx={{ width: "inherit", maxWidth: "90%" }} >
           {
-            activeStep !== 1 && activeStep < 3 ?
+            activeStep !== 2 && activeStep !== 1 && activeStep < steps.length ?
               <Button variant="contained" onClick={handleNext}>
                 {activeStep === steps.length - 1 ? t('finish') : t('next')}
               </Button> :

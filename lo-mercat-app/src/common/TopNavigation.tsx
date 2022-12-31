@@ -40,6 +40,10 @@ function loginBut(status: string) {
   return <></>
 }
 
+function fulllogout() {
+  signOut({callbackUrl: '/'});
+}
+
 
 export default function TopNavigation() {
   const [state, setState] = React.useState({
@@ -218,7 +222,7 @@ export default function TopNavigation() {
         alignItems="center"
         justifyContent="center"
         >
-        <Button variant="outlined" onClick={() => signOut({callbackUrl: '/'})}>
+        <Button variant="outlined" onClick={() => fulllogout()}>
           Sign Out
         </Button>
         </Grid>   
