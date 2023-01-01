@@ -23,12 +23,13 @@ model Farmer {
 }
 
 model Market {
-  id       String     @id @unique @default(cuid())
-  name     String
-  location String?
-  schedule String?
-  Stand    Stand[]
-  type     MarketType
+  id        String      @id @unique @default(cuid())
+  name      String
+  location  String?
+  schedule  String?
+  Stand     Stand[]
+  type      MarketType
+  OrderLine OrderLine[]
 }
 
 model Stand {
@@ -43,7 +44,7 @@ model Stand {
 model Stock {
   id        String      @id @unique @default(cuid())
   quantity  Int
-  stockType StockType  @default(KG)
+  stockType StockType   @default(KG)
   cost      Int
   farmer    Farmer      @relation(fields: [farmerId], references: [id])
   farmerId  String
@@ -61,13 +62,16 @@ model Product {
 }
 
 model OrderLine {
-  id       String @id @unique @default(cuid())
-  quantity Int
-  cost     Int
-  stock    Stock  @relation(fields: [stockId], references: [id])
-  stockId  String
-  order    Order  @relation(fields: [orderId], references: [id])
-  orderId  String
+  id         String   @id @unique @default(cuid())
+  quantity   Int
+  cost       Int
+  stock      Stock    @relation(fields: [stockId], references: [id])
+  stockId    String
+  order      Order    @relation(fields: [orderId], references: [id])
+  orderId    String
+  market     Market?  @relation(fields: [marketId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  marketId   String?
+  created_at DateTime @default(now())
 }
 
 model Order {

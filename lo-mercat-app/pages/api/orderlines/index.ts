@@ -11,6 +11,7 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
     let orderId = req.body.orderId as string;
     let quantity: number = + (req.body.quantity as string);
     let cost: number = + (req.body.cost as string);
+    let marketId: string = (req.body.marketId as string);
     let orderline = null;
     //res.status(200).json({hello:'world'});
     switch (method) {
@@ -19,7 +20,8 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
                 stockId,
                 orderId,
                 quantity,
-                cost
+                cost,
+                marketId
             }; 
             orderline = await prisma.orderLine.create({
                 data: val

@@ -1,6 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 const bcrypt = require("bcrypt");
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
+const { faker } = require('@faker-js/faker');
 
 async function updateOrCreate({ schema, where, update, create }) {
   let created = true;
@@ -120,7 +121,7 @@ async function createOrder({purchaseId, id}) {
   });
 }
 
-async function createOrderLine({stockId, orderId, quantity, cost, id}) {
+async function createOrderLine({stockId, orderId, quantity, cost, id, marketId, created_at}) {
   return await updateOrCreate({
     schema: prisma.orderLine,
     where: {
@@ -130,14 +131,18 @@ async function createOrderLine({stockId, orderId, quantity, cost, id}) {
       stockId,
       orderId,
       quantity,
-      cost
+      cost,
+      marketId,
+      created_at
     },
     create: {
       stockId,
       orderId,
       quantity,
       cost,
-      id
+      id,
+      marketId,
+      created_at
     }
   });
 }
@@ -356,30 +361,65 @@ async function main() {
     }
   );
 
-  let purchase1 = await createPurchase(
-    {
-      customerId: customerA.obj.id,
-      id: '1'
-    }
-  );
-
-  let order1 = await createOrder(
-    {
-      purchaseId: purchase1.obj.id,
-      id: '1'
-    }
-  );
-
-  let orderLine1 = await createOrderLine(
-    {
-      stockId: beta_potato.obj.id,
-      orderId: order1.obj.id,
-      quantity: 13,
-      cost: 20,
-      id: '1'
-    }
-  );
+  let products = [
+    beta_apple,
+    beta_pineapple,
+    beta_potato,
+    alpha_apple,
+    alpha_pineapple,
+    alpha_potato
+  ];
+  let customers = [
+    customerA,
+    customerB
+  ]
+  let markets = [
+    balafia,
+    tarragona,
+    barcelona
+  ];
+  let count = 1;
   
+  for(let i = 0; i < products.length; i++){
+    let product = products[i];
+    let purchasesNumber = faker.datatype.number({ min: 2, max: 50 });
+    for(let j = 0; j < purchasesNumber; j++) {
+      var costumerIndex = Math.floor(Math.random() * customers.length);
+      let costumer = customers[costumerIndex];
+      let marketIndex = Math.floor(Math.random() * markets.length);
+      let market = markets[marketIndex];
+
+      let purchase1 = await createPurchase(
+        {
+          customerId: costumer.obj.id,
+          id: '' + count
+        }
+      );
+    
+      let order1 = await createOrder(
+        {
+          purchaseId: purchase1.obj.id,
+          id: '' + count
+        }
+      );
+    
+      let orderLine1 = await createOrderLine(
+        {
+          stockId: product.obj.id,
+          orderId: order1.obj.id,
+          quantity: faker.datatype.number({ min: 1, max: 25 }),
+          cost: faker.datatype.number({ min: 10, max: 278 }),
+          id: '' + count,
+          marketId: market.obj.id,
+          created_at: faker.date.past(1)
+        }
+      );
+
+      count++;
+    }
+    
+  }
+
 }
 
 main()
