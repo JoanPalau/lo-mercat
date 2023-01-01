@@ -81,7 +81,7 @@ export async function getServerSideProps(context: NextPageContext) {
     }
 }
 
-const graphPage: NextPageWithLayout = ({ props, farmerOrder }: any) => {
+const GraphPage: NextPageWithLayout = ({ props, farmerOrder }: any) => {
     farmerOrder = JSON.parse(farmerOrder);
     let markets:Set<string> = new Set();
     const [byMarket, setbyMarket] = React.useState(true);
@@ -193,7 +193,7 @@ const graphPage: NextPageWithLayout = ({ props, farmerOrder }: any) => {
     );
 }
 
-graphPage.getLayout = function getLayout(page: ReactElement) {
+GraphPage.getLayout = function getLayout(page: ReactElement) {
     return (
         <Layout>
             {page}
@@ -201,4 +201,4 @@ graphPage.getLayout = function getLayout(page: ReactElement) {
     )
 }
 
-export default graphPage;
+export default GraphPage;
