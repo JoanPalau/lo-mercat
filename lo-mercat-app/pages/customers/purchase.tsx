@@ -78,6 +78,7 @@ type Props = {
   messages: object
   purchase: CustomPurchase
 }
+var cupon;
 
 export async function getServerSideProps(context: NextPageContext) {
 
@@ -373,8 +374,11 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
             {t('total', { amount: purchase.total.amount, currency: purchase.total.currency })}
           </Typography>
         </Stack>
+        <TextField id="outlined-search" label="DISCOUNT" type="search" value={cupon}/>
+        
       </>
     )
+    
   }
 
   const renderItem = (order: CustomOrder) => {
