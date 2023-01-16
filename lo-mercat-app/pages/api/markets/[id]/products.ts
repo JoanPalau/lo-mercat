@@ -21,7 +21,8 @@ export default async function entrypoint(req: NextApiRequest, res: NextApiRespon
             let query_select = {
                 product: {
                     select: {
-                        name: true
+                        name: true,
+                        id: true
                     }
                 }
             }

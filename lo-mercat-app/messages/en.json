@@ -48,7 +48,7 @@
     "pay": "Pay",
     "summary": "Summary",
     "payment-method": "Payment Method",
-    "quantity": "Quantity: {quantity} Kg",
+    "quantity": "Quantity: {quantity} {units}",
     "confirm": "Confirm",
     "cancel": "Cancel",
     "confirmation-dialog": "Are you sure?"
@@ -60,7 +60,7 @@
     "product": "Product",
     "stand": "Stand",
     "search-type": "Search Type",
-    "quantity": "Available quantity: {quantity} Kg",
+    "quantity": "Available quantity: {quantity} {units}",
     "farmer": "Provider Id {id}",
     "results": "Found items:"
   },
