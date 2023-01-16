@@ -221,10 +221,17 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
     open.has(id) ? openCopy.delete(id) : openCopy.add(id);
     setOpen(openCopy);
   }
-  const [coupon, setCoupon] = useState('');
+  const [inputValue, setInputValue] = useState("");
+  const [isLomercat, setIsLomercat] = useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCoupon(event.target.value);
+    setInputValue(event.target.value);
+
+    if (event.target.value === "LOMERCAT") {
+      setIsLomercat(true);
+    } else {
+      setIsLomercat(false);
+    }
   };
 
   const handleNext = () => {
@@ -403,6 +410,17 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
           value={coupon}
           onChange={handleChange}
         />
+        {isLomercat && <p>It's a Lomercat!</p>}
+        {if(isLomercat)
+          <Typography
+          variant="h6"
+          component="h1"
+          gutterBottom>
+            {t('totaltax', { amount: purchase.total.amounttax, currency: purchase.total.currency })}
+        </Typography>
+        }
+
+
         
       </>
     )
