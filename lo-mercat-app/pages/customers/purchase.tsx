@@ -47,6 +47,7 @@ type CustomPurchase = {
   orders: CustomOrder[]
   total: {
     amount: number,
+    amounttax:number,
     currency: string
   }
 }
@@ -56,6 +57,7 @@ type CustomOrder = {
   stand: number,
   total: {
     amount: number,
+    amounttax:number,
     currency: string
   },
   orderLines: CustomOrderLine[]
@@ -70,6 +72,7 @@ type CustomOrderLine = {
   },
   total: {
     amount: number,
+    amounttax:number,
     currency: string
   },
 }
@@ -86,6 +89,7 @@ export async function getServerSideProps(context: NextPageContext) {
   const purchase = {
     total: {
       amount: 28.00,
+      amounttax:33.60,
       currency: "€"
     },
     orders: [
@@ -94,6 +98,7 @@ export async function getServerSideProps(context: NextPageContext) {
         completed: false,
         total: {
           amount: 18.00,
+          amounttax:21.60,
           currency: "€"
         },
         orderLines: [
@@ -106,6 +111,7 @@ export async function getServerSideProps(context: NextPageContext) {
             },
             total: {
               amount: 15.00,
+              amounttax:18.00,
               currency: "€"
             }
           },
@@ -118,6 +124,7 @@ export async function getServerSideProps(context: NextPageContext) {
             },
             total: {
               amount: 3.00,
+              amounttax:3.60,
               currency: "€"
             }
           }
@@ -129,6 +136,7 @@ export async function getServerSideProps(context: NextPageContext) {
         completed: false,
         total: {
           amount: 10.00,
+          amounttax:12.00,
           currency: "€"
         },
         orderLines: [
@@ -141,6 +149,7 @@ export async function getServerSideProps(context: NextPageContext) {
             },
             total: {
               amount: 10.00,
+              amounttax:12.00,
               currency: "€"
             }
           }
@@ -212,6 +221,11 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
     open.has(id) ? openCopy.delete(id) : openCopy.add(id);
     setOpen(openCopy);
   }
+  const [coupon, setCoupon] = useState('');
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCoupon(event.target.value);
+  };
 
   const handleNext = () => {
     if (activeStep == steps.length - 2) {
@@ -374,7 +388,21 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
             {t('total', { amount: purchase.total.amount, currency: purchase.total.currency })}
           </Typography>
         </Stack>
-        <TextField id="outlined-search" label="DISCOUNT" type="search" value={cupon}/>
+        <Stack direction="row"
+          justifyContent="flex-end"
+          alignItems="center">
+          <Typography
+            variant="h6"
+            component="h1"
+            gutterBottom>
+              {t('totaltax', { amount: purchase.total.amounttax, currency: purchase.total.currency })}
+          </Typography>
+        </Stack>
+        <TextField
+          label="Coupon"
+          value={coupon}
+          onChange={handleChange}
+        />
         
       </>
     )

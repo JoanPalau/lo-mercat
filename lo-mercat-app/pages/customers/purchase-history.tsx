@@ -62,12 +62,14 @@ export async function getServerSideProps(context: NextPageContext) {
           stand: 5,
           total: {
             amount: 15.99,
+            amounttax: 19.18,
             currency: '€'
           }
         }
       ],
       total: {
         amount: 15.99,
+        amounttax: 19.18,
         currency: '€'
       }
     },
@@ -81,6 +83,7 @@ export async function getServerSideProps(context: NextPageContext) {
           stand: 12,
           total: {
             amount: 12.99,
+            amounttax: 15.58,
             currency: '€'
           }
         },
@@ -89,12 +92,14 @@ export async function getServerSideProps(context: NextPageContext) {
           stand: 10,
           total: {
             amount: 9.99,
+            amounttax: 11.98,
             currency: '€'
           }
         }
       ],
       total: {
         amount: 22.98,
+        amounttax: 27.57,
         currency: '€'
       }
     }
@@ -134,7 +139,8 @@ export const PurchaseHistory: NextPageWithLayout<Props> = (props: Props) => {
             primary={t('title', { id: purchase.id })}
             secondary={purchase.created_at} />
           <ListItemSecondaryAction>
-            <ListItemText primary={t('total', { amount: purchase.total.amount, currency: purchase.total.currency })} />
+            <ListItemText primary={t('total', { amount: purchase.total.amount, currency: purchase.total.currency })} 
+            secondary={t('totaltax', {amount: purchase.total.amounttax, currency: purchase.total.currency})}/>
           </ListItemSecondaryAction>
         </ListItemButton>
         <Collapse key={purchase.id + '_2'} in={open.has(purchase.id)} timeout="auto" unmountOnExit>
@@ -143,7 +149,8 @@ export const PurchaseHistory: NextPageWithLayout<Props> = (props: Props) => {
               purchase.orders.map((order: CustomOrder) => {
                 return (
                   <ListItem key={order.id} secondaryAction={
-                    <ListItemText primary={t('subtotal', { amount: order.total.amount, currency: order.total.currency })} />
+                    <ListItemText primary={t('subtotal', { amount: order.total.amount, currency: order.total.currency })} 
+                    secondary={t('totaltax', {amount: order.total.amounttax, currency: order.total.currency})}/>
                   }>
                      <ListItemIcon>
 

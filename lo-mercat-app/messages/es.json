@@ -21,12 +21,14 @@
       "completed": "Completada",
       "pending": "En proceso"
     },
-    "total": "Total: {amount} {currency}"
+    "total": "Total: {amount} {currency}",
+    "totaltax": "Total con Impuestos: {amount} {currency}"
   },
   "PurchaseHistory": {
     "header": "Mis compras",
     "title": "Id: {id}",
     "total": "Total: {amount} {currency}",
+    "totaltax": "Total con Impuestos: {amount} {currency}",
     "subtotal": "{amount} {currency}",
     "order": "# {order_id}",
     "stand": "Tienda nº: {stand_id}"
@@ -35,6 +37,7 @@
     "header": "Mis compras",
     "title": "Id: {id}",
     "total": "Total: {amount} {currency}",
+    "totaltax": "Total con Impuestos: {amount} {currency}",
     "subTotal": "Total pedido: {amount} {currency}",
     "lineTotal": "{amount} {currency}",
     "order": "# {order_id}",

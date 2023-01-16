@@ -21,12 +21,14 @@
       "completed": "Completed",
       "pending": "In proces"
     },
-    "total": "Total: {amount} {currency}"
+    "total": "Total: {amount} {currency}",
+    "totaltax": "Total with Taxes: {amount} {currency}"
   },
   "PurchaseHistory": {
     "header": "My purchases",
     "title": "Id: {id}",
     "total": "Total: {amount} {currency}",
+    "totaltax": "Total with Taxes: {amount} {currency}",
     "subtotal": "{amount} {currency}",
     "order": "# {order_id}",
     "stand": "Stand #: {stand_id}"
@@ -35,6 +37,7 @@
     "header": "My purchases",
     "title": "Id: {id}",
     "total": "Total: {amount} {currency}",
+    "totaltax": "Total with Taxes: {amount} {currency}",
     "subTotal": "Order Total: {amount} {currency}",
     "lineTotal": "{amount} {currency}",
     "order": "# {order_id}",

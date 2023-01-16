@@ -43,9 +43,10 @@ export const OrderHistory: NextPageWithLayout<Props> = (props: Props) => {
   const renderItem = (order: Order) => {
     return (
       <ListItem divider key={order.id} secondaryAction= {
-        <ListItemText primary={t('total', {amount: '15.99', currency: '€'})} />
+        <ListItemText primary={t('total', {amount: '15.99', currency: '€'})} 
+        secondary={t('totaltax', {amount: '19.18', currency: '€'})} />
       }>
-        <ListItemText 
+        <ListItemText
           primary={t('title', {number: order.id})} 
           secondary={t('status.text', {status: order.completed ? t('status.completed') : t('status.pending')})} />
       </ListItem>
