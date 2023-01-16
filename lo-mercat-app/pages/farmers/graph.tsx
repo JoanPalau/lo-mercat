@@ -132,6 +132,7 @@ const GraphPage: NextPageWithLayout = ({ props, farmerOrder }: any) => {
         'rgb(255, 99, 132)',
         'rgb(75, 192, 192)',
         'rgb(53, 162, 235)',
+        'rgb(221,160,221)',
     ]
     let datasets = [];
 
@@ -157,7 +158,7 @@ const GraphPage: NextPageWithLayout = ({ props, farmerOrder }: any) => {
             {
                 label: marketsL[i],
                 data: value,
-                backgroundColor: colors[i % 3],
+                backgroundColor: colors[i % colors.length],
             }
         )
     }

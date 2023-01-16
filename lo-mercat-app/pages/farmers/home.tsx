@@ -213,6 +213,28 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
             </CardActionArea>
           </Card>
           </p>
+          <p>
+          <Card sx={{
+              display: 'block',
+              transitionDuration: '0.3s',
+          }}>
+            <CardActionArea>
+              <Link href="/farmers/graph">
+                <CardContent>
+                  <Image src={"/graphics.svg"} alt="" width={265} height={150} />
+                </CardContent>
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    Statistics Area
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Control where you sell and what you sell
+                  </Typography>
+                </CardContent>
+              </Link>
+            </CardActionArea>
+          </Card>
+          </p>
         </div>
         </Grid>
       </Layout>

@@ -221,6 +221,15 @@ async function main() {
       type: 'PUBLIC'
     }
   );
+  let girona = await createMarket(
+    {
+      id: '4',
+      name: 'Girona',
+      location: 'Girona',
+      schedule: 'Dilluns-Dissabte',
+      type: 'PUBLIC'
+    }
+  );
 
   let user_alpha = await createUser({
     id: '1',
@@ -376,7 +385,8 @@ async function main() {
   let markets = [
     balafia,
     tarragona,
-    barcelona
+    barcelona,
+    girona
   ];
   let count = 1;
   

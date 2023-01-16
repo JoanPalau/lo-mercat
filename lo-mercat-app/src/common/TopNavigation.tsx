@@ -15,7 +15,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import React from 'react';
-import { Home, Inventory, Paid, Search, Shop, Store, Storefront } from '@mui/icons-material';
+import { BarChart, Home, Inventory, Paid, Search, Shop, Store, Storefront } from '@mui/icons-material';
 import styled from '@emotion/styled';
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
@@ -108,6 +108,16 @@ export default function TopNavigation() {
                             <Shop/>
                           </ListItemIcon>
                             <ListItemText primary={'Purchases'} />
+                        </ListItemButton>
+                        </Link>
+                      </ListItem>
+                      <ListItem disablePadding>
+                        <Link href="/farmers/graph" style={{ textDecoration: 'none' }}>
+                        <ListItemButton>
+                          <ListItemIcon>
+                            <BarChart/>
+                          </ListItemIcon>
+                            <ListItemText primary={'Statistics'} />
                         </ListItemButton>
                         </Link>
                       </ListItem>
