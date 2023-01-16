@@ -30,6 +30,7 @@ type CustomPurchase = {
   orders: CustomOrder[]
   total: {
     amount: number,
+    amounttax: number,
     currency: string
   }
 }
@@ -39,6 +40,7 @@ type CustomOrder = {
   stand: number,
   total: {
     amount: number,
+    amounttax: number,
     currency: string
   }
 }
