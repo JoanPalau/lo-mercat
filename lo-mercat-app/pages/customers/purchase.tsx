@@ -89,7 +89,7 @@ export async function getServerSideProps(context: NextPageContext) {
   const purchase = {
     total: {
       amount: 28.00,
-      amounttax:33.60,
+      amounttax:30.80,
       currency: "€"
     },
     orders: [
@@ -98,7 +98,7 @@ export async function getServerSideProps(context: NextPageContext) {
         completed: false,
         total: {
           amount: 18.00,
-          amounttax:21.60,
+          amounttax:19.80,
           currency: "€"
         },
         orderLines: [
@@ -111,7 +111,7 @@ export async function getServerSideProps(context: NextPageContext) {
             },
             total: {
               amount: 15.00,
-              amounttax:18.00,
+              amounttax:16.50,
               currency: "€"
             }
           },
@@ -124,7 +124,7 @@ export async function getServerSideProps(context: NextPageContext) {
             },
             total: {
               amount: 3.00,
-              amounttax:3.60,
+              amounttax:3.30,
               currency: "€"
             }
           }
@@ -136,7 +136,7 @@ export async function getServerSideProps(context: NextPageContext) {
         completed: false,
         total: {
           amount: 10.00,
-          amounttax:12.00,
+          amounttax:11.00,
           currency: "€"
         },
         orderLines: [
@@ -149,7 +149,7 @@ export async function getServerSideProps(context: NextPageContext) {
             },
             total: {
               amount: 10.00,
-              amounttax:12.00,
+              amounttax:11.00,
               currency: "€"
             }
           }

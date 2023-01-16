@@ -64,14 +64,14 @@ export async function getServerSideProps(context: NextPageContext) {
           stand: 5,
           total: {
             amount: 15.99,
-            amounttax: 19.18,
+            amounttax: 17.60,
             currency: '€'
           }
         }
       ],
       total: {
         amount: 15.99,
-        amounttax: 19.18,
+        amounttax: 17.60,
         currency: '€'
       }
     },
@@ -85,7 +85,7 @@ export async function getServerSideProps(context: NextPageContext) {
           stand: 12,
           total: {
             amount: 12.99,
-            amounttax: 15.58,
+            amounttax: 14.30,
             currency: '€'
           }
         },
@@ -94,7 +94,7 @@ export async function getServerSideProps(context: NextPageContext) {
           stand: 10,
           total: {
             amount: 9.99,
-            amounttax: 11.98,
+            amounttax: 10.98,
             currency: '€'
           }
         }
