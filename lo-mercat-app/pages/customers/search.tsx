@@ -61,12 +61,12 @@ export async function getServerSideProps(context: NextPageContext) {
 
   const parsedProducts: ParsedProduct[] = products.map(
     (product: MyProduct) => {
-      const result: { id: string | undefined, label: string } = { id: undefined, label: '' };
+      const result: { id: string | null, label: string } = { id: null, label: '' };
       result["id"] = product.product.id;
       result["label"] = product.product.name
       return result;
     });
-
+  console.log("Parsed products", parsedProducts);
   return {
     props: {
       messages: (await import(`../../messages/${context.locale}.json`)).default,
@@ -113,12 +113,12 @@ export const Search: NextPageWithLayout<Props> = (props: Props) => {
     }
   }
 
-  const renderItem = (item: { id: string, product: { name: string }, quantity: number, farmerId: number }) => {
+  const renderItem = (item: { id: string, product: { name: string }, quantity: number, farmerId: number, stockType: string }) => {
     return (
       <ListItem key={item.id}>
         <ListItemText
           primary={item.product.name}
-          secondary={t('quantity', { quantity: item.quantity })} />
+          secondary={t('quantity', { quantity: item.quantity, units: item.stockType })} />
         <ListItemText
           primary={t('farmer', { id: item.farmerId })} />
       </ListItem>

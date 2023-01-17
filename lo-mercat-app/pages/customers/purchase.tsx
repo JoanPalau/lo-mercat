@@ -66,6 +66,7 @@ type CustomOrder = {
 type CustomOrderLine = {
   id: number,
   quantity: number,
+  units: string,
   product: {
     id: number,
     name: string
@@ -105,6 +106,7 @@ export async function getServerSideProps(context: NextPageContext) {
           {
             id: 0,
             quantity: '3',
+            units: 'kg',
             product: {
               id: '3',
               name: 'Potatoe'
@@ -118,6 +120,7 @@ export async function getServerSideProps(context: NextPageContext) {
           {
             id: 1,
             quantity: '1',
+            units: 'kg',
             product: {
               id: '2',
               name: 'Apple'
@@ -143,6 +146,7 @@ export async function getServerSideProps(context: NextPageContext) {
           {
             id: 3,
             quantity: '2',
+            units: 'units',
             product: {
               id: '1',
               name: 'Kiwi'
@@ -457,7 +461,7 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
                     }
                     <ListItemText
                       primary={orderLine.product.name}
-                      secondary={t('quantity', {quantity: orderLine.quantity})} />
+                      secondary={t('quantity', {quantity: orderLine.quantity, units: orderLine.units})} />
                     <ListItemText />
                     <ListItemText />
                     <ListItemText />

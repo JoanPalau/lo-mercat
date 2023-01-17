@@ -48,7 +48,7 @@
     "pay": "Pago",
     "summary" : "Resumen",
     "payment-method": "Metodo de pago",
-    "quantity": "Cantidad: {quantity} Kg",
+    "quantity": "Cantidad: {quantity} {units}",
     "confirm": "Confirmar",
     "cancel": "Cancelar",
     "confirmation-dialog": "Seguro que quieres seguir?"
@@ -60,7 +60,7 @@
     "product": "Producto",
     "stand": "Tienda",
     "search-type": "Tipo de búsqueda",
-    "quantity": "Cantidad disponible: {quantity} Kg",
+    "quantity": "Cantidad disponible: {quantity} {units}",
     "farmer": "Id del proveedor {id}",
     "results": "Resultados:"
   },

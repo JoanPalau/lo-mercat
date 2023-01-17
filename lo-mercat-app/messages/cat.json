@@ -48,7 +48,7 @@
         "pay": "Pagament",
         "summary": "Resum",
         "payment-method": "Mètode de Pagament",
-        "quantity": "Quantitat: {quantity} Kg",
+        "quantity": "Quantitat: {quantity} {units}",
         "confirm": "Confirmar",
         "cancel": "Cancelar",
         "confirmation-dialog": "Estas segur?"
@@ -60,7 +60,7 @@
         "product": "Producte",
         "stand": "Parada",
         "search-type": "Tipus de cerca",
-        "quantity": "Quantitat disponible: {quantity} Kg",
+        "quantity": "Quantitat disponible: {quantity} {units}",
         "farmer": "Id del proveidor {id}",
         "results": "Resultats:"
     },
