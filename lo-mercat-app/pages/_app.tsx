@@ -21,7 +21,7 @@ const clientSideEmotionCache = createEmotionCache();
 
 const MyApp = (props : MyAppProps) => {
 
-  const [ orientation, setOrientation ] = useState<number>();
+  const [ orientation, setOrientation ] = useState<number>(0);
   const { store } = wrapper.useWrappedStore(props);
   const { Component, emotionCache = clientSideEmotionCache, pageProps, session } = props;
 

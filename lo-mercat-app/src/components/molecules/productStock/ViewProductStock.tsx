@@ -54,7 +54,7 @@ const ViewProductStock = ({ stock, props }: any) => {
     stock.forEach((stock: any) => {
         let isKilo = stock.stockType == "KG";
         let stockWord = isKilo ? "kg" : "unit";
-        let unitWord = isKilo ? "kg" : " - ";
+        let unitWord = isKilo ? "kg" : "units";
         results.push(
             <li className="list-group-item" >
                 <Box sx={{ mx: 'auto', height: 10 }} />

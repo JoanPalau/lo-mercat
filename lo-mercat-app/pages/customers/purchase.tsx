@@ -145,7 +145,7 @@ export async function getServerSideProps(context: NextPageContext) {
         orderLines: [
           {
             id: 3,
-            quantity: '2',
+            quantity: '30',
             units: 'units',
             product: {
               id: '1',
