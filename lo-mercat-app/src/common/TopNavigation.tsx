@@ -20,6 +20,9 @@ import styled from '@emotion/styled';
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import useWindowDimensions from 'src/hooks/useWindowDimensions';
+import { Icon } from '@mui/material';
+
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 
 const ImageCustom = styled.img`
@@ -296,6 +299,9 @@ export default function TopNavigation() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Lo Mercat
           </Typography>
+            <IconButton color='inherit' onClick={() => {window.location.href = '/customers/purchase'}}>
+              <ShoppingBasketIcon />
+            </IconButton>
             {loginBut(status)}
         </Toolbar>
       </AppBar>
