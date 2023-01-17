@@ -126,7 +126,7 @@ export const Search: NextPageWithLayout<Props> = (props: Props) => {
   const renderItem = (item: { id: string, product: { name: string }, quantity: number, farmerId: number, stockType: string }) => {
     return (
       <ListItem key={item.id}>
-        <ListItemButton sx={{ width: "56px", marginRight: "1" }} onClick={renderDialog}>
+        <ListItemButton sx={{ width: "56px", marginRight: "1" }} onClick={handleDialogDisplay}>
           <ListItemIcon>
             <AddIcon sx={{ "&:hover": { color: "red" } }} />
           </ListItemIcon>
@@ -143,29 +143,17 @@ export const Search: NextPageWithLayout<Props> = (props: Props) => {
   const renderDialog = () => {
     return (
       <Dialog open={showDialog} onClose={handleDialogDisplay} >
-        <DialogTitle>{t('confirmation-dialog')}</DialogTitle>
-        <Stack direction="column" justifyContent="space-evenly" alignItems="center">
+        <Stack sx={{margin: '25px'}} direction="column" justifyContent="space-evenly" alignItems="center">
           <Typography variant="h6"
             component="h1"
             gutterBottom>
             {'Select a quantity'}
           </Typography>
           <TextField label="Quantity" variant="outlined" />
-          <FormControl>
-            <FormLabel id="demo-quantity-unit-selector-label">Mesure units</FormLabel>
-            <RadioGroup
-              row
-              aria-labelledby="demo-quantity-unit-selector-label"
-              name="quantity-unit-selector"
-            >
-              <FormControlLabel value="kg" control={<Radio />} label="Kg's" />
-              <FormControlLabel value="units" control={<Radio />} label="Units" />
-            </RadioGroup>
-          </FormControl>
         </Stack>
         <Stack direction="row" justifyContent="space-evenly" alignItems="center">
-          <Button color="secondary" onClick={handleDialogDisplay}>{t('cancel')}</Button>
-          <Button color="error" onClick={handleDialogDisplay}>{t('confirm')}</Button>
+          <Button color="error" onClick={handleDialogDisplay}>{'Cancel'}</Button>
+          <Button color="primary" onClick={handleDialogDisplay}>{'Confirm'}</Button>
         </Stack>
       </Dialog>
     );
@@ -224,8 +212,8 @@ export const Search: NextPageWithLayout<Props> = (props: Props) => {
             }
           ) : <Stack justifyContent="center" textAlign="center" sx={{ paddingTop: "2rem" }}>{t('empty')}</Stack>
         }
-
       </List>
+      {renderDialog()}
 
 
 
