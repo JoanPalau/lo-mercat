@@ -29,6 +29,12 @@ import FormControl, { formControlClasses } from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+
+import AddIcon from '@mui/icons-material/Add';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
 
 
 type Props = {
@@ -82,8 +88,12 @@ export const Search: NextPageWithLayout<Props> = (props: Props) => {
   const [typeSearch, setTypeSearch] = useState("product");
   const [items, setItems] = useState([]);
 
+  const [showDialog, setShowDialog] = useState(false);
+
   const dispatch = useDispatch();
   const searchState = useSelector(selectSearchState);
+
+  const handleDialogDisplay = () => setShowDialog(!showDialog);
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -116,12 +126,36 @@ export const Search: NextPageWithLayout<Props> = (props: Props) => {
   const renderItem = (item: { id: string, product: { name: string }, quantity: number, farmerId: number, stockType: string }) => {
     return (
       <ListItem key={item.id}>
+        <ListItemButton sx={{ width: "56px", marginRight: "1" }} onClick={handleDialogDisplay}>
+          <ListItemIcon>
+            <AddIcon sx={{ "&:hover": { color: "red" } }} />
+          </ListItemIcon>
+        </ListItemButton>
         <ListItemText
           primary={item.product.name}
           secondary={t('quantity', { quantity: item.quantity, units: item.stockType })} />
         <ListItemText
           primary={t('farmer', { id: item.farmerId })} />
       </ListItem>
+    );
+  }
+
+  const renderDialog = () => {
+    return (
+      <Dialog open={showDialog} onClose={handleDialogDisplay} >
+        <Stack sx={{margin: '25px'}} direction="column" justifyContent="space-evenly" alignItems="center">
+          <Typography variant="h6"
+            component="h1"
+            gutterBottom>
+            {'Select a quantity'}
+          </Typography>
+          <TextField label="Quantity" variant="outlined" />
+        </Stack>
+        <Stack direction="row" justifyContent="space-evenly" alignItems="center">
+          <Button color="error" onClick={handleDialogDisplay}>{'Cancel'}</Button>
+          <Button color="primary" onClick={handleDialogDisplay}>{'Confirm'}</Button>
+        </Stack>
+      </Dialog>
     );
   }
 
@@ -146,7 +180,7 @@ export const Search: NextPageWithLayout<Props> = (props: Props) => {
           <Autocomplete
             disablePortal
             id="search"
-            onChange={(event:any, value: any) => {
+            onChange={(event: any, value: any) => {
               setProduct(value.label);
             }}
             options={props.products}
@@ -155,7 +189,6 @@ export const Search: NextPageWithLayout<Props> = (props: Props) => {
             renderInput={(params) => <TextField {...params} label={t("products")} />}
           />
         </Stack>
-
         <Button variant="contained" type='submit'>{t('apply-filter')}</Button>
       </Stack>
 
@@ -179,8 +212,8 @@ export const Search: NextPageWithLayout<Props> = (props: Props) => {
             }
           ) : <Stack justifyContent="center" textAlign="center" sx={{ paddingTop: "2rem" }}>{t('empty')}</Stack>
         }
-
       </List>
+      {renderDialog()}
 
 
 
