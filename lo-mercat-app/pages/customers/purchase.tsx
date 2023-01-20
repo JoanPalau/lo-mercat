@@ -149,7 +149,7 @@ export async function getServerSideProps(context: NextPageContext) {
             units: 'units',
             product: {
               id: '1',
-              name: 'Kiwi'
+              name: 'Papaya'
             },
             total: {
               amount: 10.00,
@@ -406,7 +406,7 @@ export const Purchase: NextPageWithLayout<Props> = (props: Props) => {
             variant="h6"
             component="h1"
             gutterBottom>
-              {t('totaltax', { amount: purchase.total.amounttax, currency: purchase.total.currency })}
+              {t('totaltax', { amount: (purchase.total.amount * 1.1).toFixed(2), currency: purchase.total.currency })}
           </Typography>
         </Stack>
         <TextField
