@@ -70,7 +70,7 @@ const MyApp = (props : MyAppProps) => {
                   <meta name="keywords" content="Lo mercat, Lleida, producte fresc, fruites, verdures, mercat" />
                   <link rel="icon" href="/favicon.ico" />
                 </Head>
-                {orientation === 0 ? <>
+                {true ? <>
                   <NextNProgress />
                   {getLayout(<Component {...pageProps} />)}
                   </> : screenNotSupported()

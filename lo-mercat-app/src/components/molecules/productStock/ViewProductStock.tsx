@@ -33,12 +33,12 @@ const ViewProductStock = ({ stock, props }: any) => {
         
         console.log("REM");
         MySwal.fire({
-            title: <p>Are you sure?</p>,
+            title: <p>Estas seguro?</p>,
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Yes, delete it!",
-            cancelButtonText: "No, cancel please!",
+            confirmButtonText: "¡Sí, bórralo!",
+            cancelButtonText: "¡No, cancela por favor!",
             reverseButtons: true,
           }).then((dialog) => {
             if (dialog.isConfirmed){
@@ -53,8 +53,8 @@ const ViewProductStock = ({ stock, props }: any) => {
     console.log(stock);
     stock.forEach((stock: any) => {
         let isKilo = stock.stockType == "KG";
-        let stockWord = isKilo ? "kg" : "unit";
-        let unitWord = isKilo ? "kg" : "units";
+        let stockWord = isKilo ? "kg" : "unidad";
+        let unitWord = isKilo ? "kg" : "unidades";
         results.push(
             <li className="list-group-item" >
                 <Box sx={{ mx: 'auto', height: 10 }} />
@@ -65,7 +65,7 @@ const ViewProductStock = ({ stock, props }: any) => {
                     {stock.product.name} {stock.quantity}{unitWord} {stock.cost}€/{stockWord}
                     <Box sx={{ mx: 'auto', width: 4 }} />
                     <Button variant="contained" color='error' onClick={(data) => rem(stock)}>
-                        remove
+                        Eliminar
                     </Button>
                 </Grid>
             </li>
@@ -77,7 +77,7 @@ const ViewProductStock = ({ stock, props }: any) => {
     return (
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
         <div style={{ paddingRight: '10%', paddingLeft: '10%' }}>
-            <h2>{stock.length == 0 ? "No current stock!":  "Active Stock:"}</h2>
+            <h2>{stock.length == 0 ? "¡Sin stock actual!":  "Acción activa:"}</h2>
             <ul className="list-group">{results} </ul>
         </div>
     );

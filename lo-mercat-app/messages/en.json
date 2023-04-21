@@ -235,7 +235,7 @@
     "placeholderquantity": "Enter Quantity",
     "labcost": "Cost",
     "placeholdercost": "Enter Cost",
-    "selector": "Select Product",
+    "selector": "Seleccionar producto",
     "addprod": "Add A new Product",
     "err": "Invalid value, This field is required",
     "button": "Add Stock"

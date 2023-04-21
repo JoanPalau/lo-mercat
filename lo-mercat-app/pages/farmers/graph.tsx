@@ -104,13 +104,14 @@ const GraphPage: NextPageWithLayout = ({ props, farmerOrder }: any) => {
         }
     }
     let marketsL = Array.from(markets);
-    let title = byMarket ? 'Income by month and market' : 'Income by month and product';
+    let title = byMarket ? 'Ingresos por año y mercado' : 'Ingresos por año y producto';
       
     const options = {
+    indexAxis: 'y' as const,
+    maintainAspectRatio: false,
     plugins: {
         title: {
         display: true,
-        
         text: title,
         },
     },
@@ -125,8 +126,12 @@ const GraphPage: NextPageWithLayout = ({ props, farmerOrder }: any) => {
     },
     };
     
-    const labels = [ "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December" ];
+    // const labels = [ "January", "February", "March", "April", "May", "June",
+    // "July", "August", "September", "October", "November", "December" ];
+    //const labels = [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    //"Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ];
+    const labels = [ "2011", "2012", "2013", "2014", "2015", "2016",
+    "2017", "2018", "2019", "2020", "2021", "2022"]
 
     let colors = [
         'rgb(255, 99, 132)',
@@ -177,7 +182,7 @@ const GraphPage: NextPageWithLayout = ({ props, farmerOrder }: any) => {
         direction="column"
         alignItems="center"
         justifyContent="center"
-        style={{ minHeight: '80vh' }}
+        style={{ minHeight: '80vh', maxHeight: '550px' }}
         >
             <ToggleButtonGroup
             color="primary"
@@ -186,10 +191,12 @@ const GraphPage: NextPageWithLayout = ({ props, farmerOrder }: any) => {
             onChange={handleChange}
             aria-label="Platform"
             >
-            <ToggleButton value="Market">Market</ToggleButton>
-            <ToggleButton value="Product">Product</ToggleButton>
+            {    
+            /*<ToggleButton value="Market">Mercado</ToggleButton>
+            <ToggleButton value="Product">Producto</ToggleButton>*/
+            }
             </ToggleButtonGroup>
-            <Bar options={options} data={data} />
+            <Bar options={options} data={data} height={550} width={380} />
         </Grid>
     );
 }

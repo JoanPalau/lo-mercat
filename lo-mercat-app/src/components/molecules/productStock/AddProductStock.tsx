@@ -85,7 +85,7 @@ const AddProductForm = ({ product, props }: any) => {
         alignItems="center"
         justifyContent="center"
         >
-            <Typography variant="h3">Set Stock</Typography>
+            <Typography variant="h3">Establecer y modificar existencias</Typography>
             <Box sx={{ mx: 'auto', height: 20 }}/>
             <Typography variant="h5">{t("labquantity")}</Typography>
             <div className='col-auto col-sm-4'>
@@ -103,20 +103,20 @@ const AddProductForm = ({ product, props }: any) => {
                     {errors.cost && t("err")}
                 </div>
             <Box sx={{ mx: 'auto', height: 20 }}/>
-            <Typography variant="h5">Select Product</Typography>
+            <Typography variant="h5">Seleccionar producto</Typography>
             <Select
             {...register("productSelected", { required: true })} label={t("selector")} >{results}</Select>
             <Box sx={{ mx: 'auto', height: 20 }}/>
-            <Typography variant="h5">Select unit type</Typography>
+            <Typography variant="h5">Seleccionar tipo de unidad</Typography>
             <Select
             {...register("unitSelected", { required: true })} label={t("selector")} >
                 <MenuItem value="KG">kilos</MenuItem>
-                <MenuItem value="UNIT">units</MenuItem>
+                <MenuItem value="UNIT">unidadess</MenuItem>
             </Select>
             <Box sx={{ mx: 'auto', height: 40 }}/>
             <div className='row g-3 mt-0'>
                 <Grid container spacing={2}>
-                    <Button type="submit" variant="outlined">
+                    <Button variant="outlined">
                         {errors.productSelected && t("err")}
                         <Link href="/farmers/addproduct">{t("addprod")}</Link>
                     </Button>

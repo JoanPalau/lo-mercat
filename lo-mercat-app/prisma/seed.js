@@ -190,15 +190,15 @@ async function createStand({farmer, market, id}) {
 
 async function main() {
 
-  let potato = await createProduct('Potato', '1');
-  let pineapple = await  createProduct('Pineapple', '2');
-  let apple = await createProduct('Apple', '3');
+  let potato = await createProduct('Patata', '1');
+  let pineapple = await  createProduct('Piña', '2');
+  let apple = await createProduct('Manzana', '3');
 
   let balafia = await createMarket(
     {
       id: '1',
-      name: 'Balafia',
-      location: 'Balafia',
+      name: 'Lleida',
+      location: 'Lleida',
       schedule: 'Sabado',
       type: 'PUBLIC'
     }

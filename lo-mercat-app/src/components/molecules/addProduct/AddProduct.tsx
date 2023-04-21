@@ -61,7 +61,7 @@ const AddProductForm = ({props}:any) => {
                 </div>
                 <Box sx={{ mx: 'auto', height: 20 }}/>
                 <Button type="submit" variant="contained">
-                    Submit
+                    Registrar
                 </Button>
             </Grid >
         </form >

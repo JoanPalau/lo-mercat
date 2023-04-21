@@ -70,7 +70,7 @@ export default function TopNavigation() {
                           <ListItemIcon>
                             <Home/>
                           </ListItemIcon>
-                            <ListItemText primary={'Home'} />  
+                            <ListItemText primary={'Inicio'} />  
                         </ListItemButton>
                         </Link>
                       </ListItem>
@@ -90,7 +90,7 @@ export default function TopNavigation() {
                           <ListItemIcon>
                             <Storefront/>
                           </ListItemIcon>
-                            <ListItemText primary={'Markets'} />
+                            <ListItemText primary={'Mercados'} />
                         </ListItemButton>
                         </Link>
                       </ListItem>
@@ -110,7 +110,7 @@ export default function TopNavigation() {
                           <ListItemIcon>
                             <Shop/>
                           </ListItemIcon>
-                            <ListItemText primary={'Purchases'} />
+                            <ListItemText primary={'Compras'} />
                         </ListItemButton>
                         </Link>
                       </ListItem>
@@ -120,7 +120,7 @@ export default function TopNavigation() {
                           <ListItemIcon>
                             <BarChart/>
                           </ListItemIcon>
-                            <ListItemText primary={'Statistics'} />
+                            <ListItemText primary={'Estadísticass'} />
                         </ListItemButton>
                         </Link>
                       </ListItem>

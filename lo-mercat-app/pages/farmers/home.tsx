@@ -129,7 +129,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
         style={{ minHeight: '100vh' }}
         >
           <Box sx={{ mx: 'auto', height: 20 }}/>
-          Hello Again, {session.user.name}
+          Hola de nuevo, {session.user.name}
         <Card sx={{
             display: 'block',
             transitionDuration: '0.3s',
@@ -139,10 +139,10 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
               <Image src={"/add-product.svg"} alt="" width={270} height={150} />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Add Stock
+                  Existencias
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Acces to a page to add stock of a product
+                  Para agregar y modificar stock de un producto
                 </Typography>
               </CardContent>
             </Link>
@@ -159,10 +159,10 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
                 <Image src={"/farmer-info.svg"} alt="" width={280} height={150} />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                  Manage Account
+                  Administrar cuenta
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Farmer, come join to one of our market!!
+                  ¡Agricultor, ven y únete a nuestros mercados!
                   </Typography>
                 </CardContent>
               </Link>
@@ -181,10 +181,10 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
                 </CardContent>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Market List
+                    Lista de mercados
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Take a look to our markets
+                    Echa un vistazo a nuestros mercados
                   </Typography>
                 </CardContent>
               </Link>
@@ -203,10 +203,10 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
                 </CardContent>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Control Area
+                    Área de control
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Take a look to your Market Information
+                    Echa un vistazo a tu Información de Mercado
                   </Typography>
                 </CardContent>
               </Link>
@@ -225,10 +225,10 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
                 </CardContent>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Statistics Area
+                  Área de Estadísticas
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Control where you sell and what you sell
+                  Controla dónde vendes y qué vendes
                   </Typography>
                 </CardContent>
               </Link>

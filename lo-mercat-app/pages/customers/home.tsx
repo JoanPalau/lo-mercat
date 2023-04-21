@@ -51,7 +51,7 @@ const Protected: NextPageWithLayout = ({ children } : any,props): JSX.Element =>
         style={{ minHeight: '100vh' }}
         >
           <Box sx={{ mx: 'auto', height: 20 }}/>
-        Hello Again, {session.user.name}
+          Hola de nuevo, {session.user.name}
         <div>
         <p>
           <Card sx={{

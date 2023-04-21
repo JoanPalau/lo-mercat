@@ -146,7 +146,7 @@ export async function getServerSideProps(context: NextPageContext) {
           {
             id: 3,
             quantity: '30',
-            units: 'units',
+            units: 'unidades',
             product: {
               id: '1',
               name: 'Papaya'
